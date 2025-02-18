@@ -1,0 +1,170 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "mappings": [
+    {
+      "id": "pkg:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": "freetype"
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": "gmp"
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "Color management engine supporting ICC profiles",
+      "specs": "little-cms2"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": "libffi"
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": "libimagequant"
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "The free library for JPEG image compression by the Independent JPEG Group",
+      "specs": "jpeg"
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": "jpeg-turbo"
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "Postgres C API library",
+      "specs": "libpq"
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": "libraqm"
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": "libtiff"
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "WebP image library. Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": "libxcb"
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": "libxml2"
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": "libxslt"
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": "yaml"
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "GNU Make",
+      "specs": "make"
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja"
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": "openjpeg"
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "OpenSSL as built from sources at openssl-library.org",
+      "specs": "openssl"
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "Package compiler and linker metadata toolkit, from pkgconf/pkgconf",
+      "specs": "pkgconf"
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "specs": "tcl-tk"
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "General-purpose lossless data-compression library, from zlib.net",
+      "specs": "zlib"
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "zlib data compression library for the next generation systems. From zlib-ng/zlib-ng.",
+      "specs": "zlib-ng"
+    },
+    {
+      "id": "pkg:github/apache/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": "apache-arrow"
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc"
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": "gcc"
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gfortran"
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": "rust"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The OpenBLAS implementation for BLAS",
+      "specs": "openblas"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The BLIS implementation for BLAS",
+      "specs": "blis"
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "The netlib implementation for LAPACK",
+      "specs": "lapack"
+    }
+  ],
+  "package_managers": [
+    {
+      "install_command": [
+        "brew",
+        "install"
+      ],
+      "name": "brew"
+    }
+  ]
+}

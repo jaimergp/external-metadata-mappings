@@ -1,0 +1,45 @@
+# disable autofixing PRs, commenting "pre-commit.ci autofix" on a pull request triggers a autofix
+ci:
+  autofix_prs: false
+repos:
+  # generic verification and formatting
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # standard end of line/end of file cleanup
+      - id: mixed-line-ending
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-merge-conflict
+      - id: check-json
+      - id: pretty-format-json
+        args: [--top-keys, "id,$schema,schema_version", --indent=2, --autofix]
+  - repo: meta
+    # see https://pre-commit.com/#meta-hooks
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        name: Codespell
+        args: [--write-changes]
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.31.1
+    hooks:
+      - id: check-jsonschema
+        name: Check JSON Schema (Registry)
+        args: [--verbose, --schemafile, schemas/central-registry.schema.json]
+        files: ^data/registry\.json$
+      - id: check-jsonschema
+        name: Check JSON Schema (Mappings)
+        args: [--verbose, --schemafile, schemas/external-mapping.schema.json]
+        files: ^data/.*\.mapping\.json$
+  - repo: local
+    hooks:
+      - id: no-duplicate
+        name: Prevent duplicate entries
+        language: python
+        types: [json]
+        entry: python lint-duplicates.py

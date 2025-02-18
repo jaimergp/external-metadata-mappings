@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Definition": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "PURL-like identifier.",
+          "minLength": 1,
+          "pattern": "^(pkg:|virtual:).*",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form field to add some details about the package.",
+          "title": "Description"
+        },
+        "provides": {
+          "default": [],
+          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or virtual package implementation.",
+          "items": {
+            "minLength": 1,
+            "pattern": "^(pkg:|virtual:).*",
+            "type": "string"
+          },
+          "title": "Provides",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Definition",
+      "type": "object"
+    }
+  },
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/central-registry.schema.json",
+  "additionalProperties": false,
+  "description": "Canonical list of accepted pkg:generic/* and virtual:* packages",
+  "properties": {
+    "$schema": {
+      "default": "",
+      "description": "URL of the definition list schema in use for the document.",
+      "title": "$Schema",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": 1,
+      "exclusiveMaximum": 2,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "definitions": {
+      "default": [],
+      "description": "List of PURL definitions currently recognized.",
+      "items": {
+        "$ref": "#/$defs/Definition"
+      },
+      "title": "Definitions",
+      "type": "array"
+    }
+  },
+  "title": "DefinitionListModel",
+  "type": "object"
+}

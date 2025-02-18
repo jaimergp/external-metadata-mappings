@@ -1,0 +1,317 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "mappings": [
+    {
+      "id": "pkg:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": "freetype"
+    },
+    {
+      "id": "pkg:generic/freetype",
+      "description": "CDT for freetype, repackaged from Centos7.",
+      "specs": "freetype-cos7-x86_64"
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": "gmp"
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "Open Source Color Management Engine",
+      "specs": "lcms2"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": "libffi"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library. Repackaged from msys2 x86_64",
+      "specs": "m2-libffi"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library. Repackaged from m2w64",
+      "specs": "m2w64-libffi"
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": "libimagequant"
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "The free library for JPEG image compression by the Independent JPEG Group",
+      "specs": "jpeg"
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": "libjpeg-turbo"
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "libjpeg-turbo, repackaged from mingw w64",
+      "specs": "m2w64-libjpeg-turbo"
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "The postgres runtime libraries and utilities (not the server itself)",
+      "specs": "libpq"
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "A library for complex text layout. Not available. See https://github.com/conda-forge/staged-recipes/pull/17457.",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": "libtiff"
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "WebP image library. libwebp-base ships libraries; libwebp ships the binaries.",
+      "specs": {
+        "build": "libwebp-base",
+        "host": "libwebp-base",
+        "run": "libwebp"
+      }
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": "libxcb"
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": "libxml2"
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "CDT for libxml2, repackaged from CentOS 7. There are more like this, but didn't include them for brevity.",
+      "specs": {
+        "host": [
+          "libxml2-cos7-x86_64",
+          "libxml2-devel-cos7-x86_64"
+        ],
+        "run": "libxml2-cos7-x86_64"
+      }
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "libxml2, repackaged from msys2 x86_64.",
+      "specs": "m2-libxml2"
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": "libxslt"
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "libxslt repackaged from msys2 x86_64",
+      "specs": "m2-libxslt"
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": "yaml"
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "GNU Make",
+      "specs": "make"
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "GNU Make, repackaged from msys2 x86_64",
+      "specs": "m2-make"
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja"
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": "openjpeg"
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "OpenSSL as built from sources at openssl.org",
+      "specs": "openssl"
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "OpenSSL repackaged from msys2 x86_64",
+      "specs": "m2-openssl"
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "openssl repackaged from mingw-w64",
+      "specs": "m2w64-openssl"
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "Interface for querying installed libraries for use during compilation, from FreeDesktop.org",
+      "specs": "pkg-config"
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "package compiler and linker metadata toolkit, from pkgconf/pkgconf",
+      "specs": "pkgconf"
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "pkg-config repackaged from msys2 x86_64",
+      "specs": "m2-pkg-config"
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "pkg-config repackaged from mingw-w64",
+      "specs": "m2w64-pkg-config"
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "specs": "tk"
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "Massively spiffy yet delicately unobtrusive compression library. From zlib.net.",
+      "specs": "zlib"
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "zlib data compression library for the next generation systems. From zlib-ng/zlib-ng.",
+      "specs": "zlib-ng"
+    },
+    {
+      "id": "pkg:github/apache/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": "libarrow"
+    },
+    {
+      "id": "pkg:github/apache/arrow",
+      "description": "C++ libraries for Apache Arrow",
+      "specs": "libarrow-all"
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "The default compiler for C",
+      "specs": {
+        "build": [
+          "{{ compiler('c') }}",
+          "{{ stdlib('c') }}"
+        ],
+        "host": [],
+        "run": [
+          "c-compiler"
+        ]
+      }
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "The default compiler for C++",
+      "specs": {
+        "build": [
+          "{{ compiler('cxx') }}"
+        ],
+        "host": [],
+        "run": [
+          "cxx-compiler"
+        ]
+      }
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "The default compiler for Fortran",
+      "specs": {
+        "build": [
+          "{{ compiler('fortran') }}"
+        ],
+        "host": [],
+        "run": [
+          "fortran-compiler"
+        ]
+      }
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": {
+        "build": [
+          "{{ compiler('rust') }}"
+        ],
+        "host": [],
+        "run": [
+          "rust"
+        ]
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "A metapackage for any BLAS implementation",
+      "specs": "blas"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The OpenBLAS implementation for BLAS",
+      "specs": "blas * openblas"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The MKL implementation for BLAS",
+      "specs": "blas * mkl"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The BLIS implementation for BLAS",
+      "specs": "blas * blis"
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "The default implementation for LAPACK",
+      "specs": "lapack"
+    }
+  ],
+  "package_managers": [
+    {
+      "install_command": [
+        "conda",
+        "install",
+        "--yes"
+      ],
+      "name": "conda"
+    },
+    {
+      "install_command": [
+        "mamba",
+        "install",
+        "--yes"
+      ],
+      "name": "mamba"
+    },
+    {
+      "install_command": [
+        "micromamba",
+        "install",
+        "--yes"
+      ],
+      "name": "micromamba"
+    },
+    {
+      "install_command": [
+        "pixi",
+        "add"
+      ],
+      "name": "pixi"
+    }
+  ]
+}

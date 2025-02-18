@@ -1,0 +1,151 @@
+{
+  "$schema": "../schemas/central-registry.schema.json",
+  "schema_version": 1,
+  "definitions": [
+    {
+      "id": "pkg:generic/cmake",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/freetype",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "pkg:github/apache/arrow",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": null,
+      "provides": []
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": null,
+      "provides": []
+    }
+  ]
+}

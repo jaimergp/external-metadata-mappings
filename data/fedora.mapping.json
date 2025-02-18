@@ -1,0 +1,325 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "mappings": [
+    {
+      "id": "pkg:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": {
+        "host": [
+          "freetype",
+          "freetype-devel"
+        ],
+        "run": [
+          "freetype"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": {
+        "host": [
+          "gmp",
+          "gmp-devel"
+        ],
+        "run": [
+          "gmp"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "Color management engine supporting ICC profiles",
+      "specs": {
+        "host": [
+          "lcms2",
+          "lcms2-devel"
+        ],
+        "run": [
+          "lcms2"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": "libffi"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library (for MINGW)",
+      "specs": "mingw32-libffi"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library (for MINGW64)",
+      "specs": "mingw64-libffi"
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": {
+        "host": [
+          "libimagequant",
+          "libimagequant-devel"
+        ],
+        "run": [
+          "libimagequant"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": {
+        "host": [
+          "libjpeg-turbo",
+          "libjpeg-turbo-devel"
+        ],
+        "run": [
+          "libjpeg-turbo"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "Postgres C API library",
+      "specs": {
+        "host": [
+          "libpq",
+          "libpq-devel"
+        ],
+        "run": [
+          "libpq"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": {
+        "host": [
+          "libraqm",
+          "libraqm-devel"
+        ],
+        "run": [
+          "libraqm"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": {
+        "host": [
+          "libtiff",
+          "libtiff-devel"
+        ],
+        "run": [
+          "libtiff"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "WebP image library.",
+      "specs": {
+        "host": [
+          "libwebp",
+          "libwebp-devel"
+        ],
+        "run": [
+          "libwebp"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": {
+        "host": [
+          "libxcb",
+          "libxcb-devel"
+        ],
+        "run": [
+          "libxcb"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": "libxml2"
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome, for MINGW",
+      "specs": "mingw32-libxml2"
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome, for MINGW64",
+      "specs": "mingw64-libxml2"
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": {
+        "host": [
+          "libxslt",
+          "libxslt-devel"
+        ],
+        "run": "libxslt"
+      }
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": {
+        "host": [
+          "libyaml",
+          "libyaml-devel"
+        ],
+        "run": [
+          "libyaml"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "GNU Make",
+      "specs": "make"
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja-build"
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": {
+        "host": [
+          "openjpeg",
+          "openjpeg-devel"
+        ],
+        "run": [
+          "openjpeg"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "OpenSSL built by ShiningLight",
+      "specs": {
+        "host": [
+          "openssl",
+          "openssl-devel"
+        ],
+        "run": "openssl"
+      }
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "Package compiler and linker metadata toolkit.",
+      "specs": "pkgconf-pkg-config"
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "specs": {
+        "host": [
+          "tk",
+          "tk-devel"
+        ],
+        "run": [
+          "tk"
+        ]
+      }
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "The zlib-ng-compat package contains the library that is API and binary compatible with zlib.",
+      "specs": {
+        "host": [
+          "zlib-ng-compat",
+          "zlib-ng-compat-devel"
+        ],
+        "run": [
+          "zlib-ng-compat"
+        ]
+      }
+    },
+    {
+      "id": "pkg:github/apache/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": {
+        "host": [
+          "libarrow",
+          "libarrow-devel"
+        ],
+        "run": [
+          "libarrow"
+        ]
+      }
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc"
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": [
+        "gcc",
+        "gcc-c++"
+      ]
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": [
+        "gcc",
+        "gcc-gfortran"
+      ]
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rust"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The netlib implementation for BLAS",
+      "specs": {
+        "host": [
+          "blas",
+          "blas-devel"
+        ],
+        "run": "blas"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "The netlib implementation for lapack",
+      "specs": {
+        "host": [
+          "lapack",
+          "lapack-devel"
+        ],
+        "run": "lapack"
+      }
+    }
+  ],
+  "package_managers": [
+    {
+      "install_command": [
+        "dnf",
+        "install"
+      ],
+      "name": "dnf"
+    }
+  ]
+}

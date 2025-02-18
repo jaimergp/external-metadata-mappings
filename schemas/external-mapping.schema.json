@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Mapping": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "PURL-like identifier, as provided in the central registry,\nbeing mapped to ecosystem specific packages.",
+          "minLength": 1,
+          "pattern": "^(pkg:|virtual:).*",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form field for details about the mapping.",
+          "title": "Description"
+        },
+        "specs": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "#/$defs/SpecsDict"
+            }
+          ],
+          "description": "Package specifiers that provide the identifier at `id`.",
+          "title": "Specs"
+        },
+        "specs_from": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "^(pkg:|virtual:).*",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
+          "title": "Specs From"
+        },
+        "urls": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Hyperlinks to web locations that provide more information about the mapping.",
+          "title": "Urls"
+        }
+      },
+      "required": [
+        "id",
+        "specs"
+      ],
+      "title": "Mapping",
+      "type": "object"
+    },
+    "PackageManager": {
+      "additionalProperties": false,
+      "properties": {
+        "install_command": {
+          "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Install Command",
+          "type": "array"
+        },
+        "name": {
+          "description": "Name of the package manager",
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "install_command"
+      ],
+      "title": "PackageManager",
+      "type": "object"
+    },
+    "SpecsDict": {
+      "additionalProperties": false,
+      "properties": {
+        "build": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Dependencies that must be present at build time and can be executed in the build machine.",
+          "title": "Build"
+        },
+        "host": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Dependencies that must be present at build time but only for linking purposes.\nTheir architecture does not need to match the build machine.",
+          "title": "Host"
+        },
+        "run": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Dependencies needed at runtime in the end-user machines.",
+          "title": "Run"
+        }
+      },
+      "title": "SpecsDict",
+      "type": "object"
+    }
+  },
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "default": "",
+      "description": "URL of the mappings schema in use for the document.",
+      "title": "$Schema",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": 1,
+      "exclusiveMaximum": 2,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "mappings": {
+      "default": [],
+      "description": "List of PURL-to-specs mappings.",
+      "items": {
+        "$ref": "#/$defs/Mapping"
+      },
+      "title": "Mappings",
+      "type": "array"
+    },
+    "package_managers": {
+      "default": [],
+      "description": "List of tools that can be used to install packages in this ecosystem.",
+      "items": {
+        "$ref": "#/$defs/PackageManager"
+      },
+      "title": "Package Managers",
+      "type": "array"
+    }
+  },
+  "title": "MappingsModel",
+  "type": "object"
+}

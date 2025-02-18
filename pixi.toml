@@ -1,0 +1,13 @@
+[project]
+authors = ["jaimergp <jaimergp@users.noreply.github.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "pep725"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+schema = "python schemas/schema.py"
+
+[dependencies]
+pydantic = "*"
