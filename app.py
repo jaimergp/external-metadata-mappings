@@ -42,7 +42,9 @@ def all_purls(purltype: str = None):
             yield d["id"]
         elif purltype == "Virtual" and d["id"].startswith("virtual:"):
             yield d["id"]
-        elif purltype == "Other" and not d["id"].startswith(("virtual:", "pkg:generic/")):
+        elif purltype == "Other" and not d["id"].startswith(
+            ("virtual:", "pkg:generic/")
+        ):
             yield d["id"]
         elif not purltype:
             yield d["id"]
@@ -58,43 +60,61 @@ def mappings_for_purl(purl, ecosystem):
         if m["id"] == purl:
             yield m
 
+
 with st.sidebar:
-    purltype = st.segmented_control("Filter by PURL type", options=["Virtual", "Generic", "Other"])
+    purltype = st.segmented_control(
+        "Filter by PURL type",
+        options=["Virtual", "Generic", "Other"],
+    )
     purl = st.selectbox("PURL", options=["", *sorted(all_purls(purltype))])
     ecosystem = st.selectbox("Ecosystem", options=["", *ecosystems()])
 
+# Mappings detail page
 if purl and ecosystem:
+    this_mapping = mapping(ecosystem)
     found_mappings = [
         m
         for m in mappings_for_purl(purl, ecosystem)
         if m.get("specs") or m.get("specs_from")
     ]
     st.write(f"# `{purl}`")
-    st.write(f"{len(found_mappings)} mapping(s) found for `{ecosystem}`.")
+    st.write(f"{len(found_mappings)} mapping(s) found for {ecosystem.title()}")
     for m in found_mappings:
         st.write("---")
         if m["description"]:
             st.write(m["description"])
         if m["specs"]:
             if hasattr(m["specs"], "items"):
-                run_specs = m["specs"].get("run") or m["specs"].get("build") or m["specs"].get("host") or ()
+                run_specs = (
+                    m["specs"].get("run")
+                    or m["specs"].get("build")
+                    or m["specs"].get("host")
+                    or ()
+                )
             else:
                 run_specs = m["specs"]
             if isinstance(run_specs, str):
                 run_specs = [run_specs]
-            managers = mapping(ecosystem)["package_managers"]
+            managers = this_mapping["package_managers"]
             if len(managers) > 1:
                 st.write("**Install with:**")
-                for manager, tab in zip(managers, st.tabs([m["name"] for m in managers])):
-                    tab.write(f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```")
+                for manager, tab in zip(
+                    managers, st.tabs([m["name"] for m in managers])
+                ):
+                    tab.write(
+                        f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```"
+                    )
             else:
                 st.write(f"**Install with `{managers[0]["name"]}`:**")
-                st.write(f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```")
+                st.write(
+                    f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```"
+                )
 
             with st.expander("Raw data"):
                 st.code(json.dumps(m, indent=2), language="json")
         else:
             st.write("Not available in this ecosystem.")
+# Identifier detail page
 elif purl:
     provided_by = []
     for d in registry()["definitions"]:
@@ -111,7 +131,7 @@ elif purl:
         st.write("Provided by:")
         for prov in provided_by:
             st.write(f"- `{prov}`")
-
+# All identifiers list
 else:
     definitions = registry()["definitions"]
     st.write(f"We found {len(definitions)} definitions:")
