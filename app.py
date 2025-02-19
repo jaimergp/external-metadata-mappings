@@ -83,8 +83,13 @@ if purl and ecosystem:
                 run_specs = m["specs"]
             if isinstance(run_specs, str):
                 run_specs = [run_specs]
-            for manager in mapping(ecosystem)["package_managers"]:
-                st.write(f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```")
+            managers = mapping(ecosystem)["package_managers"]
+            if len(managers) > 1:
+                for manager, tab in zip(managers, st.tabs([m["name"] for m in managers])):
+                    tab.write(f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```")
+            else:
+                st.write(f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```")
+
             with st.expander("Raw data"):
                 st.code(json.dumps(m, indent=2), language="json")
         else:
