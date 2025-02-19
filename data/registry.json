@@ -4,148 +4,171 @@
   "definitions": [
     {
       "id": "pkg:generic/cmake",
-      "description": null,
+      "description": "CMake is a cross-platform, open-source build system generator.",
       "provides": []
     },
     {
       "id": "pkg:generic/freetype",
-      "description": null,
+      "description": "FreeType is a freely available software library to render fonts.",
       "provides": []
     },
     {
       "id": "pkg:generic/gmp",
-      "description": null,
+      "description": "The GNU Multiple Precision Arithmetic Library",
       "provides": []
     },
     {
       "id": "pkg:generic/lcms2",
-      "description": null,
+      "description": "Little Color Management System",
       "provides": []
     },
     {
       "id": "pkg:generic/libffi",
-      "description": null,
+      "description": "A portable foreign-function interface library",
       "provides": []
     },
     {
       "id": "pkg:generic/libimagequant",
-      "description": null,
+      "description": "Imagequant library converts RGBA images to palette-based 8-bit indexed images, including alpha component",
       "provides": []
     },
     {
       "id": "pkg:generic/libjpeg",
-      "description": null,
+      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files developed by the IJG",
       "provides": []
     },
     {
       "id": "pkg:generic/libpq",
-      "description": null,
+      "description": "libpq is a set of library functions that allow client programs to pass queries to the PostgreSQL backend server and to receive the results of these queries",
       "provides": []
     },
     {
       "id": "pkg:generic/libraqm",
-      "description": null,
+      "description": "Raqm is a small library that encapsulates the logic for complex text layout",
       "provides": []
     },
     {
       "id": "pkg:generic/libtiff",
-      "description": null,
+      "description": "The LibTIFF software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data.",
       "provides": []
     },
     {
       "id": "pkg:generic/libwebp",
-      "description": null,
+      "description": "WebP codec is a library to encode and decode images in WebP format. This package contains the library that can be used in other programs to add WebP support",
       "provides": []
     },
     {
       "id": "pkg:generic/libxcb",
-      "description": null,
+      "description": "libxcb provides an interface to the X Window System protocol, which replaces the traditional Xlib interface",
       "provides": []
     },
     {
       "id": "pkg:generic/libxml2",
-      "description": null,
+      "description": "libxml2 is an XML toolkit implemented in C, originally developed for the GNOME Project",
       "provides": []
     },
     {
       "id": "pkg:generic/libxslt",
-      "description": null,
+      "description": "Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML",
       "provides": []
     },
     {
       "id": "pkg:generic/libyaml",
-      "description": null,
+      "description": "A C library for parsing and emitting YAML",
       "provides": []
     },
     {
       "id": "pkg:generic/make",
-      "description": null,
+      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files",
       "provides": []
     },
     {
       "id": "pkg:generic/ninja",
-      "description": null,
+      "description": "A small build system with a focus on speed",
       "provides": []
     },
     {
       "id": "pkg:generic/openjpeg",
-      "description": null,
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language",
       "provides": []
     },
     {
       "id": "pkg:generic/openssl",
-      "description": null,
+      "description": "OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols",
       "provides": []
     },
     {
       "id": "pkg:generic/pkg-config",
-      "description": null,
+      "description": "pkg-config is a helper tool used when compiling applications and libraries",
       "provides": []
     },
     {
       "id": "pkg:generic/tk",
-      "description": null,
+      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches",
       "provides": []
     },
     {
       "id": "pkg:generic/zlib",
-      "description": null,
+      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library",
       "provides": []
     },
     {
       "id": "pkg:github/apache/arrow",
-      "description": null,
+      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics",
       "provides": []
     },
     {
       "id": "virtual:compiler/c",
-      "description": null,
+      "description": "Compiler for the C language",
       "provides": []
     },
     {
       "id": "virtual:compiler/cpp",
-      "description": null,
+      "description": "Compiler for the C++ language",
       "provides": []
     },
     {
       "id": "virtual:compiler/fortran",
-      "description": null,
+      "description": "Compiler for the FORTRAN language",
       "provides": []
     },
     {
       "id": "virtual:compiler/rust",
-      "description": null,
+      "description": "Compiler for the Rust language",
       "provides": []
     },
     {
       "id": "virtual:interface/blas",
-      "description": null,
+      "description": "Interface for Basic Linear Algebra Subprograms",
       "provides": []
     },
     {
       "id": "virtual:interface/lapack",
-      "description": null,
+      "description": "Interface for Linear Algebra PACKage",
       "provides": []
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "LAPACK development repository",
+      "provides": [
+        "virtual:interface/blas",
+        "virtual:interface/lapack"
+      ]
+    },
+    {
+      "id": "pkg:generic/openblas",
+      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
+      "provides": [
+        "virtual:interface/blas"
+      ]
+    },
+    {
+      "id": "pkg:github/OpenMathLib/OpenBLAS",
+      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
+      "provides": [
+        "virtual:interface/blas",
+        "pkg:generic/openblas"
+      ]
     }
   ]
 }
