@@ -8,6 +8,8 @@ version = "0.1.0"
 
 [tasks]
 schema = "python schemas/schema.py"
+app = "python -m streamlit run --server.runOnSave=true app.py"
 
 [dependencies]
 pydantic = "*"
+streamlit = "*"
