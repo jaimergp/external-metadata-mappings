@@ -88,6 +88,13 @@
       "provides": []
     },
     {
+      "id": "pkg:generic/openblas",
+      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
+      "provides": [
+        "virtual:interface/blas"
+      ]
+    },
+    {
       "id": "pkg:generic/openjpeg",
       "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language",
       "provides": []
@@ -111,6 +118,22 @@
       "id": "pkg:generic/zlib",
       "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library",
       "provides": []
+    },
+    {
+      "id": "pkg:github/OpenMathLib/OpenBLAS",
+      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
+      "provides": [
+        "virtual:interface/blas",
+        "pkg:generic/openblas"
+      ]
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "LAPACK development repository",
+      "provides": [
+        "virtual:interface/blas",
+        "virtual:interface/lapack"
+      ]
     },
     {
       "id": "pkg:github/apache/arrow",
@@ -146,29 +169,6 @@
       "id": "virtual:interface/lapack",
       "description": "Interface for Linear Algebra PACKage",
       "provides": []
-    },
-    {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "LAPACK development repository",
-      "provides": [
-        "virtual:interface/blas",
-        "virtual:interface/lapack"
-      ]
-    },
-    {
-      "id": "pkg:generic/openblas",
-      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
-      "provides": [
-        "virtual:interface/blas"
-      ]
-    },
-    {
-      "id": "pkg:github/OpenMathLib/OpenBLAS",
-      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
-      "provides": [
-        "virtual:interface/blas",
-        "pkg:generic/openblas"
-      ]
     }
   ]
 }
