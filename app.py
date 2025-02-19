@@ -3,6 +3,7 @@ Streamlit app to browse the registry and mappings
 """
 
 import json
+import shlex
 from pathlib import Path
 
 import streamlit as st
@@ -27,12 +28,10 @@ st.set_page_config(
 )
 
 
-@st.cache_resource
 def registry():
     return json.loads((DATA / "registry.json").read_text())
 
 
-@st.cache_resource
 def ecosystems():
     return sorted([f.name.rsplit(".", 2)[0] for f in DATA.glob("*.mapping.json")])
 
@@ -71,14 +70,23 @@ if purl and ecosystem:
         if m.get("specs") or m.get("specs_from")
     ]
     st.write(f"# `{purl}`")
-    st.write(f"{len(found_mappings)} mapping(s) found.")
+    st.write(f"{len(found_mappings)} mapping(s) found for `{ecosystem}`.")
     for m in found_mappings:
         st.write("---")
         if m["description"]:
             st.write(m["description"])
         if m["specs"]:
-            st.write("- Available as:")
-            st.code(json.dumps(m["specs"], indent=2), language="json")
+            st.write("**Install with:**")
+            if hasattr(m["specs"], "items"):
+                run_specs = m["specs"].get("run") or m["specs"].get("build") or m["specs"].get("host") or ()
+            else:
+                run_specs = m["specs"]
+            if isinstance(run_specs, str):
+                run_specs = [run_specs]
+            for manager in mapping(ecosystem)["package_managers"]:
+                st.write(f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```")
+            with st.expander("Raw data"):
+                st.code(json.dumps(m, indent=2), language="json")
         else:
             st.write("Not available in this ecosystem.")
 elif purl:
