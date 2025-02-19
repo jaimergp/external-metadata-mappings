@@ -76,7 +76,6 @@ if purl and ecosystem:
         if m["description"]:
             st.write(m["description"])
         if m["specs"]:
-            st.write("**Install with:**")
             if hasattr(m["specs"], "items"):
                 run_specs = m["specs"].get("run") or m["specs"].get("build") or m["specs"].get("host") or ()
             else:
@@ -85,9 +84,11 @@ if purl and ecosystem:
                 run_specs = [run_specs]
             managers = mapping(ecosystem)["package_managers"]
             if len(managers) > 1:
+                st.write("**Install with:**")
                 for manager, tab in zip(managers, st.tabs([m["name"] for m in managers])):
                     tab.write(f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```")
             else:
+                st.write(f"**Install with `{managers[0]["name"]}`:**")
                 st.write(f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```")
 
             with st.expander("Raw data"):
