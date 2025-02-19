@@ -286,7 +286,8 @@
       "install_command": [
         "conda",
         "install",
-        "--yes"
+        "--yes",
+        "--channel=conda-forge"
       ],
       "name": "conda"
     },
@@ -294,7 +295,8 @@
       "install_command": [
         "mamba",
         "install",
-        "--yes"
+        "--yes",
+        "--channel=conda-forge"
       ],
       "name": "mamba"
     },
@@ -302,7 +304,8 @@
       "install_command": [
         "micromamba",
         "install",
-        "--yes"
+        "--yes",
+        "--channel=conda-forge"
       ],
       "name": "micromamba"
     },
