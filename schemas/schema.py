@@ -131,7 +131,8 @@ class MappingsModel(BaseModel):
     "URL of the mappings schema in use for the document."
 
     schema_version: int = Field(1, ge=1, lt=2)
-
+    description: str | None = None
+    "Free-form field to add information this mapping."
     package_managers: list[PackageManager] = []
     "List of tools that can be used to install packages in this ecosystem."
     mappings: list[Mapping] = []

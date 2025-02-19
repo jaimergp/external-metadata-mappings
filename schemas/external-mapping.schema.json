@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "Mapping": {
       "additionalProperties": false,
@@ -91,6 +90,12 @@
     "PackageManager": {
       "additionalProperties": false,
       "properties": {
+        "name": {
+          "description": "Name of the package manager",
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
         "install_command": {
           "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
           "items": {
@@ -99,12 +104,6 @@
           },
           "title": "Install Command",
           "type": "array"
-        },
-        "name": {
-          "description": "Name of the package manager",
-          "minLength": 1,
-          "title": "Name",
-          "type": "string"
         }
       },
       "required": [
@@ -185,7 +184,6 @@
       "type": "object"
     }
   },
-  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json",
   "additionalProperties": false,
   "properties": {
     "$schema": {
@@ -201,14 +199,18 @@
       "title": "Schema Version",
       "type": "integer"
     },
-    "mappings": {
-      "default": [],
-      "description": "List of PURL-to-specs mappings.",
-      "items": {
-        "$ref": "#/$defs/Mapping"
-      },
-      "title": "Mappings",
-      "type": "array"
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Free-form field to add information this mapping.",
+      "title": "Description"
     },
     "package_managers": {
       "default": [],
@@ -218,8 +220,19 @@
       },
       "title": "Package Managers",
       "type": "array"
+    },
+    "mappings": {
+      "default": [],
+      "description": "List of PURL-to-specs mappings.",
+      "items": {
+        "$ref": "#/$defs/Mapping"
+      },
+      "title": "Mappings",
+      "type": "array"
     }
   },
   "title": "MappingsModel",
-  "type": "object"
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json"
 }

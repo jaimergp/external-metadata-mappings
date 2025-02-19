@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "Definition": {
       "additionalProperties": false,
@@ -43,7 +42,6 @@
       "type": "object"
     }
   },
-  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/central-registry.schema.json",
   "additionalProperties": false,
   "description": "Canonical list of accepted pkg:generic/* and virtual:* packages",
   "properties": {
@@ -71,5 +69,7 @@
     }
   },
   "title": "DefinitionListModel",
-  "type": "object"
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/central-registry.schema.json"
 }

@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/external-mapping.schema.json",
   "schema_version": 1,
+  "description": "Mapping for the Homebrew ecosystem",
   "mappings": [
     {
       "id": "pkg:generic/freetype",
