@@ -4,88 +4,81 @@
   "definitions": [
     {
       "id": "pkg:generic/cmake",
-      "description": "CMake is a cross-platform, open-source build system generator.",
-      "provides": []
+      "description": "CMake is a cross-platform, open-source build system generator."
+    },
+    {
+      "id": "pkg:github/Kitware/CMake",
+      "description": "CMake is a cross-platform, open-source build system generator. GitHub mirror.",
+      "provides": "pkg:generic/cmake"
+    },
+    {
+      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
+      "description": "CMake is a cross-platform, open-source build system generator. With canonical URL.",
+      "provides": "pkg:generic/cmake"
     },
     {
       "id": "pkg:generic/freetype",
-      "description": "FreeType is a freely available software library to render fonts.",
-      "provides": []
+      "description": "FreeType is a freely available software library to render fonts."
     },
     {
       "id": "pkg:generic/gmp",
-      "description": "The GNU Multiple Precision Arithmetic Library",
-      "provides": []
+      "description": "The GNU Multiple Precision Arithmetic Library"
     },
     {
       "id": "pkg:generic/lcms2",
-      "description": "Little Color Management System",
-      "provides": []
+      "description": "Little Color Management System"
     },
     {
       "id": "pkg:generic/libffi",
-      "description": "A portable foreign-function interface library",
-      "provides": []
+      "description": "A portable foreign-function interface library"
     },
     {
       "id": "pkg:generic/libimagequant",
-      "description": "Imagequant library converts RGBA images to palette-based 8-bit indexed images, including alpha component",
-      "provides": []
+      "description": "Imagequant library converts RGBA images to palette-based 8-bit indexed images, including alpha component"
     },
     {
       "id": "pkg:generic/libjpeg",
-      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files developed by the IJG",
-      "provides": []
+      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files developed by the IJG"
     },
     {
       "id": "pkg:generic/libpq",
-      "description": "libpq is a set of library functions that allow client programs to pass queries to the PostgreSQL backend server and to receive the results of these queries",
-      "provides": []
+      "description": "libpq is a set of library functions that allow client programs to pass queries to the PostgreSQL backend server and to receive the results of these queries"
     },
     {
       "id": "pkg:generic/libraqm",
-      "description": "Raqm is a small library that encapsulates the logic for complex text layout",
-      "provides": []
+      "description": "Raqm is a small library that encapsulates the logic for complex text layout"
     },
     {
       "id": "pkg:generic/libtiff",
-      "description": "The LibTIFF software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data.",
-      "provides": []
+      "description": "The LibTIFF software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data."
     },
     {
       "id": "pkg:generic/libwebp",
-      "description": "WebP codec is a library to encode and decode images in WebP format. This package contains the library that can be used in other programs to add WebP support",
-      "provides": []
+      "description": "WebP codec is a library to encode and decode images in WebP format. This package contains the library that can be used in other programs to add WebP support"
     },
     {
       "id": "pkg:generic/libxcb",
-      "description": "libxcb provides an interface to the X Window System protocol, which replaces the traditional Xlib interface",
-      "provides": []
+      "description": "libxcb provides an interface to the X Window System protocol, which replaces the traditional Xlib interface"
     },
     {
       "id": "pkg:generic/libxml2",
-      "description": "libxml2 is an XML toolkit implemented in C, originally developed for the GNOME Project",
-      "provides": []
+      "description": "libxml2 is an XML toolkit implemented in C, originally developed for the GNOME Project"
     },
     {
       "id": "pkg:generic/libxslt",
-      "description": "Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML",
-      "provides": []
+      "description": "Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML"
     },
     {
       "id": "pkg:generic/libyaml",
-      "description": "A C library for parsing and emitting YAML",
-      "provides": []
+      "description": "A C library for parsing and emitting YAML"
     },
     {
       "id": "pkg:generic/make",
-      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files",
-      "provides": []
+      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files"
     },
     {
       "id": "pkg:generic/ninja",
-      "description": "A small build system with a focus on speed",
-      "provides": []
+      "description": "A small build system with a focus on speed"
     },
     {
       "id": "pkg:generic/openblas",
@@ -96,28 +89,23 @@
     },
     {
       "id": "pkg:generic/openjpeg",
-      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language",
-      "provides": []
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language"
     },
     {
       "id": "pkg:generic/openssl",
-      "description": "OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols",
-      "provides": []
+      "description": "OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols"
     },
     {
       "id": "pkg:generic/pkg-config",
-      "description": "pkg-config is a helper tool used when compiling applications and libraries",
-      "provides": []
+      "description": "pkg-config is a helper tool used when compiling applications and libraries"
     },
     {
       "id": "pkg:generic/tk",
-      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches",
-      "provides": []
+      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches"
     },
     {
       "id": "pkg:generic/zlib",
-      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library",
-      "provides": []
+      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
     },
     {
       "id": "pkg:github/OpenMathLib/OpenBLAS",
@@ -137,38 +125,31 @@
     },
     {
       "id": "pkg:github/apache/arrow",
-      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics",
-      "provides": []
+      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
     },
     {
       "id": "virtual:compiler/c",
-      "description": "Compiler for the C language",
-      "provides": []
+      "description": "Compiler for the C language"
     },
     {
       "id": "virtual:compiler/cpp",
-      "description": "Compiler for the C++ language",
-      "provides": []
+      "description": "Compiler for the C++ language"
     },
     {
       "id": "virtual:compiler/fortran",
-      "description": "Compiler for the FORTRAN language",
-      "provides": []
+      "description": "Compiler for the FORTRAN language"
     },
     {
       "id": "virtual:compiler/rust",
-      "description": "Compiler for the Rust language",
-      "provides": []
+      "description": "Compiler for the Rust language"
     },
     {
       "id": "virtual:interface/blas",
-      "description": "Interface for Basic Linear Algebra Subprograms",
-      "provides": []
+      "description": "Interface for Basic Linear Algebra Subprograms"
     },
     {
       "id": "virtual:interface/lapack",
-      "description": "Interface for Linear Algebra PACKage",
-      "provides": []
+      "description": "Interface for Linear Algebra PACKage"
     }
   ]
 }
