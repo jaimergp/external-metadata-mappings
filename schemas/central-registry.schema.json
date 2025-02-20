@@ -24,15 +24,27 @@
           "title": "Description"
         },
         "provides": {
-          "default": [],
-          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or virtual package implementation.",
-          "items": {
-            "minLength": 1,
-            "pattern": "^(pkg:|virtual:).*",
-            "type": "string"
-          },
-          "title": "Provides",
-          "type": "array"
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "^(pkg:|virtual:).*",
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "pattern": "^(pkg:|virtual:).*",
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or virtual package implementations.\nIf no `provides` info is added, the entry is considered canonical.",
+          "title": "Provides"
         },
         "urls": {
           "anyOf": [

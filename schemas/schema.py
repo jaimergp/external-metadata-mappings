@@ -17,6 +17,7 @@ MAPPING_SCHEMA_FILE = HERE / "external-mapping.schema.json"
 PURLField = Annotated[str, Field(min_length=1, pattern=r"^(pkg:|virtual:).*")]
 NonEmptyString = Annotated[str, Field(min_length=1)]
 
+
 class Definition(BaseModel):
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
@@ -27,15 +28,22 @@ class Definition(BaseModel):
     "PURL-like identifier."
     description: str | None = None
     "Free-form field to add some details about the package."
-    provides: list[PURLField] = []
+    provides: PURLField | list[PURLField] | None = None
     """
     List of identifiers this entry connects to.
-    Useful to annotate aliases or virtual package implementation.
+    Useful to annotate aliases or virtual package implementations.
+    If no `provides` info is added, the entry is considered canonical.
     """
-    urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = None
+    urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = (
+        None
+    )
     """
     Hyperlinks to web locations that provide more information about the definition.
     """
+
+    @property
+    def is_canonical(self):
+        return not self.provides
 
 
 class DefinitionListModel(BaseModel):
@@ -117,7 +125,9 @@ class Mapping(BaseModel):
     Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.
     Cannot be used together with `specs`.
     """
-    urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = None
+    urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = (
+        None
+    )
     """
     Hyperlinks to web locations that provide more information about the mapping.
     """
