@@ -36,18 +36,9 @@ def ecosystems():
     return sorted([f.name.rsplit(".", 2)[0] for f in DATA.glob("*.mapping.json")])
 
 
-def all_purls(purltype: str = None):
+def all_purls():
     for d in registry()["definitions"]:
-        if purltype == "Generic" and d["id"].startswith("pkg:generic/"):
-            yield d["id"]
-        elif purltype == "Virtual" and d["id"].startswith("virtual:"):
-            yield d["id"]
-        elif purltype == "Other" and not d["id"].startswith(
-            ("virtual:", "pkg:generic/")
-        ):
-            yield d["id"]
-        elif not purltype:
-            yield d["id"]
+        yield d["id"]
 
 
 @st.cache_resource
@@ -71,11 +62,10 @@ def parse_url():
     params = st.query_params.to_dict()
     purl = params.pop("purl", None)
     ecosystem = params.pop("ecosystem", None)
-    purltype = params.pop("purltype", None)
     if params:
         st.warning(f"URL contains unknown elements: {st.query_params.to_dict}")
         st.stop()
-    return {"purl": purl, "ecosystem": ecosystem, "purltype": purltype}
+    return {"purl": purl, "ecosystem": ecosystem}
 
 
 url_params = parse_url()
@@ -90,14 +80,10 @@ if not getattr(st.session_state, "initialized", False):
 
 
 with st.sidebar:
-    purltype = st.segmented_control(
-        "Filter by PURL type",
-        options=["Virtual", "Generic", "Other"],
-        key="purltype",
-    )
+    st.write("# External mappings browser")
     purl = st.selectbox(
         "PURL",
-        options=sorted(all_purls(purltype)),
+        options=sorted(all_purls()),
         index=None,
         key="purl",
         placeholder="Choose a PURL identifier",
@@ -118,8 +104,6 @@ if purl and ecosystem:
     st.query_params.clear()
     st.query_params.purl = purl
     st.query_params.ecosystem = ecosystem
-    if purltype:
-        st.query_params.purltype = purltype
     this_mapping = mapping(ecosystem)
     found_mappings = list(mappings_for_purl(purl, ecosystem))
     st.write(f"# `{purl}`")
@@ -163,8 +147,6 @@ if purl and ecosystem:
 elif purl:
     st.query_params.clear()
     st.query_params.purl = purl
-    if purltype:
-        st.query_params.purltype = purltype
     provided_by = []
     for d in registry()["definitions"]:
         if d["id"] == purl:
@@ -197,8 +179,6 @@ elif purl:
 # All identifiers list
 else:
     st.query_params.clear()
-    if purltype:
-        st.query_params.purltype = purltype
     definitions = registry()["definitions"]
     canonical, providers = [], []
     for d in definitions:
