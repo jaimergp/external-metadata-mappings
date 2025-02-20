@@ -72,6 +72,13 @@
               "type": "array"
             },
             {
+              "additionalProperties": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
               "type": "null"
             }
           ],
