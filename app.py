@@ -60,6 +60,7 @@ def mappings_for_purl(purl, ecosystem):
         if m["id"] == purl and m.get("specs") or m.get("specs_from"):
             yield m
 
+
 def parse_url():
     params = st.query_params.to_dict()
     purl = params.pop("purl", None)
@@ -69,7 +70,7 @@ def parse_url():
         st.warning(f"URL contains unknown elements: {st.query_params.to_dict}")
         st.stop()
     return {"purl": purl, "ecosystem": ecosystem, "purltype": purltype}
-    
+
 
 url_params = parse_url()
 if not getattr(st.session_state, "initialized", False):
@@ -80,7 +81,7 @@ if not getattr(st.session_state, "initialized", False):
             initialized = True
     if initialized:
         st.session_state.initialized = initialized
-    
+
 
 with st.sidebar:
     purltype = st.segmented_control(
@@ -93,15 +94,17 @@ with st.sidebar:
         options=sorted(all_purls(purltype)),
         index=None,
         key="purl",
-        placeholder="Choose a PURL identifier"
+        placeholder="Choose a PURL identifier",
     )
     ecosystem = st.selectbox(
         "Ecosystem",
-        options=[eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))] if purl else [],
+        options=[eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]
+        if purl
+        else [],
         index=None,
         key="ecosystem",
         placeholder="Choose a target ecosystem",
-        help="Target ecosystem for which to show the mapping. Only enabled if mappings are found."
+        help="Target ecosystem for which to show the mapping. Only enabled if mappings are found.",
     )
 
 # Mappings detail page
@@ -161,27 +164,51 @@ elif purl:
         if d["id"] == purl:
             st.write(f"### `{d["id"]}`")
             st.write(f"{d["description"] or "_no description_"}")
-            if d.get("provides"):
+            if provides := d.get("provides"):
+                if isinstance(provides, str):
+                    provides = [provides]
                 st.write("Provides:")
-                for prov in d["provides"]:
-                    st.write(f"- `{prov}`")
+                for prov in provides:
+                    st.write(
+                        f"- <a href='?purl={prov}' target='_self'><code>{prov}</code></a>",
+                        unsafe_allow_html=True,
+                    )
         if purl in d.get("provides", ()):
             provided_by.append(d["id"])
     if provided_by:
         st.write("Provided by:")
         for prov in provided_by:
-            st.write(f"- `{prov}`")
+            st.write(
+                f"- <a href='?purl={prov}' target='_self'><code>{prov}</code></a>",
+                unsafe_allow_html=True,
+            )
 # All identifiers list
 else:
     st.query_params.clear()
     if purltype:
         st.query_params.purltype = purltype
     definitions = registry()["definitions"]
-    st.write(f"We found {len(definitions)} definitions:")
-    for i, d in enumerate(definitions, 1):
-        st.write(f"### {i}. `{d["id"]}`")
-        st.write(f"{d["description"] or "_no description_"}")
+    canonical, providers = [], []
+    for d in definitions:
         if d.get("provides"):
-            st.write("Provides:")
-            for prov in d["provides"]:
-                st.write(f"- `{prov}`")
+            providers.append(d)
+        else:
+            canonical.append(d)
+    st.write(f"We found {len(canonical)} canonical definitions.")
+    for can in canonical:
+        st.write(f"### `{can["id"]}`")
+        st.write(f"{can["description"] or "_no description_"}")
+        provided_by = []
+        for provider in providers:
+            provides = provider["provides"]
+            if isinstance(provides, str):
+                provides = [provides]
+            if can["id"] in provides:
+                provided_by.append(provider["id"])
+        if provided_by:
+            st.write("Provided by:")
+            for prov in provided_by:
+                st.write(
+                    f"- <a href='?purl={prov}' target='_self'><code>{prov}</code></a>",
+                    unsafe_allow_html=True,
+                )
