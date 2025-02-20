@@ -61,6 +61,12 @@ def mappings_for_purl(purl, ecosystem):
             yield m
 
 
+def goto(**params):
+    st.session_state.initialized = False
+    st.query_params.clear()
+    st.query_params.update(params)
+
+
 def parse_url():
     params = st.query_params.to_dict()
     purl = params.pop("purl", None)
@@ -169,18 +175,24 @@ elif purl:
                     provides = [provides]
                 st.write("Provides:")
                 for prov in provides:
-                    st.write(
-                        f"- <a href='?purl={prov}' target='_self'><code>{prov}</code></a>",
-                        unsafe_allow_html=True,
+                    st.button(
+                        prov,
+                        key=f"{d}-{prov}",
+                        on_click=goto,
+                        kwargs={"purl": prov},
+                        icon="🔗",
                     )
         if purl in d.get("provides", ()):
             provided_by.append(d["id"])
     if provided_by:
         st.write("Provided by:")
         for prov in provided_by:
-            st.write(
-                f"- <a href='?purl={prov}' target='_self'><code>{prov}</code></a>",
-                unsafe_allow_html=True,
+            st.button(
+                prov,
+                key=f"{d}-{prov}-by",
+                on_click=goto,
+                kwargs={"purl": prov},
+                icon="🔗",
             )
 # All identifiers list
 else:
@@ -208,7 +220,10 @@ else:
         if provided_by:
             st.write("Provided by:")
             for prov in provided_by:
-                st.write(
-                    f"- <a href='?purl={prov}' target='_self'><code>{prov}</code></a>",
-                    unsafe_allow_html=True,
+                st.button(
+                    prov,
+                    key=f"{can}-{prov}",
+                    on_click=goto,
+                    kwargs={"purl": prov},
+                    icon="🔗",
                 )
