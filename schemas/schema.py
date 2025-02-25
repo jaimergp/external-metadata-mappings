@@ -5,7 +5,7 @@ Generate a JSON schema for PEP-XXX mappings
 
 import json
 from pathlib import Path
-from typing import Annotated, Union
+from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
@@ -34,7 +34,7 @@ class Definition(BaseModel):
     Useful to annotate aliases or virtual package implementations.
     If no `provides` info is added, the entry is considered canonical.
     """
-    urls: AnyUrl | list[AnyUrl] | dict[str, AnyUrl] | None = None
+    urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
     """
     Hyperlinks to web locations that provide more information about the definition.
     """
@@ -86,16 +86,16 @@ class SpecsDict(BaseModel):
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    build: Union[NonEmptyString, list[NonEmptyString], None] = None
+    build: NonEmptyString | list[NonEmptyString] | None = None
     """
     Dependencies that must be present at build time and can be executed in the build machine.
     """
-    host: Union[NonEmptyString, list[NonEmptyString], None] = None
+    host: NonEmptyString | list[NonEmptyString] | None = None
     """
     Dependencies that must be present at build time but only for linking purposes.
     Their architecture does not need to match the build machine.
     """
-    run: Union[NonEmptyString, list[NonEmptyString], None] = None
+    run: NonEmptyString | list[NonEmptyString] | None = None
     """
     Dependencies needed at runtime in the end-user machines.
     """
@@ -125,7 +125,7 @@ class _BaseMapping(BaseModel):
 class MappingWithSpecs(_BaseMapping):
     """ """
 
-    specs: Union[NonEmptyString, list[NonEmptyString], SpecsDict] = ...
+    specs: NonEmptyString | list[NonEmptyString] | SpecsDict = ...
     "Package specifiers that provide the identifier at `id`."
 
 
