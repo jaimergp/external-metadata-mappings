@@ -24,7 +24,7 @@ for path in sys.argv[1:]:
                     seen[item_as_json] = None
                     dedup.append(item)
             if len(dedup) != len(value):
-                retcode +=1
+                retcode += 1
             dedup.sort(key=lambda d: d.get(sortkey) or d.items())
             data[key] = dedup
 
