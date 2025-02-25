@@ -80,6 +80,19 @@ def get_specs(mapping_entry, full_mapping):
     return []
 
 
+def render_urls(definition):
+    if urls := definition.get("urls"):
+        st.write("**🔗 Links:**")
+        if hasattr(urls, "items"):
+            for name, url in urls.items():
+                st.write(f"- [{name}]({url})")
+        else:
+            if isinstance(urls, str):
+                urls = [urls]
+            for url in urls:
+                st.write(f"- [{url}]({url})")
+
+
 url_params = parse_url()
 if not getattr(st.session_state, "initialized", False):
     initialized = False
@@ -93,9 +106,10 @@ if not getattr(st.session_state, "initialized", False):
 
 with st.sidebar:
     st.write("# External mappings browser")
+    available_purls = sorted(all_purls())
     purl = st.selectbox(
-        "PURL",
-        options=sorted(all_purls()),
+        f"PURL ({len(available_purls)} available)",
+        options=available_purls,
         index=None,
         key="purl",
         placeholder="Choose a PURL identifier",
@@ -122,8 +136,8 @@ if purl and ecosystem:
     st.write(f"{len(found_mapping_entries)} mapping(s) found for {ecosystem.title()}")
     for m in found_mapping_entries:
         st.write("---")
-        if m["description"]:
-            st.write(m["description"])
+        st.write(f"> {m.get('description') or '_No description_'}")
+        render_urls(m)
         specs = get_specs(m, full_mapping)
         if specs:
             if hasattr(specs, "items"):
@@ -136,7 +150,7 @@ if purl and ecosystem:
                 run_specs = [run_specs]
             managers = full_mapping["package_managers"]
             if len(managers) > 1:
-                st.write("**Install with:**")
+                st.write("**📦 Install with:**")
                 for manager, tab in zip(
                     managers, st.tabs([m["name"] for m in managers])
                 ):
@@ -161,7 +175,8 @@ elif purl:
     for d in registry()["definitions"]:
         if d["id"] == purl:
             st.write(f"### `{d['id']}`")
-            st.write(f"{d['description'] or '_no description_'}")
+            st.write(f"> {d['description'] or '_No description_'}")
+            render_urls(d)
             if provides := d.get("provides"):
                 if isinstance(provides, str):
                     provides = [provides]
@@ -189,7 +204,7 @@ elif purl:
     if available_ecos := [
         eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))
     ]:
-        st.write("**Mappings found for:**")
+        st.write("**📍 Mappings found for:**")
         for eco in available_ecos:
             st.button(
                 eco,
@@ -204,32 +219,39 @@ elif purl:
 else:
     st.query_params.clear()
     definitions = registry()["definitions"]
-    canonical, providers = [], []
+    canonical, providers = {"generic": [], "virtual": []}, []
+    count = 0
     for d in definitions:
         if d.get("provides"):
             providers.append(d)
+        elif d["id"].startswith("pkg:generic/"):
+            canonical["generic"].append(d)
+            count += 1
         else:
-            canonical.append(d)
+            canonical["virtual"].append(d)
+            count += 1
     st.write("# Canonical identifiers")
-    st.write(f"We found {len(canonical)} canonical definitions.")
-    for can in canonical:
-        st.write("---")
-        st.write(f"### `{can['id']}`")
-        st.write(f"{can['description'] or '_no description_'}")
-        provided_by = []
-        for provider in providers:
-            provides = provider["provides"]
-            if isinstance(provides, str):
-                provides = [provides]
-            if can["id"] in provides:
-                provided_by.append(provider["id"])
-        if provided_by:
-            st.write("**📥 Provided by:**")
-            for prov in provided_by:
+    st.write(
+        f"We found {count} canonical definitions. "
+        "Non-canonical definitions are listed in the dropdown menu by the sidebar."
+    )
+    generic_tab, virtual_tab = st.tabs(
+        [
+            f"Generic ({len(canonical['generic'])})",
+            f"Virtual ({len(canonical['virtual'])})",
+        ]
+    )
+    tabs = {"generic": generic_tab, "virtual": virtual_tab}
+    for tab, values in canonical.items():
+        with tabs[tab]:
+            for value in values:
+                st.write(f"## `{value['id']}`")
+                st.write(f"> {value['description'] or '_No description_'}")
+                render_urls(value)
                 st.button(
-                    prov,
-                    key=f"{can}-{prov}",
+                    "View details",
+                    key=f"{value['id']}",
                     on_click=goto,
-                    kwargs={"purl": prov},
-                    icon="🔗",
+                    kwargs={"purl": value["id"]},
+                    icon="➕",
                 )

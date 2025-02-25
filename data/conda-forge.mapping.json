@@ -6,27 +6,39 @@
     {
       "id": "pkg:generic/arrow",
       "description": "",
-      "specs": []
+      "specs_from": "pkg:github/apache/arrow"
     },
     {
       "id": "pkg:generic/cmake",
       "description": "",
-      "specs": []
+      "specs": ["cmake"],
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/cmake-feedstock"
+      }
     },
     {
       "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
       "description": "",
-      "specs": []
+      "specs_from": "pkg:generic/cmake",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/cmake-feedstock"
+      }
     },
     {
       "id": "pkg:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
-      "specs": "freetype"
+      "specs": "freetype",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/freetype-feedstock"
+      }
     },
     {
       "id": "pkg:generic/freetype",
       "description": "CDT for freetype, repackaged from Centos7.",
-      "specs": "freetype-cos7-x86_64"
+      "specs": "freetype-cos7-x86_64",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/cdt-builds"
+      }
     },
     {
       "id": "pkg:generic/gmp",
