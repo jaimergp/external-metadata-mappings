@@ -191,7 +191,7 @@
     {
       "id": "virtual:interface/lapack",
       "description": "The MKL implementation for LAPACK",
-      "specs": "Intel.oneMKL"
+      "specs_from": "virtual:interface/blas"
     }
   ],
   "package_managers": [

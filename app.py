@@ -48,7 +48,7 @@ def mapping(ecosystem):
 
 def mappings_for_purl(purl, ecosystem):
     for m in mapping(ecosystem).get("mappings", ()):
-        if m["id"] == purl and m.get("specs") or m.get("specs_from"):
+        if m["id"] == purl and (m.get("specs") or m.get("specs_from")):
             yield m
 
 
@@ -66,6 +66,18 @@ def parse_url():
         st.warning(f"URL contains unknown elements: {params}")
         st.stop()
     return {"purl": purl, "ecosystem": ecosystem}
+
+
+def get_specs(mapping_entry, full_mapping):
+    "Specs can be found in 'specs' or specs_from, which requires traversing the whole list"
+    if specs := mapping_entry.get("specs"):
+        return specs
+    if specs_from := mapping_entry.get("specs_from"):
+        for m in full_mapping.get("mappings"):
+            if m["id"] == specs_from:
+                return get_specs(m, full_mapping)
+        raise ValueError(f"'specs_from' value '{specs_from}' cannot be found")
+    return []
 
 
 url_params = parse_url()
@@ -104,27 +116,25 @@ if purl and ecosystem:
     st.query_params.clear()
     st.query_params.purl = purl
     st.query_params.ecosystem = ecosystem
-    this_mapping = mapping(ecosystem)
-    found_mappings = list(mappings_for_purl(purl, ecosystem))
+    full_mapping = mapping(ecosystem)
+    found_mapping_entries = list(mappings_for_purl(purl, ecosystem))
     st.write(f"# `{purl}`")
-    st.write(f"{len(found_mappings)} mapping(s) found for {ecosystem.title()}")
-    for m in found_mappings:
+    st.write(f"{len(found_mapping_entries)} mapping(s) found for {ecosystem.title()}")
+    for m in found_mapping_entries:
         st.write("---")
         if m["description"]:
             st.write(m["description"])
-        if m["specs"]:
-            if hasattr(m["specs"], "items"):
+        specs = get_specs(m, full_mapping)
+        if specs:
+            if hasattr(specs, "items"):
                 run_specs = (
-                    m["specs"].get("run")
-                    or m["specs"].get("build")
-                    or m["specs"].get("host")
-                    or ()
+                    specs.get("run") or specs.get("build") or specs.get("host") or ()
                 )
             else:
-                run_specs = m["specs"]
+                run_specs = specs
             if isinstance(run_specs, str):
                 run_specs = [run_specs]
-            managers = this_mapping["package_managers"]
+            managers = full_mapping["package_managers"]
             if len(managers) > 1:
                 st.write("**Install with:**")
                 for manager, tab in zip(
@@ -134,7 +144,7 @@ if purl and ecosystem:
                         f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```"
                     )
             else:
-                st.write(f"**Install with `{managers[0]["name"]}`:**")
+                st.write(f"**Install with `{managers[0]['name']}`:**")
                 st.write(
                     f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```"
                 )
@@ -150,8 +160,8 @@ elif purl:
     provided_by = []
     for d in registry()["definitions"]:
         if d["id"] == purl:
-            st.write(f"### `{d["id"]}`")
-            st.write(f"{d["description"] or "_no description_"}")
+            st.write(f"### `{d['id']}`")
+            st.write(f"{d['description'] or '_no description_'}")
             if provides := d.get("provides"):
                 if isinstance(provides, str):
                     provides = [provides]
@@ -176,7 +186,9 @@ elif purl:
                 kwargs={"purl": prov},
                 icon="🔗",
             )
-    if available_ecos := [eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]:
+    if available_ecos := [
+        eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))
+    ]:
         st.write("**Mappings found for:**")
         for eco in available_ecos:
             st.button(
@@ -202,8 +214,8 @@ else:
     st.write(f"We found {len(canonical)} canonical definitions.")
     for can in canonical:
         st.write("---")
-        st.write(f"### `{can["id"]}`")
-        st.write(f"{can["description"] or "_no description_"}")
+        st.write(f"### `{can['id']}`")
+        st.write(f"{can['description'] or '_no description_'}")
         provided_by = []
         for provider in providers:
             provides = provider["provides"]
