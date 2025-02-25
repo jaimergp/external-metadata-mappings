@@ -48,11 +48,13 @@
         "urls": {
           "anyOf": [
             {
+              "format": "uri",
               "minLength": 1,
               "type": "string"
             },
             {
               "items": {
+                "format": "uri",
                 "minLength": 1,
                 "type": "string"
               },
@@ -60,8 +62,12 @@
             },
             {
               "additionalProperties": {
+                "format": "uri",
                 "minLength": 1,
                 "type": "string"
+              },
+              "propertyNames": {
+                "minLength": 1
               },
               "type": "object"
             },
@@ -114,11 +120,13 @@
         "urls": {
           "anyOf": [
             {
+              "format": "uri",
               "minLength": 1,
               "type": "string"
             },
             {
               "items": {
+                "format": "uri",
                 "minLength": 1,
                 "type": "string"
               },
@@ -126,8 +134,12 @@
             },
             {
               "additionalProperties": {
+                "format": "uri",
                 "minLength": 1,
                 "type": "string"
+              },
+              "propertyNames": {
+                "minLength": 1
               },
               "type": "object"
             },

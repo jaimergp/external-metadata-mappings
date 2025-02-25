@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Annotated, Union
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
 HERE = Path(__file__).parent
 CENTRAL_REGISTRY_FILE = HERE / "central-registry.schema.json"
@@ -34,9 +34,7 @@ class Definition(BaseModel):
     Useful to annotate aliases or virtual package implementations.
     If no `provides` info is added, the entry is considered canonical.
     """
-    urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = (
-        None
-    )
+    urls: AnyUrl | list[AnyUrl] | dict[str, AnyUrl] | None = None
     """
     Hyperlinks to web locations that provide more information about the definition.
     """
@@ -118,9 +116,7 @@ class _BaseMapping(BaseModel):
     """
     description: str | None = None
     "Free-form field for details about the mapping."
-    urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = (
-        None
-    )
+    urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
     """
     Hyperlinks to web locations that provide more information about the mapping.
     """

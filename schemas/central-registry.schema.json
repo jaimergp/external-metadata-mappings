@@ -51,11 +51,13 @@
         "urls": {
           "anyOf": [
             {
+              "format": "uri",
               "minLength": 1,
               "type": "string"
             },
             {
               "items": {
+                "format": "uri",
                 "minLength": 1,
                 "type": "string"
               },
@@ -63,6 +65,7 @@
             },
             {
               "additionalProperties": {
+                "format": "uri",
                 "minLength": 1,
                 "type": "string"
               },
