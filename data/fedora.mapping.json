@@ -9,12 +9,12 @@
       "specs": []
     },
     {
-      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
+      "id": "pkg:generic/cmake",
       "description": "",
       "specs": []
     },
     {
-      "id": "pkg:generic/does-not-exist",
+      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
       "description": "",
       "specs": []
     },
