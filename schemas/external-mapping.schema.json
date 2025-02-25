@@ -2,7 +2,7 @@
   "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
-    "Mapping": {
+    "MappingWithSpecs": {
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -45,21 +45,6 @@
           "description": "Package specifiers that provide the identifier at `id`.",
           "title": "Specs"
         },
-        "specs_from": {
-          "anyOf": [
-            {
-              "minLength": 1,
-              "pattern": "^(pkg:|virtual:).*",
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
-          "title": "Specs From"
-        },
         "urls": {
           "anyOf": [
             {
@@ -93,7 +78,73 @@
         "id",
         "specs"
       ],
-      "title": "Mapping",
+      "title": "MappingWithSpecs",
+      "type": "object"
+    },
+    "MappingWithSpecsFrom": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "PURL-like identifier, as provided in the central registry,\nbeing mapped to ecosystem specific packages.",
+          "minLength": 1,
+          "pattern": "^(pkg:|virtual:).*",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form field for details about the mapping.",
+          "title": "Description"
+        },
+        "specs_from": {
+          "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
+          "minLength": 1,
+          "pattern": "^(pkg:|virtual:).*",
+          "title": "Specs From",
+          "type": "string"
+        },
+        "urls": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "additionalProperties": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Hyperlinks to web locations that provide more information about the mapping.",
+          "title": "Urls"
+        }
+      },
+      "required": [
+        "id",
+        "specs_from"
+      ],
+      "title": "MappingWithSpecsFrom",
       "type": "object"
     },
     "PackageManager": {
@@ -225,7 +276,14 @@
       "default": [],
       "description": "List of PURL-to-specs mappings.",
       "items": {
-        "$ref": "#/$defs/Mapping"
+        "anyOf": [
+          {
+            "$ref": "#/$defs/MappingWithSpecs"
+          },
+          {
+            "$ref": "#/$defs/MappingWithSpecsFrom"
+          }
+        ]
       },
       "title": "Mappings",
       "type": "array"

@@ -41,5 +41,10 @@ repos:
       - id: sort-dedup
         name: Prevent duplicate entries and sort
         language: python
-        entry: python lint-duplicates-sort.py
+        entry: python scripts/lint-duplicates-sort.py
         files: ^data/.*\.json$
+      - id: find-missing-or-extra
+        name: Find missing or extra entries in mappings
+        language: python
+        entry: python scripts/lint-mapping-entries.py
+        files: ^data/.*\.mapping\.json$

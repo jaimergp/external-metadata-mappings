@@ -1,0 +1,26 @@
+import sys
+import json
+from pathlib import Path
+
+REGISTRY_PATH = Path(__file__).parent.parent / "data" / "registry.json"
+REGISTRY = json.loads(REGISTRY_PATH.read_text())
+ALL_IDs = {item["id"] for item in REGISTRY["definitions"]}
+
+exit_code = 0
+
+for path in sys.argv[1:]:
+    with open(path) as f:
+        data = json.load(f)
+        mapping_ids = {item["id"] for item in data["mappings"]}
+        if missing := ALL_IDs.difference(mapping_ids):
+            print(f"Some IDs are missing in mapping '{path}':")
+            for item in sorted(missing):
+                print("-", item)
+            exit_code += 1
+        if extra := mapping_ids.difference(ALL_IDs):
+            print(f"Some IDs in mapping '{path}' are not recognized:")
+            for item in sorted(extra):
+                print("-", item)
+            exit_code += 2
+
+sys.exit(exit_code)

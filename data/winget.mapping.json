@@ -4,6 +4,11 @@
   "description": "Mapping for the Winget ecosystem",
   "mappings": [
     {
+      "id": "pkg:generic/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs_from": "pkg:github/apache/arrow"
+    },
+    {
       "id": "pkg:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
       "specs": []

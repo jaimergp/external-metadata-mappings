@@ -103,7 +103,7 @@ class SpecsDict(BaseModel):
     """
 
 
-class Mapping(BaseModel):
+class _BaseMapping(BaseModel):
     """ """
 
     model_config: ConfigDict = ConfigDict(
@@ -118,18 +118,28 @@ class Mapping(BaseModel):
     """
     description: str | None = None
     "Free-form field for details about the mapping."
-    specs: Union[NonEmptyString, list[NonEmptyString], SpecsDict] = ...
-    "Package specifiers that provide the identifier at `id`."
-    specs_from: PURLField | None = None
-    """
-    Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.
-    Cannot be used together with `specs`.
-    """
     urls: NonEmptyString | list[NonEmptyString] | dict[str, NonEmptyString] | None = (
         None
     )
     """
     Hyperlinks to web locations that provide more information about the mapping.
+    """
+
+
+class MappingWithSpecs(_BaseMapping):
+    """ """
+
+    specs: Union[NonEmptyString, list[NonEmptyString], SpecsDict] = ...
+    "Package specifiers that provide the identifier at `id`."
+
+
+class MappingWithSpecsFrom(_BaseMapping):
+    """ """
+
+    specs_from: PURLField = ...
+    """
+    Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.
+    Cannot be used together with `specs`.
     """
 
 
@@ -149,7 +159,7 @@ class MappingsModel(BaseModel):
     "Free-form field to add information this mapping."
     package_managers: list[PackageManager] = []
     "List of tools that can be used to install packages in this ecosystem."
-    mappings: list[Mapping] = []
+    mappings: list[MappingWithSpecs | MappingWithSpecsFrom] = []
     "List of PURL-to-specs mappings."
 
 
