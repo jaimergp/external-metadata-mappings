@@ -3,13 +3,12 @@
   "schema_version": 1,
   "definitions": [
     {
-      "id": "pkg:generic/cmake",
-      "description": "CMake is a cross-platform, open-source build system generator."
+      "id": "pkg:generic/arrow",
+      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
     },
     {
-      "id": "pkg:github/Kitware/CMake",
-      "description": "CMake is a cross-platform, open-source build system generator. GitHub mirror.",
-      "provides": "pkg:generic/cmake"
+      "id": "pkg:generic/cmake",
+      "description": "CMake is a cross-platform, open-source build system generator."
     },
     {
       "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
@@ -108,6 +107,11 @@
       "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
     },
     {
+      "id": "pkg:github/Kitware/CMake",
+      "description": "CMake is a cross-platform, open-source build system generator. GitHub mirror.",
+      "provides": "pkg:generic/cmake"
+    },
+    {
       "id": "pkg:github/OpenMathLib/OpenBLAS",
       "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
       "provides": [
@@ -125,7 +129,10 @@
     },
     {
       "id": "pkg:github/apache/arrow",
-      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
+      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics",
+      "provides": [
+        "pkg:generic/arrow"
+      ]
     },
     {
       "id": "virtual:compiler/c",

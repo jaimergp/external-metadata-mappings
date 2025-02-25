@@ -1,4 +1,6 @@
 {
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "Mapping": {
       "additionalProperties": false,
@@ -97,12 +99,6 @@
     "PackageManager": {
       "additionalProperties": false,
       "properties": {
-        "name": {
-          "description": "Name of the package manager",
-          "minLength": 1,
-          "title": "Name",
-          "type": "string"
-        },
         "install_command": {
           "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
           "items": {
@@ -111,6 +107,12 @@
           },
           "title": "Install Command",
           "type": "array"
+        },
+        "name": {
+          "description": "Name of the package manager",
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
         }
       },
       "required": [
@@ -219,15 +221,6 @@
       "description": "Free-form field to add information this mapping.",
       "title": "Description"
     },
-    "package_managers": {
-      "default": [],
-      "description": "List of tools that can be used to install packages in this ecosystem.",
-      "items": {
-        "$ref": "#/$defs/PackageManager"
-      },
-      "title": "Package Managers",
-      "type": "array"
-    },
     "mappings": {
       "default": [],
       "description": "List of PURL-to-specs mappings.",
@@ -236,10 +229,17 @@
       },
       "title": "Mappings",
       "type": "array"
+    },
+    "package_managers": {
+      "default": [],
+      "description": "List of tools that can be used to install packages in this ecosystem.",
+      "items": {
+        "$ref": "#/$defs/PackageManager"
+      },
+      "title": "Package Managers",
+      "type": "array"
     }
   },
   "title": "MappingsModel",
-  "type": "object",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json"
+  "type": "object"
 }

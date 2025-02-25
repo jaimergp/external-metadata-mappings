@@ -1,4 +1,6 @@
 {
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/central-registry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "Definition": {
       "additionalProperties": false,
@@ -109,7 +111,5 @@
     }
   },
   "title": "DefinitionListModel",
-  "type": "object",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/central-registry.schema.json"
+  "type": "object"
 }
