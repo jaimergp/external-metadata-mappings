@@ -27,7 +27,7 @@ class Definition(BaseModel):
     id: PURLField = ...
     "PURL-like identifier."
     description: str | None = None
-    "Free-form field to add some details about the package."
+    "Free-form field to add some details about the package. Allows Markdown."
     provides: PURLField | list[PURLField] | None = None
     """
     List of identifiers this entry connects to.
@@ -115,7 +115,7 @@ class _BaseMapping(BaseModel):
     being mapped to ecosystem specific packages.
     """
     description: str | None = None
-    "Free-form field for details about the mapping."
+    "Free-form field for details about the mapping. Allows Markdown."
     urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
     """
     Hyperlinks to web locations that provide more information about the mapping.
@@ -152,7 +152,7 @@ class MappingsModel(BaseModel):
 
     schema_version: int = Field(1, ge=1, lt=2)
     description: str | None = None
-    "Free-form field to add information this mapping."
+    "Free-form field to add information this mapping. Allows Markdown."
     package_managers: list[PackageManager] = []
     "List of tools that can be used to install packages in this ecosystem."
     mappings: list[MappingWithSpecs | MappingWithSpecsFrom] = []

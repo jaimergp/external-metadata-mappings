@@ -136,7 +136,7 @@
     },
     {
       "id": "virtual:compiler/c",
-      "description": "Compiler for the C language"
+      "description": "Compiler for the C language.\n\nThis is a _longer description_ with **Markdown**."
     },
     {
       "id": "virtual:compiler/cpp",

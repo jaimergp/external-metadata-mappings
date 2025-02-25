@@ -80,6 +80,13 @@ def get_specs(mapping_entry, full_mapping):
     return []
 
 
+def render_description(definition: str):
+    if description := definition.get("description"):
+        st.write("\n".join([f"> {line}" for line in description.splitlines()]))
+    else:
+        st.write("> _No description_")
+
+
 def render_urls(definition):
     if urls := definition.get("urls"):
         st.write("**🔗 Links:**")
@@ -136,7 +143,7 @@ if purl and ecosystem:
     st.write(f"{len(found_mapping_entries)} mapping(s) found for {ecosystem.title()}")
     for m in found_mapping_entries:
         st.write("---")
-        st.write(f"> {m.get('description') or '_No description_'}")
+        render_description(m)
         render_urls(m)
         specs = get_specs(m, full_mapping)
         if specs:
@@ -175,7 +182,7 @@ elif purl:
     for d in registry()["definitions"]:
         if d["id"] == purl:
             st.write(f"### `{d['id']}`")
-            st.write(f"> {d['description'] or '_No description_'}")
+            render_description(d)
             render_urls(d)
             if provides := d.get("provides"):
                 if isinstance(provides, str):
@@ -246,7 +253,7 @@ else:
         with tabs[tab]:
             for value in values:
                 st.write(f"## `{value['id']}`")
-                st.write(f"> {value['description'] or '_No description_'}")
+                render_description(value)
                 render_urls(value)
                 st.button(
                     "View details",

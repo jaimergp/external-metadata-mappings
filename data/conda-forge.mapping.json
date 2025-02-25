@@ -11,7 +11,9 @@
     {
       "id": "pkg:generic/cmake",
       "description": "",
-      "specs": ["cmake"],
+      "specs": [
+        "cmake"
+      ],
       "urls": {
         "feedstock": "https://github.com/conda-forge/cmake-feedstock"
       }

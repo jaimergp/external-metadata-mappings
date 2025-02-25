@@ -22,7 +22,7 @@
             }
           ],
           "default": null,
-          "description": "Free-form field for details about the mapping.",
+          "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
         },
         "specs": {
@@ -107,7 +107,7 @@
             }
           ],
           "default": null,
-          "description": "Free-form field for details about the mapping.",
+          "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
         },
         "specs_from": {
@@ -281,7 +281,7 @@
         }
       ],
       "default": null,
-      "description": "Free-form field to add information this mapping.",
+      "description": "Free-form field to add information this mapping. Allows Markdown.",
       "title": "Description"
     },
     "mappings": {

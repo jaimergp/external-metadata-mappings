@@ -22,7 +22,7 @@
             }
           ],
           "default": null,
-          "description": "Free-form field to add some details about the package.",
+          "description": "Free-form field to add some details about the package. Allows Markdown.",
           "title": "Description"
         },
         "provides": {
