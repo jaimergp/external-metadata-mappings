@@ -12,6 +12,7 @@ for path in sys.argv[1:]:
     with open(path) as f:
         data = json.load(f)
         mapping_ids = {item["id"] for item in data["mappings"]}
+        specs_from_ids = {item["specs_from"] for item in data["mappings"] if item.get("specs_from")}
         if missing := ALL_IDs.difference(mapping_ids):
             print(f"Some IDs are missing in mapping '{path}':")
             for item in sorted(missing):
@@ -20,6 +21,11 @@ for path in sys.argv[1:]:
         if extra := mapping_ids.difference(ALL_IDs):
             print(f"Some IDs in mapping '{path}' are not recognized:")
             for item in sorted(extra):
+                print("-", item)
+            exit_code = 1
+        if missing_from := specs_from_ids.difference(ALL_IDs):
+            print(f"Some IDs used as 'specs_from' values in mapping '{path}' are not recognized:")
+            for item in sorted(missing_from):
                 print("-", item)
             exit_code = 1
 
