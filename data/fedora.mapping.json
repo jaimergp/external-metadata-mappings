@@ -9,32 +9,12 @@
       "specs": []
     },
     {
-      "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": []
-    },
-    {
       "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
       "description": "",
       "specs": []
     },
     {
-      "id": "pkg:generic/openblas",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/Kitware/CMake",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/OpenMathLib/OpenBLAS",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/Reference-LAPACK/lapack",
+      "id": "pkg:generic/does-not-exist",
       "description": "",
       "specs": []
     },
@@ -233,6 +213,11 @@
       "specs": "ninja-build"
     },
     {
+      "id": "pkg:generic/openblas",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "pkg:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": {
@@ -286,6 +271,21 @@
           "zlib-ng-compat"
         ]
       }
+    },
+    {
+      "id": "pkg:github/Kitware/CMake",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/OpenMathLib/OpenBLAS",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "",
+      "specs": []
     },
     {
       "id": "pkg:github/apache/arrow",
