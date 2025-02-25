@@ -63,7 +63,7 @@ def parse_url():
     purl = params.pop("purl", None)
     ecosystem = params.pop("ecosystem", None)
     if params:
-        st.warning(f"URL contains unknown elements: {st.query_params.to_dict}")
+        st.warning(f"URL contains unknown elements: {params}")
         st.stop()
     return {"purl": purl, "ecosystem": ecosystem}
 
@@ -155,7 +155,7 @@ elif purl:
             if provides := d.get("provides"):
                 if isinstance(provides, str):
                     provides = [provides]
-                st.write("Provides:")
+                st.write("**📤 Provides:**")
                 for prov in provides:
                     st.button(
                         prov,
@@ -167,7 +167,7 @@ elif purl:
         if purl in d.get("provides", ()):
             provided_by.append(d["id"])
     if provided_by:
-        st.write("Provided by:")
+        st.write("**📥 Provided by:**")
         for prov in provided_by:
             st.button(
                 prov,
@@ -176,6 +176,18 @@ elif purl:
                 kwargs={"purl": prov},
                 icon="🔗",
             )
+    if available_ecos := [eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]:
+        st.write("**Mappings found for:**")
+        for eco in available_ecos:
+            st.button(
+                eco,
+                key=f"{d}-{purl}-{eco}",
+                on_click=goto,
+                kwargs={"purl": purl, "ecosystem": eco},
+                icon="🔗",
+            )
+    else:
+        st.write("> No mappings available")
 # All identifiers list
 else:
     st.query_params.clear()
@@ -186,8 +198,10 @@ else:
             providers.append(d)
         else:
             canonical.append(d)
+    st.write("# Canonical identifiers")
     st.write(f"We found {len(canonical)} canonical definitions.")
     for can in canonical:
+        st.write("---")
         st.write(f"### `{can["id"]}`")
         st.write(f"{can["description"] or "_no description_"}")
         provided_by = []
@@ -198,7 +212,7 @@ else:
             if can["id"] in provides:
                 provided_by.append(provider["id"])
         if provided_by:
-            st.write("Provided by:")
+            st.write("**📥 Provided by:**")
             for prov in provided_by:
                 st.button(
                     prov,
