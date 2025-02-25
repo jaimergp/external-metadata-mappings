@@ -5,8 +5,23 @@
   "mappings": [
     {
       "id": "pkg:generic/arrow",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs_from": "pkg:github/apache/arrow"
+    },
+    {
+      "id": "pkg:generic/cmake",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
+      "description": "",
+      "specs": []
     },
     {
       "id": "pkg:generic/freetype",
@@ -94,6 +109,11 @@
       "specs": "Ninja-build.Ninja"
     },
     {
+      "id": "pkg:generic/openblas",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "pkg:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": []
@@ -116,6 +136,21 @@
     {
       "id": "pkg:generic/zlib",
       "description": "General-purpose lossless data-compression library, from zlib.net",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/Kitware/CMake",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/OpenMathLib/OpenBLAS",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "",
       "specs": []
     },
     {

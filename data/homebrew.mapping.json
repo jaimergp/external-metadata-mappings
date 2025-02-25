@@ -4,6 +4,21 @@
   "description": "Mapping for the Homebrew ecosystem",
   "mappings": [
     {
+      "id": "pkg:generic/arrow",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/cmake",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "pkg:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
       "specs": "freetype"
@@ -89,6 +104,11 @@
       "specs": "ninja"
     },
     {
+      "id": "pkg:generic/openblas",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "pkg:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": "openjpeg"
@@ -117,6 +137,21 @@
       "id": "pkg:generic/zlib",
       "description": "zlib data compression library for the next generation systems. From zlib-ng/zlib-ng.",
       "specs": "zlib-ng"
+    },
+    {
+      "id": "pkg:github/Kitware/CMake",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/OpenMathLib/OpenBLAS",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "",
+      "specs": []
     },
     {
       "id": "pkg:github/apache/arrow",

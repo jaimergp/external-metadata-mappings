@@ -16,11 +16,11 @@ for path in sys.argv[1:]:
             print(f"Some IDs are missing in mapping '{path}':")
             for item in sorted(missing):
                 print("-", item)
-            exit_code += 1
+            exit_code = 1
         if extra := mapping_ids.difference(ALL_IDs):
             print(f"Some IDs in mapping '{path}' are not recognized:")
             for item in sorted(extra):
                 print("-", item)
-            exit_code += 2
+            exit_code = 1
 
 sys.exit(exit_code)
