@@ -120,16 +120,16 @@ with st.sidebar:
         key="purl",
         placeholder="Choose a PURL identifier",
     )
-    ecosystem = st.selectbox(
-        "Ecosystem",
-        options=[eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]
+    eco_options = (
+        [eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]
         if purl
-        else [],
+        else ecosystems())
+    ecosystem = st.selectbox(
+        "Ecosystem",options=eco_options,
         format_func=lambda value: mapping(value)["name"],
         index=None,
         key="ecosystem",
-        placeholder="Choose a target ecosystem",
-        help="Target ecosystem for which to show the mapping. Only enabled if mappings are found.",
+        placeholder=f"{len(eco_options)} mappings available" if purl else "Or browse a mapping",
     )
 
 # Mappings detail page
@@ -224,6 +224,26 @@ elif purl:
             )
     else:
         st.write("> No mappings available")
+elif ecosystem:
+    st.query_params.clear()
+    st.query_params.ecosystem = ecosystem
+    full_mapping = mapping(ecosystem)
+    st.write(f"# {full_mapping.get("name") or ecosystem}")
+    render_description(full_mapping)
+    all_mappings = full_mapping["mappings"]
+    filled_mappings = [m for m in all_mappings if m.get("specs") or m.get("specs_from")]
+    unique_ids = list(dict.fromkeys([m["id"] for m in filled_mappings]))
+    st.write(f"Found **{len(all_mappings)}** mapping entries, "
+             f"of which **{len(filled_mappings)}** are fully specified, "
+             f"which correspond to **{len(unique_ids)}** unique IDs:")
+    for m in unique_ids:
+        st.button(
+            m,
+            key=m,
+            on_click=goto,
+            kwargs={"purl": m, "ecosystem": ecosystem},
+            icon="🔗",
+        )
 # All identifiers list
 else:
     st.query_params.clear()
