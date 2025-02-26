@@ -162,6 +162,12 @@
     "PackageManager": {
       "additionalProperties": false,
       "properties": {
+        "name": {
+          "description": "Name of the package manager",
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
         "install_command": {
           "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
           "items": {
@@ -170,12 +176,6 @@
           },
           "title": "Install Command",
           "type": "array"
-        },
-        "name": {
-          "description": "Name of the package manager",
-          "minLength": 1,
-          "title": "Name",
-          "type": "string"
         }
       },
       "required": [
@@ -271,6 +271,12 @@
       "title": "Schema Version",
       "type": "integer"
     },
+    "name": {
+      "description": "Name of the schema",
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
     "description": {
       "anyOf": [
         {
@@ -285,7 +291,6 @@
       "title": "Description"
     },
     "mappings": {
-      "default": [],
       "description": "List of PURL-to-specs mappings.",
       "items": {
         "anyOf": [
@@ -301,7 +306,6 @@
       "type": "array"
     },
     "package_managers": {
-      "default": [],
       "description": "List of tools that can be used to install packages in this ecosystem.",
       "items": {
         "$ref": "#/$defs/PackageManager"
@@ -310,6 +314,11 @@
       "type": "array"
     }
   },
+  "required": [
+    "name",
+    "package_managers",
+    "mappings"
+  ],
   "title": "MappingsModel",
   "type": "object"
 }

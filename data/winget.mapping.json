@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/external-mapping.schema.json",
   "schema_version": 1,
+  "name": "Winget",
   "description": "Mapping for the Winget ecosystem",
   "mappings": [
     {
@@ -196,13 +197,13 @@
   ],
   "package_managers": [
     {
+      "name": "winget",
       "install_command": [
         "winget",
         "install",
         "--exact",
         "--id"
-      ],
-      "name": "winget"
+      ]
     }
   ]
 }

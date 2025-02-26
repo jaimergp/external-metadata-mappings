@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/external-mapping.schema.json",
   "schema_version": 1,
+  "name": "conda-forge",
   "description": "Mapping for the conda-forge ecosystem",
   "mappings": [
     {
@@ -333,38 +334,38 @@
   ],
   "package_managers": [
     {
+      "name": "conda",
       "install_command": [
         "conda",
         "install",
         "--yes",
         "--channel=conda-forge"
-      ],
-      "name": "conda"
+      ]
     },
     {
+      "name": "mamba",
       "install_command": [
         "mamba",
         "install",
         "--yes",
         "--channel=conda-forge"
-      ],
-      "name": "mamba"
+      ]
     },
     {
+      "name": "micromamba",
       "install_command": [
         "micromamba",
         "install",
         "--yes",
         "--channel=conda-forge"
-      ],
-      "name": "micromamba"
+      ]
     },
     {
+      "name": "pixi",
       "install_command": [
         "pixi",
         "add"
-      ],
-      "name": "pixi"
+      ]
     }
   ]
 }

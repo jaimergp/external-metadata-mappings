@@ -41,7 +41,6 @@ def all_purls():
         yield d["id"]
 
 
-@st.cache_resource
 def mapping(ecosystem):
     return json.loads((DATA / f"{ecosystem}.mapping.json").read_text())
 
@@ -126,6 +125,7 @@ with st.sidebar:
         options=[eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]
         if purl
         else [],
+        format_func=lambda value: mapping(value)["name"],
         index=None,
         key="ecosystem",
         placeholder="Choose a target ecosystem",
@@ -140,7 +140,9 @@ if purl and ecosystem:
     full_mapping = mapping(ecosystem)
     found_mapping_entries = list(mappings_for_purl(purl, ecosystem))
     st.write(f"# `{purl}`")
-    st.write(f"{len(found_mapping_entries)} mapping(s) found for {ecosystem.title()}:")
+    st.write(
+        f"{len(found_mapping_entries)} mapping(s) found for {full_mapping['name']}:"
+    )
     for i, m in enumerate(found_mapping_entries, 1):
         st.write(f"### {i}")
         render_description(m)

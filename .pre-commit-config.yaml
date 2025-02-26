@@ -13,7 +13,7 @@ repos:
       - id: check-merge-conflict
       - id: check-json
       - id: pretty-format-json
-        args: [--top-keys, "id,$id,$schema,schema_version", --indent=2, --autofix]
+        args: [--top-keys, "id,$id,$schema,schema_version,name", --indent=2, --autofix]
   - repo: meta
     # see https://pre-commit.com/#meta-hooks
     hooks:

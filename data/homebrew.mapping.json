@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/external-mapping.schema.json",
   "schema_version": 1,
+  "name": "Homebrew",
   "description": "Mapping for the Homebrew ecosystem",
   "mappings": [
     {
@@ -196,11 +197,11 @@
   ],
   "package_managers": [
     {
+      "name": "brew",
       "install_command": [
         "brew",
         "install"
-      ],
-      "name": "brew"
+      ]
     }
   ]
 }

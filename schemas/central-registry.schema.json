@@ -107,7 +107,6 @@
       "type": "integer"
     },
     "definitions": {
-      "default": [],
       "description": "List of PURL definitions currently recognized.",
       "items": {
         "$ref": "#/$defs/Definition"
@@ -116,6 +115,9 @@
       "type": "array"
     }
   },
+  "required": [
+    "definitions"
+  ],
   "title": "DefinitionListModel",
   "type": "object"
 }

@@ -50,6 +50,13 @@ class DefinitionListModel(BaseModel):
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
         use_attribute_docstrings=True,
+        json_schema_extra={
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": (
+                "https://github.com/python/peps/blob/main/peps/pep-0XXX/"
+                f"{CENTRAL_REGISTRY_FILE.name}"
+            ),
+        },
     )
 
     schema_: str = Field(default="", alias="$schema")
@@ -57,7 +64,7 @@ class DefinitionListModel(BaseModel):
 
     schema_version: int = Field(1, ge=1, lt=2)
 
-    definitions: list[Definition] = []
+    definitions: list[Definition]
     "List of PURL definitions currently recognized."
 
 
@@ -145,33 +152,43 @@ class MappingsModel(BaseModel):
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
         use_attribute_docstrings=True,
+        json_schema_extra={
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": (
+                "https://github.com/python/peps/blob/main/peps/pep-0XXX/"
+                f"{CENTRAL_REGISTRY_FILE.name}"
+            ),
+        },
     )
 
     schema_: str = Field(default="", alias="$schema")
     "URL of the mappings schema in use for the document."
-
     schema_version: int = Field(1, ge=1, lt=2)
+    name: NonEmptyString = ...
+    "Name of the schema"
     description: str | None = None
     "Free-form field to add information this mapping. Allows Markdown."
-    package_managers: list[PackageManager] = []
+    package_managers: list[PackageManager]
     "List of tools that can be used to install packages in this ecosystem."
-    mappings: list[MappingWithSpecs | MappingWithSpecsFrom] = []
+    mappings: list[MappingWithSpecs | MappingWithSpecsFrom]
     "List of PURL-to-specs mappings."
 
 
 def main():
     with CENTRAL_REGISTRY_FILE.open(mode="w+") as f:
-        model = DefinitionListModel()
-        obj = model.model_json_schema()
-        obj["$schema"] = "https://json-schema.org/draft/2020-12/schema"
-        obj["$id"] = (
-            f"https://github.com/python/peps/blob/main/peps/pep-0XXX/{CENTRAL_REGISTRY_FILE.name}"
+        model = DefinitionListModel(
+            definitions=[],
         )
+        obj = model.model_json_schema()
         f.write(json.dumps(obj, indent=2))
         f.write("\n")
 
     with MAPPING_SCHEMA_FILE.open(mode="w+") as f:
-        model = MappingsModel()
+        model = MappingsModel(
+            name="doesnotmatter",
+            package_managers=[],
+            mappings=[],
+        )
         obj = model.model_json_schema()
         obj["$schema"] = "https://json-schema.org/draft/2020-12/schema"
         obj["$id"] = (

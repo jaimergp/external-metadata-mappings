@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/external-mapping.schema.json",
   "schema_version": 1,
+  "name": "Fedora",
   "description": "Mapping for the Fedora distro",
   "mappings": [
     {
@@ -351,11 +352,11 @@
   ],
   "package_managers": [
     {
+      "name": "dnf",
       "install_command": [
         "dnf",
         "install"
-      ],
-      "name": "dnf"
+      ]
     }
   ]
 }
