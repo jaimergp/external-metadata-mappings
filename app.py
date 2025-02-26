@@ -140,9 +140,9 @@ if purl and ecosystem:
     full_mapping = mapping(ecosystem)
     found_mapping_entries = list(mappings_for_purl(purl, ecosystem))
     st.write(f"# `{purl}`")
-    st.write(f"{len(found_mapping_entries)} mapping(s) found for {ecosystem.title()}")
-    for m in found_mapping_entries:
-        st.write("---")
+    st.write(f"{len(found_mapping_entries)} mapping(s) found for {ecosystem.title()}:")
+    for i, m in enumerate(found_mapping_entries, 1):
+        st.write(f"### {i}")
         render_description(m)
         render_urls(m)
         specs = get_specs(m, full_mapping)
@@ -169,11 +169,11 @@ if purl and ecosystem:
                 st.write(
                     f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```"
                 )
-
             with st.expander("Raw data"):
                 st.code(json.dumps(m, indent=2), language="json")
         else:
             st.write("Not available in this ecosystem.")
+        st.write("---")
 # Identifier detail page
 elif purl:
     st.query_params.clear()
