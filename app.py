@@ -139,10 +139,10 @@ if purl and ecosystem:
     st.query_params.ecosystem = ecosystem
     full_mapping = mapping(ecosystem)
     found_mapping_entries = list(mappings_for_purl(purl, ecosystem))
-    st.write(f"# `{purl}`")
-    st.write(
-        f"{len(found_mapping_entries)} mapping(s) found for {full_mapping['name']}:"
-    )
+    st.write(f"# {full_mapping.get('name') or ecosystem}")
+    render_description(full_mapping)
+    st.write(f"## `{purl}`")
+    st.write(f"{len(found_mapping_entries)} mapping(s) found:")
     for i, m in enumerate(found_mapping_entries, 1):
         st.write(f"### {i}")
         render_description(m)
