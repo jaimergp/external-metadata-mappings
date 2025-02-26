@@ -52,7 +52,9 @@
     {
       "id": "pkg:generic/libjpeg",
       "description": "A JPEG image codec that uses SIMD instructions",
-      "specs": ["main/libjpeg-turbo"]
+      "specs": [
+        "main/libjpeg-turbo"
+      ]
     },
     {
       "id": "pkg:generic/libpq",
@@ -72,7 +74,9 @@
     {
       "id": "pkg:generic/libwebp",
       "description": "WebP image library.",
-      "specs": ["main/libwebp"]
+      "specs": [
+        "main/libwebp"
+      ]
     },
     {
       "id": "pkg:generic/libxcb",
@@ -82,7 +86,9 @@
     {
       "id": "pkg:generic/libxml2",
       "description": "XML processor developed by The GNOME Project",
-      "specs": ["main/libxml2"]
+      "specs": [
+        "main/libxml2"
+      ]
     },
     {
       "id": "pkg:generic/libxslt",
@@ -97,7 +103,9 @@
     {
       "id": "pkg:generic/make",
       "description": "GNU Make is a Build automation tool.",
-      "specs": ["main/make"]
+      "specs": [
+        "main/make"
+      ]
     },
     {
       "id": "pkg:generic/ninja",
@@ -132,12 +140,16 @@
     {
       "id": "pkg:generic/pkg-config",
       "description": "A helper tool used when compiling applications and libraries.",
-      "specs": ["main/pkg-config"]
+      "specs": [
+        "main/pkg-config"
+      ]
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "pkg-config-lite is based on pkg-config, but is built with a glib code snippet which eliminates the glib dependency",
-      "specs": ["extras/pkg-config-lite"]
+      "specs": [
+        "extras/pkg-config-lite"
+      ]
     },
     {
       "id": "pkg:generic/tk",
@@ -147,7 +159,9 @@
     {
       "id": "pkg:generic/zlib",
       "description": "Massively spiffy yet delicately unobtrusive compression library.",
-      "specs": ["extras/zlib"]
+      "specs": [
+        "extras/zlib"
+      ]
     },
     {
       "id": "pkg:github/Kitware/CMake",
