@@ -220,7 +220,7 @@ elif purl:
         st.write("**📍 Mappings found for:**")
         for eco in available_ecos:
             st.button(
-                eco,
+                mapping(eco)["name"],
                 key=f"{d}-{purl}-{eco}",
                 on_click=goto,
                 kwargs={"purl": purl, "ecosystem": eco},
