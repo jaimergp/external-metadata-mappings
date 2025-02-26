@@ -233,7 +233,12 @@ elif ecosystem:
     st.write(f"# {full_mapping.get('name') or ecosystem}")
     render_description(full_mapping)
     all_mappings = full_mapping["mappings"]
-    filled_mappings = [m for m in all_mappings if m.get("specs") or m.get("specs_from")]
+    filled_mappings, empty_mappings = [], []
+    for m in all_mappings:
+        if m.get("specs") or m.get("specs_from"):
+            filled_mappings.append(m)
+        else:
+            empty_mappings.append(m)
     unique_ids = list(dict.fromkeys([m["id"] for m in filled_mappings]))
     st.write(
         f"Found **{len(all_mappings)}** mapping entries, "
@@ -248,6 +253,16 @@ elif ecosystem:
             kwargs={"purl": m, "ecosystem": ecosystem},
             icon="🔗",
         )
+    if empty_mappings:
+        st.write("The following entries are not mapped:")
+        for m in empty_mappings:
+            st.button(
+                m["id"],
+                key=m["id"],
+                on_click=goto,
+                kwargs={"purl": m["id"]},
+                icon="🔗",
+            )
 # All identifiers list
 else:
     st.query_params.clear()
