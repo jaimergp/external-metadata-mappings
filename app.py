@@ -255,8 +255,11 @@ else:
     canonical, providers = {"generic": [], "virtual": []}, []
     count = 0
     for d in definitions:
-        if d.get("provides"):
-            providers.append(d)
+        if provides := d.get("provides"):
+            if isinstance(provides, str):
+                provides = [provides]
+            if any(item.startswith("pkg:") for item in provides):
+                providers.append(d)
         elif d["id"].startswith("pkg:generic/"):
             canonical["generic"].append(d)
             count += 1
