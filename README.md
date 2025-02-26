@@ -21,3 +21,7 @@ The `scripts/` folder hosts custom linting logic used in the `pre-commit` config
 - Many mappings can exist, each maintained by different communities if necessary. They are meant to refer to the single registry as the source of canonical identifiers that can be mapped to ecosystem-native package specifiers.
 - A canonical identifier is defined in a registry by an `definitions` entry that does not provide any other `pkg:` identifier. If it only provides one or more `virtual:` identifiers, it is still considered canonical.
 - Mappings are only required to provide mapped values for canonical identifiers. They can still provide for non-canonical ones, but it's not necessary. If the ecosystem has not packaged the project behind a canonical identifier, then `specs` must be an empty list.
+
+## Open questions
+
+- Should an ecosystem map `virtual:` packages, their immediate `pkg:` providers, or both?
