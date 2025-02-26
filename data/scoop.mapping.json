@@ -12,17 +12,12 @@
     {
       "id": "pkg:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
-      "specs_from": "pkg:github/apache/arrow"
+      "specs": []
     },
     {
       "id": "pkg:generic/cmake",
       "description": "Family of tools designed to build, test and package software",
       "specs": "main/cmake"
-    },
-    {
-      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
-      "description": "",
-      "specs_from": "pkg:generic/cmake"
     },
     {
       "id": "pkg:generic/freetype",
@@ -164,22 +159,8 @@
       ]
     },
     {
-      "id": "pkg:github/Kitware/CMake",
-      "specs_from": "pkg:generic/cmake"
-    },
-    {
-      "id": "pkg:github/OpenMathLib/OpenBLAS",
-      "description": "",
-      "specs": []
-    },
-    {
       "id": "pkg:github/Reference-LAPACK/lapack",
       "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/apache/arrow",
-      "description": "C++ libraries for Apache Arrow core",
       "specs": []
     },
     {

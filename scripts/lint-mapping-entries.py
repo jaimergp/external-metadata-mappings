@@ -6,7 +6,11 @@ REGISTRY_PATH = Path(__file__).parent.parent / "data" / "registry.json"
 REGISTRY = json.loads(REGISTRY_PATH.read_text())
 ALL_IDs = {item["id"] for item in REGISTRY["definitions"]}
 CANONICAL_IDs = {
-    item["id"] for item in REGISTRY["definitions"] if not item.get("provides")
+    # Canonical IDs are those that do not implement any pkg: PURL; virtual: ones are ok
+    item["id"]
+    for item in REGISTRY["definitions"]
+    if not item.get("provides")
+    or all(item.startswith("virtual:") for item in item.get("provides"))
 }
 
 exit_code = 0
@@ -23,8 +27,8 @@ for path in sys.argv[1:]:
             for item in sorted(missing):
                 print("-", item)
             exit_code = 1
-        if extra := mapping_ids.difference(ALL_IDs):
-            print(f"Some IDs in mapping '{path}' are not recognized:")
+        if extra := mapping_ids.difference(CANONICAL_IDs):
+            print(f"Some IDs in mapping '{path}' are not recognized as canonical:")
             for item in sorted(extra):
                 print("-", item)
             exit_code = 1

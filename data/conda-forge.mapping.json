@@ -6,8 +6,13 @@
   "mappings": [
     {
       "id": "pkg:generic/arrow",
-      "description": "",
-      "specs_from": "pkg:github/apache/arrow"
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": "libarrow"
+    },
+    {
+      "id": "pkg:generic/arrow",
+      "description": "C++ libraries for Apache Arrow",
+      "specs": "libarrow-all"
     },
     {
       "id": "pkg:generic/cmake",
@@ -15,14 +20,6 @@
       "specs": [
         "cmake"
       ],
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/cmake-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
-      "description": "",
-      "specs_from": "pkg:generic/cmake",
       "urls": {
         "feedstock": "https://github.com/conda-forge/cmake-feedstock"
       }
@@ -229,29 +226,9 @@
       "specs": "zlib-ng"
     },
     {
-      "id": "pkg:github/Kitware/CMake",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/OpenMathLib/OpenBLAS",
-      "description": "",
-      "specs": []
-    },
-    {
       "id": "pkg:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
-    },
-    {
-      "id": "pkg:github/apache/arrow",
-      "description": "C++ libraries for Apache Arrow core",
-      "specs": "libarrow"
-    },
-    {
-      "id": "pkg:github/apache/arrow",
-      "description": "C++ libraries for Apache Arrow",
-      "specs": "libarrow-all"
     },
     {
       "id": "virtual:compiler/c",

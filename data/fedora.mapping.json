@@ -10,12 +10,20 @@
       "specs": []
     },
     {
-      "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": []
+      "id": "pkg:generic/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": {
+        "host": [
+          "libarrow",
+          "libarrow-devel"
+        ],
+        "run": [
+          "libarrow"
+        ]
+      }
     },
     {
-      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
+      "id": "pkg:generic/cmake",
       "description": "",
       "specs": []
     },
@@ -274,32 +282,9 @@
       }
     },
     {
-      "id": "pkg:github/Kitware/CMake",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/OpenMathLib/OpenBLAS",
-      "description": "",
-      "specs": []
-    },
-    {
       "id": "pkg:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
-    },
-    {
-      "id": "pkg:github/apache/arrow",
-      "description": "C++ libraries for Apache Arrow core",
-      "specs": {
-        "host": [
-          "libarrow",
-          "libarrow-devel"
-        ],
-        "run": [
-          "libarrow"
-        ]
-      }
     },
     {
       "id": "virtual:compiler/c",
