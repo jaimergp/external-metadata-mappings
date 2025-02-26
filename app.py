@@ -226,8 +226,6 @@ elif purl:
                 kwargs={"purl": purl, "ecosystem": eco},
                 icon="🔗",
             )
-    else:
-        st.write("> No mappings available")
 elif ecosystem:
     st.query_params.clear()
     st.query_params.ecosystem = ecosystem
