@@ -122,6 +122,11 @@
       "specs": []
     },
     {
+      "id": "pkg:generic/python",
+      "description": "The Python interpreter (3.13)",
+      "specs": "python313"
+    },
+    {
       "id": "pkg:generic/tk",
       "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
       "specs": []

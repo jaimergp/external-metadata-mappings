@@ -120,6 +120,11 @@
       "specs": []
     },
     {
+      "id": "pkg:generic/python",
+      "description": "",
+      "specs": "Python.Python.3.11"
+    },
+    {
       "id": "pkg:generic/tk",
       "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
       "specs": "Magicsplat.TclTk"

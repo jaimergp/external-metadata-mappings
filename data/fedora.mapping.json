@@ -20,7 +20,7 @@
     {
       "id": "pkg:generic/cmake",
       "description": "",
-      "specs": []
+      "specs": "cmake"
     },
     {
       "id": "pkg:generic/freetype",
@@ -265,6 +265,15 @@
       "id": "pkg:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
       "specs": "pkgconf-pkg-config"
+    },
+    {
+      "id": "pkg:generic/python",
+      "description": "The Python interpreter",
+      "specs": {
+        "build": "python-devel",
+        "host": "python-devel",
+        "run": "python"
+      }
     },
     {
       "id": "pkg:generic/tk",

@@ -99,6 +99,10 @@
       "description": "pkg-config is a helper tool used when compiling applications and libraries"
     },
     {
+      "id": "pkg:generic/python",
+      "description": "The Python interpreter"
+    },
+    {
       "id": "pkg:generic/tk",
       "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches"
     },

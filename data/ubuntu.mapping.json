@@ -265,6 +265,11 @@
       "specs": "pkgconf"
     },
     {
+      "id": "pkg:generic/python",
+      "description": "The Python interpreter",
+      "specs": "python3"
+    },
+    {
       "id": "pkg:generic/tk",
       "description": "Toolkit for Tcl and X11 (default version) - windowing shell",
       "specs": {
