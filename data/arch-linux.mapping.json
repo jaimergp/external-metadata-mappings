@@ -1,8 +1,8 @@
 {
   "$schema": "../schemas/external-mapping.schema.json",
   "schema_version": 1,
-  "name": "Fedora",
-  "description": "Mapping for the Fedora distro",
+  "name": "Arch Linux",
+  "description": "Mapping for the Arch Linux distro",
   "mappings": [
     {
       "id": "pkg:generic/arrow",
