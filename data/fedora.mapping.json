@@ -6,11 +6,6 @@
   "mappings": [
     {
       "id": "pkg:generic/arrow",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": {
         "host": [
@@ -69,7 +64,15 @@
     {
       "id": "pkg:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
-      "specs": "libffi"
+      "specs": {
+        "host": [
+          "libffi",
+          "libffi-devel"
+        ],
+        "run": [
+          "libffi"
+        ]
+      }
     },
     {
       "id": "pkg:generic/libffi",
@@ -175,7 +178,15 @@
     {
       "id": "pkg:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
-      "specs": "libxml2"
+      "specs": {
+        "host": [
+          "libxml2",
+          "libxml2-devel"
+        ],
+        "run": [
+          "libxml2"
+        ]
+      }
     },
     {
       "id": "pkg:generic/libxml2",
@@ -317,10 +328,10 @@
       "description": "The netlib implementation for BLAS",
       "specs": {
         "host": [
-          "blas",
-          "blas-devel"
+          "flexiblas",
+          "flexiblas-devel"
         ],
-        "run": "blas"
+        "run": "flexiblas"
       }
     },
     {
@@ -328,10 +339,10 @@
       "description": "The netlib implementation for lapack",
       "specs": {
         "host": [
-          "lapack",
-          "lapack-devel"
+          "flexiblas",
+          "flexiblas-devel"
         ],
-        "run": "lapack"
+        "run": "flexiblas"
       }
     }
   ],
@@ -339,8 +350,10 @@
     {
       "name": "dnf",
       "install_command": [
+        "sudo",
         "dnf",
-        "install"
+        "install",
+        "-y"
       ]
     }
   ]

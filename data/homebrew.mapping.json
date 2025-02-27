@@ -6,18 +6,13 @@
   "mappings": [
     {
       "id": "pkg:generic/arrow",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": "apache-arrow"
     },
     {
       "id": "pkg:generic/cmake",
       "description": "",
-      "specs": []
+      "specs": "cmake"
     },
     {
       "id": "pkg:generic/freetype",
