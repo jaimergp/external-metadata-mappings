@@ -50,6 +50,11 @@
       "specs": "dev-db/postgresql"
     },
     {
+      "id": "pkg:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": []
+    },
+    {
       "id": "pkg:generic/libtiff",
       "description": "Tag Image File Format (TIFF) library",
       "specs": "media-libs/tiff"
