@@ -139,9 +139,19 @@
       "specs": "sys-devel/gcc"
     },
     {
+      "id": "virtual:compiler/c",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang"
+    },
+    {
       "id": "virtual:compiler/cpp",
       "description": "The GNU Compiler Collection",
       "specs": "sys-devel/gcc[cxx]"
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang"
     },
     {
       "id": "virtual:compiler/fortran",
@@ -149,9 +159,19 @@
       "specs": "sys-devel/gcc[fortran]"
     },
     {
+      "id": "virtual:compiler/fortran",
+      "description": "LLVM's Fortran frontend",
+      "specs": "llvm-core/flang"
+    },
+    {
       "id": "virtual:compiler/rust",
       "description": "Systems programming language originally developed by Mozilla",
       "specs": "dev-lang/rust"
+    },
+    {
+      "id": "virtual:compiler/rust-bin",
+      "description": "Systems programming language from Mozilla",
+      "specs": "dev-lang/rust-bin"
     },
     {
       "id": "virtual:interface/blas",
