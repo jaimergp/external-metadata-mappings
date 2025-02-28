@@ -1,0 +1,206 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "name": "Gentoo Linux",
+  "description": "Mapping for Gentoo Linux",
+  "mappings": [
+    {
+      "id": "pkg:generic/arrow",
+      "description": "A cross-language development platform for in-memory data",
+      "specs": "dev-libs/apache-arrow"
+    },
+    {
+      "id": "pkg:generic/cmake",
+      "description": "Cross platform Make",
+      "specs": "dev-build/cmake"
+    },
+    {
+      "id": "pkg:generic/freetype",
+      "description": "High-quality and portable font engine",
+      "specs": "media-libs/freetype:2"
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "Library for arbitrary-precision arithmetic on different type of numbers",
+      "specs": "dev-libs/gmp"
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "A lightweight, speed optimized color management engine",
+      "specs": "media-libs/lcms:2"
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "a portable, high level programming interface to various calling conventions",
+      "specs": "dev-libs/libffi"
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": "media-gfx/libimagequant"
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "MMX, SSE, and SSE2 SIMD accelerated JPEG library",
+      "specs": "media-libs/libjpeg-turbo"
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "PostgreSQL RDBMS",
+      "specs": "dev-db/postgresql"
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "Tag Image File Format (TIFF) library",
+      "specs": "media-libs/tiff"
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "A lossy image compression format",
+      "specs": "media-libs/libwebp"
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "X C-language Bindings library",
+      "specs": "x11-libs/libxcb"
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "XML C parser and toolkit",
+      "specs": "dev-libs/libxml2"
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "XSLT libraries and tools",
+      "specs": "dev-libs/libxslt"
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "YAML 1.1 parser and emitter written in C",
+      "specs": "dev-libs/libyaml"
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "Standard tool to compile source trees",
+      "specs": "dev-build/make"
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "ninja symlinks",
+      "specs": "app-alternatives/ninja"
+    },
+    {
+      "id": "pkg:generic/openblas",
+      "description": "Optimized BLAS library based on GotoBLAS2",
+      "specs": "sci-libs/openblas"
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "Open-source JPEG 2000 library",
+      "specs": "media-libs/openjpeg:2"
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "Robust, full-featured Open Source Toolkit for the Transport Layer Security (TLS)",
+      "specs": "dev-libs/openssl"
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "Virtual for the pkg-config implementation",
+      "specs": "virtual/pkgconfig[native-symlinks]"
+    },
+    {
+      "id": "pkg:generic/python",
+      "description": "An interpreted, interactive, object-oriented programming language",
+      "specs": {
+        "build": [],
+        "host": [],
+        "run": "dev-lang/python"
+      }
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "Tk Widget Set",
+      "specs": "dev-lang/tk"
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "Standard (de)compression library",
+      "specs": "sys-libs/zlib"
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "BLAS, CBLAS, LAPACK, LAPACKE reference implementations",
+      "specs": "sci-libs/lapack"
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc"
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang"
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc[cxx]"
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang"
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc[fortran]"
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "LLVM's Fortran frontend",
+      "specs": "llvm-core/flang"
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "Systems programming language originally developed by Mozilla",
+      "specs": "dev-lang/rust"
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "Systems programming language from Mozilla",
+      "specs": "dev-lang/rust-bin"
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "Virtual for FORTRAN 77 BLAS implementation",
+      "specs": "virtual/blas"
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "Virtual for Linear Algebra Package FORTRAN 77 (LAPACK) implementation",
+      "specs": "virtual/lapack"
+    }
+  ],
+  "package_managers": [
+    {
+      "name": "pkgcore",
+      "install_command": [
+        "pmerge"
+      ]
+    },
+    {
+      "name": "portage",
+      "install_command": [
+        "emerge"
+      ]
+    }
+  ]
+}
