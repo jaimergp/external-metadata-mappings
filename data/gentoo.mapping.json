@@ -169,7 +169,7 @@
       "specs": "dev-lang/rust"
     },
     {
-      "id": "virtual:compiler/rust-bin",
+      "id": "virtual:compiler/rust",
       "description": "Systems programming language from Mozilla",
       "specs": "dev-lang/rust-bin"
     },
