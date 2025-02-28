@@ -238,6 +238,11 @@
     {
       "id": "virtual:compiler/c",
       "description": "The default compiler for C",
+      "specs": "c-compiler"
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "The default compiler for C",
       "specs": {
         "build": [
           "{{ compiler('c') }}",
@@ -252,15 +257,12 @@
     {
       "id": "virtual:compiler/cpp",
       "description": "The default compiler for C++",
-      "specs": {
-        "build": [
-          "{{ compiler('cxx') }}"
-        ],
-        "host": [],
-        "run": [
-          "cxx-compiler"
-        ]
-      }
+      "specs": "cxx-compiler"
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "The default compiler for Fortran",
+      "specs": "fortran-compiler"
     },
     {
       "id": "virtual:compiler/fortran",
@@ -274,6 +276,11 @@
           "fortran-compiler"
         ]
       }
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": "rust"
     },
     {
       "id": "virtual:compiler/rust",
