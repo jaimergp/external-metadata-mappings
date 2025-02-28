@@ -186,15 +186,15 @@
   ],
   "package_managers": [
     {
-      "name": "portage",
-      "install_command": [
-        "emerge"
-      ]
-    },
-    {
       "name": "pkgcore",
       "install_command": [
         "pmerge"
+      ]
+    },
+    {
+      "name": "portage",
+      "install_command": [
+        "emerge"
       ]
     }
   ]
