@@ -3,15 +3,16 @@ Python API to interact with central registry and associated mappings
 """
 
 import json
+from collections import UserDict
 from typing import Iterable
 
 # import jsonschema
 import requests
 
 
-class Registry:
-    def __init__(self, metadata):
-        self._data = metadata
+class Registry(UserDict):
+    def __init__(self, metadata=None):
+        self.data = metadata or {}
 
     @classmethod
     def from_path(cls, path):
@@ -27,8 +28,6 @@ class Registry:
     def _validate(self):
         pass
 
-    def get(self, key, default=None):
-        return self._data.get(key, default)
 
     def iter_unique_purls(self):
         seen = set()
@@ -43,7 +42,7 @@ class Registry:
                 yield item
 
     def iter_all(self):
-        for item in self._data["definitions"]:
+        for item in self.data["definitions"]:
             yield item
 
     def iter_canonical(self):
@@ -64,11 +63,10 @@ class Registry:
                 yield item
 
 
-class Mapping:
-    def __init__(self, metadata):
-        self._data = metadata
-        self.name = self._data.get("name")
-        self.description = self._data.get("description")
+
+class Mapping(UserDict):
+    def __init__(self, metadata=None):
+        self.data = metadata or {}
 
     @classmethod
     def from_path(cls, path):
@@ -84,11 +82,16 @@ class Mapping:
     def _validate(self):
         pass
 
-    def get(self, key, default=None):
-        return self._data.get(key, default)
+    @property
+    def name(self):
+        return self.get("name")
+
+    @property
+    def description(self):
+        return self.get("description")
 
     def iter_all(self, resolve_specs=True):
-        for entry in self._data["mappings"]:
+        for entry in self.data["mappings"]:
             if resolve_specs:
                 entry = entry.copy()
                 specs = self._resolve_specs(entry)
@@ -122,7 +125,7 @@ class Mapping:
         if specs := mapping_entry.get("specs"):
             return specs
         elif specs_from := mapping_entry.get("specs_from"):
-            return self._resolve_specs(self._data["mappings"], specs_from)
+            return self._resolve_specs(self.data["mappings"], specs_from)
         return []
 
     @staticmethod
@@ -141,10 +144,10 @@ class Mapping:
         return specs
 
     def get_package_manager(self, name: str) -> dict:
-        for manager in self._data["package_managers"]:
+        for manager in self.data["package_managers"]:
             if manager["name"] == name:
                 return manager
-        raise KeyError(f"Could not find '{name}' in {self._data["package_managers"]:r}")
+        raise KeyError(f"Could not find '{name}' in {self.data["package_managers"]:r}")
 
     def iter_install_commands(self, package_manager, purl) -> Iterable[list[str]]:
         command = self.get_package_manager(package_manager)["install_command"]
