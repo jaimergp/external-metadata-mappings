@@ -105,7 +105,11 @@ class Mapping:
                     entry["specs"] = self._normalize_specs(specs)
                     entry.pop("specs_from", None)
                 if only_mapped:
-                    if entry.get("specs") or entry.get("specs_from"):
+                    if specs := entry.get("specs", {}):
+                        for key in "run", "host", "build":
+                            if specs.get(key):
+                                yield entry
+                    if entry.get("specs_from"):
                         yield entry
                 else:
                     yield entry
@@ -143,5 +147,7 @@ class Mapping:
         for specs in self.iter_specs_by_id(purl):
             yield command + specs  # TODO: Deal with `{}` placeholders
 
-    def build_install_command(self, base_command: list[str], specs: list[str]) -> list[str]:
+    def build_install_command(
+        self, base_command: list[str], specs: list[str]
+    ) -> list[str]:
         return base_command + specs

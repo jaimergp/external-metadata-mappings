@@ -124,13 +124,13 @@ if purl and ecosystem:
     st.write(f"# {full_mapping.name}")
     render_description(full_mapping)
     st.write(f"## `{purl}`")
-    found_mapping_entries = list(full_mapping.iter_by_id(purl))
+    found_mapping_entries = list(full_mapping.iter_by_id(purl, only_mapped=True))
     st.write(f"{len(found_mapping_entries)} mapping(s) found:")
     for i, m in enumerate(found_mapping_entries, 1):
         st.write(f"### {i}")
         render_description(m)
         render_urls(m)
-        if m["specs"]:
+        if m["specs"]["run"]:
             managers = full_mapping.get("package_managers", ())
             if len(managers) > 1:
                 st.write("**📦 Install with:**")
