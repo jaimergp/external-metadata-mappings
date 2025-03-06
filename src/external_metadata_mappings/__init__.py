@@ -105,11 +105,15 @@ class Mapping:
                     entry["specs"] = self._normalize_specs(specs)
                     entry.pop("specs_from", None)
                 if only_mapped:
+                    try_specs_from = False
                     if specs := entry.get("specs", {}):
                         for key in "run", "host", "build":
                             if specs.get(key):
                                 yield entry
-                    if entry.get("specs_from"):
+                                break
+                        else:
+                            try_specs_from = not resolve_specs
+                    if try_specs_from and entry.get("specs_from"):
                         yield entry
                 else:
                     yield entry
