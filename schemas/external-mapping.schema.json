@@ -1,6 +1,4 @@
 {
-  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/external-mapping.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "MappingWithSpecs": {
       "additionalProperties": false,
@@ -24,26 +22,6 @@
           "default": null,
           "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
-        },
-        "specs": {
-          "anyOf": [
-            {
-              "minLength": 1,
-              "type": "string"
-            },
-            {
-              "items": {
-                "minLength": 1,
-                "type": "string"
-              },
-              "type": "array"
-            },
-            {
-              "$ref": "#/$defs/SpecsDict"
-            }
-          ],
-          "description": "Package specifiers that provide the identifier at `id`.",
-          "title": "Specs"
         },
         "urls": {
           "anyOf": [
@@ -78,6 +56,26 @@
           "default": null,
           "description": "Hyperlinks to web locations that provide more information about the mapping.",
           "title": "Urls"
+        },
+        "specs": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "#/$defs/SpecsDict"
+            }
+          ],
+          "description": "Package specifiers that provide the identifier at `id`.",
+          "title": "Specs"
         }
       },
       "required": [
@@ -110,13 +108,6 @@
           "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
         },
-        "specs_from": {
-          "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
-          "minLength": 1,
-          "pattern": "^(pkg:|virtual:).*",
-          "title": "Specs From",
-          "type": "string"
-        },
         "urls": {
           "anyOf": [
             {
@@ -150,6 +141,13 @@
           "default": null,
           "description": "Hyperlinks to web locations that provide more information about the mapping.",
           "title": "Urls"
+        },
+        "specs_from": {
+          "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
+          "minLength": 1,
+          "pattern": "^(pkg:|virtual:).*",
+          "title": "Specs From",
+          "type": "string"
         }
       },
       "required": [
@@ -256,6 +254,8 @@
       "type": "object"
     }
   },
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/central-registry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
     "$schema": {
@@ -290,6 +290,14 @@
       "description": "Free-form field to add information this mapping. Allows Markdown.",
       "title": "Description"
     },
+    "package_managers": {
+      "description": "List of tools that can be used to install packages in this ecosystem.",
+      "items": {
+        "$ref": "#/$defs/PackageManager"
+      },
+      "title": "Package Managers",
+      "type": "array"
+    },
     "mappings": {
       "description": "List of PURL-to-specs mappings.",
       "items": {
@@ -303,14 +311,6 @@
         ]
       },
       "title": "Mappings",
-      "type": "array"
-    },
-    "package_managers": {
-      "description": "List of tools that can be used to install packages in this ecosystem.",
-      "items": {
-        "$ref": "#/$defs/PackageManager"
-      },
-      "title": "Package Managers",
       "type": "array"
     }
   },

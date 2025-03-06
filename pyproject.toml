@@ -38,7 +38,7 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64"]
 
 [tool.pixi.tasks]
-schema = "python schemas/schema.py"
+schemas = "python schemas/schemas.py"
 app = "python -m streamlit run --server.runOnSave=true app.py"
 
 [tool.pixi.pypi-dependencies]

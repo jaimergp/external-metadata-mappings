@@ -215,7 +215,7 @@ packages:
 - pypi: .
   name: external-metadata-mappings
   version: 0.1.0
-  sha256: b6f256edca780c986530eee182ea3604177e060f3f5acd65b5e25733da43125b
+  sha256: 7f62e2413ca6a8d9ad8cc2f4be2c44b328ba154aeffaec4dc9b886721aa9331a
   requires_dist:
   - pydantic>=2
   - streamlit

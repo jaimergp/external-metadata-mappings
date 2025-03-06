@@ -11,12 +11,15 @@ from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
 HERE = Path(__file__).parent
 CENTRAL_REGISTRY_FILE = HERE / "central-registry.schema.json"
+ECOSYSTEMS_FILE = HERE / "known-ecosystems.schema.json"
 MAPPING_SCHEMA_FILE = HERE / "external-mapping.schema.json"
 
 
 PURLField = Annotated[str, Field(min_length=1, pattern=r"^(pkg:|virtual:).*")]
 NonEmptyString = Annotated[str, Field(min_length=1)]
 
+
+# region Definitions
 
 class Definition(BaseModel):
     model_config: ConfigDict = ConfigDict(
@@ -85,6 +88,48 @@ class PackageManager(BaseModel):
     must be injected, if needed. If `{}` is not present, they will be added at the end.
     """
 
+# endregion
+
+# region Ecosystems
+
+class EcosystemDetails(BaseModel):
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    mapping: AnyUrl = ...
+    "URL to the mapping for this ecosystem"
+    package_managers: list[NonEmptyString] = []
+    "List of package manager names known in this ecosystem"
+
+
+class Ecosystems(BaseModel):
+    """
+    A registry of known ecosystems and their canonical locations for their mappings.
+    """
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+        json_schema_extra={
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": (
+                "https://github.com/python/peps/blob/main/peps/pep-0XXX/"
+                f"{ECOSYSTEMS_FILE.name}"
+            ),
+        },
+    )
+    schema_: str = Field(default="", alias="$schema")
+    "URL of the definition list schema in use for the document."
+
+    schema_version: int = Field(1, ge=1, lt=2)
+    ecosystems: dict[NonEmptyString, EcosystemDetails] = {}
+    """
+    Ecosystems names and their corresponding details
+    """
+
+# endregion
+
+# region Mapping
 
 class SpecsDict(BaseModel):
     """ """
@@ -173,12 +218,20 @@ class MappingsModel(BaseModel):
     mappings: list[MappingWithSpecs | MappingWithSpecsFrom]
     "List of PURL-to-specs mappings."
 
+# endregion
+
 
 def main():
     with CENTRAL_REGISTRY_FILE.open(mode="w+") as f:
         model = DefinitionListModel(
             definitions=[],
         )
+        obj = model.model_json_schema()
+        f.write(json.dumps(obj, indent=2))
+        f.write("\n")
+
+    with ECOSYSTEMS_FILE.open(mode="w+") as f:
+        model = Ecosystems()
         obj = model.model_json_schema()
         f.write(json.dumps(obj, indent=2))
         f.write("\n")
@@ -190,10 +243,6 @@ def main():
             mappings=[],
         )
         obj = model.model_json_schema()
-        obj["$schema"] = "https://json-schema.org/draft/2020-12/schema"
-        obj["$id"] = (
-            f"https://github.com/python/peps/blob/main/peps/pep-0XXX/{MAPPING_SCHEMA_FILE.name}"
-        )
         f.write(json.dumps(obj, indent=2))
         f.write("\n")
 

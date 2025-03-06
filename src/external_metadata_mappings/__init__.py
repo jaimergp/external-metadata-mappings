@@ -63,6 +63,24 @@ class Registry(UserDict):
                 yield item
 
 
+class Ecosystems(UserDict):
+    def __init__(self, metadata=None):
+        self.data = metadata or {}
+
+    @classmethod
+    def from_path(cls, path):
+        with open(path) as f:
+            return cls(json.load(f))
+
+    @classmethod
+    def from_url(cls, url):
+        r = requests.get(url)
+        r.raise_for_status()
+        return cls(r.json())
+
+    def _validate(self):
+        pass
+
 
 class Mapping(UserDict):
     def __init__(self, metadata=None):
