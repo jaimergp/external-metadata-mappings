@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "external-metadata-mappings"
+version = "0.1.0"
+description = "Schemas and APIs for PEP 725 External Metadata Mappings"
+readme = "README.md"
+authors = [
+  { name = "Jaime Rodríguez-Guerra", email = "jrodriguez@quansight.com" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic >=2",
+  "streamlit",
+  "requests",
+  # "jsonschema",
+]
+
+[project.urls]
+homepage = "https://github.com/jaimergp/external-metadata-mappings"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.tasks]
+schema = "python schemas/schema.py"
+app = "python -m streamlit run --server.runOnSave=true app.py"
+
+[tool.pixi.pypi-dependencies]
+external-metadata-mappings = { path = ".", editable = true }

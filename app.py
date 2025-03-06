@@ -8,10 +8,12 @@ from pathlib import Path
 
 import streamlit as st
 
+from external_metadata_mappings import Registry, Mapping
+
 HERE = Path(__file__).parent
 DATA = HERE / "data"
 SCHEMAS = HERE / "schemas"
-
+REGISTRY = Registry.from_path(DATA / "registry.json")
 
 st.set_page_config(
     page_title="PEP-725 registry and mappings browser",
@@ -28,27 +30,12 @@ st.set_page_config(
 )
 
 
-def registry():
-    return json.loads((DATA / "registry.json").read_text())
-
-
 def ecosystems():
     return sorted([f.name.rsplit(".", 2)[0] for f in DATA.glob("*.mapping.json")])
 
 
-def all_purls():
-    for d in registry()["definitions"]:
-        yield d["id"]
-
-
-def mapping(ecosystem):
-    return json.loads((DATA / f"{ecosystem}.mapping.json").read_text())
-
-
-def mappings_for_purl(purl, ecosystem):
-    for m in mapping(ecosystem).get("mappings", ()):
-        if m["id"] == purl and (m.get("specs") or m.get("specs_from")):
-            yield m
+def mapping_for(ecosystem):
+    return Mapping.from_path(DATA / f"{ecosystem}.mapping.json")
 
 
 def goto(**params):
@@ -65,18 +52,6 @@ def parse_url():
         st.warning(f"URL contains unknown elements: {params}")
         st.stop()
     return {"purl": purl, "ecosystem": ecosystem}
-
-
-def get_specs(mapping_entry, full_mapping):
-    "Specs can be found in 'specs' or specs_from, which requires traversing the whole list"
-    if specs := mapping_entry.get("specs"):
-        return specs
-    if specs_from := mapping_entry.get("specs_from"):
-        for m in full_mapping.get("mappings"):
-            if m["id"] == specs_from:
-                return get_specs(m, full_mapping)
-        raise ValueError(f"'specs_from' value '{specs_from}' cannot be found")
-    return []
 
 
 def render_description(definition: str):
@@ -112,7 +87,7 @@ if not getattr(st.session_state, "initialized", False):
 
 with st.sidebar:
     st.write("# External mappings browser")
-    available_purls = sorted(all_purls())
+    available_purls = list(REGISTRY.iter_unique_purls())
     purl = st.selectbox(
         f"PURL ({len(available_purls)} available)",
         options=available_purls,
@@ -121,14 +96,18 @@ with st.sidebar:
         placeholder="Choose a PURL identifier",
     )
     eco_options = (
-        [eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))]
+        [
+            eco
+            for eco in ecosystems()
+            if list(mapping_for(eco).iter_by_id(purl, only_mapped=True))
+        ]
         if purl
         else ecosystems()
     )
     ecosystem = st.selectbox(
         "Ecosystem",
         options=eco_options,
-        format_func=lambda value: mapping(value)["name"],
+        format_func=lambda value: mapping_for(value).name,
         index=None,
         key="ecosystem",
         placeholder=f"{len(eco_options)} mappings available"
@@ -141,40 +120,33 @@ if purl and ecosystem:
     st.query_params.clear()
     st.query_params.purl = purl
     st.query_params.ecosystem = ecosystem
-    full_mapping = mapping(ecosystem)
-    found_mapping_entries = list(mappings_for_purl(purl, ecosystem))
-    st.write(f"# {full_mapping.get('name') or ecosystem}")
+    full_mapping = mapping_for(ecosystem)
+    st.write(f"# {full_mapping.name}")
     render_description(full_mapping)
     st.write(f"## `{purl}`")
+    found_mapping_entries = list(full_mapping.iter_by_id(purl))
     st.write(f"{len(found_mapping_entries)} mapping(s) found:")
     for i, m in enumerate(found_mapping_entries, 1):
         st.write(f"### {i}")
         render_description(m)
         render_urls(m)
-        specs = get_specs(m, full_mapping)
-        if specs:
-            if hasattr(specs, "items"):
-                run_specs = (
-                    specs.get("run") or specs.get("build") or specs.get("host") or ()
-                )
-            else:
-                run_specs = specs
-            if isinstance(run_specs, str):
-                run_specs = [run_specs]
-            managers = full_mapping["package_managers"]
+        if m["specs"]:
+            managers = full_mapping.get("package_managers", ())
             if len(managers) > 1:
                 st.write("**📦 Install with:**")
                 for manager, tab in zip(
                     managers, st.tabs([m["name"] for m in managers])
                 ):
-                    tab.write(
-                        f"```\n{shlex.join([*manager['install_command'], *run_specs])}\n```"
+                    command = full_mapping.build_install_command(
+                        manager["install_command"], m["specs"]["run"]
                     )
+                    tab.write(f"```\n{shlex.join(command)}\n```")
             else:
                 st.write(f"**Install with `{managers[0]['name']}`:**")
-                st.write(
-                    f"```\n{shlex.join([*managers[0]['install_command'], *run_specs])}\n```"
+                command = full_mapping.build_install_command(
+                    managers[0]["install_command"], m["specs"]["run"]
                 )
+                st.write(f"```\n{shlex.join(command)}\n```")
             with st.expander("Raw data"):
                 st.code(json.dumps(m, indent=2), language="json")
         else:
@@ -185,7 +157,7 @@ elif purl:
     st.query_params.clear()
     st.query_params.purl = purl
     provided_by = []
-    for d in registry()["definitions"]:
+    for d in REGISTRY.iter_all():
         if d["id"] == purl:
             st.write(f"### `{d['id']}`")
             render_description(d)
@@ -215,12 +187,14 @@ elif purl:
                 icon="🔗",
             )
     if available_ecos := [
-        eco for eco in ecosystems() if list(mappings_for_purl(purl, eco))
+        eco
+        for eco in ecosystems()
+        if list(mapping_for(eco).iter_by_id(purl, only_mapped=True))
     ]:
         st.write("**📍 Mappings found for:**")
         for eco in available_ecos:
             st.button(
-                mapping(eco)["name"],
+                mapping_for(eco).name,
                 key=f"{d}-{purl}-{eco}",
                 on_click=goto,
                 kwargs={"purl": purl, "ecosystem": eco},
@@ -229,13 +203,13 @@ elif purl:
 elif ecosystem:
     st.query_params.clear()
     st.query_params.ecosystem = ecosystem
-    full_mapping = mapping(ecosystem)
+    full_mapping = mapping_for(ecosystem)
     st.write(f"# {full_mapping.get('name') or ecosystem}")
     render_description(full_mapping)
-    all_mappings = full_mapping["mappings"]
+    all_mappings = list(full_mapping.iter_all())
     filled_mappings, empty_mappings = [], []
     for m in all_mappings:
-        if m.get("specs") or m.get("specs_from"):
+        if m.get("specs"):
             filled_mappings.append(m)
         else:
             empty_mappings.append(m)
@@ -266,10 +240,9 @@ elif ecosystem:
 # All identifiers list
 else:
     st.query_params.clear()
-    definitions = registry()["definitions"]
     canonical, providers = {"generic": [], "virtual": []}, []
     count = 0
-    for d in definitions:
+    for d in REGISTRY.iter_all():
         if provides := d.get("provides"):
             if isinstance(provides, str):
                 provides = [provides]
