@@ -21,13 +21,26 @@ class _Validated:
         validators=dict(Draft202012Validator.VALIDATORS),
     )
 
-    def _validator_inst(self):
-        schema = json.loads(self.default_schema.read_text())
+    def _validator_inst(self, path_or_url: str | None = None):
+        if path_or_url is None:
+            schema = json.loads(self.default_schema.read_text())
+        elif path_or_url.startswith(("http://", "https://")):
+            r = requests.get(path_or_url)
+            r.raise_for_status()
+            schema = r.json()
+        else:
+            path = Path(path_or_url)
+            if not path.is_absolute() and (data_path := getattr(self, "_path", None)):
+                # TODO: Stop supporting relative paths and remove '._path' from _FromPathOrUrl
+                data_path = Path(data_path).parent
+                schema = json.loads((data_path / path).read_text())
+            else:
+                schema = json.loads(Path(path_or_url).read_text())
         return self._validator_cls(schema)
 
     def validate(self):
-        # TODO: Try to use "$schema" if defined first
-        errors = list(self._validator_inst().iter_errors(self.data))
+        schema_definition = self.data.get("$schema") or None
+        errors = list(self._validator_inst(schema_definition).iter_errors(self.data))
         if errors:
             raise ValueError(f"Validation error: {'\n'.join(errors)}")
 
@@ -36,7 +49,9 @@ class _FromPathOrUrl:
     @classmethod
     def from_path(cls, path):
         with open(path) as f:
-            return cls(json.load(f))
+            inst = cls(json.load(f))
+        inst._path = path
+        return inst
 
     @classmethod
     def from_url(cls, url):
