@@ -6,9 +6,10 @@ A Streamlit app to navigate the examples is published at https://external-metada
 
 ## Overview of contents
 
-There are two schemas, both built from `schemas/schema.py` and stored as JSON schemas in `schemas/`:
+There are two schemas, both built from `schemas/schemas.py` and stored as JSON schemas in `schemas/`:
 
 - `central-registry.schema.json`: Defines the list of canonical identifiers, and its most common "providers". A concrete example of how this schema applies to a real life scenario is given in `data/registry.json`.
+- `known-ecosystems.schema.json`: Defines the list of ecosystems that are known to provide a mapping (located at the given URL), as well as their package manager names. An example is given in `data/known-ecosystems.json`.
 - `external-mapping.schema.json`: Defines how the mappings that provide package names for canonical identifiers would look like. These are designed to be hosted by the target ecosystems (e.g. Linux distributions, Homebrew, Winget, conda-forge, etc). Concrete examples can be found under the `data/*.mapping.json` files.
 
 The Streamlit app can be found in the `app.py` file.
@@ -25,3 +26,9 @@ The `scripts/` folder hosts custom linting logic used in the `pre-commit` config
 ## Open questions
 
 - Should an ecosystem map `virtual:` packages, their immediate `pkg:` providers, or both?
+
+## Contributing
+
+- Run `pre-commit` before submitting a PR.
+- Regenerate the schemas with `pixi run schemas` if necessary.
+- The Streamlit app can be run locally with `pixi run app`.
