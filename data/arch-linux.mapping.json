@@ -176,7 +176,8 @@
         "pacman",
         "-Syu",
         "--noconfirm"
-      ]
+      ],
+      "requires_elevation": true
     }
   ]
 }

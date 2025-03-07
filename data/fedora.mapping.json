@@ -359,11 +359,11 @@
     {
       "name": "dnf",
       "install_command": [
-        "sudo",
         "dnf",
         "install",
         "-y"
-      ]
+      ],
+      "requires_elevation": true
     }
   ]
 }

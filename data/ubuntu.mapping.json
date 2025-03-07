@@ -357,11 +357,11 @@
     {
       "name": "apt-get",
       "install_command": [
-        "sudo",
         "apt-get",
         "install",
         "--yes"
-      ]
+      ],
+      "requires_elevation": true
     }
   ]
 }

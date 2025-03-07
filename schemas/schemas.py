@@ -88,6 +88,8 @@ class PackageManager(BaseModel):
     separate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages
     must be injected, if needed. If `{}` is not present, they will be added at the end.
     """
+    requires_elevation: bool = False
+    "Whether the install command requires elevated permissions to run."
 
 
 # endregion

@@ -176,6 +176,12 @@
           },
           "title": "Install Command",
           "type": "array"
+        },
+        "requires_elevation": {
+          "default": false,
+          "description": "Whether the install command requires elevated permissions to run.",
+          "title": "Requires Elevation",
+          "type": "boolean"
         }
       },
       "required": [
