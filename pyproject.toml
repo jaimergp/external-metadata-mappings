@@ -35,7 +35,7 @@ homepage = "https://github.com/jaimergp/external-metadata-mappings"
 
 [tool.pixi.project]
 channels = ["conda-forge"]
-platforms = ["osx-arm64"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 
 [tool.pixi.tasks]
 schemas = "python schemas/schemas.py"
