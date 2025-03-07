@@ -138,13 +138,17 @@ if purl and ecosystem:
                     managers, st.tabs([m["name"] for m in managers])
                 ):
                     command = full_mapping.build_install_command(
-                        manager["install_command"], m["specs"]["run"]
+                        manager["install_command"],
+                        m["specs"]["run"],
+                        manager["requires_elevation"],
                     )
                     tab.write(f"```\n{shlex.join(command)}\n```")
             else:
                 st.write(f"**Install with `{managers[0]['name']}`:**")
                 command = full_mapping.build_install_command(
-                    managers[0]["install_command"], m["specs"]["run"]
+                    managers[0]["install_command"],
+                    m["specs"]["run"],
+                    managers[0]["requires_elevation"],
                 )
                 st.write(f"```\n{shlex.join(command)}\n```")
             with st.expander("Raw data"):

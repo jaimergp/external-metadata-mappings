@@ -167,11 +167,25 @@ class Mapping(UserDict):
         raise KeyError(f"Could not find '{name}' in {self.data['package_managers']:r}")
 
     def iter_install_commands(self, package_manager, purl) -> Iterable[list[str]]:
-        command = self.get_package_manager(package_manager)["install_command"]
+        mgr = self.get_package_manager(package_manager)
         for specs in self.iter_specs_by_id(purl):
-            yield command + specs  # TODO: Deal with `{}` placeholders
+            yield self.build_install_command(
+                mgr["install_command"],
+                specs,
+                mgr["requires_elevation"],
+            )
 
     def build_install_command(
-        self, base_command: list[str], specs: list[str]
+        self,
+        base_command: list[str],
+        specs: list[str],
+        requires_elevation: bool = False,
     ) -> list[str]:
-        return base_command + specs
+        # TODO: Deal with `{}` placeholders
+        cmd = []
+        if requires_elevation:
+            # TODO: Add a system to infer type of elevation required (sudo vs Windows AUC)
+            cmd.append("sudo")
+        cmd.extend(base_command)
+        cmd.extend(specs)
+        return cmd
