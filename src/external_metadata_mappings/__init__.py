@@ -4,7 +4,7 @@ Python API to interact with central registry and associated mappings
 
 import json
 from collections import UserDict
-from typing import Iterable
+from typing import Any, Iterable
 
 # import jsonschema
 import requests
@@ -169,23 +169,18 @@ class Mapping(UserDict):
     def iter_install_commands(self, package_manager, purl) -> Iterable[list[str]]:
         mgr = self.get_package_manager(package_manager)
         for specs in self.iter_specs_by_id(purl):
-            yield self.build_install_command(
-                mgr["install_command"],
-                specs,
-                mgr["requires_elevation"],
-            )
+            yield self.build_install_command(mgr, specs)
 
     def build_install_command(
         self,
-        base_command: list[str],
+        package_manager: dict[str, Any],
         specs: list[str],
-        requires_elevation: bool = False,
     ) -> list[str]:
         # TODO: Deal with `{}` placeholders
         cmd = []
-        if requires_elevation:
+        if package_manager.get("requires_elevation", False):
             # TODO: Add a system to infer type of elevation required (sudo vs Windows AUC)
             cmd.append("sudo")
-        cmd.extend(base_command)
+        cmd.extend(package_manager["install_command"])
         cmd.extend(specs)
         return cmd
