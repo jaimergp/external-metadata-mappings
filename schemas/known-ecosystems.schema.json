@@ -1,4 +1,6 @@
 {
+  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/known-ecosystems.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "EcosystemDetails": {
       "additionalProperties": false,
@@ -28,8 +30,6 @@
       "type": "object"
     }
   },
-  "$id": "https://github.com/python/peps/blob/main/peps/pep-0XXX/known-ecosystems.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "A registry of known ecosystems and their canonical locations for their mappings.",
   "properties": {

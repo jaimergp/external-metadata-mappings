@@ -3,40 +3,61 @@
   "schema_version": 1,
   "ecosystems": {
     "arch-linux": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/arch-linux.mapping.json",
-        "package_managers": ["pacman"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/arch-linux.mapping.json",
+      "package_managers": [
+        "pacman"
+      ]
     },
     "chocolatey": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/chocolatey.mapping.json",
-        "package_managers": ["choco"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/chocolatey.mapping.json",
+      "package_managers": [
+        "choco"
+      ]
     },
     "conda-forge": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/conda-forge.mapping.json",
-        "package_managers": ["conda", "mamba", "micromamba"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/conda-forge.mapping.json",
+      "package_managers": [
+        "conda",
+        "mamba",
+        "micromamba"
+      ]
     },
     "fedora": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/fedora.mapping.json",
-        "package_managers": ["dnf"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/fedora.mapping.json",
+      "package_managers": [
+        "dnf"
+      ]
     },
     "gentoo": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/gentoo.mapping.json",
-        "package_managers": ["pmerge", "emerge"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/gentoo.mapping.json",
+      "package_managers": [
+        "pmerge",
+        "emerge"
+      ]
     },
     "homebrew": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/homebrew.mapping.json",
-        "package_managers": ["brew"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/homebrew.mapping.json",
+      "package_managers": [
+        "brew"
+      ]
     },
     "scoop": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/scoop.mapping.json",
-        "package_managers": ["scoop"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/scoop.mapping.json",
+      "package_managers": [
+        "scoop"
+      ]
     },
     "ubuntu": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu.mapping.json",
-        "package_managers": ["apt-get"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu.mapping.json",
+      "package_managers": [
+        "apt-get"
+      ]
     },
     "winget": {
-        "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/winget.mapping.json",
-        "package_managers": ["winget"]
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/winget.mapping.json",
+      "package_managers": [
+        "winget"
+      ]
     }
   }
 }

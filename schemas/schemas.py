@@ -21,6 +21,7 @@ NonEmptyString = Annotated[str, Field(min_length=1)]
 
 # region Definitions
 
+
 class Definition(BaseModel):
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
@@ -88,9 +89,11 @@ class PackageManager(BaseModel):
     must be injected, if needed. If `{}` is not present, they will be added at the end.
     """
 
+
 # endregion
 
 # region Ecosystems
+
 
 class EcosystemDetails(BaseModel):
     model_config: ConfigDict = ConfigDict(
@@ -107,6 +110,7 @@ class Ecosystems(BaseModel):
     """
     A registry of known ecosystems and their canonical locations for their mappings.
     """
+
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
         use_attribute_docstrings=True,
@@ -127,9 +131,11 @@ class Ecosystems(BaseModel):
     Ecosystems names and their corresponding details
     """
 
+
 # endregion
 
 # region Mapping
+
 
 class SpecsDict(BaseModel):
     """ """
@@ -217,6 +223,7 @@ class MappingsModel(BaseModel):
     "List of tools that can be used to install packages in this ecosystem."
     mappings: list[MappingWithSpecs | MappingWithSpecsFrom]
     "List of PURL-to-specs mappings."
+
 
 # endregion
 

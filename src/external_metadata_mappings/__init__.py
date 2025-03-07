@@ -28,7 +28,6 @@ class Registry(UserDict):
     def _validate(self):
         pass
 
-
     def iter_unique_purls(self):
         seen = set()
         for item in self.iter_all():
@@ -165,7 +164,7 @@ class Mapping(UserDict):
         for manager in self.data["package_managers"]:
             if manager["name"] == name:
                 return manager
-        raise KeyError(f"Could not find '{name}' in {self.data["package_managers"]:r}")
+        raise KeyError(f"Could not find '{name}' in {self.data['package_managers']:r}")
 
     def iter_install_commands(self, package_manager, purl) -> Iterable[list[str]]:
         command = self.get_package_manager(package_manager)["install_command"]
