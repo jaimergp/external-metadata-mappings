@@ -4,16 +4,35 @@ Python API to interact with central registry and associated mappings
 
 import json
 from collections import UserDict
+from pathlib import Path
 from typing import Any, Iterable
 
-# import jsonschema
 import requests
+from jsonschema import Draft202012Validator, validators
+
+HERE = Path(__file__).parent
+SCHEMAS_DIR = HERE.parent.parent / "schemas"
 
 
-class Registry(UserDict):
-    def __init__(self, metadata=None):
-        self.data = metadata or {}
+class _Validated:
+    default_schema: Path
+    _validator_cls = validators.create(
+        meta_schema=Draft202012Validator.META_SCHEMA,
+        validators=dict(Draft202012Validator.VALIDATORS),
+    )
 
+    def _validator_inst(self):
+        schema = json.loads(self.default_schema.read_text())
+        return self._validator_cls(schema)
+
+    def validate(self):
+        # TODO: Try to use "$schema" if defined first
+        errors = list(self._validator_inst().iter_errors(self.data))
+        if errors:
+            raise ValueError(f"Validation error: {'\n'.join(errors)}")
+
+
+class _FromPathOrUrl:
     @classmethod
     def from_path(cls, path):
         with open(path) as f:
@@ -25,8 +44,9 @@ class Registry(UserDict):
         r.raise_for_status()
         return cls(r.json())
 
-    def _validate(self):
-        pass
+
+class Registry(UserDict, _Validated, _FromPathOrUrl):
+    default_schema: Path = SCHEMAS_DIR / "central-registry.schema.json"
 
     def iter_unique_purls(self):
         seen = set()
@@ -62,42 +82,16 @@ class Registry(UserDict):
                 yield item
 
 
-class Ecosystems(UserDict):
-    def __init__(self, metadata=None):
-        self.data = metadata or {}
+class Ecosystems(UserDict, _Validated, _FromPathOrUrl):
+    default_schema: Path = SCHEMAS_DIR / "known-ecosystems.schema.json"
 
-    @classmethod
-    def from_path(cls, path):
-        with open(path) as f:
-            return cls(json.load(f))
-
-    @classmethod
-    def from_url(cls, url):
-        r = requests.get(url)
-        r.raise_for_status()
-        return cls(r.json())
-
-    def _validate(self):
-        pass
+    def iter_all(self) -> Iterable[dict]:
+        for eco in self.data.get("ecosystems", ()):
+            yield eco
 
 
-class Mapping(UserDict):
-    def __init__(self, metadata=None):
-        self.data = metadata or {}
-
-    @classmethod
-    def from_path(cls, path):
-        with open(path) as f:
-            return cls(json.load(f))
-
-    @classmethod
-    def from_url(cls, url):
-        r = requests.get(url)
-        r.raise_for_status()
-        return cls(r.json())
-
-    def _validate(self):
-        pass
+class Mapping(UserDict, _Validated, _FromPathOrUrl):
+    default_schema: Path = SCHEMAS_DIR / "external-mapping.schema.json"
 
     @property
     def name(self):

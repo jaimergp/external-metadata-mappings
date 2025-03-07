@@ -20,13 +20,13 @@ MAPPINGS = sorted(DATA.glob("*.mapping.json"))
 
 
 def test_registry():
-    Registry.from_path(REGISTRY_PATH)
+    Registry.from_path(REGISTRY_PATH).validate()
 
 
 def test_ecosystems():
-    Ecosystems.from_path(ECOSYSTEMS_PATH)
+    Ecosystems.from_path(ECOSYSTEMS_PATH).validate()
 
 
 @pytest.mark.parametrize("mapping", MAPPINGS)
 def test_mappings(mapping):
-    Mapping.from_path(mapping)
+    Mapping.from_path(mapping).validate()
