@@ -355,6 +355,15 @@
   ],
   "package_managers": [
     {
+      "name": "apt",
+      "install_command": [
+        "apt",
+        "install",
+        "--yes"
+      ],
+      "requires_elevation": true
+    },
+    {
       "name": "apt-get",
       "install_command": [
         "apt-get",

@@ -50,6 +50,7 @@
     "ubuntu": {
       "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu.mapping.json",
       "package_managers": [
+        "apt",
         "apt-get"
       ]
     },
