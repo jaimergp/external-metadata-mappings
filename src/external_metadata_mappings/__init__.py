@@ -42,7 +42,8 @@ class _Validated:
         schema_definition = self.data.get("$schema") or None
         errors = list(self._validator_inst(schema_definition).iter_errors(self.data))
         if errors:
-            raise ValueError(f"Validation error: {'\n'.join(errors)}")
+            msg = "\n".join(errors)
+            raise ValueError(f"Validation error: {msg}")
 
 
 class _FromPathOrUrl:
