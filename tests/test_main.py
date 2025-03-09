@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pytest
+from packageurl import PackageURL
 
 from external_metadata_mappings import Ecosystems, Mapping, Registry
 
@@ -27,6 +28,20 @@ def test_ecosystems():
     Ecosystems.from_path(ECOSYSTEMS_PATH).validate()
 
 
-@pytest.mark.parametrize("mapping", MAPPINGS)
+@pytest.mark.parametrize("mapping", [pytest.param(m, id=m.name) for m in MAPPINGS])
 def test_mappings(mapping):
     Mapping.from_path(mapping).validate()
+
+
+@pytest.mark.parametrize(
+    "purl",
+    list(
+        dict.fromkeys(
+            [entry["id"] for entry in Registry.from_path(REGISTRY_PATH).iter_all()]
+        )
+    ),
+)
+def test_registry_purls_are_parsable(purl):
+    if purl.startswith("virtual:"):
+        pytest.skip("Virtual PURLs use a different schema and aren't parsable (yet?)")
+    PackageURL.from_string(purl)
