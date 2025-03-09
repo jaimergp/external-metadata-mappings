@@ -24,10 +24,8 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-  "pydantic >=2",
-  "streamlit",
   "requests",
-  # "jsonschema",
+  "jsonschema",
 ]
 
 [project.urls]
@@ -37,12 +35,23 @@ homepage = "https://github.com/jaimergp/external-metadata-mappings"
 channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 
-[tool.pixi.tasks]
-schemas = "python schemas/schemas.py"
-app = "python -m streamlit run --server.runOnSave=true app.py"
-
 [tool.pixi.pypi-dependencies]
 external-metadata-mappings = { path = ".", editable = true }
+
+[tool.pixi.feature.schemas.dependencies]
+pydantic = ">=2"
+[tool.pixi.feature.schemas.tasks]
+schemas = "python schemas/schemas.py"
+
+[tool.pixi.feature.streamlit.dependencies]
+streamlit = "*"
+[tool.pixi.feature.streamlit.tasks]
+app = "python -m streamlit run --server.runOnSave=true app.py"
+
+[tool.pixi.feature.pre-commit.dependencies]
+pre-commit = "*"
+[tool.pixi.feature.pre-commit.tasks]
+pre-commit = "pre-commit"
 
 [tool.pixi.feature.py310.dependencies]
 python = "3.10.*"
@@ -60,8 +69,10 @@ pytest = "*"
 test = "pytest"
 
 [tool.pixi.environments]
-test = ["test"]
 test-py310 = ["test", "py310"]
 test-py311 = ["test", "py311"]
 test-py312 = ["test", "py312"]
 test-py313 = ["test", "py313"]
+streamlit = ["streamlit"]
+schemas = ["schemas"]
+pre-commit = ["pre-commit"]

@@ -29,6 +29,7 @@ The `scripts/` folder hosts custom linting logic used in the `pre-commit` config
 
 ## Contributing
 
-- Run `pre-commit` before submitting a PR.
+- Run test suite with `pixi run test` and choose the adequate environment for a Python version
+- Run `pixi run pre-commit run --all-files` before submitting a PR.
 - Regenerate the schemas with `pixi run schemas` if necessary.
 - The Streamlit app can be run locally with `pixi run app`.
