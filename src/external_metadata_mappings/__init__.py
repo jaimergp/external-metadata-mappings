@@ -4,20 +4,55 @@ Python API to interact with central registry and associated mappings
 
 import json
 from collections import UserDict
+from pathlib import Path
 from typing import Any, Iterable
 
-# import jsonschema
 import requests
+from jsonschema import Draft202012Validator, validators
+
+HERE = Path(__file__).parent
+SCHEMAS_DIR = HERE.parent.parent / "schemas"
 
 
-class Registry(UserDict):
-    def __init__(self, metadata=None):
-        self.data = metadata or {}
+class _Validated:
+    default_schema: Path
+    _validator_cls = validators.create(
+        meta_schema=Draft202012Validator.META_SCHEMA,
+        validators=dict(Draft202012Validator.VALIDATORS),
+    )
 
+    def _validator_inst(self, path_or_url: str | None = None):
+        if path_or_url is None:
+            schema = json.loads(self.default_schema.read_text())
+        elif path_or_url.startswith(("http://", "https://")):
+            r = requests.get(path_or_url)
+            r.raise_for_status()
+            schema = r.json()
+        else:
+            path = Path(path_or_url)
+            if not path.is_absolute() and (data_path := getattr(self, "_path", None)):
+                # TODO: Stop supporting relative paths and remove '._path' from _FromPathOrUrl
+                data_path = Path(data_path).parent
+                schema = json.loads((data_path / path).read_text())
+            else:
+                schema = json.loads(Path(path_or_url).read_text())
+        return self._validator_cls(schema)
+
+    def validate(self):
+        schema_definition = self.data.get("$schema") or None
+        errors = list(self._validator_inst(schema_definition).iter_errors(self.data))
+        if errors:
+            msg = "\n".join(errors)
+            raise ValueError(f"Validation error: {msg}")
+
+
+class _FromPathOrUrl:
     @classmethod
     def from_path(cls, path):
         with open(path) as f:
-            return cls(json.load(f))
+            inst = cls(json.load(f))
+        inst._path = path
+        return inst
 
     @classmethod
     def from_url(cls, url):
@@ -25,8 +60,9 @@ class Registry(UserDict):
         r.raise_for_status()
         return cls(r.json())
 
-    def _validate(self):
-        pass
+
+class Registry(UserDict, _Validated, _FromPathOrUrl):
+    default_schema: Path = SCHEMAS_DIR / "central-registry.schema.json"
 
     def iter_unique_purls(self):
         seen = set()
@@ -62,42 +98,16 @@ class Registry(UserDict):
                 yield item
 
 
-class Ecosystems(UserDict):
-    def __init__(self, metadata=None):
-        self.data = metadata or {}
+class Ecosystems(UserDict, _Validated, _FromPathOrUrl):
+    default_schema: Path = SCHEMAS_DIR / "known-ecosystems.schema.json"
 
-    @classmethod
-    def from_path(cls, path):
-        with open(path) as f:
-            return cls(json.load(f))
-
-    @classmethod
-    def from_url(cls, url):
-        r = requests.get(url)
-        r.raise_for_status()
-        return cls(r.json())
-
-    def _validate(self):
-        pass
+    def iter_all(self) -> Iterable[dict]:
+        for eco in self.data.get("ecosystems", ()):
+            yield eco
 
 
-class Mapping(UserDict):
-    def __init__(self, metadata=None):
-        self.data = metadata or {}
-
-    @classmethod
-    def from_path(cls, path):
-        with open(path) as f:
-            return cls(json.load(f))
-
-    @classmethod
-    def from_url(cls, url):
-        r = requests.get(url)
-        r.raise_for_status()
-        return cls(r.json())
-
-    def _validate(self):
-        pass
+class Mapping(UserDict, _Validated, _FromPathOrUrl):
+    default_schema: Path = SCHEMAS_DIR / "external-mapping.schema.json"
 
     @property
     def name(self):
