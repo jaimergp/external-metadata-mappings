@@ -11,8 +11,11 @@
     },
     {
       "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": "cmake"
+      "description": "cross-platform, open-source make system",
+      "specs": "cmake",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/cmake"
+      }
     },
     {
       "id": "pkg:generic/freetype",
@@ -25,6 +28,10 @@
         "run": [
           "libfreetype6"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libfreetype6)": "https://packages.ubuntu.com/noble/libfreetype6",
+        "packages.ubuntu.com (libfreetype6-dev)": "https://packages.ubuntu.com/noble/libfreetype6-dev"
       }
     },
     {
@@ -38,6 +45,10 @@
         "run": [
           "libgmp10"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libgmp10)": "https://packages.ubuntu.com/noble/libgmp10",
+        "packages.ubuntu.com (libgmp10-dev)": "https://packages.ubuntu.com/noble/libgmp10-dev"
       }
     },
     {
@@ -51,6 +62,10 @@
         "run": [
           "liblcms2-2"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblcms2-2)": "https://packages.ubuntu.com/noble/liblcms2-2",
+        "packages.ubuntu.com (liblcms2-dev)": "https://packages.ubuntu.com/noble/liblcms2-dev"
       }
     },
     {
@@ -64,6 +79,10 @@
         "run": [
           "libffi8"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libffi-dev)": "https://packages.ubuntu.com/noble/libffi-dev",
+        "packages.ubuntu.com (libffi8)": "https://packages.ubuntu.com/noble/libffi8"
       }
     },
     {
@@ -77,6 +96,10 @@
         "run": [
           "libimagequant0"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libimagequant-dev)": "https://packages.ubuntu.com/noble/libimagequant-dev",
+        "packages.ubuntu.com (libimagequant0)": "https://packages.ubuntu.com/noble/libimagequant0"
       }
     },
     {
@@ -90,6 +113,10 @@
         "run": [
           "libjpeg9"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg9)": "https://packages.ubuntu.com/noble/libjpeg9",
+        "packages.ubuntu.com (libjpeg9-dev)": "https://packages.ubuntu.com/noble/libjpeg9-dev"
       }
     },
     {
@@ -103,6 +130,10 @@
         "run": [
           "libjpeg62"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg62)": "https://packages.ubuntu.com/noble/libjpeg62",
+        "packages.ubuntu.com (libjpeg62-dev)": "https://packages.ubuntu.com/noble/libjpeg62-dev"
       }
     },
     {
@@ -116,6 +147,10 @@
         "run": [
           "libjpeg-turbo8"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
+        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
       }
     },
     {
@@ -129,6 +164,10 @@
         "run": [
           "libpq5"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libpq-dev)": "https://packages.ubuntu.com/noble/libpq-dev",
+        "packages.ubuntu.com (libpq5)": "https://packages.ubuntu.com/noble/libpq5"
       }
     },
     {
@@ -142,6 +181,10 @@
         "run": [
           "libraqm0"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libraqm-dev)": "https://packages.ubuntu.com/noble/libraqm-dev",
+        "packages.ubuntu.com (libraqm0)": "https://packages.ubuntu.com/noble/libraqm0"
       }
     },
     {
@@ -155,6 +198,10 @@
         "run": [
           "libtiff"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libtiff)": "https://packages.ubuntu.com/noble/libtiff",
+        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev"
       }
     },
     {
@@ -168,6 +215,10 @@
         "run": [
           "libwebp7"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libwebp-dev)": "https://packages.ubuntu.com/noble/libwebp-dev",
+        "packages.ubuntu.com (libwebp7)": "https://packages.ubuntu.com/noble/libwebp7"
       }
     },
     {
@@ -181,6 +232,10 @@
         "run": [
           "libxcb1"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libxcb1)": "https://packages.ubuntu.com/noble/libxcb1",
+        "packages.ubuntu.com (libxcb1-dev)": "https://packages.ubuntu.com/noble/libxcb1-dev"
       }
     },
     {
@@ -189,9 +244,13 @@
       "specs": {
         "host": [
           "libxml2",
-          "libxml2-devel"
+          "libxml2-dev"
         ],
         "run": "libxml2"
+      },
+      "urls": {
+        "packages.ubuntu.com (libxml2)": "https://packages.ubuntu.com/noble/libxml2",
+        "packages.ubuntu.com (libxml2-dev)": "https://packages.ubuntu.com/noble/libxml2-dev"
       }
     },
     {
@@ -203,6 +262,10 @@
           "libxslt-devel"
         ],
         "run": "libxslt"
+      },
+      "urls": {
+        "packages.ubuntu.com (libxslt)": "https://packages.ubuntu.com/noble/libxslt",
+        "packages.ubuntu.com (libxslt-dev)": "https://packages.ubuntu.com/noble/libxslt-dev"
       }
     },
     {
@@ -216,17 +279,27 @@
         "run": [
           "libyaml-0-2"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libxslt-dev)": "https://packages.ubuntu.com/noble/libxslt-dev",
+        "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/noble/libyaml-0-2"
       }
     },
     {
       "id": "pkg:generic/make",
       "description": "GNU Make",
-      "specs": "make"
+      "specs": "make",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/make"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "ninja-build"
+      "specs": "ninja-build",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/ninja-build"
+      }
     },
     {
       "id": "pkg:generic/openblas",
@@ -239,6 +312,10 @@
         "run": [
           "libopenblas0"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libopenblas-dev)": "https://packages.ubuntu.com/noble/libopenblas-dev",
+        "packages.ubuntu.com (libopenblas0)": "https://packages.ubuntu.com/noble/libopenblas0"
       }
     },
     {
@@ -252,22 +329,35 @@
         "run": [
           "libopenjp2-7"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libopenjp2-7)": "https://packages.ubuntu.com/noble/libopenjp2-7",
+        "packages.ubuntu.com (libopenjp2-7-dev)": "https://packages.ubuntu.com/noble/libopenjp2-7-dev"
       }
     },
     {
       "id": "pkg:generic/openssl",
-      "description": "OpenSSL built by ShiningLight",
-      "specs": "openssl"
+      "description": "Secure Sockets Layer toolkit - cryptographic utility",
+      "specs": "openssl",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/openssl"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
-      "specs": "pkgconf"
+      "specs": "pkgconf",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/pkgconf"
+      }
     },
     {
       "id": "pkg:generic/python",
       "description": "The Python interpreter",
-      "specs": "python3"
+      "specs": "python3",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/python3"
+      }
     },
     {
       "id": "pkg:generic/tk",
@@ -280,6 +370,10 @@
         "run": [
           "tk"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (tk)": "https://packages.ubuntu.com/noble/tk",
+        "packages.ubuntu.com (tk-dev)": "https://packages.ubuntu.com/noble/tk-dev"
       }
     },
     {
@@ -293,6 +387,10 @@
         "run": [
           "zlib1g"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (zlib1g)": "https://packages.ubuntu.com/noble/zlib1g",
+        "packages.ubuntu.com (zlib1g-dev)": "https://packages.ubuntu.com/noble/zlib1g-dev"
       }
     },
     {
@@ -306,27 +404,43 @@
         "run": [
           "liblapack3"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
+        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
       }
     },
     {
       "id": "virtual:compiler/c",
       "description": "GNU C Compiler",
-      "specs": "gcc"
+      "specs": "gcc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "GNU C++ Compiler",
-      "specs": "g++"
+      "specs": "g++",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
       "description": "GNU Fortran Compiler",
-      "specs": "gfortran"
+      "specs": "gfortran",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler",
-      "specs": "rustc"
+      "specs": "rustc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
+      }
     },
     {
       "id": "virtual:interface/blas",
@@ -337,6 +451,10 @@
           "libblas-dev"
         ],
         "run": "libblas3"
+      },
+      "urls": {
+        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
+        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
       }
     },
     {
@@ -350,6 +468,10 @@
         "run": [
           "liblapack3"
         ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
+        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
       }
     }
   ],
