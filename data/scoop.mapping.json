@@ -12,7 +12,10 @@
     {
       "id": "pkg:generic/cmake",
       "description": "Family of tools designed to build, test and package software",
-      "specs": "main/cmake"
+      "specs": "main/cmake",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=cmake"
+      }
     },
     {
       "id": "pkg:generic/freetype",
@@ -44,7 +47,10 @@
       "description": "A JPEG image codec that uses SIMD instructions",
       "specs": [
         "main/libjpeg-turbo"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=libjpeg-turbo"
+      }
     },
     {
       "id": "pkg:generic/libpq",
@@ -66,7 +72,10 @@
       "description": "WebP image library.",
       "specs": [
         "main/libwebp"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=libwebp"
+      }
     },
     {
       "id": "pkg:generic/libxcb",
@@ -78,7 +87,10 @@
       "description": "XML processor developed by The GNOME Project",
       "specs": [
         "main/libxml2"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=libxml2"
+      }
     },
     {
       "id": "pkg:generic/libxslt",
@@ -95,17 +107,26 @@
       "description": "GNU Make is a Build automation tool.",
       "specs": [
         "main/make"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=make"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "main/ninja"
+      "specs": "main/ninja",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=ninja"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed (Kitware fork with jobserver support).",
-      "specs": "main/ninja-kitware"
+      "specs": "main/ninja-kitware",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=ninja-kitware"
+      }
     },
     {
       "id": "pkg:generic/openblas",
@@ -120,31 +141,46 @@
     {
       "id": "pkg:generic/openssl",
       "description": "TLS/SSL toolkit (from slproweb.com)",
-      "specs": "main/openssl"
+      "specs": "main/openssl",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=openssl"
+      }
     },
     {
       "id": "pkg:generic/openssl",
       "description": "TLS/SSL toolkit (from slproweb.com, light version)",
-      "specs": "main/openssl-light"
+      "specs": "main/openssl-light",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=openssl-light"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "A helper tool used when compiling applications and libraries.",
       "specs": [
         "main/pkg-config"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=pkg-config"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "pkg-config-lite is based on pkg-config, but is built with a glib code snippet which eliminates the glib dependency",
       "specs": [
         "extras/pkg-config-lite"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=pkg-config-lite"
+      }
     },
     {
       "id": "pkg:generic/python",
       "description": "The Python interpreter",
-      "specs": "main/python"
+      "specs": "main/python",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=python"
+      }
     },
     {
       "id": "pkg:generic/tk",
@@ -156,7 +192,10 @@
       "description": "Massively spiffy yet delicately unobtrusive compression library.",
       "specs": [
         "extras/zlib"
-      ]
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=zlib"
+      }
     },
     {
       "id": "pkg:github/Reference-LAPACK/lapack",
@@ -166,37 +205,58 @@
     {
       "id": "virtual:compiler/c",
       "description": "GNU Compiler Collection and binutils",
-      "specs": "main/gcc"
+      "specs": "main/gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "The Tiny C Compiler (a.k.a. TCC, tCc, or TinyCC) is an x86, X86-64 and ARM processor C compiler created by Fabrice Bellard.",
-      "specs": "main/tcc"
+      "specs": "main/tcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=tcc"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "GCC compiler, Windows-friendly",
-      "specs": "versions/tdm-gcc"
+      "specs": "versions/tdm-gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=tdm-gcc"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "GNU Compiler Collection (WinLibs build)",
-      "specs": "main/mingw-winlibs"
+      "specs": "main/mingw-winlibs",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=mingw-winlibs"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
-      "specs": "extras/codeblocks-mingw"
+      "specs": "extras/codeblocks-mingw",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "GNU Compiler Collection and binutils",
-      "specs": "main/gcc"
+      "specs": "main/gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
-      "specs": "extras/codeblocks-mingw"
+      "specs": "extras/codeblocks-mingw",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
@@ -206,17 +266,26 @@
     {
       "id": "virtual:compiler/rust",
       "description": "A language empowering everyone to build reliable and efficient software. (GNU toolchain)",
-      "specs": "main/rust-gnu"
+      "specs": "main/rust-gnu",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust-gnu"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
-      "specs": "main/rust-msvc"
+      "specs": "main/rust-msvc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust-msvc"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
-      "specs": "main/rust"
+      "specs": "main/rust",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust"
+      }
     },
     {
       "id": "virtual:interface/blas",
