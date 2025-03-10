@@ -7,47 +7,74 @@
     {
       "id": "pkg:generic/arrow",
       "description": "A cross-language development platform for in-memory data",
-      "specs": "dev-libs/apache-arrow"
+      "specs": "dev-libs/apache-arrow",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/apache-arrow"
+      }
     },
     {
       "id": "pkg:generic/cmake",
       "description": "Cross platform Make",
-      "specs": "dev-build/cmake"
+      "specs": "dev-build/cmake",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-build/cmake"
+      }
     },
     {
       "id": "pkg:generic/freetype",
       "description": "High-quality and portable font engine",
-      "specs": "media-libs/freetype:2"
+      "specs": "media-libs/freetype:2",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/freetype"
+      }
     },
     {
       "id": "pkg:generic/gmp",
       "description": "Library for arbitrary-precision arithmetic on different type of numbers",
-      "specs": "dev-libs/gmp"
+      "specs": "dev-libs/gmp",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/gmp"
+      }
     },
     {
       "id": "pkg:generic/lcms2",
       "description": "A lightweight, speed optimized color management engine",
-      "specs": "media-libs/lcms:2"
+      "specs": "media-libs/lcms:2",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/lcms"
+      }
     },
     {
       "id": "pkg:generic/libffi",
       "description": "a portable, high level programming interface to various calling conventions",
-      "specs": "dev-libs/libffi"
+      "specs": "dev-libs/libffi",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/libffi"
+      }
     },
     {
       "id": "pkg:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
-      "specs": "media-gfx/libimagequant"
+      "specs": "media-gfx/libimagequant",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-gfx/libimagequant"
+      }
     },
     {
       "id": "pkg:generic/libjpeg",
       "description": "MMX, SSE, and SSE2 SIMD accelerated JPEG library",
-      "specs": "media-libs/libjpeg-turbo"
+      "specs": "media-libs/libjpeg-turbo",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/libjpeg-turbo"
+      }
     },
     {
       "id": "pkg:generic/libpq",
       "description": "PostgreSQL RDBMS",
-      "specs": "dev-db/postgresql"
+      "specs": "dev-db/postgresql",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-db/postgresql"
+      }
     },
     {
       "id": "pkg:generic/libraqm",
@@ -57,62 +84,98 @@
     {
       "id": "pkg:generic/libtiff",
       "description": "Tag Image File Format (TIFF) library",
-      "specs": "media-libs/tiff"
+      "specs": "media-libs/tiff",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/tiff"
+      }
     },
     {
       "id": "pkg:generic/libwebp",
       "description": "A lossy image compression format",
-      "specs": "media-libs/libwebp"
+      "specs": "media-libs/libwebp",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/libwebp"
+      }
     },
     {
       "id": "pkg:generic/libxcb",
       "description": "X C-language Bindings library",
-      "specs": "x11-libs/libxcb"
+      "specs": "x11-libs/libxcb",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/x11-libs/libxcb"
+      }
     },
     {
       "id": "pkg:generic/libxml2",
       "description": "XML C parser and toolkit",
-      "specs": "dev-libs/libxml2"
+      "specs": "dev-libs/libxml2",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/libxml2"
+      }
     },
     {
       "id": "pkg:generic/libxslt",
       "description": "XSLT libraries and tools",
-      "specs": "dev-libs/libxslt"
+      "specs": "dev-libs/libxslt",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/libxslt"
+      }
     },
     {
       "id": "pkg:generic/libyaml",
       "description": "YAML 1.1 parser and emitter written in C",
-      "specs": "dev-libs/libyaml"
+      "specs": "dev-libs/libyaml",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/libyaml"
+      }
     },
     {
       "id": "pkg:generic/make",
       "description": "Standard tool to compile source trees",
-      "specs": "dev-build/make"
+      "specs": "dev-build/make",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-build/make"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "ninja symlinks",
-      "specs": "app-alternatives/ninja"
+      "specs": "app-alternatives/ninja",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/app-alternatives/ninja"
+      }
     },
     {
       "id": "pkg:generic/openblas",
       "description": "Optimized BLAS library based on GotoBLAS2",
-      "specs": "sci-libs/openblas"
+      "specs": "sci-libs/openblas",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sci-libs/openblas"
+      }
     },
     {
       "id": "pkg:generic/openjpeg",
       "description": "Open-source JPEG 2000 library",
-      "specs": "media-libs/openjpeg:2"
+      "specs": "media-libs/openjpeg:2",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/openjpeg"
+      }
     },
     {
       "id": "pkg:generic/openssl",
       "description": "Robust, full-featured Open Source Toolkit for the Transport Layer Security (TLS)",
-      "specs": "dev-libs/openssl"
+      "specs": "dev-libs/openssl",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/openssl"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "Virtual for the pkg-config implementation",
-      "specs": "virtual/pkgconfig[native-symlinks]"
+      "specs": "virtual/pkgconfig[native-symlinks]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/pkgconfig"
+      }
     },
     {
       "id": "pkg:generic/python",
@@ -121,72 +184,114 @@
         "build": [],
         "host": [],
         "run": "dev-lang/python"
+      },
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/python"
       }
     },
     {
       "id": "pkg:generic/tk",
       "description": "Tk Widget Set",
-      "specs": "dev-lang/tk"
+      "specs": "dev-lang/tk",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/tk"
+      }
     },
     {
       "id": "pkg:generic/zlib",
       "description": "Standard (de)compression library",
-      "specs": "sys-libs/zlib"
+      "specs": "sys-libs/zlib",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-libs/zlib"
+      }
     },
     {
       "id": "pkg:github/Reference-LAPACK/lapack",
       "description": "BLAS, CBLAS, LAPACK, LAPACKE reference implementations",
-      "specs": "sci-libs/lapack"
+      "specs": "sci-libs/lapack",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sci-libs/lapack"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc"
+      "specs": "sys-devel/gcc",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "C language family frontend for LLVM",
-      "specs": "llvm-core/clang"
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc[cxx]"
+      "specs": "sys-devel/gcc[cxx]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "C language family frontend for LLVM",
-      "specs": "llvm-core/clang"
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
       "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc[fortran]"
+      "specs": "sys-devel/gcc[fortran]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
       "description": "LLVM's Fortran frontend",
-      "specs": "llvm-core/flang"
+      "specs": "llvm-core/flang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/flang"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "Systems programming language originally developed by Mozilla",
-      "specs": "dev-lang/rust"
+      "specs": "dev-lang/rust",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "Systems programming language from Mozilla",
-      "specs": "dev-lang/rust-bin"
+      "specs": "dev-lang/rust-bin",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust-bin"
+      }
     },
     {
       "id": "virtual:interface/blas",
       "description": "Virtual for FORTRAN 77 BLAS implementation",
-      "specs": "virtual/blas"
+      "specs": "virtual/blas",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/blas"
+      }
     },
     {
       "id": "virtual:interface/lapack",
       "description": "Virtual for Linear Algebra Package FORTRAN 77 (LAPACK) implementation",
-      "specs": "virtual/lapack"
+      "specs": "virtual/lapack",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/lapack"
+      }
     }
   ],
   "package_managers": [
