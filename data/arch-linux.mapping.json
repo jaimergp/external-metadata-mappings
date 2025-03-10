@@ -7,166 +7,294 @@
     {
       "id": "pkg:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
-      "specs": "arrow"
+      "specs": "arrow",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/arrow/"
+      }
     },
     {
       "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": "cmake"
+      "description": "A cross-platform open-source make system",
+      "specs": "cmake",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/cmake/"
+      }
     },
     {
       "id": "pkg:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
-      "specs": "freetype2"
+      "specs": "freetype2",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/freetype2/"
+      }
     },
     {
       "id": "pkg:generic/gmp",
       "description": "The GNU multiprecision library",
-      "specs": "gmp"
+      "specs": "gmp",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gmp/"
+      }
     },
     {
       "id": "pkg:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
-      "specs": "lcms2"
+      "specs": "lcms2",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lcms2/"
+      }
     },
     {
       "id": "pkg:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
-      "specs": "libffi"
+      "specs": "libffi",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/libffi/"
+      }
     },
     {
       "id": "pkg:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
-      "specs": "libimagequant"
+      "specs": "libimagequant",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libimagequant/"
+      }
     },
     {
       "id": "pkg:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
-      "specs": "libjpeg-turbo"
+      "specs": "libjpeg-turbo",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libjpeg-turbo/"
+      }
     },
     {
       "id": "pkg:generic/libpq",
       "description": "Postgres C API library",
-      "specs": "postgresql-libs"
+      "specs": "postgresql-libs",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/postgresql-libs/"
+      }
     },
     {
       "id": "pkg:generic/libraqm",
       "description": "A library for complex text layout.",
-      "specs": "libraqm"
+      "specs": "libraqm",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libraqm/"
+      }
     },
     {
       "id": "pkg:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
-      "specs": "libtiff4"
+      "specs": "libtiff",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libtiff/"
+      }
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": "libtiff4",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libtiff/4"
+      }
     },
     {
       "id": "pkg:generic/libwebp",
-      "description": "WebP image library.",
-      "specs": "libwebp"
+      "description": "WebP image library",
+      "specs": "libwebp",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libwebp/"
+      }
     },
     {
       "id": "pkg:generic/libxcb",
-      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
-      "specs": "libxcb"
+      "description": "X11 client-side library",
+      "specs": "libxcb",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libxcb/"
+      }
     },
     {
       "id": "pkg:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
-      "specs": "libxml2"
+      "specs": "libxml2",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/libxml2/"
+      }
     },
     {
       "id": "pkg:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
-      "specs": "libxslt"
+      "specs": "libxslt",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libxslt/"
+      }
     },
     {
       "id": "pkg:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
-      "specs": "libyaml"
+      "specs": "libyaml",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libyaml/"
+      }
     },
     {
       "id": "pkg:generic/make",
       "description": "GNU Make",
-      "specs": "make"
+      "specs": "make",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/make/"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "ninja"
+      "specs": "ninja",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/ninja/"
+      }
     },
     {
       "id": "pkg:generic/openblas",
-      "description": "",
-      "specs": "openblas"
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
+      "specs": "openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/openblas/"
+      }
     },
     {
       "id": "pkg:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
-      "specs": "openjpeg2"
+      "specs": "openjpeg2",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/openjpeg2/"
+      }
     },
     {
       "id": "pkg:generic/openssl",
-      "description": "OpenSSL built by ShiningLight",
-      "specs": "openssl"
+      "description": "The Open Source toolkit for Secure Sockets Layer and Transport Layer Security",
+      "specs": "openssl",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/openssl/"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
-      "specs": "pkgconf"
+      "specs": "pkgconf",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/pkgconf/"
+      }
     },
     {
       "id": "pkg:generic/python",
-      "description": "The Python interpreter",
+      "description": "The Python programming language",
       "specs": {
         "build": [],
         "host": [],
         "run": "python"
+      },
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/python/"
       }
     },
     {
       "id": "pkg:generic/tk",
-      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
-      "specs": "tk"
+      "description": "A windowing toolkit for use with tcl",
+      "specs": "tk",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/tk/"
+      }
     },
     {
       "id": "pkg:generic/zlib",
-      "description": "The zlib-ng-compat package contains the library that is API and binary compatible with zlib.",
-      "specs": "zlib"
+      "description": "Compression library implementing the deflate compression method found in gzip and PKZIP",
+      "specs": "zlib",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/zlib/"
+      }
     },
     {
       "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "",
-      "specs": []
+      "description": "Linear Algebra PACKage",
+      "specs": "lapack",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lapack/"
+      }
     },
     {
       "id": "virtual:compiler/c",
       "description": "GNU C Compiler",
-      "specs": "gcc"
+      "specs": "gcc",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "GNU C++ Compiler",
-      "specs": "gcc"
+      "specs": "gcc",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
       "description": "GNU Fortran Compiler",
-      "specs": "gcc-gfortran"
+      "specs": "gcc-fortran",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc-fortran/"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler",
-      "specs": "rust"
+      "specs": "rust",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/rust/"
+      }
     },
     {
       "id": "virtual:interface/blas",
-      "description": "The netlib implementation for BLAS",
-      "specs": "openblas"
+      "description": "Basic Linear Algebra Subprograms",
+      "specs": "blas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/blas/"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
+      "specs": "blas-openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
+      "specs": "openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/openblas/"
+      }
     },
     {
       "id": "virtual:interface/lapack",
-      "description": "The netlib implementation for lapack",
-      "specs": "openblas"
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
+      "specs": "blas-openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "Linear Algebra PACKage",
+      "specs": "lapack",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lapack/"
+      }
     }
   ],
   "package_managers": [
