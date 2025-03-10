@@ -6,7 +6,7 @@
   "mappings": [
     {
       "id": "pkg:generic/arrow",
-      "description": "C++ libraries for Apache Arrow core",
+      "description": "A toolbox for accelerated data interchange and in-memory processing",
       "specs": {
         "host": [
           "libarrow",
@@ -15,16 +15,23 @@
         "run": [
           "libarrow"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libarrow)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow/",
+        "packages.fedoraproject.org (libarrow-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-devel/"
       }
     },
     {
       "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": "cmake"
+      "description": "Cross-platform make system",
+      "specs": "cmake",
+      "urls": {
+        "packages.fedoraproject.org (libarrow)": "https://packages.fedoraproject.org/pkgs/cmake/cmake/"
+      }
     },
     {
       "id": "pkg:generic/freetype",
-      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "description": "A free and portable font rendering engine",
       "specs": {
         "host": [
           "freetype",
@@ -33,11 +40,15 @@
         "run": [
           "freetype"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (freetype)": "https://packages.fedoraproject.org/pkgs/freetype/freetype/",
+        "packages.fedoraproject.org (freetype-devel)": "https://packages.fedoraproject.org/pkgs/freetype/freetype-devel/"
       }
     },
     {
       "id": "pkg:generic/gmp",
-      "description": "The GNU multiprecision library",
+      "description": "GNU arbitrary precision library",
       "specs": {
         "host": [
           "gmp",
@@ -46,6 +57,10 @@
         "run": [
           "gmp"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (gmp)": "https://packages.fedoraproject.org/pkgs/gmp/gmp/",
+        "packages.fedoraproject.org (gmp-devel)": "https://packages.fedoraproject.org/pkgs/gmp/gmp-devel/"
       }
     },
     {
@@ -59,6 +74,10 @@
         "run": [
           "lcms2"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (lcms2)": "https://packages.fedoraproject.org/pkgs/lcms2/lcms2/",
+        "packages.fedoraproject.org (lcms2-devel)": "https://packages.fedoraproject.org/pkgs/lcms2/lcms2-devel/"
       }
     },
     {
@@ -72,17 +91,27 @@
         "run": [
           "libffi"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libffi)": "https://packages.fedoraproject.org/pkgs/libffi/libffi/",
+        "packages.fedoraproject.org (libffi-devel)": "https://packages.fedoraproject.org/pkgs/libffi/libffi-devel/"
       }
     },
     {
       "id": "pkg:generic/libffi",
       "description": "A Portable Foreign Function Interface Library (for MINGW)",
-      "specs": "mingw32-libffi"
+      "specs": "mingw32-libffi",
+      "urls": {
+        "packages.fedoraproject.org (mingw32libffi)": "https://packages.fedoraproject.org/pkgs/mingw-libffi/mingw32-libffi/"
+      }
     },
     {
       "id": "pkg:generic/libffi",
       "description": "A Portable Foreign Function Interface Library (for MINGW64)",
-      "specs": "mingw64-libffi"
+      "specs": "mingw64-libffi",
+      "urls": {
+        "packages.fedoraproject.org (mingw64-libffi)": "https://packages.fedoraproject.org/pkgs/mingw-libffi/mingw64-libffi/"
+      }
     },
     {
       "id": "pkg:generic/libimagequant",
@@ -95,6 +124,10 @@
         "run": [
           "libimagequant"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libimagequant)": "https://packages.fedoraproject.org/pkgs/libimagequant/libimagequant/",
+        "packages.fedoraproject.org (libimagequant-devel)": "https://packages.fedoraproject.org/pkgs/libimagequant/libimagequant-devel/"
       }
     },
     {
@@ -108,6 +141,10 @@
         "run": [
           "libjpeg-turbo"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libjpeg-turbo)": "https://packages.fedoraproject.org/pkgs/libjpeg-turbo/libjpeg-turbo/",
+        "packages.fedoraproject.org (libjpeg-turbo-devel)": "https://packages.fedoraproject.org/pkgs/libjpeg-turbo/libjpeg-turbo-devel/"
       }
     },
     {
@@ -121,6 +158,10 @@
         "run": [
           "libpq"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libpq)": "https://packages.fedoraproject.org/pkgs/libpq/libpq/",
+        "packages.fedoraproject.org (libpq-devel)": "https://packages.fedoraproject.org/pkgs/libpq/libpq-devel/"
       }
     },
     {
@@ -134,6 +175,10 @@
         "run": [
           "libraqm"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libraqm)": "https://packages.fedoraproject.org/pkgs/libraqm/libraqm/",
+        "packages.fedoraproject.org (libraqm-devel)": "https://packages.fedoraproject.org/pkgs/libraqm/libraqm-devel/"
       }
     },
     {
@@ -147,6 +192,10 @@
         "run": [
           "libtiff"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libtiff)": "https://packages.fedoraproject.org/pkgs/libtiff/libtiff/",
+        "packages.fedoraproject.org (libtiff-devel)": "https://packages.fedoraproject.org/pkgs/libtiff/libtiff-devel/"
       }
     },
     {
@@ -160,6 +209,10 @@
         "run": [
           "libwebp"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libwebp)": "https://packages.fedoraproject.org/pkgs/libwebp/libwebp/",
+        "packages.fedoraproject.org (libwebp-devel)": "https://packages.fedoraproject.org/pkgs/libwebp/libwebp-devel/"
       }
     },
     {
@@ -173,6 +226,10 @@
         "run": [
           "libxcb"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libxcb)": "https://packages.fedoraproject.org/pkgs/libxcb/libxcb/",
+        "packages.fedoraproject.org (libxcb-devel)": "https://packages.fedoraproject.org/pkgs/libxcb/libxcb-devel/"
       }
     },
     {
@@ -186,17 +243,27 @@
         "run": [
           "libxml2"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libxml2)": "https://packages.fedoraproject.org/pkgs/libxml2/libxml2/",
+        "packages.fedoraproject.org (libxml2-devel)": "https://packages.fedoraproject.org/pkgs/libxml2/libxml2-devel/"
       }
     },
     {
       "id": "pkg:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome, for MINGW",
-      "specs": "mingw32-libxml2"
+      "specs": "mingw32-libxml2",
+      "urls": {
+        "packages.fedoraproject.org (mingw32-libxml2)": "https://packages.fedoraproject.org/pkgs/mingw-libxml2/mingw32-libxml2/"
+      }
     },
     {
       "id": "pkg:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome, for MINGW64",
-      "specs": "mingw64-libxml2"
+      "specs": "mingw64-libxml2",
+      "urls": {
+        "packages.fedoraproject.org (mingw64-libxml2)": "https://packages.fedoraproject.org/pkgs/mingw-libxml2/mingw64-libxml2/"
+      }
     },
     {
       "id": "pkg:generic/libxslt",
@@ -207,6 +274,10 @@
           "libxslt-devel"
         ],
         "run": "libxslt"
+      },
+      "urls": {
+        "packages.fedoraproject.org (libxslt)": "https://packages.fedoraproject.org/pkgs/libxslt/libxslt/",
+        "packages.fedoraproject.org (libxslt-devel)": "https://packages.fedoraproject.org/pkgs/libxslt/libxslt-devel/"
       }
     },
     {
@@ -220,22 +291,44 @@
         "run": [
           "libyaml"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libyaml)": "https://packages.fedoraproject.org/pkgs/libyaml/libyaml/",
+        "packages.fedoraproject.org (libyaml-devel)": "https://packages.fedoraproject.org/pkgs/libyaml/libyaml-devel/"
       }
     },
     {
       "id": "pkg:generic/make",
       "description": "GNU Make",
-      "specs": "make"
+      "specs": "make",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/make/make/"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "ninja-build"
+      "specs": "ninja-build",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/ninja-build/ninja-build/"
+      }
     },
     {
       "id": "pkg:generic/openblas",
-      "description": "",
-      "specs": []
+      "description": "An optimized BLAS library based on GotoBLAS2",
+      "specs": {
+        "host": [
+          "openblas",
+          "openblas-devel"
+        ],
+        "run": [
+          "openblas"
+        ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (openblas)": "https://packages.fedoraproject.org/pkgs/openblas/openblas/",
+        "packages.fedoraproject.org (openblas-devel)": "https://packages.fedoraproject.org/pkgs/openblas/openblas-devel/"
+      }
     },
     {
       "id": "pkg:generic/openjpeg",
@@ -248,36 +341,55 @@
         "run": [
           "openjpeg"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (openjpeg)": "https://packages.fedoraproject.org/pkgs/openjpeg/openjpeg/",
+        "packages.fedoraproject.org (openjpeg-devel)": "https://packages.fedoraproject.org/pkgs/openjpeg/openjpeg-devel/"
       }
     },
     {
       "id": "pkg:generic/openssl",
-      "description": "OpenSSL built by ShiningLight",
+      "description": "Utilities from the general purpose cryptography library with TLS implementation",
       "specs": {
         "host": [
           "openssl",
           "openssl-devel"
         ],
         "run": "openssl"
+      },
+      "urls": {
+        "packages.fedoraproject.org (openssl)": "https://packages.fedoraproject.org/pkgs/openssl/openssl/",
+        "packages.fedoraproject.org (openssl-devel)": "https://packages.fedoraproject.org/pkgs/openssl/openssl-devel/"
       }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
-      "specs": "pkgconf-pkg-config"
+      "specs": "pkgconf",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/pkgconf/pkgconf/"
+      }
     },
     {
       "id": "pkg:generic/python",
       "description": "The Python interpreter",
       "specs": {
-        "build": "python-devel",
-        "host": "python-devel",
-        "run": "python"
+        "build": "python3-devel",
+        "host": "python3-devel",
+        "run": [
+          "python3",
+          "python-unversioned-command"
+        ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (python-unversioned-command)": "https://packages.fedoraproject.org/pkgs/python3.13/python-unversioned-command/",
+        "packages.fedoraproject.org (python3)": "https://packages.fedoraproject.org/pkgs/python3.13/python3/",
+        "packages.fedoraproject.org (python3-devel)": "https://packages.fedoraproject.org/pkgs/python3.13/python3-devel/"
       }
     },
     {
       "id": "pkg:generic/tk",
-      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "description": "The graphical toolkit for the Tcl scripting language",
       "specs": {
         "host": [
           "tk",
@@ -286,6 +398,10 @@
         "run": [
           "tk"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (tk)": "https://packages.fedoraproject.org/pkgs/tk/tk/",
+        "packages.fedoraproject.org (tk-devel)": "https://packages.fedoraproject.org/pkgs/tk/tk-devel/"
       }
     },
     {
@@ -299,6 +415,10 @@
         "run": [
           "zlib-ng-compat"
         ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (zlib-ng-compat)": "https://packages.fedoraproject.org/pkgs/zlib-ng/zlib-ng-compat/",
+        "packages.fedoraproject.org (zlib-ng-compat-devel)": "https://packages.fedoraproject.org/pkgs/zlib-ng/zlib-ng-compat-devel/"
       }
     },
     {
@@ -309,7 +429,10 @@
     {
       "id": "virtual:compiler/c",
       "description": "GNU C Compiler",
-      "specs": "gcc"
+      "specs": "gcc",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/gcc/gcc/"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
@@ -317,7 +440,11 @@
       "specs": [
         "gcc",
         "gcc-c++"
-      ]
+      ],
+      "urls": {
+        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
+        "packages.fedoraproject.org (gcc-c++)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-c++/"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
@@ -325,33 +452,93 @@
       "specs": [
         "gcc",
         "gcc-gfortran"
-      ]
+      ],
+      "urls": {
+        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
+        "packages.fedoraproject.org (gcc-gfortran)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-gfortran/"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler",
-      "specs": "rust"
+      "specs": "rust",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
+      }
     },
     {
       "id": "virtual:interface/blas",
-      "description": "The netlib implementation for BLAS",
+      "description": "The Basic Linear Algebra Subprograms library",
+      "specs": {
+        "host": [
+          "blas",
+          "blas-devel"
+        ],
+        "run": "blas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (blas)": "https://packages.fedoraproject.org/pkgs/lapack/blas/",
+        "packages.fedoraproject.org (blas-devel)": "https://packages.fedoraproject.org/pkgs/lapack/blas-devel/"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+      "specs": {
+        "host": [
+          "openblas",
+          "openblas-devel"
+        ],
+        "run": "openblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (openblas)": "https://packages.fedoraproject.org/pkgs/openblas/openblas/",
+        "packages.fedoraproject.org (openblas-devel)": "https://packages.fedoraproject.org/pkgs/openblas/openblas-devel/"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
       "specs": {
         "host": [
           "flexiblas",
           "flexiblas-devel"
         ],
         "run": "flexiblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
+        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
       }
     },
     {
       "id": "virtual:interface/lapack",
-      "description": "The netlib implementation for lapack",
+      "description": "Numerical linear algebra package libraries",
+      "specs": {
+        "host": [
+          "lapack",
+          "lapack-devel"
+        ],
+        "run": "lapack"
+      },
+      "urls": {
+        "packages.fedoraproject.org (lapack)": "https://packages.fedoraproject.org/pkgs/lapack/lapack/",
+        "packages.fedoraproject.org (lapack-devel)": "https://packages.fedoraproject.org/pkgs/lapack/lapack-devel/"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
       "specs": {
         "host": [
           "flexiblas",
           "flexiblas-devel"
         ],
         "run": "flexiblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
+        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
       }
     }
   ],
