@@ -7,62 +7,98 @@
     {
       "id": "pkg:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
-      "specs": "apache-arrow"
+      "specs": "apache-arrow",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/apache-arrow"
+      }
     },
     {
       "id": "pkg:generic/cmake",
       "description": "",
-      "specs": "cmake"
+      "specs": "cmake",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/cmake"
+      }
     },
     {
       "id": "pkg:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
-      "specs": "freetype"
+      "specs": "freetype",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/freetype"
+      }
     },
     {
       "id": "pkg:generic/gmp",
       "description": "The GNU multiprecision library",
-      "specs": "gmp"
+      "specs": "gmp",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gmp"
+      }
     },
     {
       "id": "pkg:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
-      "specs": "little-cms2"
+      "specs": "little-cms2",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/little-cms2"
+      }
     },
     {
       "id": "pkg:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
-      "specs": "libffi"
+      "specs": "libffi",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libffi"
+      }
     },
     {
       "id": "pkg:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
-      "specs": "libimagequant"
+      "specs": "libimagequant",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libimagequant"
+      }
     },
     {
       "id": "pkg:generic/libjpeg",
       "description": "The free library for JPEG image compression by the Independent JPEG Group",
-      "specs": "jpeg"
+      "specs": "jpeg",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/jpeg"
+      }
     },
     {
       "id": "pkg:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
-      "specs": "jpeg-turbo"
+      "specs": "jpeg-turbo",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/jpeg-turbo"
+      }
     },
     {
       "id": "pkg:generic/libpq",
       "description": "Postgres C API library",
-      "specs": "libpq"
+      "specs": "libpq",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libpq"
+      }
     },
     {
       "id": "pkg:generic/libraqm",
       "description": "A library for complex text layout.",
-      "specs": "libraqm"
+      "specs": "libraqm",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libraqm"
+      }
     },
     {
       "id": "pkg:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
-      "specs": "libtiff"
+      "specs": "libtiff",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libtiff"
+      }
     },
     {
       "id": "pkg:generic/libwebp",
@@ -72,32 +108,50 @@
     {
       "id": "pkg:generic/libxcb",
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
-      "specs": "libxcb"
+      "specs": "libxcb",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libxcb"
+      }
     },
     {
       "id": "pkg:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
-      "specs": "libxml2"
+      "specs": "libxml2",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libxml2"
+      }
     },
     {
       "id": "pkg:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
-      "specs": "libxslt"
+      "specs": "libxslt",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libxslt"
+      }
     },
     {
       "id": "pkg:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
-      "specs": "yaml"
+      "specs": "yaml",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/yaml"
+      }
     },
     {
       "id": "pkg:generic/make",
       "description": "GNU Make",
-      "specs": "make"
+      "specs": "make",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/make"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "ninja"
+      "specs": "ninja",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/ninja"
+      }
     },
     {
       "id": "pkg:generic/openblas",
@@ -107,37 +161,58 @@
     {
       "id": "pkg:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
-      "specs": "openjpeg"
+      "specs": "openjpeg",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/openjpeg"
+      }
     },
     {
       "id": "pkg:generic/openssl",
       "description": "OpenSSL as built from sources at openssl-library.org",
-      "specs": "openssl"
+      "specs": "openssl",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/openssl"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit, from pkgconf/pkgconf",
-      "specs": "pkgconf"
+      "specs": "pkgconf",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/pkgconf"
+      }
     },
     {
       "id": "pkg:generic/python",
       "description": "The Python interpreter",
-      "specs": "python"
+      "specs": "python",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/python"
+      }
     },
     {
       "id": "pkg:generic/tk",
       "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
-      "specs": "tcl-tk"
+      "specs": "tcl-tk",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/tcl-tk"
+      }
     },
     {
       "id": "pkg:generic/zlib",
       "description": "General-purpose lossless data-compression library, from zlib.net",
-      "specs": "zlib"
+      "specs": "zlib",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/zlib"
+      }
     },
     {
       "id": "pkg:generic/zlib",
       "description": "zlib data compression library for the next generation systems. From zlib-ng/zlib-ng.",
-      "specs": "zlib-ng"
+      "specs": "zlib-ng",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/zlib-ng"
+      }
     },
     {
       "id": "pkg:github/Reference-LAPACK/lapack",
@@ -147,37 +222,58 @@
     {
       "id": "virtual:compiler/c",
       "description": "GNU C Compiler",
-      "specs": "gcc"
+      "specs": "gcc",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gcc"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "GNU C++ Compiler",
-      "specs": "gcc"
+      "specs": "gcc",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gcc"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
       "description": "GNU Fortran Compiler",
-      "specs": "gfortran"
+      "specs": "gfortran",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gfortran"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The default compiler for Rust",
-      "specs": "rust"
+      "specs": "rust",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/rust"
+      }
     },
     {
       "id": "virtual:interface/blas",
       "description": "The OpenBLAS implementation for BLAS",
-      "specs": "openblas"
+      "specs": "openblas",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/openblas"
+      }
     },
     {
       "id": "virtual:interface/blas",
       "description": "The BLIS implementation for BLAS",
-      "specs": "blis"
+      "specs": "blis",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/blis"
+      }
     },
     {
       "id": "virtual:interface/lapack",
       "description": "The netlib implementation for LAPACK",
-      "specs": "lapack"
+      "specs": "lapack",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/lapack"
+      }
     }
   ],
   "package_managers": [
