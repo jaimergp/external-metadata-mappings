@@ -42,12 +42,18 @@
     {
       "id": "pkg:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations, for MSVC",
-      "specs": "turbo.libjpeg-turbo.VC"
+      "specs": "turbo.libjpeg-turbo.VC",
+      "urls": {
+        "winget.run": "https://winget.run/pkg/libjpeg-turbo/libjpeg-turbo.VC"
+      }
     },
     {
       "id": "pkg:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations, for GCC",
-      "specs": "turbo.libjpeg-turbo.GCC"
+      "specs": "turbo.libjpeg-turbo.GCC",
+      "urls": {
+        "winget.run": "https://winget.run/pkg/libjpeg-turbo/libjpeg-turbo.GCC"
+      }
     },
     {
       "id": "pkg:generic/libpq",
@@ -67,7 +73,10 @@
     {
       "id": "pkg:generic/libwebp",
       "description": "WebP image library.",
-      "specs": "Google.Libwebp"
+      "specs": "Google.Libwebp",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Google.Libwebp"
+      }
     },
     {
       "id": "pkg:generic/libxcb",
@@ -97,7 +106,10 @@
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "Ninja-build.Ninja"
+      "specs": "Ninja-build.Ninja",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Ninja-build.Ninja"
+      }
     },
     {
       "id": "pkg:generic/openblas",
@@ -112,7 +124,10 @@
     {
       "id": "pkg:generic/openssl",
       "description": "OpenSSL built by ShiningLight",
-      "specs": "ShiningLight.OpenSSL"
+      "specs": "ShiningLight.OpenSSL",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/ShiningLight.OpenSSL"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
@@ -122,12 +137,18 @@
     {
       "id": "pkg:generic/python",
       "description": "",
-      "specs": "Python.Python.3.11"
+      "specs": "Python.Python.3.11",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Python.Python.3.11"
+      }
     },
     {
       "id": "pkg:generic/tk",
       "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
-      "specs": "Magicsplat.TclTk"
+      "specs": "Magicsplat.TclTk",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Magicsplat.TclTk"
+      }
     },
     {
       "id": "pkg:generic/zlib",
@@ -142,32 +163,50 @@
     {
       "id": "virtual:compiler/c",
       "description": "MSVC Compilers",
-      "specs": "Microsoft.VisualStudio.2022.Community"
+      "specs": "Microsoft.VisualStudio.2022.Community",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Microsoft.VisualStudio.2022.Community"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "MSVC Compilers",
-      "specs": "Microsoft.VisualStudio.2022.Community"
+      "specs": "Microsoft.VisualStudio.2022.Community",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Microsoft.VisualStudio.2022.Community"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
       "description": "Intel Fortran compilers",
-      "specs": "Intel.FortranCompiler"
+      "specs": "Intel.FortranCompiler",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Intel.FortranCompiler"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler, built with the GNU toolchain",
-      "specs": "Rustlang.Rust.GNU"
+      "specs": "Rustlang.Rust.GNU",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Rustlang.Rust.GNU"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler, built with the MSVC toolchain",
-      "specs": "Rustlang.Rust.MSVC"
+      "specs": "Rustlang.Rust.MSVC",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Rustlang.Rust.MSVC"
+      }
     },
     {
       "id": "virtual:interface/blas",
       "description": "The MKL implementation for BLAS",
-      "specs": "Intel.oneMKL"
+      "specs": "Intel.oneMKL",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Intel.oneMKL"
+      }
     },
     {
       "id": "virtual:interface/lapack",

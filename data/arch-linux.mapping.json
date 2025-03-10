@@ -22,7 +22,7 @@
     },
     {
       "id": "pkg:generic/freetype",
-      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "description": "Font rasterization library",
       "specs": "freetype2",
       "urls": {
         "archlinux.org": "https://archlinux.org/packages/extra/x86_64/freetype2/"

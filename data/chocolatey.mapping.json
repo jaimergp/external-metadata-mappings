@@ -12,7 +12,10 @@
     {
       "id": "pkg:generic/cmake",
       "description": "Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI",
-      "specs": "cmake"
+      "specs": "cmake",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/cmake"
+      }
     },
     {
       "id": "pkg:generic/freetype",
@@ -92,14 +95,18 @@
     {
       "id": "pkg:generic/make",
       "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.",
-      "specs": [
-        "make"
-      ]
+      "specs": "make",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/make"
+      }
     },
     {
       "id": "pkg:generic/ninja",
       "description": "A small build system with a focus on speed",
-      "specs": "ninja"
+      "specs": "ninja",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/ninja"
+      }
     },
     {
       "id": "pkg:generic/openblas",
@@ -114,7 +121,10 @@
     {
       "id": "pkg:generic/openssl",
       "description": "The Win32/Win64 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL for Microsoft Windows.",
-      "specs": "openssl"
+      "specs": "openssl",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/openssl"
+      }
     },
     {
       "id": "pkg:generic/pkg-config",
@@ -124,7 +134,10 @@
     {
       "id": "pkg:generic/python",
       "description": "The Python interpreter (3.13)",
-      "specs": "python313"
+      "specs": "python313",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/python313"
+      }
     },
     {
       "id": "pkg:generic/tk",
@@ -144,12 +157,18 @@
     {
       "id": "virtual:compiler/c",
       "description": "Microsoft Visual Studio 2022 Build Tools",
-      "specs": "visualstudio2022buildtools"
+      "specs": "visualstudio2022buildtools",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/visualstudio2022buildtools"
+      }
     },
     {
       "id": "virtual:compiler/cpp",
       "description": "Microsoft Visual Studio 2022 Build Tools",
-      "specs": "visualstudio2022buildtools"
+      "specs": "visualstudio2022buildtools",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/visualstudio2022buildtools"
+      }
     },
     {
       "id": "virtual:compiler/fortran",
@@ -159,12 +178,18 @@
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler (GNU ABI)",
-      "specs": "rust"
+      "specs": "rust",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/rust"
+      }
     },
     {
       "id": "virtual:compiler/rust",
       "description": "The Rust compiler (Visual Studio ABI)",
-      "specs": "rust-ms"
+      "specs": "rust-ms",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/rust-ms"
+      }
     },
     {
       "id": "virtual:interface/blas",
