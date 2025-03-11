@@ -6,6 +6,7 @@ from packageurl import PackageURL
 from univers.versions import PypiVersion
 from univers.version_range import PypiVersionRange
 
+
 class DepURL(PackageURL):
     # TODO: Needs https://github.com/package-url/packageurl-python/pull/184
     SCHEME = "dep"
