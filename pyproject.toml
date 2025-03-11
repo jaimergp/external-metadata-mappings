@@ -26,7 +26,8 @@ requires-python = ">=3.10"
 dependencies = [
   "requests",
   "jsonschema",
-  "packageurl-python==0.16.0"
+  "packageurl-python==0.16.0",
+  "univers==30.12.1"
 ]
 
 [project.urls]
