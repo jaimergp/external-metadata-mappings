@@ -327,17 +327,17 @@
   ],
   "package_managers": [
     {
-      "name": "nix-shell",
-      "install_command": [
-        "nix-shell",
-        "-p"
-      ]
-    },
-    {
       "name": "nix-env",
       "install_command": [
         "nix-env",
         "-iA"
+      ]
+    },
+    {
+      "name": "nix-shell",
+      "install_command": [
+        "nix-shell",
+        "-p"
       ]
     }
   ]

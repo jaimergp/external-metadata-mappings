@@ -14,6 +14,12 @@
         "choco"
       ]
     },
+    "conan": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/conan.mapping.json",
+      "package_managers": [
+        "conan"
+      ]
+    },
     "conda-forge": {
       "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/conda-forge.mapping.json",
       "package_managers": [
@@ -41,10 +47,23 @@
         "brew"
       ]
     },
+    "nix": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/nix.mapping.json",
+      "package_managers": [
+        "nix-shell",
+        "nix-env"
+      ]
+    },
     "scoop": {
       "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/scoop.mapping.json",
       "package_managers": [
         "scoop"
+      ]
+    },
+    "spack": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/spack.mapping.json",
+      "package_managers": [
+        "spack"
       ]
     },
     "ubuntu": {
