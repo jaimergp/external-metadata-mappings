@@ -152,7 +152,7 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         if specs := mapping_entry.get("specs"):
             return specs
         elif specs_from := mapping_entry.get("specs_from"):
-            return self._resolve_specs(self.data["mappings"], specs_from)
+            return self._resolve_specs(specs_from)
         return []
 
     @staticmethod
