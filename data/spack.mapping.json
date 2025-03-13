@@ -1,0 +1,393 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "name": "Spack",
+  "description": "Mapping for the Spack ecosystem",
+  "mappings": [
+    {
+      "id": "pkg:generic/arrow",
+      "description": "A cross-language development platform for in-memory data. This package contains the C++ bindings.",
+      "specs": "arrow",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=arrow"
+      }
+    },
+    {
+      "id": "pkg:generic/cmake",
+      "description": "A cross-platform, open-source build system. CMake is a family of tools designed to build, test and package software.",
+      "specs": "cmake",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=cmake"
+      }
+    },
+    {
+      "id": "pkg:generic/freetype",
+      "description": "FreeType is a freely available software library to render fonts. It is written in C, designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images) of most vector and bitmap font formats.",
+      "specs": "freetype",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=freetype"
+      }
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.",
+      "specs": "gmp",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gmp"
+      }
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "Little cms is a color management library. Implements fast transforms between ICC profiles. It is focused on speed, and is portable across several platforms (MIT license).",
+      "specs": "lcms",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=lcms"
+      }
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "The libffi library provides a portable, high level programming interface to various calling conventions. This allows a programmer to call any function specified by a call interface description at run time.",
+      "specs": "libffi",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libffi"
+      }
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Not Small, portable C library for high-quality conversion of RGBA images to 8-bit indexed-color (palette) images.",
+      "specs": "libimagequant",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libimagequant"
+      }
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "libjpeg is a widely used free library with functions for handling the JPEG image data format. It implements a JPEG codec (encoding and decoding) alongside various utilities for handling JPEG data.",
+      "specs": "libjpeg",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libjpeg"
+      }
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression. libjpeg is a library that implements JPEG image encoding, decoding and transcoding.",
+      "specs": "libjpeg-turbo",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libjpeg-turbo"
+      }
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "PostgreSQL is a powerful, open source object-relational database system. It has more than 15 years of active development and a proven architecture that has earned it a strong reputation for reliability, data integrity, and correctness.",
+      "specs": "postgresql",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=postgresql"
+      }
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "Raqm provides a convenient API for the logic of complex text layout.",
+      "specs": "libraqm",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libraqm"
+      }
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "LibTIFF - Tag Image File Format (TIFF) Library and Utilities.",
+      "specs": "libtiff",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libtiff"
+      }
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.",
+      "specs": "libwebp",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libwebp"
+      }
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint, latency hiding, direct access to the protocol, improved threading support, and extensibility.",
+      "specs": "libxcb",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libxcb"
+      }
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "Libxml2 is the XML C parser and toolkit developed for the Gnome project (but usable outside of the Gnome platform), it is free software available under the MIT License.",
+      "specs": "libxml2",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libxml2"
+      }
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML. Libxslt is based on libxml2 the XML C library developed for the GNOME project. It also implements most of the EXSLT set of processor-portable extensions functions and some of Saxon's evaluate and expressions extensions.",
+      "specs": "libxslt",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libxslt"
+      }
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML.",
+      "specs": "libyaml",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libyaml"
+      }
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files",
+      "specs": "gmake",
+      "urls": {
+        "conan.io": "https://packages.spack.io/package.html?name=gmake"
+      }
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "Ninja is a small build system with a focus on speed. It differs from other build systems in two major respects: it is designed to have its input files generated by a higher-level build system, and it is designed to run builds as fast as possible.",
+      "specs": "ninja",
+      "urls": {
+        "conan.io": "https://packages.spack.io/package.html?name=ninja"
+      }
+    },
+    {
+      "id": "pkg:generic/openblas",
+      "description": "OpenBLAS: An optimized BLAS library",
+      "specs": "openblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
+      }
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of JPEG 2000, a still-image compression standard from the Joint Photographic Experts Group (JPEG). Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.",
+      "specs": "openjpeg",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openjpeg"
+      }
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "OpenSSL is an open source project that provides a robust, commercial- grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.",
+      "specs": "openssl",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openssl"
+      }
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "pkgconf is a program which helps to configure compiler and linker flags for development frameworks. It is similar to pkg-config from freedesktop.org, providing additional functionality while also maintaining compatibility.",
+      "specs": "pkgconf",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=pkgconf"
+      }
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "pkg-config is a helper tool used when compiling applications and libraries",
+      "specs": "pkg-config",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=pkg-config"
+      }
+    },
+    {
+      "id": "pkg:generic/python",
+      "description": "The Python programming language.",
+      "specs": "python",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=python"
+      }
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches. Tk is the standard GUI not only for Tcl, but for many other dynamic languages, and can produce rich, native applications that run unchanged across Windows, Mac OS X, Linux and more.",
+      "specs": "tk",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=tk"
+      }
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "A free, general-purpose, legally unencumbered lossless data-compression library.",
+      "specs": "zlib",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=zlib"
+      }
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "LAPACK version 3.X is a comprehensive FORTRAN library that does linear algebra operations including matrix inversions, least squared solutions to linear sets of equations, eigenvector analysis, singular value decomposition, etc. It is a very comprehensive and reputable package that has found extensive use in the scientific community.",
+      "specs": "netlib-lapack",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=netlib-lapack"
+      }
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
+      "specs": "gcc",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
+      }
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
+      "specs": "gcc",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
+      }
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
+      "specs": "intel-oneapi-compilers",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers"
+      }
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
+      "specs": "gcc",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
+      }
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
+      "specs": "intel-oneapi-compilers",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers"
+      }
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "Relies on intel-oneapi-compilers to install the compilers, and configures modules for icc/icpc/ifort. LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
+      "specs": "intel-oneapi-compilers-classic",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers-classic"
+      }
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "Modern interactive LLVM-based Fortran compiler",
+      "specs": "lfortran",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=lfortran"
+      }
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "The Rust programming language toolchain.",
+      "specs": "rust",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=rust"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "The BLAS (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations.",
+      "specs": "cblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=cblas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "Radeon Open Compute BLAS library",
+      "specs": "rocblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=rocblas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "OpenBLAS: An optimized BLAS library",
+      "specs": "openblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "NVPL BLAS (NVIDIA Performance Libraries BLAS) is part of NVIDIA Performance Libraries that provides standard Fortran 77 BLAS APIs as well as C (CBLAS)",
+      "specs": "nvpl-blas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=nvpl-blas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "A BLAS and LAPACK wrapper library with runtime exchangeable backends",
+      "specs": "flexiblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=flexiblas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "CLBlast is a modern, lightweight, performant and tunable OpenCL BLAS library written in C++11. It is designed to leverage the full performance potential of a wide variety of OpenCL devices from different vendors, including desktop and laptop GPUs, embedded GPUs, and other accelerators. CLBlast implements BLAS routines: basic linear algebra subprograms operating on vectors and matrices.",
+      "specs": "clblast",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=clblast"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "Lightweight but flexible shim designed to rectify the incompatibilities between the Accelerate/vecLib BLAS and LAPACK libraries shipped with macOS and FORTRAN code compiled with modern compilers such as GNU Fortran.",
+      "specs": "veclibfort",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=veclibfort"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "Lightweight but flexible shim designed to rectify the incompatibilities between the Accelerate/vecLib BLAS and LAPACK libraries shipped with macOS and FORTRAN code compiled with modern compilers such as GNU Fortran.",
+      "specs": "veclibfort",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=veclibfort"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "LAPACK version 3.X is a comprehensive FORTRAN library that does linear algebra operations including matrix inversions, least squared solutions to linear sets of equations, eigenvector analysis, singular value decomposition, etc. It is a very comprehensive and reputable package that has found extensive use in the scientific community.",
+      "specs": "netlib-lapack",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=netlib-lapack"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "OpenBLAS: An optimized BLAS library",
+      "specs": "openblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "CLAPACK is a f2c'ed version of LAPACK. The CLAPACK library was built using a Fortran to C conversion utility called f2c. The entire Fortran 77 LAPACK library is run through f2c to obtain C code, and then modified to improve readability. CLAPACK's goal is to provide LAPACK for someone who does not have access to a Fortran compiler.",
+      "specs": "clapack",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=clapack"
+      }
+    }
+  ],
+  "package_managers": [
+    {
+      "name": "spack",
+      "install_command": [
+        "spack",
+        "install"
+      ]
+    }
+  ]
+}
