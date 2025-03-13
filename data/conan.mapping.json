@@ -1,0 +1,283 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "name": "Conan",
+  "description": "Mapping for the Conan ecosystem",
+  "mappings": [
+    {
+      "id": "pkg:generic/arrow",
+      "description": "Apache Arrow is a cross-language development platform for in-memory data",
+      "specs": "arrow/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/arrow"
+      }
+    },
+    {
+      "id": "pkg:generic/cmake",
+      "description": "CMake, the cross-platform, open-source build system.",
+      "specs": "cmake/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/cmake"
+      }
+    },
+    {
+      "id": "pkg:generic/freetype",
+      "description": "FreeType is a freely available software library to render fonts.",
+      "specs": "freetype/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/freetype"
+      }
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.",
+      "specs": "gmp/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gmp"
+      }
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "A free, open source, CMM engine.",
+      "specs": "lcms/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/lcms"
+      }
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "A portable, high level programming interface to various calling conventions",
+      "specs": "libffi/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libffi"
+      }
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files",
+      "specs": "libjpeg/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libjpeg"
+      }
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "SIMD-accelerated libjpeg-compatible JPEG codec library",
+      "specs": "libjpeg-turbo/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libjpeg-turbo"
+      }
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "The library used by all the standard PostgreSQL tools",
+      "specs": "libpq/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libpq"
+      }
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": "libtiff/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libtiff"
+      }
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "Library to encode and decode images in WebP format",
+      "specs": "libwebp/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libwebp"
+      }
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "libxml2 is a software library for parsing XML documents",
+      "specs": "libxml2/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libxml2"
+      }
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "libxslt is a software library implementing XSLT processor, based on libxml2",
+      "specs": "libxslt/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libxslt"
+      }
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "LibYAML is a YAML parser and emitter library",
+      "specs": "libyaml/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libyaml"
+      }
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files",
+      "specs": "make/[*]",
+      "urls": {
+        "conan.io": "https://community.conan.io/packages/make"
+      }
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja/[*]",
+      "urls": {
+        "conan.io": "https://community.conan.io/packages/ninja"
+      }
+    },
+    {
+      "id": "pkg:generic/openblas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
+      "specs": "openblas/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openblas"
+      }
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language",
+      "specs": "openjpeg/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openjpeg"
+      }
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "A toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols",
+      "specs": "openssl/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openssl"
+      }
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "Package compiler and linker metadata toolkit.",
+      "specs": "pkgconf/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/pkgconf"
+      }
+    },
+    {
+      "id": "pkg:generic/python",
+      "description": "Python is a programming language that lets you work quickly and integrate systems more effectively",
+      "specs": "cpython/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/cpython"
+      }
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches.",
+      "specs": "tk/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/tk"
+      }
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library (Also Free, Not to Mention Unencumbered by Patents)",
+      "specs": "zlib/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/zlib"
+      }
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
+      "specs": "gcc/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gcc"
+      }
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
+      "specs": "mingw-w64/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/mingw-w64"
+      }
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
+      "specs": "gcc/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gcc"
+      }
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
+      "specs": "mingw-w64/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/mingw-w64"
+      }
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "The Fortran compiler front end and run-time libraries for GCC",
+      "specs": "gfortran/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gfortran"
+      }
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
+      "specs": "openblas/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openblas"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
+      "specs": "openblas/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openblas"
+      }
+    }
+  ],
+  "package_managers": [
+    {
+      "name": "conan",
+      "install_command": [
+        "conan",
+        "install",
+        "--requires"
+      ]
+    }
+  ]
+}
