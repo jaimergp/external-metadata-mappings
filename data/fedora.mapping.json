@@ -26,7 +26,7 @@
       "description": "Cross-platform make system",
       "specs": "cmake",
       "urls": {
-        "packages.fedoraproject.org (libarrow)": "https://packages.fedoraproject.org/pkgs/cmake/cmake/"
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/cmake/cmake/"
       }
     },
     {
@@ -102,7 +102,7 @@
       "description": "A Portable Foreign Function Interface Library (for MINGW)",
       "specs": "mingw32-libffi",
       "urls": {
-        "packages.fedoraproject.org (mingw32libffi)": "https://packages.fedoraproject.org/pkgs/mingw-libffi/mingw32-libffi/"
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/mingw-libffi/mingw32-libffi/"
       }
     },
     {
@@ -110,7 +110,7 @@
       "description": "A Portable Foreign Function Interface Library (for MINGW64)",
       "specs": "mingw64-libffi",
       "urls": {
-        "packages.fedoraproject.org (mingw64-libffi)": "https://packages.fedoraproject.org/pkgs/mingw-libffi/mingw64-libffi/"
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/mingw-libffi/mingw64-libffi/"
       }
     },
     {
@@ -254,7 +254,7 @@
       "description": "The XML C parser and toolkit of Gnome, for MINGW",
       "specs": "mingw32-libxml2",
       "urls": {
-        "packages.fedoraproject.org (mingw32-libxml2)": "https://packages.fedoraproject.org/pkgs/mingw-libxml2/mingw32-libxml2/"
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/mingw-libxml2/mingw32-libxml2/"
       }
     },
     {
@@ -262,7 +262,7 @@
       "description": "The XML C parser and toolkit of Gnome, for MINGW64",
       "specs": "mingw64-libxml2",
       "urls": {
-        "packages.fedoraproject.org (mingw64-libxml2)": "https://packages.fedoraproject.org/pkgs/mingw-libxml2/mingw64-libxml2/"
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/mingw-libxml2/mingw64-libxml2/"
       }
     },
     {
