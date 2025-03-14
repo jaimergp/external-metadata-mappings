@@ -74,6 +74,12 @@
         "apt-get"
       ]
     },
+    "vcpkg": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/vcpkg.mapping.json",
+      "package_managers": [
+        "vcpkg"
+      ]
+    },
     "winget": {
       "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/winget.mapping.json",
       "package_managers": [

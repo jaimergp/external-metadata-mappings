@@ -1,0 +1,297 @@
+{
+  "$schema": "../schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "name": "vcpkg",
+  "description": "Mapping for the vcpkg ecosystem",
+  "mappings": [
+    {
+      "id": "pkg:generic/arrow",
+      "description": "Cross-language development platform for in-memory analytics",
+      "specs": "arrow",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/arrow"
+      }
+    },
+    {
+      "id": "pkg:generic/cmake",
+      "description": "Not available",
+      "specs": "vcpkg-cmake",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/vcpkg-cmake"
+      }
+    },
+    {
+      "id": "pkg:generic/freetype",
+      "description": "A library to render fonts.",
+      "specs": "freetype",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/freetype"
+      }
+    },
+    {
+      "id": "pkg:generic/gmp",
+      "description": "GNU multiple precision arithmetic library",
+      "specs": "gmp",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/gmp"
+      }
+    },
+    {
+      "id": "pkg:generic/lcms2",
+      "description": "Little CMS",
+      "specs": "lcms",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/lcms"
+      }
+    },
+    {
+      "id": "pkg:generic/libffi",
+      "description": "Portable, high level programming interface to various calling conventions",
+      "specs": "libffi",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libffi"
+      }
+    },
+    {
+      "id": "pkg:generic/libimagequant",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "Independent JPEG Group's JPEG software",
+      "specs": "igj-libjpeg",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/igj-libjpeg"
+      }
+    },
+    {
+      "id": "pkg:generic/libjpeg",
+      "description": "libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems",
+      "specs": "libjpeg-turbo",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libjpeg-turbo"
+      }
+    },
+    {
+      "id": "pkg:generic/libpq",
+      "description": "The official database access API of postgresql",
+      "specs": "libpq",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libpq"
+      }
+    },
+    {
+      "id": "pkg:generic/libraqm",
+      "description": "Library for complex text layout",
+      "specs": "libraqm",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libraqm"
+      }
+    },
+    {
+      "id": "pkg:generic/libtiff",
+      "description": "A library that supports the manipulation of TIFF image files",
+      "specs": "tiff",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/tiff"
+      }
+    },
+    {
+      "id": "pkg:generic/libwebp",
+      "description": "WebP codec: library to encode and decode images in WebP format",
+      "specs": "libwebp",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libwebp"
+      }
+    },
+    {
+      "id": "pkg:generic/libxcb",
+      "description": "C interface to the X Window System protocol, which replaces the traditional Xlib interface.",
+      "specs": "xcb",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/xcb"
+      }
+    },
+    {
+      "id": "pkg:generic/libxml2",
+      "description": "Libxml2 is the XML C parser and toolkit developed for the Gnome project (but usable outside of the Gnome platform).",
+      "specs": "libxml2",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libxml2"
+      }
+    },
+    {
+      "id": "pkg:generic/libxslt",
+      "description": "Libxslt is a XSLT library implemented in C for XSLT 1.0 and most of EXSLT",
+      "specs": "libxslt",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libxslt"
+      }
+    },
+    {
+      "id": "pkg:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML.",
+      "specs": "libyaml",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libyaml"
+      }
+    },
+    {
+      "id": "pkg:generic/make",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/ninja",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/openblas",
+      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+      "specs": "openblas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/openblas"
+      }
+    },
+    {
+      "id": "pkg:generic/openjpeg",
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of JPEG 2000, a still-image compression standard from the Joint Photographic Experts Group (JPEG). Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.",
+      "specs": "openjpeg",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/openjpeg"
+      }
+    },
+    {
+      "id": "pkg:generic/openssl",
+      "description": "OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.",
+      "specs": "openssl",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/openssl"
+      }
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.",
+      "specs": "pkgconf",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/pkgconf"
+      }
+    },
+    {
+      "id": "pkg:generic/pkg-config",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/python",
+      "description": "The Python programming language.",
+      "specs": "python3",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/python3"
+      }
+    },
+    {
+      "id": "pkg:generic/tk",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "pkg:generic/zlib",
+      "description": "A compression library",
+      "specs": "zlib",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/zlib"
+      }
+    },
+    {
+      "id": "pkg:github/Reference-LAPACK/lapack",
+      "description": "LAPACK - Linear Algebra PACKage",
+      "specs": "lapack-reference",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/lapack-reference"
+      }
+    },
+    {
+      "id": "virtual:compiler/c",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "virtual:compiler/cpp",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "virtual:compiler/fortran",
+      "description": "Metaport to install gfortran dependencies from msys if VCPKG_USE_EXTERNAL_Fortran is false",
+      "specs": "vcpkg-gfortran",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/vcpkg-gfortran"
+      }
+    },
+    {
+      "id": "virtual:compiler/rust",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "Metapackage for packages which provide BLAS",
+      "specs": "blas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/blas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+      "specs": "openblas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/openblas"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "clBLAS is an OpenCL 1.2 accelerated BLAS (Basic Linear Algebra Subsystem) library.",
+      "specs": "clblas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/clblast"
+      }
+    },
+    {
+      "id": "virtual:interface/blas",
+      "description": "A modern, lightweight, performant and tunable OpenCL BLAS library written in C++11.",
+      "specs": "clblast",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/clblast"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "LAPACK - Linear Algebra PACKage",
+      "specs": "lapack-reference",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/lapack-reference"
+      }
+    },
+    {
+      "id": "virtual:interface/lapack",
+      "description": "CLAPACK (f2c'ed version of LAPACK)",
+      "specs": "clapack",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/clapack"
+      }
+    }
+  ],
+  "package_managers": [
+    {
+      "name": "vcpkg",
+      "install_command": [
+        "vcpkg",
+        "install"
+      ]
+    }
+  ]
+}
