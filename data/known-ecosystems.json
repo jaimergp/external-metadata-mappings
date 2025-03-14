@@ -25,7 +25,8 @@
       "package_managers": [
         "conda",
         "mamba",
-        "micromamba"
+        "micromamba",
+        "pixi"
       ]
     },
     "fedora": {
