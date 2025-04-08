@@ -5,7 +5,87 @@
   "description": "Mapping for Gentoo Linux",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
+      "id": "dep:abstract/compiler/c",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/c",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc[cxx]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/fortran",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc[fortran]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/fortran",
+      "description": "LLVM's Fortran frontend",
+      "specs": "llvm-core/flang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/flang"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "Systems programming language originally developed by Mozilla",
+      "specs": "dev-lang/rust",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "Systems programming language from Mozilla",
+      "specs": "dev-lang/rust-bin",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust-bin"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "Virtual for FORTRAN 77 BLAS implementation",
+      "specs": "virtual/blas",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/blas"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "Virtual for Linear Algebra Package FORTRAN 77 (LAPACK) implementation",
+      "specs": "virtual/lapack",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/lapack"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
       "description": "A cross-language development platform for in-memory data",
       "specs": "dev-libs/apache-arrow",
       "urls": {
@@ -13,7 +93,7 @@
       }
     },
     {
-      "id": "pkg:generic/cmake",
+      "id": "dep:generic/cmake",
       "description": "Cross platform Make",
       "specs": "dev-build/cmake",
       "urls": {
@@ -21,7 +101,7 @@
       }
     },
     {
-      "id": "pkg:generic/freetype",
+      "id": "dep:generic/freetype",
       "description": "High-quality and portable font engine",
       "specs": "media-libs/freetype:2",
       "urls": {
@@ -29,7 +109,7 @@
       }
     },
     {
-      "id": "pkg:generic/gmp",
+      "id": "dep:generic/gmp",
       "description": "Library for arbitrary-precision arithmetic on different type of numbers",
       "specs": "dev-libs/gmp",
       "urls": {
@@ -37,7 +117,7 @@
       }
     },
     {
-      "id": "pkg:generic/lcms2",
+      "id": "dep:generic/lcms2",
       "description": "A lightweight, speed optimized color management engine",
       "specs": "media-libs/lcms:2",
       "urls": {
@@ -45,7 +125,7 @@
       }
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "a portable, high level programming interface to various calling conventions",
       "specs": "dev-libs/libffi",
       "urls": {
@@ -53,7 +133,7 @@
       }
     },
     {
-      "id": "pkg:generic/libimagequant",
+      "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": "media-gfx/libimagequant",
       "urls": {
@@ -61,7 +141,7 @@
       }
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "MMX, SSE, and SSE2 SIMD accelerated JPEG library",
       "specs": "media-libs/libjpeg-turbo",
       "urls": {
@@ -69,7 +149,7 @@
       }
     },
     {
-      "id": "pkg:generic/libpq",
+      "id": "dep:generic/libpq",
       "description": "PostgreSQL RDBMS",
       "specs": "dev-db/postgresql",
       "urls": {
@@ -77,12 +157,12 @@
       }
     },
     {
-      "id": "pkg:generic/libraqm",
+      "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": []
     },
     {
-      "id": "pkg:generic/libtiff",
+      "id": "dep:generic/libtiff",
       "description": "Tag Image File Format (TIFF) library",
       "specs": "media-libs/tiff",
       "urls": {
@@ -90,7 +170,7 @@
       }
     },
     {
-      "id": "pkg:generic/libwebp",
+      "id": "dep:generic/libwebp",
       "description": "A lossy image compression format",
       "specs": "media-libs/libwebp",
       "urls": {
@@ -98,7 +178,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxcb",
+      "id": "dep:generic/libxcb",
       "description": "X C-language Bindings library",
       "specs": "x11-libs/libxcb",
       "urls": {
@@ -106,7 +186,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "XML C parser and toolkit",
       "specs": "dev-libs/libxml2",
       "urls": {
@@ -114,7 +194,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxslt",
+      "id": "dep:generic/libxslt",
       "description": "XSLT libraries and tools",
       "specs": "dev-libs/libxslt",
       "urls": {
@@ -122,7 +202,7 @@
       }
     },
     {
-      "id": "pkg:generic/libyaml",
+      "id": "dep:generic/libyaml",
       "description": "YAML 1.1 parser and emitter written in C",
       "specs": "dev-libs/libyaml",
       "urls": {
@@ -130,7 +210,7 @@
       }
     },
     {
-      "id": "pkg:generic/make",
+      "id": "dep:generic/make",
       "description": "Standard tool to compile source trees",
       "specs": "dev-build/make",
       "urls": {
@@ -138,7 +218,7 @@
       }
     },
     {
-      "id": "pkg:generic/ninja",
+      "id": "dep:generic/ninja",
       "description": "ninja symlinks",
       "specs": "app-alternatives/ninja",
       "urls": {
@@ -146,7 +226,7 @@
       }
     },
     {
-      "id": "pkg:generic/openblas",
+      "id": "dep:generic/openblas",
       "description": "Optimized BLAS library based on GotoBLAS2",
       "specs": "sci-libs/openblas",
       "urls": {
@@ -154,7 +234,7 @@
       }
     },
     {
-      "id": "pkg:generic/openjpeg",
+      "id": "dep:generic/openjpeg",
       "description": "Open-source JPEG 2000 library",
       "specs": "media-libs/openjpeg:2",
       "urls": {
@@ -162,7 +242,7 @@
       }
     },
     {
-      "id": "pkg:generic/openssl",
+      "id": "dep:generic/openssl",
       "description": "Robust, full-featured Open Source Toolkit for the Transport Layer Security (TLS)",
       "specs": "dev-libs/openssl",
       "urls": {
@@ -170,7 +250,7 @@
       }
     },
     {
-      "id": "pkg:generic/pkg-config",
+      "id": "dep:generic/pkg-config",
       "description": "Virtual for the pkg-config implementation",
       "specs": "virtual/pkgconfig[native-symlinks]",
       "urls": {
@@ -178,7 +258,7 @@
       }
     },
     {
-      "id": "pkg:generic/python",
+      "id": "dep:generic/python",
       "description": "An interpreted, interactive, object-oriented programming language",
       "specs": {
         "build": [],
@@ -190,7 +270,7 @@
       }
     },
     {
-      "id": "pkg:generic/tk",
+      "id": "dep:generic/tk",
       "description": "Tk Widget Set",
       "specs": "dev-lang/tk",
       "urls": {
@@ -198,7 +278,7 @@
       }
     },
     {
-      "id": "pkg:generic/zlib",
+      "id": "dep:generic/zlib",
       "description": "Standard (de)compression library",
       "specs": "sys-libs/zlib",
       "urls": {
@@ -206,91 +286,11 @@
       }
     },
     {
-      "id": "pkg:github/Reference-LAPACK/lapack",
+      "id": "dep:github/Reference-LAPACK/lapack",
       "description": "BLAS, CBLAS, LAPACK, LAPACKE reference implementations",
       "specs": "sci-libs/lapack",
       "urls": {
         "packages.gentoo.org": "https://packages.gentoo.org/packages/sci-libs/lapack"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "C language family frontend for LLVM",
-      "specs": "llvm-core/clang",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc[cxx]",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "C language family frontend for LLVM",
-      "specs": "llvm-core/clang",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
-      }
-    },
-    {
-      "id": "virtual:compiler/fortran",
-      "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc[fortran]",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/fortran",
-      "description": "LLVM's Fortran frontend",
-      "specs": "llvm-core/flang",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/flang"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "Systems programming language originally developed by Mozilla",
-      "specs": "dev-lang/rust",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "Systems programming language from Mozilla",
-      "specs": "dev-lang/rust-bin",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust-bin"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "Virtual for FORTRAN 77 BLAS implementation",
-      "specs": "virtual/blas",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/blas"
-      }
-    },
-    {
-      "id": "virtual:interface/lapack",
-      "description": "Virtual for Linear Algebra Package FORTRAN 77 (LAPACK) implementation",
-      "specs": "virtual/lapack",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/lapack"
       }
     }
   ],

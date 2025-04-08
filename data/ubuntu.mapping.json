@@ -5,12 +5,76 @@
   "description": "Mapping for the Ubuntu 24.04 LTS (Noble) distro",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
+      "id": "dep:abstract/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": "g++",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gfortran",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rustc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "Basic Linear Algebra Reference implementations",
+      "specs": {
+        "host": [
+          "libblas3",
+          "libblas-dev"
+        ],
+        "run": "libblas3"
+      },
+      "urls": {
+        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
+        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "The netlib implementation for lapack",
+      "specs": {
+        "host": [
+          "liblapack3",
+          "liblapack3-dev"
+        ],
+        "run": [
+          "liblapack3"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
+        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": []
     },
     {
-      "id": "pkg:generic/cmake",
+      "id": "dep:generic/cmake",
       "description": "cross-platform, open-source make system",
       "specs": "cmake",
       "urls": {
@@ -18,7 +82,7 @@
       }
     },
     {
-      "id": "pkg:generic/freetype",
+      "id": "dep:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
       "specs": {
         "host": [
@@ -35,7 +99,7 @@
       }
     },
     {
-      "id": "pkg:generic/gmp",
+      "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": {
         "host": [
@@ -52,7 +116,7 @@
       }
     },
     {
-      "id": "pkg:generic/lcms2",
+      "id": "dep:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
       "specs": {
         "host": [
@@ -69,7 +133,7 @@
       }
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": {
         "host": [
@@ -86,7 +150,7 @@
       }
     },
     {
-      "id": "pkg:generic/libimagequant",
+      "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": {
         "host": [
@@ -103,7 +167,7 @@
       }
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "Independent JPEG Group's JPEG runtime library (Version 9)",
       "specs": {
         "host": [
@@ -120,7 +184,7 @@
       }
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "Independent JPEG Group's JPEG runtime library (Version 6.2)",
       "specs": {
         "host": [
@@ -137,7 +201,7 @@
       }
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
       "specs": {
         "host": [
@@ -154,7 +218,7 @@
       }
     },
     {
-      "id": "pkg:generic/libpq",
+      "id": "dep:generic/libpq",
       "description": "Postgres C API library",
       "specs": {
         "host": [
@@ -171,7 +235,7 @@
       }
     },
     {
-      "id": "pkg:generic/libraqm",
+      "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": {
         "host": [
@@ -188,7 +252,7 @@
       }
     },
     {
-      "id": "pkg:generic/libtiff",
+      "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {
         "host": [
@@ -205,7 +269,7 @@
       }
     },
     {
-      "id": "pkg:generic/libwebp",
+      "id": "dep:generic/libwebp",
       "description": "WebP image library.",
       "specs": {
         "host": [
@@ -222,7 +286,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxcb",
+      "id": "dep:generic/libxcb",
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
       "specs": {
         "host": [
@@ -239,7 +303,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
       "specs": {
         "host": [
@@ -254,7 +318,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxslt",
+      "id": "dep:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
       "specs": {
         "host": [
@@ -269,7 +333,7 @@
       }
     },
     {
-      "id": "pkg:generic/libyaml",
+      "id": "dep:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
       "specs": {
         "host": [
@@ -286,7 +350,7 @@
       }
     },
     {
-      "id": "pkg:generic/make",
+      "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",
       "urls": {
@@ -294,7 +358,7 @@
       }
     },
     {
-      "id": "pkg:generic/ninja",
+      "id": "dep:generic/ninja",
       "description": "A small build system with a focus on speed",
       "specs": "ninja-build",
       "urls": {
@@ -302,7 +366,7 @@
       }
     },
     {
-      "id": "pkg:generic/openblas",
+      "id": "dep:generic/openblas",
       "description": "Optimized BLAS (linear algebra) library (meta)",
       "specs": {
         "host": [
@@ -319,7 +383,7 @@
       }
     },
     {
-      "id": "pkg:generic/openjpeg",
+      "id": "dep:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": {
         "host": [
@@ -336,7 +400,7 @@
       }
     },
     {
-      "id": "pkg:generic/openssl",
+      "id": "dep:generic/openssl",
       "description": "Secure Sockets Layer toolkit - cryptographic utility",
       "specs": "openssl",
       "urls": {
@@ -344,7 +408,7 @@
       }
     },
     {
-      "id": "pkg:generic/pkg-config",
+      "id": "dep:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
       "specs": "pkgconf",
       "urls": {
@@ -352,7 +416,7 @@
       }
     },
     {
-      "id": "pkg:generic/python",
+      "id": "dep:generic/python",
       "description": "The Python interpreter",
       "specs": "python3",
       "urls": {
@@ -360,7 +424,7 @@
       }
     },
     {
-      "id": "pkg:generic/tk",
+      "id": "dep:generic/tk",
       "description": "Toolkit for Tcl and X11 (default version) - windowing shell",
       "specs": {
         "host": [
@@ -377,7 +441,7 @@
       }
     },
     {
-      "id": "pkg:generic/zlib",
+      "id": "dep:generic/zlib",
       "description": "Compression library",
       "specs": {
         "host": [
@@ -394,72 +458,8 @@
       }
     },
     {
-      "id": "pkg:github/Reference-LAPACK/lapack",
+      "id": "dep:github/Reference-LAPACK/lapack",
       "description": "Library of linear algebra routines 3 - shared version",
-      "specs": {
-        "host": [
-          "liblapack3",
-          "liblapack3-dev"
-        ],
-        "run": [
-          "liblapack3"
-        ]
-      },
-      "urls": {
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": "g++",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
-      }
-    },
-    {
-      "id": "virtual:compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": "gfortran",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "The Rust compiler",
-      "specs": "rustc",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "Basic Linear Algebra Reference implementations",
-      "specs": {
-        "host": [
-          "libblas3",
-          "libblas-dev"
-        ],
-        "run": "libblas3"
-      },
-      "urls": {
-        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
-        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
-      }
-    },
-    {
-      "id": "virtual:interface/lapack",
-      "description": "The netlib implementation for lapack",
       "specs": {
         "host": [
           "liblapack3",

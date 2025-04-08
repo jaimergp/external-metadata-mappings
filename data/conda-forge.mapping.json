@@ -5,343 +5,7 @@
   "description": "Mapping for the conda-forge ecosystem",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
-      "description": "C++ libraries for Apache Arrow core",
-      "specs": "libarrow",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/arrow-cpp-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/arrow",
-      "description": "C++ libraries for Apache Arrow",
-      "specs": "libarrow-all",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/arrow-cpp-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": [
-        "cmake"
-      ],
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/cmake-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/freetype",
-      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
-      "specs": "freetype",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/freetype-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/freetype",
-      "description": "CDT for freetype, repackaged from Centos7.",
-      "specs": "freetype-cos7-x86_64",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/cdt-builds"
-      }
-    },
-    {
-      "id": "pkg:generic/gmp",
-      "description": "The GNU multiprecision library",
-      "specs": "gmp",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/gmp-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/lcms2",
-      "description": "Open Source Color Management Engine",
-      "specs": "lcms2",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/lcms2-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libffi",
-      "description": "A Portable Foreign Function Interface Library",
-      "specs": "libffi",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libffi-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libffi",
-      "description": "A Portable Foreign Function Interface Library. Repackaged from msys2 x86_64",
-      "specs": "m2-libffi",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libffi",
-      "description": "A Portable Foreign Function Interface Library. Repackaged from m2w64",
-      "specs": "m2w64-libffi",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/msys2-recipes"
-      }
-    },
-    {
-      "id": "pkg:generic/libimagequant",
-      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
-      "specs": "libimagequant",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libimagequant-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "The free library for JPEG image compression by the Independent JPEG Group",
-      "specs": "jpeg",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/jpeg-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
-      "specs": "libjpeg-turbo",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libjpeg-turbo-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "libjpeg-turbo, repackaged from mingw w64",
-      "specs": "m2w64-libjpeg-turbo",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/msys2-recipes"
-      }
-    },
-    {
-      "id": "pkg:generic/libpq",
-      "description": "The postgres runtime libraries and utilities (not the server itself)",
-      "specs": "libpq",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/postgresql-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libraqm",
-      "description": "A library for complex text layout. Not available. See https://github.com/conda-forge/staged-recipes/pull/17457.",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libtiff",
-      "description": "Support for the Tag Image File Format (TIFF)",
-      "specs": "libtiff",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libtiff-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libwebp",
-      "description": "WebP image library. libwebp-base ships libraries; libwebp ships the binaries.",
-      "specs": {
-        "build": "libwebp-base",
-        "host": "libwebp-base",
-        "run": "libwebp"
-      },
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libwebp-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libxcb",
-      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
-      "specs": "libxcb",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libxcb-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libxml2",
-      "description": "The XML C parser and toolkit of Gnome",
-      "specs": "libxml2",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libxml2-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libxml2",
-      "description": "CDT for libxml2, repackaged from CentOS 7. There are more like this, but didn't include them for brevity.",
-      "specs": {
-        "host": [
-          "libxml2-cos7-x86_64",
-          "libxml2-devel-cos7-x86_64"
-        ],
-        "run": "libxml2-cos7-x86_64"
-      },
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/cdt-builds"
-      }
-    },
-    {
-      "id": "pkg:generic/libxml2",
-      "description": "libxml2, repackaged from msys2 x86_64.",
-      "specs": "m2-libxml2",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libxslt",
-      "description": "The XSLT C library developed for the GNOME project",
-      "specs": "libxslt",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/libxslt-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libxslt",
-      "description": "libxslt repackaged from msys2 x86_64",
-      "specs": "m2-libxslt",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/libyaml",
-      "description": "A C library for parsing and emitting YAML",
-      "specs": "yaml",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/yaml-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/make",
-      "description": "GNU Make",
-      "specs": "make",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/make-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/make",
-      "description": "GNU Make, repackaged from msys2 x86_64",
-      "specs": "m2-make",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/ninja",
-      "description": "A small build system with a focus on speed",
-      "specs": "ninja",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/ninja-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/openblas",
-      "description": "The OpenBLAS implementation for BLAS",
-      "specs": "blas * openblas"
-    },
-    {
-      "id": "pkg:generic/openjpeg",
-      "description": "An open-source JPEG 2000 codec written in C",
-      "specs": "openjpeg",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/openjpeg-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/openssl",
-      "description": "OpenSSL as built from sources at openssl.org",
-      "specs": "openssl",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/openssl-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/openssl",
-      "description": "OpenSSL repackaged from msys2 x86_64",
-      "specs": "m2-openssl",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/openssl",
-      "description": "openssl repackaged from mingw-w64",
-      "specs": "m2w64-openssl"
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "Interface for querying installed libraries for use during compilation, from FreeDesktop.org",
-      "specs": "pkg-config",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/pkg-config-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "package compiler and linker metadata toolkit, from pkgconf/pkgconf",
-      "specs": "pkgconf",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/pkgconf-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "pkg-config repackaged from msys2 x86_64",
-      "specs": "m2-pkg-config",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "pkg-config repackaged from mingw-w64",
-      "specs": "m2w64-pkg-config"
-    },
-    {
-      "id": "pkg:generic/python",
-      "description": "The Python interpreter",
-      "specs": "python",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/python-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/tk",
-      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
-      "specs": "tk",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/tk-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/zlib",
-      "description": "Massively spiffy yet delicately unobtrusive compression library. From zlib.net.",
-      "specs": "zlib",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/zlib-feedstock"
-      }
-    },
-    {
-      "id": "pkg:generic/zlib",
-      "description": "zlib data compression library for the next generation systems. From zlib-ng/zlib-ng.",
-      "specs": "zlib-ng",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/zlib-ng-feedstock"
-      }
-    },
-    {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "Linear Algebra PACKage",
-      "specs": "lapack",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/lapack-feedstock"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
+      "id": "dep:abstract/compiler/c",
       "description": "The default compiler for C",
       "specs": "c-compiler",
       "urls": {
@@ -349,7 +13,7 @@
       }
     },
     {
-      "id": "virtual:compiler/c",
+      "id": "dep:abstract/compiler/c",
       "description": "The default compiler for C",
       "specs": {
         "build": [
@@ -366,7 +30,7 @@
       }
     },
     {
-      "id": "virtual:compiler/cpp",
+      "id": "dep:abstract/compiler/cpp",
       "description": "The default compiler for C++",
       "specs": "cxx-compiler",
       "urls": {
@@ -374,7 +38,7 @@
       }
     },
     {
-      "id": "virtual:compiler/fortran",
+      "id": "dep:abstract/compiler/fortran",
       "description": "The default compiler for Fortran",
       "specs": "fortran-compiler",
       "urls": {
@@ -382,7 +46,7 @@
       }
     },
     {
-      "id": "virtual:compiler/fortran",
+      "id": "dep:abstract/compiler/fortran",
       "description": "The default compiler for Fortran",
       "specs": {
         "build": [
@@ -398,12 +62,12 @@
       }
     },
     {
-      "id": "virtual:compiler/rust",
+      "id": "dep:abstract/compiler/rust",
       "description": "The default compiler for Rust",
       "specs": "rust"
     },
     {
-      "id": "virtual:compiler/rust",
+      "id": "dep:abstract/compiler/rust",
       "description": "The default compiler for Rust",
       "specs": {
         "build": [
@@ -419,7 +83,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "A metapackage for any BLAS implementation",
       "specs": "blas",
       "urls": {
@@ -427,7 +91,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "The OpenBLAS implementation for BLAS",
       "specs": "blas * openblas",
       "urls": {
@@ -435,7 +99,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "The MKL implementation for BLAS",
       "specs": "blas * mkl",
       "urls": {
@@ -443,7 +107,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "The BLIS implementation for BLAS",
       "specs": "blas * blis",
       "urls": {
@@ -451,8 +115,344 @@
       }
     },
     {
-      "id": "virtual:interface/lapack",
+      "id": "dep:abstract/interface/lapack",
       "description": "The default implementation for LAPACK",
+      "specs": "lapack",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/lapack-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": "libarrow",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/arrow-cpp-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
+      "description": "C++ libraries for Apache Arrow",
+      "specs": "libarrow-all",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/arrow-cpp-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/cmake",
+      "description": "",
+      "specs": [
+        "cmake"
+      ],
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/cmake-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": "freetype",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/freetype-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "CDT for freetype, repackaged from Centos7.",
+      "specs": "freetype-cos7-x86_64",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/cdt-builds"
+      }
+    },
+    {
+      "id": "dep:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": "gmp",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/gmp-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/lcms2",
+      "description": "Open Source Color Management Engine",
+      "specs": "lcms2",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/lcms2-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": "libffi",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libffi-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library. Repackaged from msys2 x86_64",
+      "specs": "m2-libffi",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library. Repackaged from m2w64",
+      "specs": "m2w64-libffi",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/msys2-recipes"
+      }
+    },
+    {
+      "id": "dep:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": "libimagequant",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libimagequant-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "The free library for JPEG image compression by the Independent JPEG Group",
+      "specs": "jpeg",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/jpeg-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": "libjpeg-turbo",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libjpeg-turbo-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "libjpeg-turbo, repackaged from mingw w64",
+      "specs": "m2w64-libjpeg-turbo",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/msys2-recipes"
+      }
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "The postgres runtime libraries and utilities (not the server itself)",
+      "specs": "libpq",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/postgresql-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libraqm",
+      "description": "A library for complex text layout. Not available. See https://github.com/conda-forge/staged-recipes/pull/17457.",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": "libtiff",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libtiff-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libwebp",
+      "description": "WebP image library. libwebp-base ships libraries; libwebp ships the binaries.",
+      "specs": {
+        "build": "libwebp-base",
+        "host": "libwebp-base",
+        "run": "libwebp"
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libwebp-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": "libxcb",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libxcb-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": "libxml2",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libxml2-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "CDT for libxml2, repackaged from CentOS 7. There are more like this, but didn't include them for brevity.",
+      "specs": {
+        "host": [
+          "libxml2-cos7-x86_64",
+          "libxml2-devel-cos7-x86_64"
+        ],
+        "run": "libxml2-cos7-x86_64"
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/cdt-builds"
+      }
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "libxml2, repackaged from msys2 x86_64.",
+      "specs": "m2-libxml2",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": "libxslt",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libxslt-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "libxslt repackaged from msys2 x86_64",
+      "specs": "m2-libxslt",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": "yaml",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/yaml-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "GNU Make",
+      "specs": "make",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/make-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "GNU Make, repackaged from msys2 x86_64",
+      "specs": "m2-make",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/ninja-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/openblas",
+      "description": "The OpenBLAS implementation for BLAS",
+      "specs": "blas * openblas"
+    },
+    {
+      "id": "dep:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": "openjpeg",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/openjpeg-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "OpenSSL as built from sources at openssl.org",
+      "specs": "openssl",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/openssl-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "OpenSSL repackaged from msys2 x86_64",
+      "specs": "m2-openssl",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "openssl repackaged from mingw-w64",
+      "specs": "m2w64-openssl"
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "Interface for querying installed libraries for use during compilation, from FreeDesktop.org",
+      "specs": "pkg-config",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/pkg-config-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "package compiler and linker metadata toolkit, from pkgconf/pkgconf",
+      "specs": "pkgconf",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/pkgconf-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "pkg-config repackaged from msys2 x86_64",
+      "specs": "m2-pkg-config",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "pkg-config repackaged from mingw-w64",
+      "specs": "m2w64-pkg-config"
+    },
+    {
+      "id": "dep:generic/python",
+      "description": "The Python interpreter",
+      "specs": "python",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/python-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/tk",
+      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "specs": "tk",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/tk-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "Massively spiffy yet delicately unobtrusive compression library. From zlib.net.",
+      "specs": "zlib",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/zlib-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "zlib data compression library for the next generation systems. From zlib-ng/zlib-ng.",
+      "specs": "zlib-ng",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/zlib-ng-feedstock"
+      }
+    },
+    {
+      "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "Linear Algebra PACKage",
       "specs": "lapack",
       "urls": {
         "feedstock": "https://github.com/conda-forge/lapack-feedstock"

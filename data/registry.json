@@ -3,164 +3,164 @@
   "schema_version": 1,
   "definitions": [
     {
-      "id": "pkg:generic/arrow",
-      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
-    },
-    {
-      "id": "pkg:generic/cmake",
-      "description": "CMake is a cross-platform, open-source build system generator."
-    },
-    {
-      "id": "pkg:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
-      "description": "CMake is a cross-platform, open-source build system generator. With canonical URL.",
-      "provides": "pkg:generic/cmake"
-    },
-    {
-      "id": "pkg:generic/freetype",
-      "description": "FreeType is a freely available software library to render fonts."
-    },
-    {
-      "id": "pkg:generic/gmp",
-      "description": "The GNU Multiple Precision Arithmetic Library"
-    },
-    {
-      "id": "pkg:generic/lcms2",
-      "description": "Little Color Management System"
-    },
-    {
-      "id": "pkg:generic/libffi",
-      "description": "A portable foreign-function interface library"
-    },
-    {
-      "id": "pkg:generic/libimagequant",
-      "description": "Imagequant library converts RGBA images to palette-based 8-bit indexed images, including alpha component"
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files developed by the IJG"
-    },
-    {
-      "id": "pkg:generic/libpq",
-      "description": "libpq is a set of library functions that allow client programs to pass queries to the PostgreSQL backend server and to receive the results of these queries"
-    },
-    {
-      "id": "pkg:generic/libraqm",
-      "description": "Raqm is a small library that encapsulates the logic for complex text layout"
-    },
-    {
-      "id": "pkg:generic/libtiff",
-      "description": "The LibTIFF software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data."
-    },
-    {
-      "id": "pkg:generic/libwebp",
-      "description": "WebP codec is a library to encode and decode images in WebP format. This package contains the library that can be used in other programs to add WebP support"
-    },
-    {
-      "id": "pkg:generic/libxcb",
-      "description": "libxcb provides an interface to the X Window System protocol, which replaces the traditional Xlib interface"
-    },
-    {
-      "id": "pkg:generic/libxml2",
-      "description": "libxml2 is an XML toolkit implemented in C, originally developed for the GNOME Project"
-    },
-    {
-      "id": "pkg:generic/libxslt",
-      "description": "Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML"
-    },
-    {
-      "id": "pkg:generic/libyaml",
-      "description": "A C library for parsing and emitting YAML"
-    },
-    {
-      "id": "pkg:generic/make",
-      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files"
-    },
-    {
-      "id": "pkg:generic/ninja",
-      "description": "A small build system with a focus on speed"
-    },
-    {
-      "id": "pkg:generic/openblas",
-      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
-      "provides": [
-        "virtual:interface/blas"
-      ]
-    },
-    {
-      "id": "pkg:generic/openjpeg",
-      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language"
-    },
-    {
-      "id": "pkg:generic/openssl",
-      "description": "OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols"
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "pkg-config is a helper tool used when compiling applications and libraries"
-    },
-    {
-      "id": "pkg:generic/python",
-      "description": "The Python interpreter"
-    },
-    {
-      "id": "pkg:generic/tk",
-      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches"
-    },
-    {
-      "id": "pkg:generic/zlib",
-      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
-    },
-    {
-      "id": "pkg:github/Kitware/CMake",
-      "description": "CMake is a cross-platform, open-source build system generator. GitHub mirror.",
-      "provides": "pkg:generic/cmake"
-    },
-    {
-      "id": "pkg:github/OpenMathLib/OpenBLAS",
-      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
-      "provides": [
-        "virtual:interface/blas",
-        "pkg:generic/openblas"
-      ]
-    },
-    {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "LAPACK development repository",
-      "provides": [
-        "virtual:interface/blas",
-        "virtual:interface/lapack"
-      ]
-    },
-    {
-      "id": "pkg:github/apache/arrow",
-      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics",
-      "provides": [
-        "pkg:generic/arrow"
-      ]
-    },
-    {
-      "id": "virtual:compiler/c",
+      "id": "dep:abstract/compiler/c",
       "description": "Compiler for the C language.\n\nThis is a _longer description_ with **Markdown**."
     },
     {
-      "id": "virtual:compiler/cpp",
+      "id": "dep:abstract/compiler/cpp",
       "description": "Compiler for the C++ language"
     },
     {
-      "id": "virtual:compiler/fortran",
+      "id": "dep:abstract/compiler/fortran",
       "description": "Compiler for the FORTRAN language"
     },
     {
-      "id": "virtual:compiler/rust",
+      "id": "dep:abstract/compiler/rust",
       "description": "Compiler for the Rust language"
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "Interface for Basic Linear Algebra Subprograms"
     },
     {
-      "id": "virtual:interface/lapack",
+      "id": "dep:abstract/interface/lapack",
       "description": "Interface for Linear Algebra PACKage"
+    },
+    {
+      "id": "dep:generic/arrow",
+      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
+    },
+    {
+      "id": "dep:generic/cmake",
+      "description": "CMake is a cross-platform, open-source build system generator."
+    },
+    {
+      "id": "dep:generic/cmake?repository_url=https://gitlab.kitware.com/cmake/cmake",
+      "description": "CMake is a cross-platform, open-source build system generator. With canonical URL.",
+      "provides": "dep:generic/cmake"
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "FreeType is a freely available software library to render fonts."
+    },
+    {
+      "id": "dep:generic/gmp",
+      "description": "The GNU Multiple Precision Arithmetic Library"
+    },
+    {
+      "id": "dep:generic/lcms2",
+      "description": "Little Color Management System"
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A portable foreign-function interface library"
+    },
+    {
+      "id": "dep:generic/libimagequant",
+      "description": "Imagequant library converts RGBA images to palette-based 8-bit indexed images, including alpha component"
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files developed by the IJG"
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "libpq is a set of library functions that allow client programs to pass queries to the PostgreSQL backend server and to receive the results of these queries"
+    },
+    {
+      "id": "dep:generic/libraqm",
+      "description": "Raqm is a small library that encapsulates the logic for complex text layout"
+    },
+    {
+      "id": "dep:generic/libtiff",
+      "description": "The LibTIFF software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data."
+    },
+    {
+      "id": "dep:generic/libwebp",
+      "description": "WebP codec is a library to encode and decode images in WebP format. This package contains the library that can be used in other programs to add WebP support"
+    },
+    {
+      "id": "dep:generic/libxcb",
+      "description": "libxcb provides an interface to the X Window System protocol, which replaces the traditional Xlib interface"
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "libxml2 is an XML toolkit implemented in C, originally developed for the GNOME Project"
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML"
+    },
+    {
+      "id": "dep:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML"
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files"
+    },
+    {
+      "id": "dep:generic/ninja",
+      "description": "A small build system with a focus on speed"
+    },
+    {
+      "id": "dep:generic/openblas",
+      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
+      "provides": [
+        "dep:abstract/interface/blas"
+      ]
+    },
+    {
+      "id": "dep:generic/openjpeg",
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language"
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols"
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "pkg-config is a helper tool used when compiling applications and libraries"
+    },
+    {
+      "id": "dep:generic/python",
+      "description": "The Python interpreter"
+    },
+    {
+      "id": "dep:generic/tk",
+      "description": "Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches"
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
+    },
+    {
+      "id": "dep:github/Kitware/CMake",
+      "description": "CMake is a cross-platform, open-source build system generator. GitHub mirror.",
+      "provides": "dep:generic/cmake"
+    },
+    {
+      "id": "dep:github/OpenMathLib/OpenBLAS",
+      "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
+      "provides": [
+        "dep:abstract/interface/blas",
+        "dep:generic/openblas"
+      ]
+    },
+    {
+      "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "LAPACK development repository",
+      "provides": [
+        "dep:abstract/interface/blas",
+        "dep:abstract/interface/lapack"
+      ]
+    },
+    {
+      "id": "dep:github/apache/arrow",
+      "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics",
+      "provides": [
+        "dep:generic/arrow"
+      ]
     }
   ]
 }

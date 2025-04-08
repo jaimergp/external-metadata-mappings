@@ -15,7 +15,7 @@ ECOSYSTEMS_FILE = HERE / "known-ecosystems.schema.json"
 MAPPING_SCHEMA_FILE = HERE / "external-mapping.schema.json"
 
 
-PURLField = Annotated[str, Field(min_length=1, pattern=r"^(pkg:|virtual:).*")]
+PURLField = Annotated[str, Field(min_length=1, pattern=r"^(dep:).*")]
 NonEmptyString = Annotated[str, Field(min_length=1)]
 
 
@@ -35,7 +35,7 @@ class Definition(BaseModel):
     provides: PURLField | list[PURLField] | None = None
     """
     List of identifiers this entry connects to.
-    Useful to annotate aliases or virtual package implementations.
+    Useful to annotate aliases or abstract package implementations.
     If no `provides` info is added, the entry is considered canonical.
     """
     urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
@@ -49,7 +49,7 @@ class Definition(BaseModel):
 
 
 class DefinitionListModel(BaseModel):
-    """Canonical list of accepted pkg:generic/* and virtual:* packages"""
+    """Canonical list of accepted `dep:(abstract|generic)/` packages"""
 
     model_config: ConfigDict = ConfigDict(
         extra="forbid",

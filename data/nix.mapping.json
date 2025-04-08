@@ -5,231 +5,7 @@
   "description": "Mapping for the Nix ecosystem",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
-      "description": "Cross-language development platform for in-memory data.",
-      "specs": "arrow-cpp",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=arrow-cpp"
-      }
-    },
-    {
-      "id": "pkg:generic/cmake",
-      "description": "Cross-platform, open-source build system generator",
-      "specs": "cmake",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=cmake"
-      }
-    },
-    {
-      "id": "pkg:generic/freetype",
-      "description": "Font rendering engine",
-      "specs": "freetype",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=freetype"
-      }
-    },
-    {
-      "id": "pkg:generic/gmp",
-      "description": "GNU multiple precision arithmetic library",
-      "specs": "gmp",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=gmp"
-      }
-    },
-    {
-      "id": "pkg:generic/lcms2",
-      "description": "Color management engine",
-      "specs": "lcms",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=lcms"
-      }
-    },
-    {
-      "id": "pkg:generic/libffi",
-      "description": "Foreign function call interface library",
-      "specs": "libffi",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libffi"
-      }
-    },
-    {
-      "id": "pkg:generic/libimagequant",
-      "description": "Image quantization library",
-      "specs": "libimagequant",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libimagequant"
-      }
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "Library that implements the JPEG image file format",
-      "specs": "libjpeg_original",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libjpeg_original"
-      }
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "Faster (using SIMD) libjpeg implementation",
-      "specs": "libjpeg",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libjpeg"
-      }
-    },
-    {
-      "id": "pkg:generic/libpq",
-      "description": "C++ library to access PostgreSQL databases",
-      "specs": "libpqxx",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libpqxx"
-      }
-    },
-    {
-      "id": "pkg:generic/libraqm",
-      "description": "Library for complex text layout",
-      "specs": "libraqm",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libraqm"
-      }
-    },
-    {
-      "id": "pkg:generic/libtiff",
-      "description": "Library and utilities for working with the TIFF image file format",
-      "specs": "libtiff",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libtiff"
-      }
-    },
-    {
-      "id": "pkg:generic/libwebp",
-      "description": "Tools and library for the WebP image format",
-      "specs": "libwebp",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libwebp"
-      }
-    },
-    {
-      "id": "pkg:generic/libxcb",
-      "description": "The X protocol C-language Binding (XCB) is a replacement for Xlib",
-      "specs": "xorg.libxcb",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=xorg.libxcb"
-      }
-    },
-    {
-      "id": "pkg:generic/libxml2",
-      "description": "XML parsing library for C",
-      "specs": "libxml2",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libxml2"
-      }
-    },
-    {
-      "id": "pkg:generic/libxslt",
-      "description": "C library and tools to do XSL transformations",
-      "specs": "libxslt",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libxslt"
-      }
-    },
-    {
-      "id": "pkg:generic/libyaml",
-      "description": "YAML 1.1 parser and emitter written in C",
-      "specs": "libyaml",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libyaml"
-      }
-    },
-    {
-      "id": "pkg:generic/make",
-      "description": "Tool to control the generation of non-source files from sources",
-      "specs": "gnumake",
-      "urls": {
-        "conan.io": "https://search.nixos.org/packages?show=gnumake"
-      }
-    },
-    {
-      "id": "pkg:generic/ninja",
-      "description": "Small build system with a focus on speed",
-      "specs": "ninja",
-      "urls": {
-        "conan.io": "https://search.nixos.org/packages?show=ninja"
-      }
-    },
-    {
-      "id": "pkg:generic/openblas",
-      "description": "Basic Linear Algebra Subprograms",
-      "specs": "openblas",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=openblas"
-      }
-    },
-    {
-      "id": "pkg:generic/openjpeg",
-      "description": "Open-source JPEG 2000 codec written in C language",
-      "specs": "openjpeg",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=openjpeg"
-      }
-    },
-    {
-      "id": "pkg:generic/openssl",
-      "description": "Cryptographic library that implements the SSL and TLS protocols",
-      "specs": "openssl",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=openssl"
-      }
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "Package compiler and linker metadata toolkit (wrapper script)",
-      "specs": "pkgconf",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=pkgconf"
-      }
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "Tool that allows packages to find out information about other packages (wrapper script)",
-      "specs": "pkg-config",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=pkg-config"
-      }
-    },
-    {
-      "id": "pkg:generic/python",
-      "description": "The Python programming language.",
-      "specs": "python3",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=python3"
-      }
-    },
-    {
-      "id": "pkg:generic/tk",
-      "description": "Widget toolkit that provides a library of basic elements for building a GUI in many different programming languages",
-      "specs": "tclPackages.tk",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=tclPackages.tk"
-      }
-    },
-    {
-      "id": "pkg:generic/zlib",
-      "description": "Lossless data-compression library",
-      "specs": "zlib",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=zlib"
-      }
-    },
-    {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "openblas with just the LAPACK C and FORTRAN ABI",
-      "specs": "lapack",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=lapack"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
+      "id": "dep:abstract/compiler/c",
       "description": "GNU Compiler Collection",
       "specs": "gcc",
       "urls": {
@@ -237,7 +13,7 @@
       }
     },
     {
-      "id": "virtual:compiler/cpp",
+      "id": "dep:abstract/compiler/cpp",
       "description": "GNU Compiler Collection",
       "specs": "gcc",
       "urls": {
@@ -245,7 +21,7 @@
       }
     },
     {
-      "id": "virtual:compiler/fortran",
+      "id": "dep:abstract/compiler/fortran",
       "description": "GNU Compiler Collection",
       "specs": "gfortran",
       "urls": {
@@ -253,7 +29,7 @@
       }
     },
     {
-      "id": "virtual:compiler/rust",
+      "id": "dep:abstract/compiler/rust",
       "description": "The Rust programming language toolchain.",
       "specs": "rustc",
       "urls": {
@@ -261,7 +37,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "openblas with just the BLAS C and FORTRAN ABI",
       "specs": "blas",
       "urls": {
@@ -269,7 +45,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "Basic Linear Algebra Subprograms",
       "specs": "openblas",
       "urls": {
@@ -277,7 +53,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "Software library containing BLAS functions written in OpenCL",
       "specs": "clblas",
       "urls": {
@@ -285,7 +61,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "Tuned OpenCL BLAS library",
       "specs": "clblast",
       "urls": {
@@ -293,7 +69,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "BLAS-compatible linear algebra library",
       "specs": "blis",
       "urls": {
@@ -301,7 +77,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "BLAS-compatible library optimized for AMD CPUs",
       "specs": "amd-blis",
       "urls": {
@@ -309,7 +85,7 @@
       }
     },
     {
-      "id": "virtual:interface/lapack",
+      "id": "dep:abstract/interface/lapack",
       "description": "Basic Linear Algebra Subprograms",
       "specs": "openblas",
       "urls": {
@@ -317,11 +93,235 @@
       }
     },
     {
-      "id": "virtual:interface/lapack",
+      "id": "dep:abstract/interface/lapack",
       "description": "LAPACK-compatible linear algebra library optimized for AMD CPUs",
       "specs": "amd-libflame",
       "urls": {
         "nixos.org": "https://search.nixos.org/packages?show=amd-libflame"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
+      "description": "Cross-language development platform for in-memory data.",
+      "specs": "arrow-cpp",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=arrow-cpp"
+      }
+    },
+    {
+      "id": "dep:generic/cmake",
+      "description": "Cross-platform, open-source build system generator",
+      "specs": "cmake",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=cmake"
+      }
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "Font rendering engine",
+      "specs": "freetype",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=freetype"
+      }
+    },
+    {
+      "id": "dep:generic/gmp",
+      "description": "GNU multiple precision arithmetic library",
+      "specs": "gmp",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=gmp"
+      }
+    },
+    {
+      "id": "dep:generic/lcms2",
+      "description": "Color management engine",
+      "specs": "lcms",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=lcms"
+      }
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "Foreign function call interface library",
+      "specs": "libffi",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libffi"
+      }
+    },
+    {
+      "id": "dep:generic/libimagequant",
+      "description": "Image quantization library",
+      "specs": "libimagequant",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libimagequant"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "Library that implements the JPEG image file format",
+      "specs": "libjpeg_original",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libjpeg_original"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "Faster (using SIMD) libjpeg implementation",
+      "specs": "libjpeg",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libjpeg"
+      }
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "C++ library to access PostgreSQL databases",
+      "specs": "libpqxx",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libpqxx"
+      }
+    },
+    {
+      "id": "dep:generic/libraqm",
+      "description": "Library for complex text layout",
+      "specs": "libraqm",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libraqm"
+      }
+    },
+    {
+      "id": "dep:generic/libtiff",
+      "description": "Library and utilities for working with the TIFF image file format",
+      "specs": "libtiff",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libtiff"
+      }
+    },
+    {
+      "id": "dep:generic/libwebp",
+      "description": "Tools and library for the WebP image format",
+      "specs": "libwebp",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libwebp"
+      }
+    },
+    {
+      "id": "dep:generic/libxcb",
+      "description": "The X protocol C-language Binding (XCB) is a replacement for Xlib",
+      "specs": "xorg.libxcb",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=xorg.libxcb"
+      }
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "XML parsing library for C",
+      "specs": "libxml2",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libxml2"
+      }
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "C library and tools to do XSL transformations",
+      "specs": "libxslt",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libxslt"
+      }
+    },
+    {
+      "id": "dep:generic/libyaml",
+      "description": "YAML 1.1 parser and emitter written in C",
+      "specs": "libyaml",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libyaml"
+      }
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "Tool to control the generation of non-source files from sources",
+      "specs": "gnumake",
+      "urls": {
+        "conan.io": "https://search.nixos.org/packages?show=gnumake"
+      }
+    },
+    {
+      "id": "dep:generic/ninja",
+      "description": "Small build system with a focus on speed",
+      "specs": "ninja",
+      "urls": {
+        "conan.io": "https://search.nixos.org/packages?show=ninja"
+      }
+    },
+    {
+      "id": "dep:generic/openblas",
+      "description": "Basic Linear Algebra Subprograms",
+      "specs": "openblas",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=openblas"
+      }
+    },
+    {
+      "id": "dep:generic/openjpeg",
+      "description": "Open-source JPEG 2000 codec written in C language",
+      "specs": "openjpeg",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=openjpeg"
+      }
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "Cryptographic library that implements the SSL and TLS protocols",
+      "specs": "openssl",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=openssl"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "Package compiler and linker metadata toolkit (wrapper script)",
+      "specs": "pkgconf",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=pkgconf"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "Tool that allows packages to find out information about other packages (wrapper script)",
+      "specs": "pkg-config",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=pkg-config"
+      }
+    },
+    {
+      "id": "dep:generic/python",
+      "description": "The Python programming language.",
+      "specs": "python3",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=python3"
+      }
+    },
+    {
+      "id": "dep:generic/tk",
+      "description": "Widget toolkit that provides a library of basic elements for building a GUI in many different programming languages",
+      "specs": "tclPackages.tk",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=tclPackages.tk"
+      }
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "Lossless data-compression library",
+      "specs": "zlib",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=zlib"
+      }
+    },
+    {
+      "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "openblas with just the LAPACK C and FORTRAN ABI",
+      "specs": "lapack",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=lapack"
       }
     }
   ],

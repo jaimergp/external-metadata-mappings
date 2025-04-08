@@ -5,12 +5,107 @@
   "description": "Mapping for the Scoop ecosystem (official buckets only)",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
+      "id": "dep:abstract/compiler/c",
+      "description": "GNU Compiler Collection and binutils",
+      "specs": "main/gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/c",
+      "description": "The Tiny C Compiler (a.k.a. TCC, tCc, or TinyCC) is an x86, X86-64 and ARM processor C compiler created by Fabrice Bellard.",
+      "specs": "main/tcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=tcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/c",
+      "description": "GCC compiler, Windows-friendly",
+      "specs": "versions/tdm-gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=tdm-gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/c",
+      "description": "GNU Compiler Collection (WinLibs build)",
+      "specs": "main/mingw-winlibs",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=mingw-winlibs"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/c",
+      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
+      "specs": "extras/codeblocks-mingw",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "GNU Compiler Collection and binutils",
+      "specs": "main/gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
+      "specs": "extras/codeblocks-mingw",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/fortran",
+      "description": "Intel Fortran compilers",
+      "specs": []
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "A language empowering everyone to build reliable and efficient software. (GNU toolchain)",
+      "specs": "main/rust-gnu",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust-gnu"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
+      "specs": "main/rust-msvc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust-msvc"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
+      "specs": "main/rust",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": []
     },
     {
-      "id": "pkg:generic/cmake",
+      "id": "dep:generic/cmake",
       "description": "Family of tools designed to build, test and package software",
       "specs": "main/cmake",
       "urls": {
@@ -18,32 +113,32 @@
       }
     },
     {
-      "id": "pkg:generic/freetype",
+      "id": "dep:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
       "specs": []
     },
     {
-      "id": "pkg:generic/gmp",
+      "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": []
     },
     {
-      "id": "pkg:generic/lcms2",
+      "id": "dep:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
       "specs": []
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": []
     },
     {
-      "id": "pkg:generic/libimagequant",
+      "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": []
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "A JPEG image codec that uses SIMD instructions",
       "specs": [
         "main/libjpeg-turbo"
@@ -53,22 +148,22 @@
       }
     },
     {
-      "id": "pkg:generic/libpq",
+      "id": "dep:generic/libpq",
       "description": "Postgres C API library",
       "specs": []
     },
     {
-      "id": "pkg:generic/libraqm",
+      "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": []
     },
     {
-      "id": "pkg:generic/libtiff",
+      "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": []
     },
     {
-      "id": "pkg:generic/libwebp",
+      "id": "dep:generic/libwebp",
       "description": "WebP image library.",
       "specs": [
         "main/libwebp"
@@ -78,12 +173,12 @@
       }
     },
     {
-      "id": "pkg:generic/libxcb",
+      "id": "dep:generic/libxcb",
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
       "specs": []
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "XML processor developed by The GNOME Project",
       "specs": [
         "main/libxml2"
@@ -93,17 +188,17 @@
       }
     },
     {
-      "id": "pkg:generic/libxslt",
+      "id": "dep:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
       "specs": []
     },
     {
-      "id": "pkg:generic/libyaml",
+      "id": "dep:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
       "specs": []
     },
     {
-      "id": "pkg:generic/make",
+      "id": "dep:generic/make",
       "description": "GNU Make is a Build automation tool.",
       "specs": [
         "main/make"
@@ -113,7 +208,7 @@
       }
     },
     {
-      "id": "pkg:generic/ninja",
+      "id": "dep:generic/ninja",
       "description": "A small build system with a focus on speed",
       "specs": "main/ninja",
       "urls": {
@@ -121,7 +216,7 @@
       }
     },
     {
-      "id": "pkg:generic/ninja",
+      "id": "dep:generic/ninja",
       "description": "A small build system with a focus on speed (Kitware fork with jobserver support).",
       "specs": "main/ninja-kitware",
       "urls": {
@@ -129,17 +224,17 @@
       }
     },
     {
-      "id": "pkg:generic/openblas",
+      "id": "dep:generic/openblas",
       "description": "",
       "specs": []
     },
     {
-      "id": "pkg:generic/openjpeg",
+      "id": "dep:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": []
     },
     {
-      "id": "pkg:generic/openssl",
+      "id": "dep:generic/openssl",
       "description": "TLS/SSL toolkit (from slproweb.com)",
       "specs": "main/openssl",
       "urls": {
@@ -147,7 +242,7 @@
       }
     },
     {
-      "id": "pkg:generic/openssl",
+      "id": "dep:generic/openssl",
       "description": "TLS/SSL toolkit (from slproweb.com, light version)",
       "specs": "main/openssl-light",
       "urls": {
@@ -155,7 +250,7 @@
       }
     },
     {
-      "id": "pkg:generic/pkg-config",
+      "id": "dep:generic/pkg-config",
       "description": "A helper tool used when compiling applications and libraries.",
       "specs": [
         "main/pkg-config"
@@ -165,7 +260,7 @@
       }
     },
     {
-      "id": "pkg:generic/pkg-config",
+      "id": "dep:generic/pkg-config",
       "description": "pkg-config-lite is based on pkg-config, but is built with a glib code snippet which eliminates the glib dependency",
       "specs": [
         "extras/pkg-config-lite"
@@ -175,7 +270,7 @@
       }
     },
     {
-      "id": "pkg:generic/python",
+      "id": "dep:generic/python",
       "description": "The Python interpreter",
       "specs": "main/python",
       "urls": {
@@ -183,12 +278,12 @@
       }
     },
     {
-      "id": "pkg:generic/tk",
+      "id": "dep:generic/tk",
       "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
       "specs": []
     },
     {
-      "id": "pkg:generic/zlib",
+      "id": "dep:generic/zlib",
       "description": "Massively spiffy yet delicately unobtrusive compression library.",
       "specs": [
         "extras/zlib"
@@ -198,102 +293,7 @@
       }
     },
     {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "GNU Compiler Collection and binutils",
-      "specs": "main/gcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "The Tiny C Compiler (a.k.a. TCC, tCc, or TinyCC) is an x86, X86-64 and ARM processor C compiler created by Fabrice Bellard.",
-      "specs": "main/tcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=tcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "GCC compiler, Windows-friendly",
-      "specs": "versions/tdm-gcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=tdm-gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "GNU Compiler Collection (WinLibs build)",
-      "specs": "main/mingw-winlibs",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=mingw-winlibs"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
-      "specs": "extras/codeblocks-mingw",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "GNU Compiler Collection and binutils",
-      "specs": "main/gcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
-      "specs": "extras/codeblocks-mingw",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
-      }
-    },
-    {
-      "id": "virtual:compiler/fortran",
-      "description": "Intel Fortran compilers",
-      "specs": []
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "A language empowering everyone to build reliable and efficient software. (GNU toolchain)",
-      "specs": "main/rust-gnu",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=rust-gnu"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
-      "specs": "main/rust-msvc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=rust-msvc"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
-      "specs": "main/rust",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=rust"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "virtual:interface/lapack",
+      "id": "dep:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
     }

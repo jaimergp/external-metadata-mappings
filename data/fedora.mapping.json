@@ -5,7 +5,122 @@
   "description": "Mapping for the Fedora distro",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
+      "id": "dep:abstract/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/gcc/gcc/"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": [
+        "gcc",
+        "gcc-c++"
+      ],
+      "urls": {
+        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
+        "packages.fedoraproject.org (gcc-c++)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-c++/"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": [
+        "gcc",
+        "gcc-gfortran"
+      ],
+      "urls": {
+        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
+        "packages.fedoraproject.org (gcc-gfortran)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-gfortran/"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rust",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "The Basic Linear Algebra Subprograms library",
+      "specs": {
+        "host": [
+          "blas",
+          "blas-devel"
+        ],
+        "run": "blas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (blas)": "https://packages.fedoraproject.org/pkgs/lapack/blas/",
+        "packages.fedoraproject.org (blas-devel)": "https://packages.fedoraproject.org/pkgs/lapack/blas-devel/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+      "specs": {
+        "host": [
+          "openblas",
+          "openblas-devel"
+        ],
+        "run": "openblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (openblas)": "https://packages.fedoraproject.org/pkgs/openblas/openblas/",
+        "packages.fedoraproject.org (openblas-devel)": "https://packages.fedoraproject.org/pkgs/openblas/openblas-devel/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
+      "specs": {
+        "host": [
+          "flexiblas",
+          "flexiblas-devel"
+        ],
+        "run": "flexiblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
+        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "Numerical linear algebra package libraries",
+      "specs": {
+        "host": [
+          "lapack",
+          "lapack-devel"
+        ],
+        "run": "lapack"
+      },
+      "urls": {
+        "packages.fedoraproject.org (lapack)": "https://packages.fedoraproject.org/pkgs/lapack/lapack/",
+        "packages.fedoraproject.org (lapack-devel)": "https://packages.fedoraproject.org/pkgs/lapack/lapack-devel/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
+      "specs": {
+        "host": [
+          "flexiblas",
+          "flexiblas-devel"
+        ],
+        "run": "flexiblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
+        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
       "description": "A toolbox for accelerated data interchange and in-memory processing",
       "specs": {
         "host": [
@@ -22,7 +137,7 @@
       }
     },
     {
-      "id": "pkg:generic/cmake",
+      "id": "dep:generic/cmake",
       "description": "Cross-platform make system",
       "specs": "cmake",
       "urls": {
@@ -30,7 +145,7 @@
       }
     },
     {
-      "id": "pkg:generic/freetype",
+      "id": "dep:generic/freetype",
       "description": "A free and portable font rendering engine",
       "specs": {
         "host": [
@@ -47,7 +162,7 @@
       }
     },
     {
-      "id": "pkg:generic/gmp",
+      "id": "dep:generic/gmp",
       "description": "GNU arbitrary precision library",
       "specs": {
         "host": [
@@ -64,7 +179,7 @@
       }
     },
     {
-      "id": "pkg:generic/lcms2",
+      "id": "dep:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
       "specs": {
         "host": [
@@ -81,7 +196,7 @@
       }
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": {
         "host": [
@@ -98,7 +213,7 @@
       }
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library (for MINGW)",
       "specs": "mingw32-libffi",
       "urls": {
@@ -106,7 +221,7 @@
       }
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library (for MINGW64)",
       "specs": "mingw64-libffi",
       "urls": {
@@ -114,7 +229,7 @@
       }
     },
     {
-      "id": "pkg:generic/libimagequant",
+      "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": {
         "host": [
@@ -131,7 +246,7 @@
       }
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
       "specs": {
         "host": [
@@ -148,7 +263,7 @@
       }
     },
     {
-      "id": "pkg:generic/libpq",
+      "id": "dep:generic/libpq",
       "description": "Postgres C API library",
       "specs": {
         "host": [
@@ -165,7 +280,7 @@
       }
     },
     {
-      "id": "pkg:generic/libraqm",
+      "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": {
         "host": [
@@ -182,7 +297,7 @@
       }
     },
     {
-      "id": "pkg:generic/libtiff",
+      "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {
         "host": [
@@ -199,7 +314,7 @@
       }
     },
     {
-      "id": "pkg:generic/libwebp",
+      "id": "dep:generic/libwebp",
       "description": "WebP image library.",
       "specs": {
         "host": [
@@ -216,7 +331,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxcb",
+      "id": "dep:generic/libxcb",
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
       "specs": {
         "host": [
@@ -233,7 +348,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
       "specs": {
         "host": [
@@ -250,7 +365,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome, for MINGW",
       "specs": "mingw32-libxml2",
       "urls": {
@@ -258,7 +373,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome, for MINGW64",
       "specs": "mingw64-libxml2",
       "urls": {
@@ -266,7 +381,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxslt",
+      "id": "dep:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
       "specs": {
         "host": [
@@ -281,7 +396,7 @@
       }
     },
     {
-      "id": "pkg:generic/libyaml",
+      "id": "dep:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
       "specs": {
         "host": [
@@ -298,7 +413,7 @@
       }
     },
     {
-      "id": "pkg:generic/make",
+      "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",
       "urls": {
@@ -306,7 +421,7 @@
       }
     },
     {
-      "id": "pkg:generic/ninja",
+      "id": "dep:generic/ninja",
       "description": "A small build system with a focus on speed",
       "specs": "ninja-build",
       "urls": {
@@ -314,7 +429,7 @@
       }
     },
     {
-      "id": "pkg:generic/openblas",
+      "id": "dep:generic/openblas",
       "description": "An optimized BLAS library based on GotoBLAS2",
       "specs": {
         "host": [
@@ -331,7 +446,7 @@
       }
     },
     {
-      "id": "pkg:generic/openjpeg",
+      "id": "dep:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": {
         "host": [
@@ -348,7 +463,7 @@
       }
     },
     {
-      "id": "pkg:generic/openssl",
+      "id": "dep:generic/openssl",
       "description": "Utilities from the general purpose cryptography library with TLS implementation",
       "specs": {
         "host": [
@@ -363,7 +478,7 @@
       }
     },
     {
-      "id": "pkg:generic/pkg-config",
+      "id": "dep:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
       "specs": "pkgconf",
       "urls": {
@@ -371,7 +486,7 @@
       }
     },
     {
-      "id": "pkg:generic/python",
+      "id": "dep:generic/python",
       "description": "The Python interpreter",
       "specs": {
         "build": "python3-devel",
@@ -388,7 +503,7 @@
       }
     },
     {
-      "id": "pkg:generic/tk",
+      "id": "dep:generic/tk",
       "description": "The graphical toolkit for the Tcl scripting language",
       "specs": {
         "host": [
@@ -405,7 +520,7 @@
       }
     },
     {
-      "id": "pkg:generic/zlib",
+      "id": "dep:generic/zlib",
       "description": "The zlib-ng-compat package contains the library that is API and binary compatible with zlib.",
       "specs": {
         "host": [
@@ -422,124 +537,9 @@
       }
     },
     {
-      "id": "pkg:github/Reference-LAPACK/lapack",
+      "id": "dep:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/gcc/gcc/"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": [
-        "gcc",
-        "gcc-c++"
-      ],
-      "urls": {
-        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
-        "packages.fedoraproject.org (gcc-c++)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-c++/"
-      }
-    },
-    {
-      "id": "virtual:compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": [
-        "gcc",
-        "gcc-gfortran"
-      ],
-      "urls": {
-        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
-        "packages.fedoraproject.org (gcc-gfortran)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-gfortran/"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "The Rust compiler",
-      "specs": "rust",
-      "urls": {
-        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "The Basic Linear Algebra Subprograms library",
-      "specs": {
-        "host": [
-          "blas",
-          "blas-devel"
-        ],
-        "run": "blas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (blas)": "https://packages.fedoraproject.org/pkgs/lapack/blas/",
-        "packages.fedoraproject.org (blas-devel)": "https://packages.fedoraproject.org/pkgs/lapack/blas-devel/"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
-      "specs": {
-        "host": [
-          "openblas",
-          "openblas-devel"
-        ],
-        "run": "openblas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (openblas)": "https://packages.fedoraproject.org/pkgs/openblas/openblas/",
-        "packages.fedoraproject.org (openblas-devel)": "https://packages.fedoraproject.org/pkgs/openblas/openblas-devel/"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
-      "specs": {
-        "host": [
-          "flexiblas",
-          "flexiblas-devel"
-        ],
-        "run": "flexiblas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
-        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
-      }
-    },
-    {
-      "id": "virtual:interface/lapack",
-      "description": "Numerical linear algebra package libraries",
-      "specs": {
-        "host": [
-          "lapack",
-          "lapack-devel"
-        ],
-        "run": "lapack"
-      },
-      "urls": {
-        "packages.fedoraproject.org (lapack)": "https://packages.fedoraproject.org/pkgs/lapack/lapack/",
-        "packages.fedoraproject.org (lapack-devel)": "https://packages.fedoraproject.org/pkgs/lapack/lapack-devel/"
-      }
-    },
-    {
-      "id": "virtual:interface/lapack",
-      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
-      "specs": {
-        "host": [
-          "flexiblas",
-          "flexiblas-devel"
-        ],
-        "run": "flexiblas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
-        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
-      }
     }
   ],
   "package_managers": [

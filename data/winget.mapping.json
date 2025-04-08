@@ -5,163 +5,7 @@
   "description": "Mapping for the Winget ecosystem",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
-      "description": "C++ libraries for Apache Arrow core",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/cmake",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/freetype",
-      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/gmp",
-      "description": "The GNU multiprecision library",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/lcms2",
-      "description": "Color management engine supporting ICC profiles",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libffi",
-      "description": "A Portable Foreign Function Interface Library",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libimagequant",
-      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations, for MSVC",
-      "specs": "turbo.libjpeg-turbo.VC",
-      "urls": {
-        "winget.run": "https://winget.run/pkg/libjpeg-turbo/libjpeg-turbo.VC"
-      }
-    },
-    {
-      "id": "pkg:generic/libjpeg",
-      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations, for GCC",
-      "specs": "turbo.libjpeg-turbo.GCC",
-      "urls": {
-        "winget.run": "https://winget.run/pkg/libjpeg-turbo/libjpeg-turbo.GCC"
-      }
-    },
-    {
-      "id": "pkg:generic/libpq",
-      "description": "Postgres C API library",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libraqm",
-      "description": "A library for complex text layout.",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libtiff",
-      "description": "Support for the Tag Image File Format (TIFF)",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libwebp",
-      "description": "WebP image library.",
-      "specs": "Google.Libwebp",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Google.Libwebp"
-      }
-    },
-    {
-      "id": "pkg:generic/libxcb",
-      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libxml2",
-      "description": "The XML C parser and toolkit of Gnome",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libxslt",
-      "description": "The XSLT C library developed for the GNOME project",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/libyaml",
-      "description": "A C library for parsing and emitting YAML",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/make",
-      "description": "GNU Make",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/ninja",
-      "description": "A small build system with a focus on speed",
-      "specs": "Ninja-build.Ninja",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Ninja-build.Ninja"
-      }
-    },
-    {
-      "id": "pkg:generic/openblas",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/openjpeg",
-      "description": "An open-source JPEG 2000 codec written in C",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/openssl",
-      "description": "OpenSSL built by ShiningLight",
-      "specs": "ShiningLight.OpenSSL",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/ShiningLight.OpenSSL"
-      }
-    },
-    {
-      "id": "pkg:generic/pkg-config",
-      "description": "Package compiler and linker metadata toolkit.",
-      "specs": []
-    },
-    {
-      "id": "pkg:generic/python",
-      "description": "",
-      "specs": "Python.Python.3.11",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Python.Python.3.11"
-      }
-    },
-    {
-      "id": "pkg:generic/tk",
-      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
-      "specs": "Magicsplat.TclTk",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Magicsplat.TclTk"
-      }
-    },
-    {
-      "id": "pkg:generic/zlib",
-      "description": "General-purpose lossless data-compression library, from zlib.net",
-      "specs": []
-    },
-    {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "virtual:compiler/c",
+      "id": "dep:abstract/compiler/c",
       "description": "MSVC Compilers",
       "specs": "Microsoft.VisualStudio.2022.Community",
       "urls": {
@@ -169,7 +13,7 @@
       }
     },
     {
-      "id": "virtual:compiler/cpp",
+      "id": "dep:abstract/compiler/cpp",
       "description": "MSVC Compilers",
       "specs": "Microsoft.VisualStudio.2022.Community",
       "urls": {
@@ -177,7 +21,7 @@
       }
     },
     {
-      "id": "virtual:compiler/fortran",
+      "id": "dep:abstract/compiler/fortran",
       "description": "Intel Fortran compilers",
       "specs": "Intel.FortranCompiler",
       "urls": {
@@ -185,7 +29,7 @@
       }
     },
     {
-      "id": "virtual:compiler/rust",
+      "id": "dep:abstract/compiler/rust",
       "description": "The Rust compiler, built with the GNU toolchain",
       "specs": "Rustlang.Rust.GNU",
       "urls": {
@@ -193,7 +37,7 @@
       }
     },
     {
-      "id": "virtual:compiler/rust",
+      "id": "dep:abstract/compiler/rust",
       "description": "The Rust compiler, built with the MSVC toolchain",
       "specs": "Rustlang.Rust.MSVC",
       "urls": {
@@ -201,7 +45,7 @@
       }
     },
     {
-      "id": "virtual:interface/blas",
+      "id": "dep:abstract/interface/blas",
       "description": "The MKL implementation for BLAS",
       "specs": "Intel.oneMKL",
       "urls": {
@@ -209,9 +53,165 @@
       }
     },
     {
-      "id": "virtual:interface/lapack",
+      "id": "dep:abstract/interface/lapack",
       "description": "The MKL implementation for LAPACK",
-      "specs_from": "virtual:interface/blas"
+      "specs_from": "dep:abstract/interface/blas"
+    },
+    {
+      "id": "dep:generic/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/cmake",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/lcms2",
+      "description": "Color management engine supporting ICC profiles",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations, for MSVC",
+      "specs": "turbo.libjpeg-turbo.VC",
+      "urls": {
+        "winget.run": "https://winget.run/pkg/libjpeg-turbo/libjpeg-turbo.VC"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations, for GCC",
+      "specs": "turbo.libjpeg-turbo.GCC",
+      "urls": {
+        "winget.run": "https://winget.run/pkg/libjpeg-turbo/libjpeg-turbo.GCC"
+      }
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "Postgres C API library",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libwebp",
+      "description": "WebP image library.",
+      "specs": "Google.Libwebp",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Google.Libwebp"
+      }
+    },
+    {
+      "id": "dep:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "GNU Make",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "Ninja-build.Ninja",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Ninja-build.Ninja"
+      }
+    },
+    {
+      "id": "dep:generic/openblas",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "OpenSSL built by ShiningLight",
+      "specs": "ShiningLight.OpenSSL",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/ShiningLight.OpenSSL"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "Package compiler and linker metadata toolkit.",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/python",
+      "description": "",
+      "specs": "Python.Python.3.11",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Python.Python.3.11"
+      }
+    },
+    {
+      "id": "dep:generic/tk",
+      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "specs": "Magicsplat.TclTk",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Magicsplat.TclTk"
+      }
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "General-purpose lossless data-compression library, from zlib.net",
+      "specs": []
+    },
+    {
+      "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "",
+      "specs": []
     }
   ],
   "package_managers": [

@@ -240,32 +240,32 @@ elif ecosystem:
 # All identifiers list
 else:
     st.query_params.clear()
-    canonical, providers = {"generic": [], "virtual": []}, []
+    canonical, providers = {"generic": [], "abstract": []}, []
     count = 0
     for d in REGISTRY.iter_all():
         if provides := d.get("provides"):
             if isinstance(provides, str):
                 provides = [provides]
-            if any(item.startswith("pkg:") for item in provides):
+            if any(item.startswith("dep:") for item in provides):
                 providers.append(d)
-        elif d["id"].startswith("pkg:generic/"):
+        elif d["id"].startswith("dep:generic/"):
             canonical["generic"].append(d)
             count += 1
         else:
-            canonical["virtual"].append(d)
+            canonical["abstract"].append(d)
             count += 1
     st.write("# Canonical identifiers")
     st.write(
         f"We found {count} canonical definitions. "
         "Non-canonical definitions are listed in the dropdown menu by the sidebar."
     )
-    generic_tab, virtual_tab = st.tabs(
+    generic_tab, abstract_tab = st.tabs(
         [
             f"Generic ({len(canonical['generic'])})",
-            f"Virtual ({len(canonical['virtual'])})",
+            f"Abstract ({len(canonical['abstract'])})",
         ]
     )
-    tabs = {"generic": generic_tab, "virtual": virtual_tab}
+    tabs = {"generic": generic_tab, "abstract": abstract_tab}
     for tab, values in canonical.items():
         with tabs[tab]:
             for value in values:

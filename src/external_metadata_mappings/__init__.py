@@ -83,18 +83,18 @@ class Registry(UserDict, _Validated, _FromPathOrUrl):
     def iter_canonical(self):
         for item in self.iter_all():
             if not item.get("provides") or all(
-                item.startswith("virtual:") for item in item.get("provides")
+                item.startswith("dep:abstract/") for item in item.get("provides")
             ):
                 yield item
 
     def iter_generic(self):
         for item in self.iter_all():
-            if item["id"].startswith("pkg:generic/"):
+            if item["id"].startswith("dep:generic/"):
                 yield item
 
-    def iter_virtual(self):
+    def iter_abstract(self):
         for item in self.iter_all():
-            if item["id"].startswith("virtual:"):
+            if item["id"].startswith("dep:abstract/"):
                 yield item
 
 

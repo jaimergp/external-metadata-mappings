@@ -5,7 +5,79 @@
   "description": "Mapping for the Arch Linux distro",
   "mappings": [
     {
-      "id": "pkg:generic/arrow",
+      "id": "dep:abstract/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": "gcc",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gcc-fortran",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc-fortran/"
+      }
+    },
+    {
+      "id": "dep:abstract/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rust",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/rust/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "Basic Linear Algebra Subprograms",
+      "specs": "blas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/blas/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
+      "specs": "blas-openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
+      "specs": "openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/openblas/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
+      "specs": "blas-openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
+      }
+    },
+    {
+      "id": "dep:abstract/interface/lapack",
+      "description": "Linear Algebra PACKage",
+      "specs": "lapack",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lapack/"
+      }
+    },
+    {
+      "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": "arrow",
       "urls": {
@@ -13,7 +85,7 @@
       }
     },
     {
-      "id": "pkg:generic/cmake",
+      "id": "dep:generic/cmake",
       "description": "A cross-platform open-source make system",
       "specs": "cmake",
       "urls": {
@@ -21,7 +93,7 @@
       }
     },
     {
-      "id": "pkg:generic/freetype",
+      "id": "dep:generic/freetype",
       "description": "Font rasterization library",
       "specs": "freetype2",
       "urls": {
@@ -29,7 +101,7 @@
       }
     },
     {
-      "id": "pkg:generic/gmp",
+      "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": "gmp",
       "urls": {
@@ -37,7 +109,7 @@
       }
     },
     {
-      "id": "pkg:generic/lcms2",
+      "id": "dep:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
       "specs": "lcms2",
       "urls": {
@@ -45,7 +117,7 @@
       }
     },
     {
-      "id": "pkg:generic/libffi",
+      "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": "libffi",
       "urls": {
@@ -53,7 +125,7 @@
       }
     },
     {
-      "id": "pkg:generic/libimagequant",
+      "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": "libimagequant",
       "urls": {
@@ -61,7 +133,7 @@
       }
     },
     {
-      "id": "pkg:generic/libjpeg",
+      "id": "dep:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
       "specs": "libjpeg-turbo",
       "urls": {
@@ -69,7 +141,7 @@
       }
     },
     {
-      "id": "pkg:generic/libpq",
+      "id": "dep:generic/libpq",
       "description": "Postgres C API library",
       "specs": "postgresql-libs",
       "urls": {
@@ -77,7 +149,7 @@
       }
     },
     {
-      "id": "pkg:generic/libraqm",
+      "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": "libraqm",
       "urls": {
@@ -85,7 +157,7 @@
       }
     },
     {
-      "id": "pkg:generic/libtiff",
+      "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": "libtiff",
       "urls": {
@@ -93,7 +165,7 @@
       }
     },
     {
-      "id": "pkg:generic/libtiff",
+      "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": "libtiff4",
       "urls": {
@@ -101,7 +173,7 @@
       }
     },
     {
-      "id": "pkg:generic/libwebp",
+      "id": "dep:generic/libwebp",
       "description": "WebP image library",
       "specs": "libwebp",
       "urls": {
@@ -109,7 +181,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxcb",
+      "id": "dep:generic/libxcb",
       "description": "X11 client-side library",
       "specs": "libxcb",
       "urls": {
@@ -117,7 +189,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxml2",
+      "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
       "specs": "libxml2",
       "urls": {
@@ -125,7 +197,7 @@
       }
     },
     {
-      "id": "pkg:generic/libxslt",
+      "id": "dep:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
       "specs": "libxslt",
       "urls": {
@@ -133,7 +205,7 @@
       }
     },
     {
-      "id": "pkg:generic/libyaml",
+      "id": "dep:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
       "specs": "libyaml",
       "urls": {
@@ -141,7 +213,7 @@
       }
     },
     {
-      "id": "pkg:generic/make",
+      "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",
       "urls": {
@@ -149,7 +221,7 @@
       }
     },
     {
-      "id": "pkg:generic/ninja",
+      "id": "dep:generic/ninja",
       "description": "A small build system with a focus on speed",
       "specs": "ninja",
       "urls": {
@@ -157,7 +229,7 @@
       }
     },
     {
-      "id": "pkg:generic/openblas",
+      "id": "dep:generic/openblas",
       "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
       "specs": "openblas",
       "urls": {
@@ -165,7 +237,7 @@
       }
     },
     {
-      "id": "pkg:generic/openjpeg",
+      "id": "dep:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": "openjpeg2",
       "urls": {
@@ -173,7 +245,7 @@
       }
     },
     {
-      "id": "pkg:generic/openssl",
+      "id": "dep:generic/openssl",
       "description": "The Open Source toolkit for Secure Sockets Layer and Transport Layer Security",
       "specs": "openssl",
       "urls": {
@@ -181,7 +253,7 @@
       }
     },
     {
-      "id": "pkg:generic/pkg-config",
+      "id": "dep:generic/pkg-config",
       "description": "Package compiler and linker metadata toolkit.",
       "specs": "pkgconf",
       "urls": {
@@ -189,7 +261,7 @@
       }
     },
     {
-      "id": "pkg:generic/python",
+      "id": "dep:generic/python",
       "description": "The Python programming language",
       "specs": {
         "build": [],
@@ -201,7 +273,7 @@
       }
     },
     {
-      "id": "pkg:generic/tk",
+      "id": "dep:generic/tk",
       "description": "A windowing toolkit for use with tcl",
       "specs": "tk",
       "urls": {
@@ -209,7 +281,7 @@
       }
     },
     {
-      "id": "pkg:generic/zlib",
+      "id": "dep:generic/zlib",
       "description": "Compression library implementing the deflate compression method found in gzip and PKZIP",
       "specs": "zlib",
       "urls": {
@@ -217,79 +289,7 @@
       }
     },
     {
-      "id": "pkg:github/Reference-LAPACK/lapack",
-      "description": "Linear Algebra PACKage",
-      "specs": "lapack",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lapack/"
-      }
-    },
-    {
-      "id": "virtual:compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
-      }
-    },
-    {
-      "id": "virtual:compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": "gcc",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
-      }
-    },
-    {
-      "id": "virtual:compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": "gcc-fortran",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc-fortran/"
-      }
-    },
-    {
-      "id": "virtual:compiler/rust",
-      "description": "The Rust compiler",
-      "specs": "rust",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/rust/"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "Basic Linear Algebra Subprograms",
-      "specs": "blas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/blas/"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
-      "specs": "blas-openblas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
-      }
-    },
-    {
-      "id": "virtual:interface/blas",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
-      "specs": "openblas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/openblas/"
-      }
-    },
-    {
-      "id": "virtual:interface/lapack",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
-      "specs": "blas-openblas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
-      }
-    },
-    {
-      "id": "virtual:interface/lapack",
+      "id": "dep:github/Reference-LAPACK/lapack",
       "description": "Linear Algebra PACKage",
       "specs": "lapack",
       "urls": {
