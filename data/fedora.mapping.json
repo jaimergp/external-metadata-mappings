@@ -461,7 +461,7 @@
     {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
-      "specs": "rust",
+      "specs": ["rust", "cargo"],
       "urls": {
         "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
       }
