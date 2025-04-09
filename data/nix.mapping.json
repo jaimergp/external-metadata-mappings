@@ -141,6 +141,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Collection of modular and reusable compiler and toolchain technologies",
+      "specs": "libllvm",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libllvm"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "Tool to control the generation of non-source files from sources",
       "specs": "gnumake",

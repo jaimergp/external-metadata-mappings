@@ -132,6 +132,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "A toolkit for the construction of highly optimized compilers,optimizers, and runtime environments.",
+      "specs": "llvm-core/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/llvm-core"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files",
       "specs": "make/[*]",

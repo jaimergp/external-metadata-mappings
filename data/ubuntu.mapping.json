@@ -286,6 +286,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Low-Level Virtual Machine (LLVM)",
+      "specs": "llvm",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/llvm"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",

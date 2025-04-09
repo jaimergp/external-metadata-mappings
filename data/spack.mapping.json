@@ -141,6 +141,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+      "specs": "llvm",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=llvm"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files",
       "specs": "gmake",

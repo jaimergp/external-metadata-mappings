@@ -72,6 +72,10 @@
       "description": "A C library for parsing and emitting YAML"
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies."
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files"
     },
@@ -137,6 +141,11 @@
       "provides": [
         "dep:generic/arrow"
       ]
+    },
+    {
+      "id": "dep:github/llvm/llvm-project",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+      "provides": "dep:generic/llvm"
     },
     {
       "id": "dep:virtual/compiler/c",

@@ -103,6 +103,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Collection of modular and reusable compiler and toolchain technologies.",
+      "specs": "main/llvmdev",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=llvmdev"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make is a Build automation tool.",
       "specs": [

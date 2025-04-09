@@ -99,6 +99,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "A collection of modular and reusable compiler and toolchain technologies.",
+      "specs": "LLVM.LLVM",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/LLVM.LLVM"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": []

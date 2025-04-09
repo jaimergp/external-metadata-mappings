@@ -206,6 +206,22 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Development headers and libraries for LLVM",
+      "specs": {
+        "host": [
+          "llvm",
+          "llvmdev"
+        ],
+        "run": [
+          "llvm-tools"
+        ]
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/llvmdev-feedstock"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",

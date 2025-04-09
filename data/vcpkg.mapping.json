@@ -138,6 +138,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "The LLVM Compiler Infrastructure.",
+      "specs": "llvm",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/llvm"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "Not available",
       "specs": []

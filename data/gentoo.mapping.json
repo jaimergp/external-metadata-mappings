@@ -130,6 +130,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Low Level Virtual Machine",
+      "specs": "llvm-core/llvm",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/llvm"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "Standard tool to compile source trees",
       "specs": "dev-build/make",

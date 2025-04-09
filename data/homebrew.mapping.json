@@ -138,6 +138,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Next-gen compiler infrastructure",
+      "specs": "llvm",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/llvm"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",

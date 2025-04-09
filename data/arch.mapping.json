@@ -141,6 +141,14 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "Compiler infrastructure",
+      "specs": "llvm",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/llvm/"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",

@@ -298,6 +298,23 @@
       }
     },
     {
+      "id": "dep:generic/llvm",
+      "description": "LLVM is a compiler infrastructure designed for compile-time, link-time, runtime, and idle-time optimization of programs from arbitrary programming languages",
+      "specs": {
+        "host": [
+          "llvm",
+          "llvm-devel"
+        ],
+        "run": [
+          "llvm"
+        ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (llvm)": "https://packages.fedoraproject.org/pkgs/llvm/llvm/",
+        "packages.fedoraproject.org (llvm-devel)": "https://packages.fedoraproject.org/pkgs/llvm/llvm-devel/"
+      }
+    },
+    {
       "id": "dep:generic/make",
       "description": "GNU Make",
       "specs": "make",
@@ -461,7 +478,10 @@
     {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
-      "specs": ["rust", "cargo"],
+      "specs": [
+        "rust",
+        "cargo"
+      ],
       "urls": {
         "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
       }
