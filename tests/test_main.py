@@ -34,14 +34,14 @@ def test_mappings(mapping):
 
 
 @pytest.mark.parametrize(
-    "purl",
+    "dep_url",
     list(
         dict.fromkeys(
             [entry["id"] for entry in Registry.from_path(REGISTRY_PATH).iter_all()]
         )
     ),
 )
-def test_registry_purls_are_parsable(purl):
-    if purl.startswith("dep:"):
-        pytest.skip("Virtual PURLs use a different schema and aren't parsable (yet?)")
-    PackageURL.from_string(purl)
+def test_registry_dep_urls_are_parsable(dep_url):
+    if dep_url.startswith("dep:"):
+        pytest.skip("dep URLs use a different schema and aren't parsable (yet?)")
+    PackageURL.from_string(dep_url)

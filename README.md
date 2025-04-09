@@ -1,6 +1,6 @@
 # Registry and mappings for external metadata
 
-This repository prototypes schemas for PEP-725-adjacent PURL registry and downstream mappings could look like.
+This repository prototypes schemas for PEP-725-adjacent PURL-like registry and downstream mappings could look like.
 
 A Streamlit app to navigate the examples is published at https://external-metadata-mappings.streamlit.app.
 

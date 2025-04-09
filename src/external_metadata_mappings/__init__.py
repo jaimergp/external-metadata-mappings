@@ -64,7 +64,7 @@ class _FromPathOrUrl:
 class Registry(UserDict, _Validated, _FromPathOrUrl):
     default_schema: Path = SCHEMAS_DIR / "central-registry.schema.json"
 
-    def iter_unique_purls(self):
+    def iter_unique_ids(self):
         seen = set()
         for item in self.iter_all():
             if (id_ := item["id"]) not in seen:
@@ -176,9 +176,9 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
                 return manager
         raise KeyError(f"Could not find '{name}' in {self.data['package_managers']:r}")
 
-    def iter_install_commands(self, package_manager, purl) -> Iterable[list[str]]:
+    def iter_install_commands(self, package_manager, dep_url) -> Iterable[list[str]]:
         mgr = self.get_package_manager(package_manager)
-        for specs in self.iter_specs_by_id(purl):
+        for specs in self.iter_specs_by_id(dep_url):
             yield self.build_install_command(mgr, specs)
 
     def build_install_command(

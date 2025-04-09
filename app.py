@@ -23,7 +23,7 @@ st.set_page_config(
         "about": """
         **📦 PEP725-metadata-browser **
 
-        Explore the central registry of PURL identifiers and their mapped names
+        Explore the central registry of package identifiers and their mapped names
         in several ecosystems.
         """
     },
@@ -46,12 +46,12 @@ def goto(**params):
 
 def parse_url():
     params = st.query_params.to_dict()
-    purl = params.pop("purl", None)
+    id_ = params.pop("id", None)
     ecosystem = params.pop("ecosystem", None)
     if params:
         st.warning(f"URL contains unknown elements: {params}")
         st.stop()
-    return {"purl": purl, "ecosystem": ecosystem}
+    return {"id": id_, "ecosystem": ecosystem}
 
 
 def render_description(definition: str):
@@ -87,21 +87,21 @@ if not getattr(st.session_state, "initialized", False):
 
 with st.sidebar:
     st.write("# External mappings browser")
-    available_purls = list(REGISTRY.iter_unique_purls())
-    purl = st.selectbox(
-        f"PURL ({len(available_purls)} available)",
-        options=available_purls,
+    available_dep_urls = list(REGISTRY.iter_unique_ids())
+    dep_url = st.selectbox(
+        f"Identifier ({len(available_dep_urls)} available)",
+        options=available_dep_urls,
         index=None,
-        key="purl",
-        placeholder="Choose a PURL identifier",
+        key="dep_url",
+        placeholder="Choose a package",
     )
     eco_options = (
         [
             eco
             for eco in ecosystems()
-            if list(mapping_for(eco).iter_by_id(purl, only_mapped=True))
+            if list(mapping_for(eco).iter_by_id(dep_url, only_mapped=True))
         ]
-        if purl
+        if dep_url
         else ecosystems()
     )
     ecosystem = st.selectbox(
@@ -111,20 +111,20 @@ with st.sidebar:
         index=None,
         key="ecosystem",
         placeholder=f"{len(eco_options)} mappings available"
-        if purl
+        if dep_url
         else "Or browse a mapping",
     )
 
 # Mappings detail page
-if purl and ecosystem:
+if dep_url and ecosystem:
     st.query_params.clear()
-    st.query_params.purl = purl
+    st.query_params.id = dep_url
     st.query_params.ecosystem = ecosystem
     full_mapping = mapping_for(ecosystem)
     st.write(f"# {full_mapping.name}")
     render_description(full_mapping)
-    st.write(f"## `{purl}`")
-    found_mapping_entries = list(full_mapping.iter_by_id(purl, only_mapped=True))
+    st.write(f"## `{dep_url}`")
+    found_mapping_entries = list(full_mapping.iter_by_id(dep_url, only_mapped=True))
     st.write(f"{len(found_mapping_entries)} mapping(s) found:")
     for i, m in enumerate(found_mapping_entries, 1):
         st.write(f"### {i}")
@@ -153,12 +153,12 @@ if purl and ecosystem:
             st.write("Not available in this ecosystem.")
         st.write("---")
 # Identifier detail page
-elif purl:
+elif dep_url:
     st.query_params.clear()
-    st.query_params.purl = purl
+    st.query_params.id = dep_url
     provided_by = []
     for d in REGISTRY.iter_all():
-        if d["id"] == purl:
+        if d["id"] == dep_url:
             st.write(f"### `{d['id']}`")
             render_description(d)
             render_urls(d)
@@ -171,10 +171,10 @@ elif purl:
                         prov,
                         key=f"{d}-{prov}",
                         on_click=goto,
-                        kwargs={"purl": prov},
+                        kwargs={"id": prov},
                         icon="🔗",
                     )
-        if purl in d.get("provides", ()):
+        if dep_url in d.get("provides", ()):
             provided_by.append(d["id"])
     if provided_by:
         st.write("**📥 Provided by:**")
@@ -183,21 +183,21 @@ elif purl:
                 prov,
                 key=f"{d}-{prov}-by",
                 on_click=goto,
-                kwargs={"purl": prov},
+                kwargs={"id": prov},
                 icon="🔗",
             )
     if available_ecos := [
         eco
         for eco in ecosystems()
-        if list(mapping_for(eco).iter_by_id(purl, only_mapped=True))
+        if list(mapping_for(eco).iter_by_id(dep_url, only_mapped=True))
     ]:
         st.write("**📍 Mappings found for:**")
         for eco in available_ecos:
             st.button(
                 mapping_for(eco).name,
-                key=f"{d}-{purl}-{eco}",
+                key=f"{d}-{dep_url}-{eco}",
                 on_click=goto,
-                kwargs={"purl": purl, "ecosystem": eco},
+                kwargs={"id": dep_url, "ecosystem": eco},
                 icon="🔗",
             )
 elif ecosystem:
@@ -224,7 +224,7 @@ elif ecosystem:
             m,
             key=m,
             on_click=goto,
-            kwargs={"purl": m, "ecosystem": ecosystem},
+            kwargs={"id": m, "ecosystem": ecosystem},
             icon="🔗",
         )
     if empty_mappings:
@@ -234,7 +234,7 @@ elif ecosystem:
                 m["id"],
                 key=m["id"],
                 on_click=goto,
-                kwargs={"purl": m["id"]},
+                kwargs={"id": m["id"]},
                 icon="🔗",
             )
 # All identifiers list
@@ -276,6 +276,6 @@ else:
                     "View details",
                     key=f"{value['id']}",
                     on_click=goto,
-                    kwargs={"purl": value["id"]},
+                    kwargs={"id": value["id"]},
                     icon="➕",
                 )
