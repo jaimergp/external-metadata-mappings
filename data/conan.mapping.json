@@ -5,67 +5,6 @@
   "description": "Mapping for the Conan ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
-      "specs": "gcc/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
-      "specs": "mingw-w64/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/mingw-w64"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
-      "specs": "gcc/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
-      "specs": "mingw-w64/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/mingw-w64"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "The Fortran compiler front end and run-time libraries for GCC",
-      "specs": "gfortran/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/gfortran"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "Not available",
-      "specs": []
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
-      "specs": "openblas/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
-      "specs": "openblas/[*]",
-      "urls": {
-        "conan.io": "https://conan.io/center/recipes/openblas"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "Apache Arrow is a cross-language development platform for in-memory data",
       "specs": "arrow/[*]",
@@ -268,6 +207,67 @@
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "Not available",
       "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
+      "specs": "gcc/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
+      "specs": "mingw-w64/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/mingw-w64"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
+      "specs": "gcc/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
+      "specs": "mingw-w64/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/mingw-w64"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "The Fortran compiler front end and run-time libraries for GCC",
+      "specs": "gfortran/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/gfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
+      "specs": "openblas/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD version",
+      "specs": "openblas/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/openblas"
+      }
     }
   ],
   "package_managers": [

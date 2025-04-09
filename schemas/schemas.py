@@ -35,7 +35,7 @@ class Definition(BaseModel):
     provides: PURLField | list[PURLField] | None = None
     """
     List of identifiers this entry connects to.
-    Useful to annotate aliases or abstract package implementations.
+    Useful to annotate aliases or virtual package implementations.
     If no `provides` info is added, the entry is considered canonical.
     """
     urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
@@ -49,7 +49,7 @@ class Definition(BaseModel):
 
 
 class DefinitionListModel(BaseModel):
-    """Canonical list of accepted `dep:(abstract|generic)/` packages"""
+    """Canonical list of accepted `dep:(virtual|generic)/` packages"""
 
     model_config: ConfigDict = ConfigDict(
         extra="forbid",

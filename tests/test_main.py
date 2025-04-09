@@ -43,5 +43,5 @@ def test_mappings(mapping):
 )
 def test_registry_purls_are_parsable(purl):
     if purl.startswith("dep:"):
-        pytest.skip("Abstract PURLs use a different schema and aren't parsable (yet?)")
+        pytest.skip("Virtual PURLs use a different schema and aren't parsable (yet?)")
     PackageURL.from_string(purl)

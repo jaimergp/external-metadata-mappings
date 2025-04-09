@@ -3,30 +3,6 @@
   "schema_version": 1,
   "definitions": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "Compiler for the C language.\n\nThis is a _longer description_ with **Markdown**."
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "Compiler for the C++ language"
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Compiler for the FORTRAN language"
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "Compiler for the Rust language"
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Interface for Basic Linear Algebra Subprograms"
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "Interface for Linear Algebra PACKage"
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
     },
@@ -107,7 +83,7 @@
       "id": "dep:generic/openblas",
       "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
       "provides": [
-        "dep:abstract/interface/blas"
+        "dep:virtual/interface/blas"
       ]
     },
     {
@@ -143,7 +119,7 @@
       "id": "dep:github/OpenMathLib/OpenBLAS",
       "description": "OpenBLAS is an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.",
       "provides": [
-        "dep:abstract/interface/blas",
+        "dep:virtual/interface/blas",
         "dep:generic/openblas"
       ]
     },
@@ -151,8 +127,8 @@
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "LAPACK development repository",
       "provides": [
-        "dep:abstract/interface/blas",
-        "dep:abstract/interface/lapack"
+        "dep:virtual/interface/blas",
+        "dep:virtual/interface/lapack"
       ]
     },
     {
@@ -161,6 +137,30 @@
       "provides": [
         "dep:generic/arrow"
       ]
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "Compiler for the C language.\n\nThis is a _longer description_ with **Markdown**."
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "Compiler for the C++ language"
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Compiler for the FORTRAN language"
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "Compiler for the Rust language"
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Interface for Basic Linear Algebra Subprograms"
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "Interface for Linear Algebra PACKage"
     }
   ]
 }

@@ -5,59 +5,6 @@
   "description": "Mapping for the Winget ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "MSVC Compilers",
-      "specs": "Microsoft.VisualStudio.2022.Community",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Microsoft.VisualStudio.2022.Community"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "MSVC Compilers",
-      "specs": "Microsoft.VisualStudio.2022.Community",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Microsoft.VisualStudio.2022.Community"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Intel Fortran compilers",
-      "specs": "Intel.FortranCompiler",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Intel.FortranCompiler"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust compiler, built with the GNU toolchain",
-      "specs": "Rustlang.Rust.GNU",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Rustlang.Rust.GNU"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust compiler, built with the MSVC toolchain",
-      "specs": "Rustlang.Rust.MSVC",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Rustlang.Rust.MSVC"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The MKL implementation for BLAS",
-      "specs": "Intel.oneMKL",
-      "urls": {
-        "winstall.app": "https://winstall.app/apps/Intel.oneMKL"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "The MKL implementation for LAPACK",
-      "specs_from": "dep:abstract/interface/blas"
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": []
@@ -212,6 +159,59 @@
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "MSVC Compilers",
+      "specs": "Microsoft.VisualStudio.2022.Community",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Microsoft.VisualStudio.2022.Community"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "MSVC Compilers",
+      "specs": "Microsoft.VisualStudio.2022.Community",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Microsoft.VisualStudio.2022.Community"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Intel Fortran compilers",
+      "specs": "Intel.FortranCompiler",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Intel.FortranCompiler"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler, built with the GNU toolchain",
+      "specs": "Rustlang.Rust.GNU",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Rustlang.Rust.GNU"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler, built with the MSVC toolchain",
+      "specs": "Rustlang.Rust.MSVC",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Rustlang.Rust.MSVC"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The MKL implementation for BLAS",
+      "specs": "Intel.oneMKL",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Intel.oneMKL"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "The MKL implementation for LAPACK",
+      "specs_from": "dep:virtual/interface/blas"
     }
   ],
   "package_managers": [

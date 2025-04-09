@@ -5,101 +5,6 @@
   "description": "Mapping for the Scoop ecosystem (official buckets only)",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU Compiler Collection and binutils",
-      "specs": "main/gcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "The Tiny C Compiler (a.k.a. TCC, tCc, or TinyCC) is an x86, X86-64 and ARM processor C compiler created by Fabrice Bellard.",
-      "specs": "main/tcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=tcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "GCC compiler, Windows-friendly",
-      "specs": "versions/tdm-gcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=tdm-gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU Compiler Collection (WinLibs build)",
-      "specs": "main/mingw-winlibs",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=mingw-winlibs"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
-      "specs": "extras/codeblocks-mingw",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "GNU Compiler Collection and binutils",
-      "specs": "main/gcc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
-      "specs": "extras/codeblocks-mingw",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Intel Fortran compilers",
-      "specs": []
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "A language empowering everyone to build reliable and efficient software. (GNU toolchain)",
-      "specs": "main/rust-gnu",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=rust-gnu"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
-      "specs": "main/rust-msvc",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=rust-msvc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
-      "specs": "main/rust",
-      "urls": {
-        "scoop.sh": "https://scoop.sh/#/apps?q=rust"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "",
-      "specs": []
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "",
-      "specs": []
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": []
@@ -294,6 +199,101 @@
     },
     {
       "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU Compiler Collection and binutils",
+      "specs": "main/gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The Tiny C Compiler (a.k.a. TCC, tCc, or TinyCC) is an x86, X86-64 and ARM processor C compiler created by Fabrice Bellard.",
+      "specs": "main/tcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=tcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GCC compiler, Windows-friendly",
+      "specs": "versions/tdm-gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=tdm-gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU Compiler Collection (WinLibs build)",
+      "specs": "main/mingw-winlibs",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=mingw-winlibs"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
+      "specs": "extras/codeblocks-mingw",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "GNU Compiler Collection and binutils",
+      "specs": "main/gcc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
+      "specs": "extras/codeblocks-mingw",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=codeblocks-mingw"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Intel Fortran compilers",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "A language empowering everyone to build reliable and efficient software. (GNU toolchain)",
+      "specs": "main/rust-gnu",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust-gnu"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
+      "specs": "main/rust-msvc",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust-msvc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
+      "specs": "main/rust",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=rust"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
       "description": "",
       "specs": []
     }

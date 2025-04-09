@@ -5,70 +5,6 @@
   "description": "Mapping for the Ubuntu 24.04 LTS (Noble) distro",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": "g++",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": "gfortran",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust compiler",
-      "specs": "rustc",
-      "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Basic Linear Algebra Reference implementations",
-      "specs": {
-        "host": [
-          "libblas3",
-          "libblas-dev"
-        ],
-        "run": "libblas3"
-      },
-      "urls": {
-        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
-        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "The netlib implementation for lapack",
-      "specs": {
-        "host": [
-          "liblapack3",
-          "liblapack3-dev"
-        ],
-        "run": [
-          "liblapack3"
-        ]
-      },
-      "urls": {
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": []
@@ -460,6 +396,70 @@
     {
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "Library of linear algebra routines 3 - shared version",
+      "specs": {
+        "host": [
+          "liblapack3",
+          "liblapack3-dev"
+        ],
+        "run": [
+          "liblapack3"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
+        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": "g++",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gfortran",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rustc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Basic Linear Algebra Reference implementations",
+      "specs": {
+        "host": [
+          "libblas3",
+          "libblas-dev"
+        ],
+        "run": "libblas3"
+      },
+      "urls": {
+        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
+        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "The netlib implementation for lapack",
       "specs": {
         "host": [
           "liblapack3",

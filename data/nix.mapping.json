@@ -5,102 +5,6 @@
   "description": "Mapping for the Nix ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU Compiler Collection",
-      "specs": "gcc",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "GNU Compiler Collection",
-      "specs": "gcc",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "GNU Compiler Collection",
-      "specs": "gfortran",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=gfortran"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust programming language toolchain.",
-      "specs": "rustc",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=rustc"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "openblas with just the BLAS C and FORTRAN ABI",
-      "specs": "blas",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=blas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Basic Linear Algebra Subprograms",
-      "specs": "openblas",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Software library containing BLAS functions written in OpenCL",
-      "specs": "clblas",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=clblast"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Tuned OpenCL BLAS library",
-      "specs": "clblast",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=clblast"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "BLAS-compatible linear algebra library",
-      "specs": "blis",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=blis"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "BLAS-compatible library optimized for AMD CPUs",
-      "specs": "amd-blis",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=amd-blis"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "Basic Linear Algebra Subprograms",
-      "specs": "openblas",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "LAPACK-compatible linear algebra library optimized for AMD CPUs",
-      "specs": "amd-libflame",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=amd-libflame"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "Cross-language development platform for in-memory data.",
       "specs": "arrow-cpp",
@@ -322,6 +226,102 @@
       "specs": "lapack",
       "urls": {
         "nixos.org": "https://search.nixos.org/packages?show=lapack"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU Compiler Collection",
+      "specs": "gcc",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "GNU Compiler Collection",
+      "specs": "gcc",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "GNU Compiler Collection",
+      "specs": "gfortran",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=gfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust programming language toolchain.",
+      "specs": "rustc",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=rustc"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "openblas with just the BLAS C and FORTRAN ABI",
+      "specs": "blas",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=blas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Basic Linear Algebra Subprograms",
+      "specs": "openblas",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Software library containing BLAS functions written in OpenCL",
+      "specs": "clblas",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=clblast"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Tuned OpenCL BLAS library",
+      "specs": "clblast",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=clblast"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "BLAS-compatible linear algebra library",
+      "specs": "blis",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=blis"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "BLAS-compatible library optimized for AMD CPUs",
+      "specs": "amd-blis",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=amd-blis"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "Basic Linear Algebra Subprograms",
+      "specs": "openblas",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "LAPACK-compatible linear algebra library optimized for AMD CPUs",
+      "specs": "amd-libflame",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=amd-libflame"
       }
     }
   ],

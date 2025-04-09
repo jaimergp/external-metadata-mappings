@@ -5,121 +5,6 @@
   "description": "Mapping for the Fedora distro",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/gcc/gcc/"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": [
-        "gcc",
-        "gcc-c++"
-      ],
-      "urls": {
-        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
-        "packages.fedoraproject.org (gcc-c++)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-c++/"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": [
-        "gcc",
-        "gcc-gfortran"
-      ],
-      "urls": {
-        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
-        "packages.fedoraproject.org (gcc-gfortran)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-gfortran/"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust compiler",
-      "specs": "rust",
-      "urls": {
-        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The Basic Linear Algebra Subprograms library",
-      "specs": {
-        "host": [
-          "blas",
-          "blas-devel"
-        ],
-        "run": "blas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (blas)": "https://packages.fedoraproject.org/pkgs/lapack/blas/",
-        "packages.fedoraproject.org (blas-devel)": "https://packages.fedoraproject.org/pkgs/lapack/blas-devel/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
-      "specs": {
-        "host": [
-          "openblas",
-          "openblas-devel"
-        ],
-        "run": "openblas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (openblas)": "https://packages.fedoraproject.org/pkgs/openblas/openblas/",
-        "packages.fedoraproject.org (openblas-devel)": "https://packages.fedoraproject.org/pkgs/openblas/openblas-devel/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
-      "specs": {
-        "host": [
-          "flexiblas",
-          "flexiblas-devel"
-        ],
-        "run": "flexiblas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
-        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "Numerical linear algebra package libraries",
-      "specs": {
-        "host": [
-          "lapack",
-          "lapack-devel"
-        ],
-        "run": "lapack"
-      },
-      "urls": {
-        "packages.fedoraproject.org (lapack)": "https://packages.fedoraproject.org/pkgs/lapack/lapack/",
-        "packages.fedoraproject.org (lapack-devel)": "https://packages.fedoraproject.org/pkgs/lapack/lapack-devel/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
-      "specs": {
-        "host": [
-          "flexiblas",
-          "flexiblas-devel"
-        ],
-        "run": "flexiblas"
-      },
-      "urls": {
-        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
-        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "A toolbox for accelerated data interchange and in-memory processing",
       "specs": {
@@ -540,6 +425,121 @@
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/gcc/gcc/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": [
+        "gcc",
+        "gcc-c++"
+      ],
+      "urls": {
+        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
+        "packages.fedoraproject.org (gcc-c++)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-c++/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": [
+        "gcc",
+        "gcc-gfortran"
+      ],
+      "urls": {
+        "packages.fedoraproject.org (gcc)": "https://packages.fedoraproject.org/pkgs/gcc/gcc/",
+        "packages.fedoraproject.org (gcc-gfortran)": "https://packages.fedoraproject.org/pkgs/gcc/gcc-gfortran/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rust",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/rust/rust/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The Basic Linear Algebra Subprograms library",
+      "specs": {
+        "host": [
+          "blas",
+          "blas-devel"
+        ],
+        "run": "blas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (blas)": "https://packages.fedoraproject.org/pkgs/lapack/blas/",
+        "packages.fedoraproject.org (blas-devel)": "https://packages.fedoraproject.org/pkgs/lapack/blas-devel/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+      "specs": {
+        "host": [
+          "openblas",
+          "openblas-devel"
+        ],
+        "run": "openblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (openblas)": "https://packages.fedoraproject.org/pkgs/openblas/openblas/",
+        "packages.fedoraproject.org (openblas-devel)": "https://packages.fedoraproject.org/pkgs/openblas/openblas-devel/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
+      "specs": {
+        "host": [
+          "flexiblas",
+          "flexiblas-devel"
+        ],
+        "run": "flexiblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
+        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "Numerical linear algebra package libraries",
+      "specs": {
+        "host": [
+          "lapack",
+          "lapack-devel"
+        ],
+        "run": "lapack"
+      },
+      "urls": {
+        "packages.fedoraproject.org (lapack)": "https://packages.fedoraproject.org/pkgs/lapack/lapack/",
+        "packages.fedoraproject.org (lapack-devel)": "https://packages.fedoraproject.org/pkgs/lapack/lapack-devel/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
+      "specs": {
+        "host": [
+          "flexiblas",
+          "flexiblas-devel"
+        ],
+        "run": "flexiblas"
+      },
+      "urls": {
+        "packages.fedoraproject.org (flexiblas)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas/",
+        "packages.fedoraproject.org (flexiblas-devel)": "https://packages.fedoraproject.org/pkgs/flexiblas/flexiblas-devel/"
+      }
     }
   ],
   "package_managers": [

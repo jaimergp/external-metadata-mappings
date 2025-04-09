@@ -5,78 +5,6 @@
   "description": "Mapping for the Arch Linux distro",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": "gcc",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": "gcc-fortran",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc-fortran/"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust compiler",
-      "specs": "rust",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/rust/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Basic Linear Algebra Subprograms",
-      "specs": "blas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/blas/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
-      "specs": "blas-openblas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
-      "specs": "openblas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/openblas/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
-      "specs": "blas-openblas",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "Linear Algebra PACKage",
-      "specs": "lapack",
-      "urls": {
-        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lapack/"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": "arrow",
@@ -290,6 +218,78 @@
     },
     {
       "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "Linear Algebra PACKage",
+      "specs": "lapack",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/lapack/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": "gcc",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gcc-fortran",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/gcc-fortran/"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": "rust",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/rust/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Basic Linear Algebra Subprograms",
+      "specs": "blas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/blas/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
+      "specs": "blas-openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD",
+      "specs": "openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra-testing/x86_64/openblas/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "An optimized BLAS library based on GotoBLAS2 1.13 BSD (Provides BLAS/CBLAS/LAPACK/LAPACKE system-wide)",
+      "specs": "blas-openblas",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/blas-openblas/"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
       "description": "Linear Algebra PACKage",
       "specs": "lapack",
       "urls": {

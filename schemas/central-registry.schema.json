@@ -45,7 +45,7 @@
             }
           ],
           "default": null,
-          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or abstract package implementations.\nIf no `provides` info is added, the entry is considered canonical.",
+          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or virtual package implementations.\nIf no `provides` info is added, the entry is considered canonical.",
           "title": "Provides"
         },
         "urls": {
@@ -91,7 +91,7 @@
     }
   },
   "additionalProperties": false,
-  "description": "Canonical list of accepted `dep:(abstract|generic)/` packages",
+  "description": "Canonical list of accepted `dep:(virtual|generic)/` packages",
   "properties": {
     "$schema": {
       "default": "",

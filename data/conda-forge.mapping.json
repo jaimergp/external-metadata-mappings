@@ -5,124 +5,6 @@
   "description": "Mapping for the conda-forge ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "The default compiler for C",
-      "specs": "c-compiler",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "The default compiler for C",
-      "specs": {
-        "build": [
-          "{{ compiler('c') }}",
-          "{{ stdlib('c') }}"
-        ],
-        "host": [],
-        "run": [
-          "c-compiler"
-        ]
-      },
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "The default compiler for C++",
-      "specs": "cxx-compiler",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "The default compiler for Fortran",
-      "specs": "fortran-compiler",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "The default compiler for Fortran",
-      "specs": {
-        "build": [
-          "{{ compiler('fortran') }}"
-        ],
-        "host": [],
-        "run": [
-          "fortran-compiler"
-        ]
-      },
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The default compiler for Rust",
-      "specs": "rust"
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The default compiler for Rust",
-      "specs": {
-        "build": [
-          "{{ compiler('rust') }}"
-        ],
-        "host": [],
-        "run": [
-          "rust"
-        ]
-      },
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/rust-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "A metapackage for any BLAS implementation",
-      "specs": "blas",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/blas-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The OpenBLAS implementation for BLAS",
-      "specs": "blas * openblas",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/openblas-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The MKL implementation for BLAS",
-      "specs": "blas * mkl",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/intel_repack-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The BLIS implementation for BLAS",
-      "specs": "blas * blis",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/blis-feedstock"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "The default implementation for LAPACK",
-      "specs": "lapack",
-      "urls": {
-        "feedstock": "https://github.com/conda-forge/lapack-feedstock"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": "libarrow",
@@ -453,6 +335,124 @@
     {
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "Linear Algebra PACKage",
+      "specs": "lapack",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/lapack-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The default compiler for C",
+      "specs": "c-compiler",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The default compiler for C",
+      "specs": {
+        "build": [
+          "{{ compiler('c') }}",
+          "{{ stdlib('c') }}"
+        ],
+        "host": [],
+        "run": [
+          "c-compiler"
+        ]
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "The default compiler for C++",
+      "specs": "cxx-compiler",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "The default compiler for Fortran",
+      "specs": "fortran-compiler",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "The default compiler for Fortran",
+      "specs": {
+        "build": [
+          "{{ compiler('fortran') }}"
+        ],
+        "host": [],
+        "run": [
+          "fortran-compiler"
+        ]
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/compilers-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": "rust"
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": {
+        "build": [
+          "{{ compiler('rust') }}"
+        ],
+        "host": [],
+        "run": [
+          "rust"
+        ]
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/rust-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "A metapackage for any BLAS implementation",
+      "specs": "blas",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/blas-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The OpenBLAS implementation for BLAS",
+      "specs": "blas * openblas",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/openblas-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The MKL implementation for BLAS",
+      "specs": "blas * mkl",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/intel_repack-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The BLIS implementation for BLAS",
+      "specs": "blas * blis",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/blis-feedstock"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "The default implementation for LAPACK",
       "specs": "lapack",
       "urls": {
         "feedstock": "https://github.com/conda-forge/lapack-feedstock"

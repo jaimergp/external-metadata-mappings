@@ -5,77 +5,6 @@
   "description": "Mapping for the vcpkg ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "Not available",
-      "specs": []
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "Not available",
-      "specs": []
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Metaport to install gfortran dependencies from msys if VCPKG_USE_EXTERNAL_Fortran is false",
-      "specs": "vcpkg-gfortran",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/vcpkg-gfortran"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "Not available",
-      "specs": []
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Metapackage for packages which provide BLAS",
-      "specs": "blas",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/blas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
-      "specs": "openblas",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "clBLAS is an OpenCL 1.2 accelerated BLAS (Basic Linear Algebra Subsystem) library.",
-      "specs": "clblas",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/clblast"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "A modern, lightweight, performant and tunable OpenCL BLAS library written in C++11.",
-      "specs": "clblast",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/clblast"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "LAPACK - Linear Algebra PACKage",
-      "specs": "lapack-reference",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/lapack-reference"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "CLAPACK (f2c'ed version of LAPACK)",
-      "specs": "clapack",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/clapack"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "Cross-language development platform for in-memory analytics",
       "specs": "arrow",
@@ -282,6 +211,77 @@
       "specs": "lapack-reference",
       "urls": {
         "vcpkg.io": "https://vcpkg.io/en/package/lapack-reference"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Metaport to install gfortran dependencies from msys if VCPKG_USE_EXTERNAL_Fortran is false",
+      "specs": "vcpkg-gfortran",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/vcpkg-gfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "Not available",
+      "specs": []
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Metapackage for packages which provide BLAS",
+      "specs": "blas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/blas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+      "specs": "openblas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "clBLAS is an OpenCL 1.2 accelerated BLAS (Basic Linear Algebra Subsystem) library.",
+      "specs": "clblas",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/clblast"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "A modern, lightweight, performant and tunable OpenCL BLAS library written in C++11.",
+      "specs": "clblast",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/clblast"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "LAPACK - Linear Algebra PACKage",
+      "specs": "lapack-reference",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/lapack-reference"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "CLAPACK (f2c'ed version of LAPACK)",
+      "specs": "clapack",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/clapack"
       }
     }
   ],

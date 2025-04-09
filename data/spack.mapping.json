@@ -5,158 +5,6 @@
   "description": "Mapping for the Spack ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
-      "specs": "gcc",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
-      "specs": "gcc",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
-      "specs": "intel-oneapi-compilers",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
-      "specs": "gcc",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
-      "specs": "intel-oneapi-compilers",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Relies on intel-oneapi-compilers to install the compilers, and configures modules for icc/icpc/ifort. LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
-      "specs": "intel-oneapi-compilers-classic",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers-classic"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "Modern interactive LLVM-based Fortran compiler",
-      "specs": "lfortran",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=lfortran"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The Rust programming language toolchain.",
-      "specs": "rust",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=rust"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The BLAS (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations.",
-      "specs": "cblas",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=cblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Radeon Open Compute BLAS library",
-      "specs": "rocblas",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=rocblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "OpenBLAS: An optimized BLAS library",
-      "specs": "openblas",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "NVPL BLAS (NVIDIA Performance Libraries BLAS) is part of NVIDIA Performance Libraries that provides standard Fortran 77 BLAS APIs as well as C (CBLAS)",
-      "specs": "nvpl-blas",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=nvpl-blas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "A BLAS and LAPACK wrapper library with runtime exchangeable backends",
-      "specs": "flexiblas",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=flexiblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "CLBlast is a modern, lightweight, performant and tunable OpenCL BLAS library written in C++11. It is designed to leverage the full performance potential of a wide variety of OpenCL devices from different vendors, including desktop and laptop GPUs, embedded GPUs, and other accelerators. CLBlast implements BLAS routines: basic linear algebra subprograms operating on vectors and matrices.",
-      "specs": "clblast",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=clblast"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Lightweight but flexible shim designed to rectify the incompatibilities between the Accelerate/vecLib BLAS and LAPACK libraries shipped with macOS and FORTRAN code compiled with modern compilers such as GNU Fortran.",
-      "specs": "veclibfort",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=veclibfort"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "Lightweight but flexible shim designed to rectify the incompatibilities between the Accelerate/vecLib BLAS and LAPACK libraries shipped with macOS and FORTRAN code compiled with modern compilers such as GNU Fortran.",
-      "specs": "veclibfort",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=veclibfort"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "LAPACK version 3.X is a comprehensive FORTRAN library that does linear algebra operations including matrix inversions, least squared solutions to linear sets of equations, eigenvector analysis, singular value decomposition, etc. It is a very comprehensive and reputable package that has found extensive use in the scientific community.",
-      "specs": "netlib-lapack",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=netlib-lapack"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "OpenBLAS: An optimized BLAS library",
-      "specs": "openblas",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "CLAPACK is a f2c'ed version of LAPACK. The CLAPACK library was built using a Fortran to C conversion utility called f2c. The entire Fortran 77 LAPACK library is run through f2c to obtain C code, and then modified to improve readability. CLAPACK's goal is to provide LAPACK for someone who does not have access to a Fortran compiler.",
-      "specs": "clapack",
-      "urls": {
-        "packages.spack.io": "https://packages.spack.io/package.html?name=clapack"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "A cross-language development platform for in-memory data. This package contains the C++ bindings.",
       "specs": "arrow",
@@ -378,6 +226,158 @@
       "specs": "netlib-lapack",
       "urls": {
         "packages.spack.io": "https://packages.spack.io/package.html?name=netlib-lapack"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
+      "specs": "gcc",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
+      "specs": "gcc",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
+      "specs": "intel-oneapi-compilers",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
+      "specs": "gcc",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
+      "specs": "intel-oneapi-compilers",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Relies on intel-oneapi-compilers to install the compilers, and configures modules for icc/icpc/ifort. LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
+      "specs": "intel-oneapi-compilers-classic",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=intel-oneapi-compilers-classic"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "Modern interactive LLVM-based Fortran compiler",
+      "specs": "lfortran",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=lfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust programming language toolchain.",
+      "specs": "rust",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=rust"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The BLAS (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations.",
+      "specs": "cblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=cblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Radeon Open Compute BLAS library",
+      "specs": "rocblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=rocblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "OpenBLAS: An optimized BLAS library",
+      "specs": "openblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "NVPL BLAS (NVIDIA Performance Libraries BLAS) is part of NVIDIA Performance Libraries that provides standard Fortran 77 BLAS APIs as well as C (CBLAS)",
+      "specs": "nvpl-blas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=nvpl-blas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "A BLAS and LAPACK wrapper library with runtime exchangeable backends",
+      "specs": "flexiblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=flexiblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "CLBlast is a modern, lightweight, performant and tunable OpenCL BLAS library written in C++11. It is designed to leverage the full performance potential of a wide variety of OpenCL devices from different vendors, including desktop and laptop GPUs, embedded GPUs, and other accelerators. CLBlast implements BLAS routines: basic linear algebra subprograms operating on vectors and matrices.",
+      "specs": "clblast",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=clblast"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Lightweight but flexible shim designed to rectify the incompatibilities between the Accelerate/vecLib BLAS and LAPACK libraries shipped with macOS and FORTRAN code compiled with modern compilers such as GNU Fortran.",
+      "specs": "veclibfort",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=veclibfort"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "Lightweight but flexible shim designed to rectify the incompatibilities between the Accelerate/vecLib BLAS and LAPACK libraries shipped with macOS and FORTRAN code compiled with modern compilers such as GNU Fortran.",
+      "specs": "veclibfort",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=veclibfort"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "LAPACK version 3.X is a comprehensive FORTRAN library that does linear algebra operations including matrix inversions, least squared solutions to linear sets of equations, eigenvector analysis, singular value decomposition, etc. It is a very comprehensive and reputable package that has found extensive use in the scientific community.",
+      "specs": "netlib-lapack",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=netlib-lapack"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "OpenBLAS: An optimized BLAS library",
+      "specs": "openblas",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "CLAPACK is a f2c'ed version of LAPACK. The CLAPACK library was built using a Fortran to C conversion utility called f2c. The entire Fortran 77 LAPACK library is run through f2c to obtain C code, and then modified to improve readability. CLAPACK's goal is to provide LAPACK for someone who does not have access to a Fortran compiler.",
+      "specs": "clapack",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=clapack"
       }
     }
   ],

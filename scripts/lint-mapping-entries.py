@@ -6,11 +6,11 @@ REGISTRY_PATH = Path(__file__).parent.parent / "data" / "registry.json"
 REGISTRY = json.loads(REGISTRY_PATH.read_text())
 ALL_IDs = {item["id"] for item in REGISTRY["definitions"]}
 CANONICAL_IDs = {
-    # Canonical IDs are those that do not implement any pkg: PURL (pkg:abstract/ are ok)
+    # Canonical IDs are those that do not implement any pkg: PURL (pkg:virtual/ are ok)
     item["id"]
     for item in REGISTRY["definitions"]
     if not item.get("provides")
-    or all(item.startswith("dep:abstract/") for item in item.get("provides"))
+    or all(item.startswith("dep:virtual/") for item in item.get("provides"))
 }
 
 exit_code = 0

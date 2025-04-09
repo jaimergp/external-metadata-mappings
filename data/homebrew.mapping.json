@@ -5,62 +5,6 @@
   "description": "Mapping for the Homebrew ecosystem",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "GNU C Compiler",
-      "specs": "gcc",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "GNU C++ Compiler",
-      "specs": "gcc",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "GNU Fortran Compiler",
-      "specs": "gfortran",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/gfortran"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "The default compiler for Rust",
-      "specs": "rust",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/rust"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The OpenBLAS implementation for BLAS",
-      "specs": "openblas",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/openblas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "The BLIS implementation for BLAS",
-      "specs": "blis",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/blis"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "The netlib implementation for LAPACK",
-      "specs": "lapack",
-      "urls": {
-        "brew.sh": "https://formulae.brew.sh/formula/lapack"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
       "specs": "apache-arrow",
@@ -274,6 +218,62 @@
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "",
       "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "GNU C++ Compiler",
+      "specs": "gcc",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gfortran",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": "rust",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/rust"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The OpenBLAS implementation for BLAS",
+      "specs": "openblas",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/openblas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "The BLIS implementation for BLAS",
+      "specs": "blis",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/blis"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "The netlib implementation for LAPACK",
+      "specs": "lapack",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/lapack"
+      }
     }
   ],
   "package_managers": [

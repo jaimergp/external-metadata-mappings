@@ -5,86 +5,6 @@
   "description": "Mapping for Gentoo Linux",
   "mappings": [
     {
-      "id": "dep:abstract/compiler/c",
-      "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/c",
-      "description": "C language family frontend for LLVM",
-      "specs": "llvm-core/clang",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc[cxx]",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/cpp",
-      "description": "C language family frontend for LLVM",
-      "specs": "llvm-core/clang",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "The GNU Compiler Collection",
-      "specs": "sys-devel/gcc[fortran]",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/fortran",
-      "description": "LLVM's Fortran frontend",
-      "specs": "llvm-core/flang",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/flang"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "Systems programming language originally developed by Mozilla",
-      "specs": "dev-lang/rust",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust"
-      }
-    },
-    {
-      "id": "dep:abstract/compiler/rust",
-      "description": "Systems programming language from Mozilla",
-      "specs": "dev-lang/rust-bin",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust-bin"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/blas",
-      "description": "Virtual for FORTRAN 77 BLAS implementation",
-      "specs": "virtual/blas",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/blas"
-      }
-    },
-    {
-      "id": "dep:abstract/interface/lapack",
-      "description": "Virtual for Linear Algebra Package FORTRAN 77 (LAPACK) implementation",
-      "specs": "virtual/lapack",
-      "urls": {
-        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/lapack"
-      }
-    },
-    {
       "id": "dep:generic/arrow",
       "description": "A cross-language development platform for in-memory data",
       "specs": "dev-libs/apache-arrow",
@@ -291,6 +211,86 @@
       "specs": "sci-libs/lapack",
       "urls": {
         "packages.gentoo.org": "https://packages.gentoo.org/packages/sci-libs/lapack"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc[cxx]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/cpp",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "The GNU Compiler Collection",
+      "specs": "sys-devel/gcc[fortran]",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "LLVM's Fortran frontend",
+      "specs": "llvm-core/flang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/flang"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "Systems programming language originally developed by Mozilla",
+      "specs": "dev-lang/rust",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "Systems programming language from Mozilla",
+      "specs": "dev-lang/rust-bin",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/rust-bin"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Virtual for FORTRAN 77 BLAS implementation",
+      "specs": "virtual/blas",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/blas"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "Virtual for Linear Algebra Package FORTRAN 77 (LAPACK) implementation",
+      "specs": "virtual/lapack",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/virtual/lapack"
       }
     }
   ],
