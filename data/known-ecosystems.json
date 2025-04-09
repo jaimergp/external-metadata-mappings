@@ -2,8 +2,8 @@
   "$schema": "../schemas/known-ecosystems.schema.json",
   "schema_version": 1,
   "ecosystems": {
-    "arch-linux": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/arch-linux.mapping.json",
+    "arch": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/arch.mapping.json",
       "package_managers": [
         "pacman"
       ]
