@@ -87,6 +87,11 @@ class Registry(UserDict, _Validated, _FromPathOrUrl):
             ):
                 yield item
 
+    def iter_aliases(self):
+        for item in self.iter_all():
+            if item.get("provides"):
+                yield item
+
     def iter_generic(self):
         for item in self.iter_all():
             if item["id"].startswith("dep:generic/"):
@@ -126,9 +131,23 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
                 entry.pop("specs_from", None)
             yield entry
 
-    def iter_by_id(self, key, only_mapped=False, resolve_specs=True):
+    def iter_by_id(
+        self,
+        key: str,
+        only_mapped: bool = False,
+        resolve_specs: bool = True,
+        resolve_alias_with_registry: Registry | None = None,
+    ):
+        keys = {key}
+        if resolve_alias_with_registry is not None:
+            keys.update(
+                prov
+                for alias in resolve_alias_with_registry.iter_aliases()
+                for prov in alias["provides"]
+                if key == alias["id"]
+            )
         for entry in self.iter_all(resolve_specs=False):
-            if entry["id"] == key:
+            if entry["id"] in keys:
                 if resolve_specs:
                     entry = entry.copy()
                     specs = self._resolve_specs(entry)
@@ -152,7 +171,7 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         if specs := mapping_entry.get("specs"):
             return specs
         elif specs_from := mapping_entry.get("specs_from"):
-            return self._resolve_specs(specs_from)
+            return self._resolve_specs(next(self.iter_by_id(specs_from)))
         return []
 
     @staticmethod

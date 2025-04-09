@@ -45,3 +45,29 @@ def test_registry_dep_urls_are_parsable(dep_url):
     if dep_url.startswith("dep:"):
         pytest.skip("dep URLs use a different schema and aren't parsable (yet?)")
     PackageURL.from_string(dep_url)
+
+
+def test_resolve_virtual_gcc():
+    mapping = Mapping.from_path(DATA / "fedora.mapping.json")
+    registry = Registry.from_path(DATA / "registry.json")
+    arrow = next(
+        iter(
+            mapping.iter_by_id(
+                "dep:virtual/compiler/c", resolve_alias_with_registry=registry
+            )
+        )
+    )
+    assert arrow["specs"]["build"] == ["gcc"]
+
+
+def test_resolve_alias_arrow():
+    mapping = Mapping.from_path(DATA / "fedora.mapping.json")
+    registry = Registry.from_path(DATA / "registry.json")
+    arrow = next(
+        iter(
+            mapping.iter_by_id(
+                "dep:github/apache/arrow", resolve_alias_with_registry=registry
+            )
+        )
+    )
+    assert arrow["specs"]["run"] == ["libarrow"]
