@@ -476,7 +476,19 @@
         "--yes",
         "--channel=conda-forge",
         "--strict-channel-priority"
-      ]
+      ],
+      "version_operators": {
+        "and": ",",
+        "arbitrary": "==",
+        "compatible": "~=",
+        "equal": "=",
+        "greater_than": ">",
+        "greater_than_equal": ">=",
+        "less_than": "<",
+        "less_than_equal": "<=",
+        "not_equal": "!=",
+        "separator": ""
+      }
     },
     {
       "name": "mamba",
@@ -486,7 +498,19 @@
         "--yes",
         "--channel=conda-forge",
         "--channel-priority=strict"
-      ]
+      ],
+      "version_operators": {
+        "and": ",",
+        "arbitrary": "==",
+        "compatible": "~=",
+        "equal": "=",
+        "greater_than": ">",
+        "greater_than_equal": ">=",
+        "less_than": "<",
+        "less_than_equal": "<=",
+        "not_equal": "!=",
+        "separator": ""
+      }
     },
     {
       "name": "micromamba",
@@ -496,14 +520,38 @@
         "--yes",
         "--channel=conda-forge",
         "--channel-priority=strict"
-      ]
+      ],
+      "version_operators": {
+        "and": ",",
+        "arbitrary": "==",
+        "compatible": "~=",
+        "equal": "=",
+        "greater_than": ">",
+        "greater_than_equal": ">=",
+        "less_than": "<",
+        "less_than_equal": "<=",
+        "not_equal": "!=",
+        "separator": ""
+      }
     },
     {
       "name": "pixi",
       "install_command": [
         "pixi",
         "add"
-      ]
+      ],
+      "version_operators": {
+        "and": ",",
+        "arbitrary": "==",
+        "compatible": "~=",
+        "equal": "=",
+        "greater_than": ">",
+        "greater_than_equal": ">=",
+        "less_than": "<",
+        "less_than_equal": "<=",
+        "not_equal": "!=",
+        "separator": ""
+      }
     }
   ]
 }

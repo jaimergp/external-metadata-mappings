@@ -285,7 +285,8 @@
         "conan",
         "install",
         "--requires"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }

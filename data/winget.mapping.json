@@ -230,7 +230,8 @@
         "install",
         "--exact",
         "--id"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }

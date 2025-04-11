@@ -395,7 +395,8 @@
       "install_command": [
         "spack",
         "install"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }

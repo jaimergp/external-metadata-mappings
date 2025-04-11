@@ -307,13 +307,15 @@
       "name": "pkgcore",
       "install_command": [
         "pmerge"
-      ]
+      ],
+      "version_operators": {}
     },
     {
       "name": "portage",
       "install_command": [
         "emerge"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }
