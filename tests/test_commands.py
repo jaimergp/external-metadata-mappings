@@ -170,5 +170,5 @@ def test_add_version_to_spec(mapping_instance, name, version, pm_config, expecte
 )
 def test_build_command(dep_url, expected):
     mapping = Mapping.from_path(DATA / "conda-forge.mapping.json")
-    for command in mapping.iter_install_commands("conda", dep_url):
-        assert expected in command
+    for specs in mapping.iter_specs_by_id(dep_url, "conda"):
+        assert expected in specs

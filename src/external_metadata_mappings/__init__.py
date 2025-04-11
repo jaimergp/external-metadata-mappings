@@ -200,16 +200,18 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         for manager in self.data["package_managers"]:
             if manager["name"] == name:
                 return manager
-        raise KeyError(f"Could not find '{name}' in {self.data['package_managers']:r}")
+        raise KeyError(f"Could not find '{name}' in {self.data['package_managers']}")
 
-    def iter_install_commands(
+    def iter_specs_by_id(
         self,
-        package_manager: str,
         dep_url: str,
+        package_manager: str,
         specs_type: str | Iterable[str] | None = None,
-    ) -> Iterable[list[str]]:
-        mgr = self.get_package_manager(package_manager)
-        if "@" in dep_url:
+        **kwargs,
+    ):
+        if "@" in dep_url and not dep_url.startswith("dep:virtual/"):
+            # TODO: Virtual versions are not implemented
+            # (e.g. how to map a language standard to a concrete version)
             dep_url, version = dep_url.split("@", 1)
         else:
             version = None
@@ -217,17 +219,31 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
             specs_type = ("build", "host", "run")
         elif isinstance(specs_type, str):
             specs_type = (specs_type,)
-        for entry in self.iter_by_id(dep_url):
+        mgr = self.get_package_manager(package_manager)
+        for entry in self.iter_by_id(dep_url, **kwargs):
             specs = list(
                 dict.fromkeys(s for key in specs_type for s in entry["specs"][key])
             )
-            yield self.build_install_command(mgr, specs, version)
+            if version:
+                specs = [
+                    self._add_version_to_spec(spec, version, mgr) for spec in specs
+                ]
+            yield specs
+
+    def iter_install_commands(
+        self,
+        dep_url: str,
+        package_manager: str,
+        specs_type: str | Iterable[str] | None = None,
+    ) -> Iterable[list[str]]:
+        mgr = self.get_package_manager(package_manager)
+        for specs in self.iter_specs_by_id(dep_url, package_manager, specs_type):
+            yield self.build_install_command(mgr, specs)
 
     def build_install_command(
         self,
         package_manager: dict[str, Any],
         specs: list[str],
-        version: str | None = None,
     ) -> list[str]:
         # TODO: Deal with `{}` placeholders
         cmd = []
@@ -235,11 +251,6 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
             # TODO: Add a system to infer type of elevation required (sudo vs Windows AUC)
             cmd.append("sudo")
         cmd.extend(package_manager["install_command"])
-        if version:
-            specs = [
-                self._add_version_to_spec(spec, version, package_manager)
-                for spec in specs
-            ]
         cmd.extend(specs)
         return cmd
 
