@@ -299,7 +299,8 @@
       "install_command": [
         "vcpkg",
         "install"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }

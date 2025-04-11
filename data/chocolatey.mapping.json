@@ -216,7 +216,8 @@
       "install_command": [
         "choco",
         "install"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }

@@ -339,14 +339,16 @@
       "install_command": [
         "nix-env",
         "-iA"
-      ]
+      ],
+      "version_operators": {}
     },
     {
       "name": "nix-shell",
       "install_command": [
         "nix-shell",
         "-p"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }

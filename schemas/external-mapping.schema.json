@@ -161,6 +161,7 @@
     },
     "PackageManager": {
       "additionalProperties": false,
+      "description": "Details of a particular package manager for this ecosystem.",
       "properties": {
         "name": {
           "description": "Name of the package manager",
@@ -169,7 +170,7 @@
           "type": "string"
         },
         "install_command": {
-          "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
+          "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the package specs\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
           "items": {
             "minLength": 1,
             "type": "string"
@@ -197,7 +198,7 @@
             "not_equal": "!=",
             "separator": ""
           },
-          "description": "Mapping of version comparison operators to syntax used in the package manager"
+          "description": "Mapping of PEP440 version comparison operators to the syntax used in this package manager.\nIf set to an empty dictionary, it means that the package manager (or ecosystem)\ndoesn't support the notion of requesting particular package versions."
         }
       },
       "required": [
@@ -279,6 +280,7 @@
     },
     "VersionOperators": {
       "additionalProperties": false,
+      "description": "Mapping of a PEP440 operator to a package manager specific operator.\nUse an empty string if there's no equivalent.",
       "properties": {
         "and": {
           "default": ",",
