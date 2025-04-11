@@ -182,6 +182,22 @@
           "description": "Whether the install command requires elevated permissions to run.",
           "title": "Requires Elevation",
           "type": "boolean"
+        },
+        "version_operators": {
+          "$ref": "#/$defs/VersionOperators",
+          "default": {
+            "and": ",",
+            "arbitrary": "===",
+            "compatible": "~=",
+            "equal": "==",
+            "greater_than": ">",
+            "greater_than_equal": ">=",
+            "less_than": "<",
+            "less_than_equal": "<=",
+            "not_equal": "!=",
+            "separator": ""
+          },
+          "description": "Mapping of version comparison operators to syntax used in the package manager"
         }
       },
       "required": [
@@ -259,6 +275,63 @@
         }
       },
       "title": "SpecsDict",
+      "type": "object"
+    },
+    "VersionOperators": {
+      "additionalProperties": false,
+      "properties": {
+        "and": {
+          "default": ",",
+          "title": "And",
+          "type": "string"
+        },
+        "arbitrary": {
+          "default": "===",
+          "title": "Arbitrary",
+          "type": "string"
+        },
+        "compatible": {
+          "default": "~=",
+          "title": "Compatible",
+          "type": "string"
+        },
+        "equal": {
+          "default": "==",
+          "title": "Equal",
+          "type": "string"
+        },
+        "greater_than": {
+          "default": ">",
+          "title": "Greater Than",
+          "type": "string"
+        },
+        "greater_than_equal": {
+          "default": ">=",
+          "title": "Greater Than Equal",
+          "type": "string"
+        },
+        "less_than": {
+          "default": "<",
+          "title": "Less Than",
+          "type": "string"
+        },
+        "less_than_equal": {
+          "default": "<=",
+          "title": "Less Than Equal",
+          "type": "string"
+        },
+        "not_equal": {
+          "default": "!=",
+          "title": "Not Equal",
+          "type": "string"
+        },
+        "separator": {
+          "default": "",
+          "title": "Separator",
+          "type": "string"
+        }
+      },
+      "title": "VersionOperators",
       "type": "object"
     }
   },

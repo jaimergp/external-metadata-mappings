@@ -9,6 +9,7 @@ from typing import Any, Iterable
 
 import requests
 from jsonschema import Draft202012Validator, validators
+from packaging.specifiers import Specifier
 
 HERE = Path(__file__).parent
 SCHEMAS_DIR = HERE.parent.parent / "schemas"
@@ -113,6 +114,11 @@ class Ecosystems(UserDict, _Validated, _FromPathOrUrl):
 
 class Mapping(UserDict, _Validated, _FromPathOrUrl):
     default_schema: Path = SCHEMAS_DIR / "external-mapping.schema.json"
+    default_operator_mapping = {
+        "and": ",",
+        "separator": "",
+        **{v: k for (k, v) in Specifier._operators.items()},
+    }
 
     @property
     def name(self):
@@ -138,6 +144,7 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         resolve_specs: bool = True,
         resolve_alias_with_registry: Registry | None = None,
     ):
+        key = key.split("@", 1)[0]  # remove version components
         keys = {key}
         if resolve_alias_with_registry is not None:
             keys.update(
@@ -197,13 +204,18 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
 
     def iter_install_commands(self, package_manager, dep_url) -> Iterable[list[str]]:
         mgr = self.get_package_manager(package_manager)
+        if "@" in dep_url:
+            dep_url, version = dep_url.split("@", 1)
+        else:
+            version = None
         for specs in self.iter_specs_by_id(dep_url):
-            yield self.build_install_command(mgr, specs)
+            yield self.build_install_command(mgr, specs, version)
 
     def build_install_command(
         self,
         package_manager: dict[str, Any],
         specs: list[str],
+        version: str | None = None,
     ) -> list[str]:
         # TODO: Deal with `{}` placeholders
         cmd = []
@@ -211,5 +223,31 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
             # TODO: Add a system to infer type of elevation required (sudo vs Windows AUC)
             cmd.append("sudo")
         cmd.extend(package_manager["install_command"])
+        if version:
+            specs = [
+                self._add_version_to_spec(spec, version, package_manager)
+                for spec in specs
+            ]
         cmd.extend(specs)
         return cmd
+
+    def _add_version_to_spec(self, name: str, version: str, package_manager: str):
+        operator_mapping = package_manager.get("version_operators")
+        if operator_mapping is None or not version:
+            # Package manager does not support versions, return early
+            return name
+        operator_mapping.update(self.default_operator_mapping)
+        converted_versions = []
+        for source_version in version.split(","):
+            parsed = Specifier(source_version)
+            source_operator = parsed.operator
+            converted_operator = operator_mapping[Specifier._operators[source_operator]]
+            if converted_operator:
+                converted = source_version.replace(source_operator, converted_operator)
+                converted_versions.append(converted)
+            else:
+                ...  # TODO: we should warn here
+        if converted_versions:
+            merged_versions = operator_mapping["and"].join(converted_versions)
+            return f"{name}{operator_mapping['separator']}{merged_versions}"
+        return name

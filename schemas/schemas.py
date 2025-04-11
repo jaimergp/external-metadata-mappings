@@ -72,6 +72,25 @@ class DefinitionListModel(BaseModel):
     "List of PURL definitions currently recognized."
 
 
+class VersionOperators(BaseModel):
+    """ """
+
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    and_: str = Field(",", alias="and")
+    arbitrary: str = "==="
+    compatible: str = "~="
+    equal: str = "=="
+    greater_than_equal: str = ">="
+    greater_than: str = ">"
+    less_than_equal: str = "<="
+    less_than: str = "<"
+    not_equal: str = "!="
+    separator: str = ""
+
+
 class PackageManager(BaseModel):
     """ """
 
@@ -90,6 +109,8 @@ class PackageManager(BaseModel):
     """
     requires_elevation: bool = False
     "Whether the install command requires elevated permissions to run."
+    version_operators: VersionOperators = VersionOperators()
+    "Mapping of version comparison operators to syntax used in the package manager"
 
 
 # endregion
