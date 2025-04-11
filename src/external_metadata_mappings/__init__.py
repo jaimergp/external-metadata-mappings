@@ -202,13 +202,25 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
                 return manager
         raise KeyError(f"Could not find '{name}' in {self.data['package_managers']:r}")
 
-    def iter_install_commands(self, package_manager, dep_url) -> Iterable[list[str]]:
+    def iter_install_commands(
+        self,
+        package_manager: str,
+        dep_url: str,
+        specs_type: str | Iterable[str] | None = None,
+    ) -> Iterable[list[str]]:
         mgr = self.get_package_manager(package_manager)
         if "@" in dep_url:
             dep_url, version = dep_url.split("@", 1)
         else:
             version = None
-        for specs in self.iter_specs_by_id(dep_url):
+        if specs_type is None:
+            specs_type = ("build", "host", "run")
+        elif isinstance(specs_type, str):
+            specs_type = (specs_type,)
+        for entry in self.iter_by_id(dep_url):
+            specs = list(
+                dict.fromkeys(s for key in specs_type for s in entry["specs"][key])
+            )
             yield self.build_install_command(mgr, specs, version)
 
     def build_install_command(
@@ -231,23 +243,40 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         cmd.extend(specs)
         return cmd
 
-    def _add_version_to_spec(self, name: str, version: str, package_manager: str):
-        operator_mapping = package_manager.get("version_operators")
-        if operator_mapping is None or not version:
-            # Package manager does not support versions, return early
+    def _add_version_to_spec(
+        self, name: str, version: str, package_manager: dict
+    ) -> str:
+        operator_mapping_config = package_manager.get("version_operators")
+        if operator_mapping_config == {} or not version:
             return name
-        operator_mapping.update(self.default_operator_mapping)
+
+        final_operator_mapping = self.default_operator_mapping.copy()
+        if operator_mapping_config:
+            final_operator_mapping.update(operator_mapping_config)
+
         converted_versions = []
-        for source_version in version.split(","):
-            parsed = Specifier(source_version)
+        for source_version_part in version.split(","):
+            source_version_part = self._ensure_specifier_compatible(source_version_part)
+            parsed = Specifier(source_version_part)
             source_operator = parsed.operator
-            converted_operator = operator_mapping[Specifier._operators[source_operator]]
-            if converted_operator:
-                converted = source_version.replace(source_operator, converted_operator)
-                converted_versions.append(converted)
-            else:
-                ...  # TODO: we should warn here
+            operator_key = Specifier._operators[source_operator]
+            converted_operator = final_operator_mapping[operator_key]
+            # Replace the original PEP440 operator with the target one
+            if converted_operator is None:
+                continue  # TODO: Warn? Error?
+            converted = source_version_part.replace(source_operator, converted_operator)
+            converted_versions.append(converted)
+
         if converted_versions:
-            merged_versions = operator_mapping["and"].join(converted_versions)
-            return f"{name}{operator_mapping['separator']}{merged_versions}"
+            # Join the converted parts using the target 'and' string
+            merged_versions = final_operator_mapping["and"].join(converted_versions)
+            # Prepend the target separator
+            return f"{name}{final_operator_mapping['separator']}{merged_versions}"
+
+        # Return only name if no valid/convertible version parts were found
         return name
+
+    def _ensure_specifier_compatible(self, value: str) -> Specifier:
+        if not set(value).intersection("<>=!~"):
+            return f"==={value}"
+        return value
