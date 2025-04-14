@@ -570,7 +570,8 @@
         "install",
         "-y"
       ],
-      "requires_elevation": true
+      "requires_elevation": true,
+      "version_operators": {}
     }
   ]
 }

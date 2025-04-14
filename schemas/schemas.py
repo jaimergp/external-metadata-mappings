@@ -72,8 +72,32 @@ class DefinitionListModel(BaseModel):
     "List of PURL definitions currently recognized."
 
 
+class VersionOperators(BaseModel):
+    """
+    Mapping of a PEP440 operator to a package manager specific operator.
+    Use an empty string if there's no equivalent.
+    """
+
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    and_: str = Field(",", alias="and")
+    arbitrary: str = "==="
+    compatible: str = "~="
+    equal: str = "=="
+    greater_than_equal: str = ">="
+    greater_than: str = ">"
+    less_than_equal: str = "<="
+    less_than: str = "<"
+    not_equal: str = "!="
+    separator: str = ""
+
+
 class PackageManager(BaseModel):
-    """ """
+    """
+    Details of a particular package manager for this ecosystem.
+    """
 
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
@@ -85,11 +109,17 @@ class PackageManager(BaseModel):
     install_command: list[NonEmptyString] = ...
     """
     Command that must be used to install the given package(s). Each argument must be provided as a
-    separate string, as in `subprocess.run`. Use `{}` as a placeholder where the packages
+    separate string, as in `subprocess.run`. Use `{}` as a placeholder where the package specs
     must be injected, if needed. If `{}` is not present, they will be added at the end.
     """
     requires_elevation: bool = False
     "Whether the install command requires elevated permissions to run."
+    version_operators: VersionOperators = VersionOperators()
+    """
+    Mapping of PEP440 version comparison operators to the syntax used in this package manager.
+    If set to an empty dictionary, it means that the package manager (or ecosystem)
+    doesn't support the notion of requesting particular package versions.
+    """
 
 
 # endregion

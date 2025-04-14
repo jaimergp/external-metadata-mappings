@@ -9,6 +9,7 @@ from typing import Any, Iterable
 
 import requests
 from jsonschema import Draft202012Validator, validators
+from packaging.specifiers import Specifier
 
 HERE = Path(__file__).parent
 SCHEMAS_DIR = HERE.parent.parent / "schemas"
@@ -113,6 +114,11 @@ class Ecosystems(UserDict, _Validated, _FromPathOrUrl):
 
 class Mapping(UserDict, _Validated, _FromPathOrUrl):
     default_schema: Path = SCHEMAS_DIR / "external-mapping.schema.json"
+    default_operator_mapping = {
+        "and": ",",
+        "separator": "",
+        **{v: k for (k, v) in Specifier._operators.items()},
+    }
 
     @property
     def name(self):
@@ -138,6 +144,7 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         resolve_specs: bool = True,
         resolve_alias_with_registry: Registry | None = None,
     ):
+        key = key.split("@", 1)[0]  # remove version components
         keys = {key}
         if resolve_alias_with_registry is not None:
             keys.update(
@@ -193,11 +200,44 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         for manager in self.data["package_managers"]:
             if manager["name"] == name:
                 return manager
-        raise KeyError(f"Could not find '{name}' in {self.data['package_managers']:r}")
+        raise KeyError(f"Could not find '{name}' in {self.data['package_managers']}")
 
-    def iter_install_commands(self, package_manager, dep_url) -> Iterable[list[str]]:
+    def iter_specs_by_id(
+        self,
+        dep_url: str,
+        package_manager: str,
+        specs_type: str | Iterable[str] | None = None,
+        **kwargs,
+    ):
+        if "@" in dep_url and not dep_url.startswith("dep:virtual/"):
+            # TODO: Virtual versions are not implemented
+            # (e.g. how to map a language standard to a concrete version)
+            dep_url, version = dep_url.split("@", 1)
+        else:
+            version = None
+        if specs_type is None:
+            specs_type = ("build", "host", "run")
+        elif isinstance(specs_type, str):
+            specs_type = (specs_type,)
         mgr = self.get_package_manager(package_manager)
-        for specs in self.iter_specs_by_id(dep_url):
+        for entry in self.iter_by_id(dep_url, **kwargs):
+            specs = list(
+                dict.fromkeys(s for key in specs_type for s in entry["specs"][key])
+            )
+            if version:
+                specs = [
+                    self._add_version_to_spec(spec, version, mgr) for spec in specs
+                ]
+            yield specs
+
+    def iter_install_commands(
+        self,
+        dep_url: str,
+        package_manager: str,
+        specs_type: str | Iterable[str] | None = None,
+    ) -> Iterable[list[str]]:
+        mgr = self.get_package_manager(package_manager)
+        for specs in self.iter_specs_by_id(dep_url, package_manager, specs_type):
             yield self.build_install_command(mgr, specs)
 
     def build_install_command(
@@ -213,3 +253,41 @@ class Mapping(UserDict, _Validated, _FromPathOrUrl):
         cmd.extend(package_manager["install_command"])
         cmd.extend(specs)
         return cmd
+
+    def _add_version_to_spec(
+        self, name: str, version: str, package_manager: dict
+    ) -> str:
+        operator_mapping_config = package_manager.get("version_operators")
+        if operator_mapping_config == {} or not version:
+            return name
+
+        final_operator_mapping = self.default_operator_mapping.copy()
+        if operator_mapping_config:
+            final_operator_mapping.update(operator_mapping_config)
+
+        converted_versions = []
+        for source_version_part in version.split(","):
+            source_version_part = self._ensure_specifier_compatible(source_version_part)
+            parsed = Specifier(source_version_part)
+            source_operator = parsed.operator
+            operator_key = Specifier._operators[source_operator]
+            converted_operator = final_operator_mapping[operator_key]
+            # Replace the original PEP440 operator with the target one
+            if converted_operator is None:
+                continue  # TODO: Warn? Error?
+            converted = source_version_part.replace(source_operator, converted_operator)
+            converted_versions.append(converted)
+
+        if converted_versions:
+            # Join the converted parts using the target 'and' string
+            merged_versions = final_operator_mapping["and"].join(converted_versions)
+            # Prepend the target separator
+            return f"{name}{final_operator_mapping['separator']}{merged_versions}"
+
+        # Return only name if no valid/convertible version parts were found
+        return name
+
+    def _ensure_specifier_compatible(self, value: str) -> Specifier:
+        if not set(value).intersection("<>=!~"):
+            return f"==={value}"
+        return value

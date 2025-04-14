@@ -312,7 +312,8 @@
       "install_command": [
         "scoop",
         "install"
-      ]
+      ],
+      "version_operators": {}
     }
   ]
 }
