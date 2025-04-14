@@ -7,6 +7,10 @@
       "description": "Apache Arrow is the universal columnar format and multi-language toolbox for fast data interchange and in-memory analytics"
     },
     {
+      "id": "dep:generic/clang",
+      "description": "Language front-end and tooling infrastructure for languages in the C language family for the LLVM project."
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "CMake is a cross-platform, open-source build system generator."
     },

@@ -13,6 +13,14 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "C language family frontend for LLVM",
+      "specs": "llvm-core/clang",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/llvm-core/clang"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "Cross platform Make",
       "specs": "dev-build/cmake",

@@ -10,6 +10,11 @@
       "specs": []
     },
     {
+      "id": "dep:generic/clang",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI",
       "specs": "cmake",

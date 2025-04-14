@@ -13,6 +13,14 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "C language family frontend for LLVM",
+      "specs": "clang",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/clang/"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "A cross-platform open-source make system",
       "specs": "cmake",

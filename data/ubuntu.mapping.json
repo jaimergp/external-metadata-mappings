@@ -10,6 +10,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/clang",
+      "description": "C, C++ and Objective-C compiler (LLVM based), clang binary",
+      "specs": "clang",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/clang"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "cross-platform, open-source make system",
       "specs": "cmake",

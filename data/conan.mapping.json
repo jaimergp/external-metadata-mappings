@@ -13,6 +13,11 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "clang is an open-source JPEG 2000 codec written in C language",
+      "specs": []
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "CMake, the cross-platform, open-source build system.",
       "specs": "cmake/[*]",

@@ -13,6 +13,11 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "",
       "specs": "cmake",

@@ -10,6 +10,11 @@
       "specs": []
     },
     {
+      "id": "dep:generic/clang",
+      "description": "",
+      "specs": []
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "Family of tools designed to build, test and package software",
       "specs": "main/cmake",

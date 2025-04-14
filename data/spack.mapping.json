@@ -13,6 +13,17 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "LLVM C/C++/Objective-C compiler frontend",
+      "specs": [
+        "llvm",
+        "+clang"
+      ],
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=llvm"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "A cross-platform, open-source build system. CMake is a family of tools designed to build, test and package software.",
       "specs": "cmake",

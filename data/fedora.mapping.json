@@ -25,6 +25,27 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "A C language family front-end for LLVM",
+      "specs": {
+        "build": [
+          "clang"
+        ],
+        "host": [
+          "clang-devel",
+          "clang-libs"
+        ],
+        "run": [
+          "clang-libs"
+        ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (clang)": "https://packages.fedoraproject.org/pkgs/clang/clang/",
+        "packages.fedoraproject.org (clang-devel)": "https://packages.fedoraproject.org/pkgs/clang/clang-devel/",
+        "packages.fedoraproject.org (clang-libs)": "https://packages.fedoraproject.org/pkgs/clang/clang-libs/"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "Cross-platform make system",
       "specs": "cmake",

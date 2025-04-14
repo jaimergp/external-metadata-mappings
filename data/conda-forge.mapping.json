@@ -13,6 +13,26 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "Development headers and libraries for Clang",
+      "specs": {
+        "build": [
+          "clang",
+          "clangxx"
+        ],
+        "host": [
+          "clangdev"
+        ],
+        "run": [
+          "clang-format",
+          "clang-tools"
+        ]
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/clangdev-feedstock"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "",
       "specs": [

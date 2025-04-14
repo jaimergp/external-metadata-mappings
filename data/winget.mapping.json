@@ -10,6 +10,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/clang",
+      "description": "A collection of modular and reusable compiler and toolchain technologies.",
+      "specs": "LLVM.LLVM",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/LLVM.LLVM"
+      }
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "",
       "specs": []

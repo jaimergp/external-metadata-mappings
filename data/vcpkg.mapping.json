@@ -13,6 +13,11 @@
       }
     },
     {
+      "id": "dep:generic/clang",
+      "description": "Not available",
+      "specs": []
+    },
+    {
       "id": "dep:generic/cmake",
       "description": "Not available",
       "specs": "vcpkg-cmake",
