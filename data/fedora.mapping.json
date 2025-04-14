@@ -10,10 +10,19 @@
       "specs": {
         "host": [
           "libarrow",
-          "libarrow-devel"
+          "libarrow-devel",
+          "libarrow-acero-libs",
+          "libarrow-acero-devel",
+          "libarrow-dataset-libs",
+          "libarrow-dataset-devel",
+          "libarrow-flight-libs",
+          "libarrow-flight-devel"
         ],
         "run": [
-          "libarrow"
+          "libarrow",
+          "libarrow-acero-libs",
+          "libarrow-dataset-libs",
+          "libarrow-flight-libs"
         ]
       },
       "urls": {
