@@ -36,6 +36,7 @@
           "clang-libs"
         ],
         "run": [
+          "clang",
           "clang-libs"
         ]
       },
