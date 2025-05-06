@@ -133,9 +133,7 @@ class EcosystemDetails(BaseModel):
         use_attribute_docstrings=True,
     )
     mapping: AnyUrl = ...
-    "URL to the mapping for this ecosystem"
-    package_managers: list[NonEmptyString] = []
-    "List of package manager names known in this ecosystem"
+    "URL to the mapping for this ecosystem / package manager"
 
 
 class Ecosystems(BaseModel):

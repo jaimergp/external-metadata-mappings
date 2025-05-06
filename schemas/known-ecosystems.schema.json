@@ -6,21 +6,11 @@
       "additionalProperties": false,
       "properties": {
         "mapping": {
-          "description": "URL to the mapping for this ecosystem",
+          "description": "URL to the mapping for this ecosystem / package manager",
           "format": "uri",
           "minLength": 1,
           "title": "Mapping",
           "type": "string"
-        },
-        "package_managers": {
-          "default": [],
-          "description": "List of package manager names known in this ecosystem",
-          "items": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "title": "Package Managers",
-          "type": "array"
         }
       },
       "required": [

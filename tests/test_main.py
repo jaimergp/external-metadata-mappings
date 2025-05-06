@@ -70,4 +70,4 @@ def test_resolve_alias_arrow():
             )
         )
     )
-    assert arrow["specs"]["run"] == ["libarrow"]
+    assert arrow["specs"]["run"] == ["libarrow", "libarrow-dataset-libs"]
