@@ -8,7 +8,7 @@
         "id": {
           "description": "PURL-like identifier.",
           "minLength": 1,
-          "pattern": "^(dep:).*",
+          "pattern": "^dep:.+$",
           "title": "Id",
           "type": "string"
         },
@@ -29,13 +29,13 @@
           "anyOf": [
             {
               "minLength": 1,
-              "pattern": "^(dep:).*",
+              "pattern": "^dep:.+$",
               "type": "string"
             },
             {
               "items": {
                 "minLength": 1,
-                "pattern": "^(dep:).*",
+                "pattern": "^dep:.+$",
                 "type": "string"
               },
               "type": "array"

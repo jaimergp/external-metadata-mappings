@@ -8,7 +8,7 @@
         "id": {
           "description": "PURL-like identifier, as provided in the central registry,\nbeing mapped to ecosystem specific packages.",
           "minLength": 1,
-          "pattern": "^(dep:).*",
+          "pattern": "^dep:.+$",
           "title": "Id",
           "type": "string"
         },
@@ -93,7 +93,7 @@
         "id": {
           "description": "PURL-like identifier, as provided in the central registry,\nbeing mapped to ecosystem specific packages.",
           "minLength": 1,
-          "pattern": "^(dep:).*",
+          "pattern": "^dep:.+$",
           "title": "Id",
           "type": "string"
         },
@@ -113,7 +113,7 @@
         "specs_from": {
           "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
           "minLength": 1,
-          "pattern": "^(dep:).*",
+          "pattern": "^dep:.+$",
           "title": "Specs From",
           "type": "string"
         },

@@ -15,7 +15,7 @@ ECOSYSTEMS_FILE = HERE / "known-ecosystems.schema.json"
 MAPPING_SCHEMA_FILE = HERE / "external-mapping.schema.json"
 
 
-PURLField = Annotated[str, Field(min_length=1, pattern=r"^(dep:).*")]
+DepURLField = Annotated[str, Field(min_length=1, pattern=r"^dep:.+$")]
 NonEmptyString = Annotated[str, Field(min_length=1)]
 
 
@@ -28,11 +28,11 @@ class Definition(BaseModel):
         use_attribute_docstrings=True,
     )
 
-    id: PURLField = ...
+    id: DepURLField = ...
     "PURL-like identifier."
     description: str | None = None
     "Free-form field to add some details about the package. Allows Markdown."
-    provides: PURLField | list[PURLField] | None = None
+    provides: DepURLField | list[DepURLField] | None = None
     """
     List of identifiers this entry connects to.
     Useful to annotate aliases or virtual package implementations.
@@ -197,7 +197,7 @@ class _BaseMapping(BaseModel):
         use_attribute_docstrings=True,
     )
 
-    id: PURLField = ...
+    id: DepURLField = ...
     """
     PURL-like identifier, as provided in the central registry,
     being mapped to ecosystem specific packages.
@@ -220,7 +220,7 @@ class MappingWithSpecs(_BaseMapping):
 class MappingWithSpecsFrom(_BaseMapping):
     """ """
 
-    specs_from: PURLField = ...
+    specs_from: DepURLField = ...
     """
     Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.
     Cannot be used together with `specs`.
