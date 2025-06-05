@@ -37,4 +37,4 @@ The `scripts/` folder hosts custom linting logic used in the `pre-commit` config
 
 - [`external-deps-build`](https://github.com/rgommers/external-deps-build): CI workflows to
   build popular PyPI packages patched with the necessary `[external]` metadata.
-- [`pyproject-external](https://github.com/jaimergp/pyproject-external): Library and CLI to interact with [PEP 725](https://peps.python.org/pep-0725/) `[external]` metadata.
+- [`pyproject-external`](https://github.com/jaimergp/pyproject-external): Library and CLI to interact with [PEP 725](https://peps.python.org/pep-0725/) `[external]` metadata.
