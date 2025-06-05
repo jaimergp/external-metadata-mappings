@@ -1,0 +1,19 @@
+[workspace]
+authors = ["jaimergp <jaimergp@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "external-metadata-mappings"
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+version = "0.1.0"
+
+[dependencies]
+pydantic = ">=2"
+streamlit = "*"
+pre-commit = "*"
+
+[pypi-dependencies]
+pyproject-external = { git = "https://github.com/jaimergp/pyproject-external.git" }
+
+[tasks]
+schemas = "python schemas/schemas.py && pre-commit run --files schemas/* data/*"
+app = "python -m streamlit run --server.runOnSave=true app.py"
+pre-commit = "pre-commit"

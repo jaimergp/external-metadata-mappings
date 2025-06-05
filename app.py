@@ -8,7 +8,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from external_metadata_mappings import Registry, Mapping
+from pyproject_external import Registry, Mapping
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
