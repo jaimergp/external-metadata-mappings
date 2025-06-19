@@ -180,8 +180,12 @@
       "description": "Compiler for the JavaScript language"
     },
     {
-      "id": "dep:virtual/compiler/objective-c",
+      "id": "dep:virtual/compiler/obj-c",
       "description": "Compiler for the Objective C language"
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language"
     },
     {
       "id": "dep:virtual/compiler/ocaml",
