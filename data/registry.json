@@ -153,19 +153,55 @@
     },
     {
       "id": "dep:virtual/compiler/c",
-      "description": "Compiler for the C language.\n\nThis is a _longer description_ with **Markdown**."
+      "description": "Compiler for the C language."
+    },
+    {
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language."
     },
     {
       "id": "dep:virtual/compiler/cpp",
       "description": "Compiler for the C++ language"
     },
     {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the CUDA language"
+    },
+    {
       "id": "dep:virtual/compiler/fortran",
       "description": "Compiler for the FORTRAN language"
     },
     {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language"
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language"
+    },
+    {
+      "id": "dep:virtual/compiler/objective-c",
+      "description": "Compiler for the Objective C language"
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language"
+    },
+    {
       "id": "dep:virtual/compiler/rust",
       "description": "Compiler for the Rust language"
+    },
+    {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language"
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language"
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language"
     },
     {
       "id": "dep:virtual/interface/blas",
@@ -174,6 +210,14 @@
     {
       "id": "dep:virtual/interface/lapack",
       "description": "Interface for Linear Algebra PACKage"
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Interface for MPI (Message Passing Interface)"
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "Interface for OpenMP multiprocessing"
     }
   ]
 }
