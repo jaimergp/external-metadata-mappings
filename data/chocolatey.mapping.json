@@ -176,7 +176,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "Microsoft Visual Studio 2022 Build Tools",
       "specs": "visualstudio2022buildtools",
       "urls": {

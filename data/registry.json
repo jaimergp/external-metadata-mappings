@@ -160,7 +160,7 @@
       "description": "Compiler for the C# language."
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "Compiler for the C++ language"
     },
     {

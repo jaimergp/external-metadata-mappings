@@ -185,7 +185,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "MSVC Compilers",
       "specs": "Microsoft.VisualStudio.2022.Community",
       "urls": {

@@ -246,7 +246,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "The GNU Compiler Collection",
       "specs": "sys-devel/gcc[cxx]",
       "urls": {
@@ -254,7 +254,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "C language family frontend for LLVM",
       "specs": "llvm-core/clang",
       "urls": {

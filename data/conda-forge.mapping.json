@@ -396,7 +396,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "The default compiler for C++",
       "specs": "cxx-compiler",
       "urls": {

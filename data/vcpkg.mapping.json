@@ -232,7 +232,7 @@
       "specs": []
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "Not available",
       "specs": []
     },

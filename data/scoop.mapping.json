@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "GNU Compiler Collection and binutils",
       "specs": "main/gcc",
       "urls": {
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
       "specs": "extras/codeblocks-mingw",
       "urls": {

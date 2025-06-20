@@ -249,7 +249,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "GNU C++ Compiler",
       "specs": "gcc",
       "urls": {

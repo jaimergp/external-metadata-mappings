@@ -238,7 +238,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).",
       "specs": "gcc/[*]",
       "urls": {
@@ -246,7 +246,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "This package provides a MinGW-w64 environment with a GCC toolchain for cross-compilation of native Windows binaries from Linux.",
       "specs": "mingw-w64/[*]",
       "urls": {
