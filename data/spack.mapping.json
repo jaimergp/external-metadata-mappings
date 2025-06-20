@@ -263,7 +263,7 @@
     },
     {
       "id": "dep:virtual/compiler/cuda",
-      "description": "Compiler for the Cuda language",
+      "description": "Compiler for the CUDA language",
       "specs": [],
       "urls": {}
     },
