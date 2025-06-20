@@ -256,7 +256,19 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the CUDA language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cxx",
       "description": "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, and Go, as well as libraries for these languages.",
       "specs": "gcc",
       "urls": {
@@ -264,7 +276,7 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/cxx",
       "description": "Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc LICENSE INFORMATION: By downloading and using this software, you agree to the terms and conditions of the software license agreements at https://intel.ly/393CijO.",
       "specs": "intel-oneapi-compilers",
       "urls": {
@@ -304,12 +316,60 @@
       }
     },
     {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-c",
+      "description": "Compiler for the Objective C language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust programming language toolchain.",
       "specs": "rust",
       "urls": {
         "packages.spack.io": "https://packages.spack.io/package.html?name=rust"
       }
+    },
+    {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language",
+      "specs": [],
+      "urls": {}
     },
     {
       "id": "dep:virtual/interface/blas",
@@ -398,6 +458,18 @@
       "urls": {
         "packages.spack.io": "https://packages.spack.io/package.html?name=clapack"
       }
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Message Passing Interface",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "OpenMP MultiProcessing",
+      "specs": [],
+      "urls": {}
     }
   ],
   "package_managers": [

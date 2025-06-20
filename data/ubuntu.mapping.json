@@ -435,7 +435,19 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the CUDA language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cxx",
       "description": "GNU C++ Compiler",
       "specs": "g++",
       "urls": {
@@ -451,12 +463,60 @@
       }
     },
     {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-c",
+      "description": "Compiler for the Objective C language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
       "specs": "rustc",
       "urls": {
         "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
       }
+    },
+    {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language",
+      "specs": [],
+      "urls": {}
     },
     {
       "id": "dep:virtual/interface/blas",
@@ -489,6 +549,18 @@
         "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
         "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
       }
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Message Passing Interface",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "OpenMP MultiProcessing",
+      "specs": [],
+      "urls": {}
     }
   ],
   "package_managers": [

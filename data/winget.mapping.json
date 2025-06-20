@@ -185,7 +185,19 @@
       }
     },
     {
-      "id": "dep:virtual/compiler/cpp",
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the CUDA language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cxx",
       "description": "MSVC Compilers",
       "specs": "Microsoft.VisualStudio.2022.Community",
       "urls": {
@@ -199,6 +211,36 @@
       "urls": {
         "winstall.app": "https://winstall.app/apps/Intel.FortranCompiler"
       }
+    },
+    {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-c",
+      "description": "Compiler for the Objective C language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language",
+      "specs": [],
+      "urls": {}
     },
     {
       "id": "dep:virtual/compiler/rust",
@@ -217,6 +259,24 @@
       }
     },
     {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:virtual/interface/blas",
       "description": "The MKL implementation for BLAS",
       "specs": "Intel.oneMKL",
@@ -228,6 +288,18 @@
       "id": "dep:virtual/interface/lapack",
       "description": "The MKL implementation for LAPACK",
       "specs_from": "dep:virtual/interface/blas"
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Message Passing Interface",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "OpenMP MultiProcessing",
+      "specs": [],
+      "urls": {}
     }
   ],
   "package_managers": [
