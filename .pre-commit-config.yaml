@@ -57,3 +57,8 @@ repos:
         language: python
         entry: python scripts/lint-mapping-entries.py
         files: ^data/.*\.mapping\.json$
+      - id: lint-registry
+        name: Lint central registry
+        language: python
+        entry: python scripts/lint-registry.py
+        files: ^data/registry\.json$

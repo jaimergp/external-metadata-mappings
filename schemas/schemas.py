@@ -15,7 +15,7 @@ ECOSYSTEMS_FILE = HERE / "known-ecosystems.schema.json"
 MAPPING_SCHEMA_FILE = HERE / "external-mapping.schema.json"
 
 
-DepURLField = Annotated[str, Field(min_length=1, pattern=r"^dep:.+$")]
+DepURLField = Annotated[str, Field(min_length=5, pattern=r"^dep:.+$")]
 NonEmptyString = Annotated[str, Field(min_length=1)]
 
 
@@ -37,6 +37,7 @@ class Definition(BaseModel):
     List of identifiers this entry connects to.
     Useful to annotate aliases or virtual package implementations.
     If no `provides` info is added, the entry is considered canonical.
+    MUST NOT be used with `dep:virtual/` URLs.
     """
     urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
     """
