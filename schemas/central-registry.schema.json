@@ -7,7 +7,7 @@
       "properties": {
         "id": {
           "description": "PURL-like identifier.",
-          "minLength": 1,
+          "minLength": 5,
           "pattern": "^dep:.+$",
           "title": "Id",
           "type": "string"
@@ -28,13 +28,13 @@
         "provides": {
           "anyOf": [
             {
-              "minLength": 1,
+              "minLength": 5,
               "pattern": "^dep:.+$",
               "type": "string"
             },
             {
               "items": {
-                "minLength": 1,
+                "minLength": 5,
                 "pattern": "^dep:.+$",
                 "type": "string"
               },
@@ -45,7 +45,7 @@
             }
           ],
           "default": null,
-          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or virtual package implementations.\nIf no `provides` info is added, the entry is considered canonical.",
+          "description": "List of identifiers this entry connects to.\nUseful to annotate aliases or virtual package implementations.\nIf no `provides` info is added, the entry is considered canonical.\nMUST NOT be used with `dep:virtual/` URLs.",
           "title": "Provides"
         },
         "urls": {
