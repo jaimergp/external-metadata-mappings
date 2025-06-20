@@ -256,6 +256,18 @@
       }
     },
     {
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the Cuda language",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:virtual/compiler/cxx",
       "description": "GNU Compiler Collection and binutils",
       "specs": "main/gcc",
@@ -275,6 +287,36 @@
       "id": "dep:virtual/compiler/fortran",
       "description": "Intel Fortran compilers",
       "specs": []
+    },
+    {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-c",
+      "description": "Compiler for the Objective C language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language",
+      "specs": [],
+      "urls": {}
     },
     {
       "id": "dep:virtual/compiler/rust",
@@ -301,6 +343,24 @@
       }
     },
     {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:virtual/interface/blas",
       "description": "",
       "specs": []
@@ -309,6 +369,18 @@
       "id": "dep:virtual/interface/lapack",
       "description": "",
       "specs": []
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Message Passing Interface",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "OpenMP MultiProcessing",
+      "specs": [],
+      "urls": {}
     }
   ],
   "package_managers": [

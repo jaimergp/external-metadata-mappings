@@ -160,12 +160,12 @@
       "description": "Compiler for the C# language."
     },
     {
-      "id": "dep:virtual/compiler/cxx",
-      "description": "Compiler for the C++ language"
-    },
-    {
       "id": "dep:virtual/compiler/cuda",
       "description": "Compiler for the CUDA language"
+    },
+    {
+      "id": "dep:virtual/compiler/cxx",
+      "description": "Compiler for the C++ language"
     },
     {
       "id": "dep:virtual/compiler/fortran",
