@@ -92,7 +92,7 @@ with st.sidebar:
         f"Identifier ({len(available_dep_urls)} available)",
         options=available_dep_urls,
         index=None,
-        key="dep_url",
+        key="id",
         placeholder="Choose a package",
     )
     eco_options = (
