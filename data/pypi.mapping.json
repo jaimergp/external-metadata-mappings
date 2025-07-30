@@ -131,7 +131,7 @@
     },
     {
       "id": "dep:generic/openblas",
-      "description": "The OpenBLAS implementation for BLAS",
+      "description": "An OpenBLAS build suitable for vendoring into wheels",
       "specs": [
         "scipy-openblas32",
         "scipy-openblas64"
