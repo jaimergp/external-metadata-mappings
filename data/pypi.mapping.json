@@ -272,8 +272,7 @@
     {
       "id": "dep:virtual/interface/blas",
       "description": "A metapackage for any BLAS implementation",
-      "specs": [],
-      "urls": {}
+      "specs_from": "dep:generic/openblas"
     },
     {
       "id": "dep:virtual/interface/lapack",
