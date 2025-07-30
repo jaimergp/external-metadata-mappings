@@ -132,7 +132,10 @@
     {
       "id": "dep:generic/openblas",
       "description": "The OpenBLAS implementation for BLAS",
-      "specs": ["scipy-openblas32", "scipy-openblas64"],
+      "specs": [
+        "scipy-openblas32",
+        "scipy-openblas64"
+      ],
       "urls": {
         "project (scipy-openblas32)": "https://pypi.org/project/scipy-openblas32/",
         "project (scipy-openblas64)": "https://pypi.org/project/scipy-openblas64/"
