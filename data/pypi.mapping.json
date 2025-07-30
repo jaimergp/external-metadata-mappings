@@ -1,0 +1,315 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "name": "PyPI",
+  "description": "Mapping for the external dependencies found in PyPI",
+  "mappings": [
+    {
+      "id": "dep:generic/arrow",
+      "description": "C++ libraries for Apache Arrow",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/clang",
+      "description": "Development headers and libraries for Clang",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/cmake",
+      "description": "CMake is an open-source, cross-platform family of tools designed to build, test and package software",
+      "specs": "cmake",
+      "urls": {
+        "project": "https://pypi.org/project/cmake/"
+      }
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/lcms2",
+      "description": "Open Source Color Management Engine",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "The free library for JPEG image compression by the Independent JPEG Group",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "The postgres runtime libraries and utilities (not the server itself)",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libwebp",
+      "description": "WebP image library.",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/llvm",
+      "description": "Development headers and libraries for LLVM",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "GNU Make",
+      "specs": "gnumake",
+      "urls": {
+        "project": "https://pypi.org/project/gnumake/"
+      }
+    },
+    {
+      "id": "dep:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja",
+      "urls": {
+        "project": "https://pypi.org/project/ninja/"
+      }
+    },
+    {
+      "id": "dep:generic/openblas",
+      "description": "The OpenBLAS implementation for BLAS",
+      "specs": ["scipy-openblas32", "scipy-openblas64"],
+      "urls": {
+        "project (scipy-openblas32)": "https://pypi.org/project/scipy-openblas32/",
+        "project (scipy-openblas64)": "https://pypi.org/project/scipy-openblas64/"
+      }
+    },
+    {
+      "id": "dep:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "OpenSSL as built from sources at openssl.org",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "`pkgconf` is a program which helps with discovering library dependencies and configuring compiler and linker flags.",
+      "specs": "pkgconf",
+      "urls": {
+        "project": "https://pypi.org/project/pkgconf/"
+      }
+    },
+    {
+      "id": "dep:generic/python",
+      "description": "The Python interpreter",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/tk",
+      "description": "A dynamic programming language with GUI support. Bundles Tcl and Tk.",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "Massively spiffy yet delicately unobtrusive compression library.",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "Linear Algebra PACKage",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "The default compiler for C",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the CUDA language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cxx",
+      "description": "The default compiler for C++",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "The default compiler for Fortran",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-c",
+      "description": "Compiler for the Objective C language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The default compiler for Rust",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "A metapackage for any BLAS implementation",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "The default implementation for LAPACK",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Message Passing Interface",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "OpenMP MultiProcessing",
+      "specs": [],
+      "urls": {}
+    }
+  ],
+  "package_managers": [
+    {
+      "name": "pip",
+      "install_command": [
+        "pip",
+        "install",
+        "--yes"
+      ],
+      "version_operators": {}
+    },
+    {
+      "name": "uv",
+      "install_command": [
+        "uv",
+        "pip",
+        "install",
+        "--yes"
+      ],
+      "version_operators": {}
+    }
+  ]
+}
