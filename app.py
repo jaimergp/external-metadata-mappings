@@ -209,7 +209,7 @@ elif ecosystem:
     all_mappings = list(full_mapping.iter_all())
     filled_mappings, empty_mappings = [], []
     for m in all_mappings:
-        if m.get("specs"):
+        if any(deps for deps in m.get("specs").values()):
             filled_mappings.append(m)
         else:
             empty_mappings.append(m)
@@ -228,15 +228,16 @@ elif ecosystem:
             icon="🔗",
         )
     if empty_mappings:
-        st.write("The following entries are not mapped:")
-        for m in empty_mappings:
-            st.button(
-                m["id"],
-                key=m["id"],
-                on_click=goto,
-                kwargs={"id": m["id"]},
-                icon="🔗",
-            )
+        st.write(f"The following **{len(empty_mappings)}** entries are not mapped:")
+        with st.expander("Not mapped"):
+            for m in empty_mappings:
+                st.button(
+                    m["id"],
+                    key=m["id"],
+                    on_click=goto,
+                    kwargs={"id": m["id"]},
+                    icon="🔗",
+                )
 # All identifiers list
 else:
     st.query_params.clear()
