@@ -113,7 +113,7 @@ class PackageManager(BaseModel):
     separate string, as in `subprocess.run`. Use `{}` as a placeholder where the package specs
     must be injected, if needed. If `{}` is not present, they will be added at the end.
     """
-    query_command: list[NonEmptyString]  = ...
+    query_command: list[NonEmptyString] = ...
     """
     Command to check whether a package is installed. Each argument must be provided as a
     separate string, as in `subprocess.run`. The `{}` placeholder will be replaced by
