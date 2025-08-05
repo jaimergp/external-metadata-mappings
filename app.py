@@ -132,21 +132,22 @@ if dep_url and ecosystem:
         render_urls(m)
         if m["specs"]["run"]:
             managers = full_mapping.get("package_managers", ())
-            if len(managers) > 1:
-                st.write("**📦 Install with:**")
-                for manager, tab in zip(
-                    managers, st.tabs([m["name"] for m in managers])
-                ):
-                    command = full_mapping.build_install_command(
-                        manager, m["specs"]["run"]
+            for verb, method in (("Install", "build_install_command"), ("Query", "build_query_command")):
+                if len(managers) > 1:
+                    st.write(f"**📦 {verb} with:**")
+                    for manager, tab in zip(
+                        managers, st.tabs([m["name"] for m in managers])
+                    ):
+                        command = getattr(full_mapping, method)(
+                            manager, m["specs"]["run"]
+                        )
+                        tab.write(f"```\n{shlex.join(command)}\n```")
+                else:
+                    st.write(f"**{verb} with `{managers[0]['name']}`:**")
+                    command = getattr(full_mapping, method)(
+                        managers[0], m["specs"]["run"]
                     )
-                    tab.write(f"```\n{shlex.join(command)}\n```")
-            else:
-                st.write(f"**Install with `{managers[0]['name']}`:**")
-                command = full_mapping.build_install_command(
-                    managers[0], m["specs"]["run"]
-                )
-                st.write(f"```\n{shlex.join(command)}\n```")
+                    st.write(f"```\n{shlex.join(command)}\n```")
             with st.expander("Raw data"):
                 st.code(json.dumps(m, indent=2), language="json")
         else:
