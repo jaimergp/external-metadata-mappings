@@ -132,7 +132,10 @@ if dep_url and ecosystem:
         render_urls(m)
         if m["specs"]["run"]:
             managers = full_mapping.get("package_managers", ())
-            for verb, method in (("Install", "build_install_command"), ("Query", "build_query_command")):
+            for verb, method in (
+                ("Install", "build_install_command"),
+                ("Query", "build_query_command"),
+            ):
                 if len(managers) > 1:
                     st.write(f"**📦 {verb} with:**")
                     for manager, tab in zip(
