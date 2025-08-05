@@ -311,6 +311,10 @@
         "--exact",
         "--id"
       ],
+      "query_command": [
+        "winget",
+        "list"
+      ],
       "version_operators": {}
     }
   ]

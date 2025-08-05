@@ -393,7 +393,11 @@
         "-Syu",
         "--noconfirm"
       ],
-      "requires_elevation": true,
+      "query_command": [
+        "pacman",
+        "-Q"
+      ],
+      "requires_elevation": "install",
       "version_operators": {}
     }
   ]

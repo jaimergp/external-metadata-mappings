@@ -571,6 +571,11 @@
         "--channel=conda-forge",
         "--strict-channel-priority"
       ],
+      "query_command": [
+        "conda",
+        "list",
+        "-f"
+      ],
       "version_operators": {
         "and": ",",
         "arbitrary": "==",
@@ -592,6 +597,11 @@
         "--yes",
         "--channel=conda-forge",
         "--channel-priority=strict"
+      ],
+      "query_command": [
+        "mamba",
+        "list",
+        "-f"
       ],
       "version_operators": {
         "and": ",",
@@ -615,6 +625,11 @@
         "--channel=conda-forge",
         "--channel-priority=strict"
       ],
+      "query_command": [
+        "micromamba",
+        "list",
+        "-f"
+      ],
       "version_operators": {
         "and": ",",
         "arbitrary": "==",
@@ -633,6 +648,11 @@
       "install_command": [
         "pixi",
         "add"
+      ],
+      "query_command": [
+        "pixi",
+        "list",
+        "^{}$"
       ],
       "version_operators": {
         "and": ",",
