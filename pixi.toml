@@ -9,6 +9,7 @@ version = "0.1.0"
 pydantic = ">=2"
 streamlit = "*"
 pre-commit = "*"
+click = "<8.2"  # pyproject-external constraint
 
 [pypi-dependencies]
 pyproject-external = { git = "https://github.com/jaimergp/pyproject-external.git" }

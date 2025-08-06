@@ -134,23 +134,29 @@ if dep_url and ecosystem:
             managers = full_mapping.get("package_managers", ())
             for verb, method in (
                 ("Install", "build_install_command"),
-                ("Query", "build_query_command"),
+                ("Query", "build_query_commands"),
             ):
                 if len(managers) > 1:
                     st.write(f"**📦 {verb} with:**")
                     for manager, tab in zip(
                         managers, st.tabs([m["name"] for m in managers])
                     ):
-                        command = getattr(full_mapping, method)(
+                        commands = getattr(full_mapping, method)(
                             manager, m["specs"]["run"]
                         )
-                        tab.write(f"```\n{shlex.join(command)}\n```")
+                        if isinstance(commands[0], str):
+                            commands = [commands]
+                        text = "\n".join([shlex.join(command) for command in commands])
+                        tab.write(f"```\n{text}\n```")
                 else:
                     st.write(f"**{verb} with `{managers[0]['name']}`:**")
-                    command = getattr(full_mapping, method)(
+                    commands = getattr(full_mapping, method)(
                         managers[0], m["specs"]["run"]
                     )
-                    st.write(f"```\n{shlex.join(command)}\n```")
+                    if isinstance(commands[0], str):
+                        commands = [commands]
+                    text = "\n".join([shlex.join(command) for command in commands])
+                    st.write(f"```\n{text}\n```")
             with st.expander("Raw data"):
                 st.code(json.dumps(m, indent=2), language="json")
         else:
