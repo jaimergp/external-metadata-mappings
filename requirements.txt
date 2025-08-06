@@ -1,2 +1,3 @@
-pyproject-external
+# pyproject-external
+pyproject-external @ https://github.com/jaimergp/pyproject-external/archive/query-cmd.tar.gz
 streamlit
