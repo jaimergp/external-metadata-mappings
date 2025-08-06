@@ -667,7 +667,11 @@
         "install",
         "-y"
       ],
-      "requires_elevation": true,
+      "query_command": [
+        "rpm",
+        "-q"
+      ],
+      "requires_elevation": "install",
       "version_operators": {}
     }
   ]

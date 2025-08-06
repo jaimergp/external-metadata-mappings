@@ -390,6 +390,10 @@
         "scoop",
         "install"
       ],
+      "query_command": [
+        "scoop",
+        "list"
+      ],
       "version_operators": {}
     }
   ]

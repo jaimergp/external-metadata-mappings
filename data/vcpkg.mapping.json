@@ -377,6 +377,10 @@
         "vcpkg",
         "install"
       ],
+      "query_command": [
+        "vcpkg",
+        "list"
+      ],
       "version_operators": {}
     }
   ]

@@ -388,12 +388,21 @@
       "install_command": [
         "pmerge"
       ],
+      "query_command": [
+        "pkgcore",
+        "search",
+        "-I"
+      ],
       "version_operators": {}
     },
     {
       "name": "portage",
       "install_command": [
         "emerge"
+      ],
+      "query_command": [
+        "qlist",
+        "-I"
       ],
       "version_operators": {}
     }

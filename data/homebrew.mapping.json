@@ -368,6 +368,11 @@
         "brew",
         "install"
       ],
+      "query_command": [
+        "brew",
+        "list",
+        "--formula"
+      ],
       "version_operators": {}
     }
   ]

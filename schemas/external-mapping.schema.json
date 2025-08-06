@@ -178,11 +178,31 @@
           "title": "Install Command",
           "type": "array"
         },
+        "query_command": {
+          "description": "Command to check whether a package is installed. Each argument must be provided as a\nseparate string, as in `subprocess.run`. The `{}` placeholder will be replaced by\na single package spec, if needed. Otherwise, the package specifier will be added at the end.",
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Query Command",
+          "type": "array"
+        },
         "requires_elevation": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "enum": [
+                "install",
+                "query"
+              ],
+              "type": "string"
+            }
+          ],
           "default": false,
-          "description": "Whether the install command requires elevated permissions to run.",
-          "title": "Requires Elevation",
-          "type": "boolean"
+          "description": "Whether the install and query commands require elevated permissions to run. Use `True`\nto require on all commands, `False` for none. `install` and `query` can be used individually\nto only require elevation on one of them.",
+          "title": "Requires Elevation"
         },
         "version_operators": {
           "$ref": "#/$defs/VersionOperators",
@@ -203,7 +223,8 @@
       },
       "required": [
         "name",
-        "install_command"
+        "install_command",
+        "query_command"
       ],
       "title": "PackageManager",
       "type": "object"

@@ -363,6 +363,11 @@
         "install",
         "--requires"
       ],
+      "query_command": [
+        "conan",
+        "get",
+        "--check"
+      ],
       "version_operators": {}
     }
   ]

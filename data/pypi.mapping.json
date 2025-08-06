@@ -301,6 +301,10 @@
         "install",
         "--yes"
       ],
+      "query_command": [
+        "pip",
+        "show"
+      ],
       "version_operators": {}
     },
     {
@@ -310,6 +314,11 @@
         "pip",
         "install",
         "--yes"
+      ],
+      "query_command": [
+        "uv",
+        "pip",
+        "show"
       ],
       "version_operators": {}
     }

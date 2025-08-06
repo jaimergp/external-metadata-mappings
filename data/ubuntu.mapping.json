@@ -571,7 +571,11 @@
         "install",
         "--yes"
       ],
-      "requires_elevation": true
+      "query_command": [
+        "dpkg-query",
+        "-W"
+      ],
+      "requires_elevation": "install"
     },
     {
       "name": "apt-get",
@@ -580,7 +584,11 @@
         "install",
         "--yes"
       ],
-      "requires_elevation": true,
+      "query_command": [
+        "dpkg-query",
+        "-W"
+      ],
+      "requires_elevation": "install",
       "version_operators": {}
     }
   ]

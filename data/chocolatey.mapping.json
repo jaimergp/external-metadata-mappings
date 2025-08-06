@@ -294,6 +294,11 @@
         "choco",
         "install"
       ],
+      "query_command": [
+        "choco",
+        "list",
+        "--local-only"
+      ],
       "version_operators": {}
     }
   ]

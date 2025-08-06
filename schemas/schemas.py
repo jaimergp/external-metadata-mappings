@@ -5,7 +5,7 @@ Generate a JSON schema for PEP-XXX mappings
 
 import json
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
@@ -113,8 +113,19 @@ class PackageManager(BaseModel):
     separate string, as in `subprocess.run`. Use `{}` as a placeholder where the package specs
     must be injected, if needed. If `{}` is not present, they will be added at the end.
     """
-    requires_elevation: bool = False
-    "Whether the install command requires elevated permissions to run."
+    query_command: list[NonEmptyString] = ...
+    """
+    Command to check whether a package is installed. Each argument must be provided as a
+    separate string, as in `subprocess.run`. The `{}` placeholder will be replaced by
+    a single package spec, if needed. Otherwise, the package specifier will be added at the end.
+    An empty list means no query command is available for this package manager.
+    """
+    requires_elevation: bool | Literal["install", "query"] = False
+    """
+    Whether the install and query commands require elevated permissions to run. Use `True`
+    to require on all commands, `False` for none. `install` and `query` can be used individually
+    to only require elevation on one of them.
+    """
     version_operators: VersionOperators = VersionOperators()
     """
     Mapping of PEP440 version comparison operators to the syntax used in this package manager.

@@ -420,6 +420,10 @@
         "nix-env",
         "-iA"
       ],
+      "query_command": [
+        "nix-env",
+        "-q"
+      ],
       "version_operators": {}
     },
     {
@@ -428,6 +432,7 @@
         "nix-shell",
         "-p"
       ],
+      "query_command": [],
       "version_operators": {}
     }
   ]
