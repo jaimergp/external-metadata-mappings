@@ -1,2 +1,2 @@
-pyproject-external
+pyproject-external>=0.1.1
 streamlit
