@@ -25,6 +25,23 @@
           "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
         },
+        "extra": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "propertyNames": {
+                "minLength": 1
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form key-value store for arbitrary metadata.",
+          "title": "Extra"
+        },
         "specs": {
           "anyOf": [
             {
@@ -110,6 +127,23 @@
           "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
         },
+        "extra": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "propertyNames": {
+                "minLength": 1
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form key-value store for arbitrary metadata.",
+          "title": "Extra"
+        },
         "specs_from": {
           "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",
           "minLength": 5,
@@ -179,7 +213,7 @@
           "type": "array"
         },
         "query_command": {
-          "description": "Command to check whether a package is installed. Each argument must be provided as a\nseparate string, as in `subprocess.run`. The `{}` placeholder will be replaced by\na single package spec, if needed. Otherwise, the package specifier will be added at the end.",
+          "description": "Command to check whether a package is installed. Each argument must be provided as a\nseparate string, as in `subprocess.run`. The `{}` placeholder will be replaced by\na single package spec, if needed. Otherwise, the package specifier will be added at the end.\nAn empty list means no query command is available for this package manager.",
           "items": {
             "minLength": 1,
             "type": "string"
