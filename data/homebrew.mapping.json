@@ -364,15 +364,23 @@
   "package_managers": [
     {
       "name": "brew",
-      "install_command": [
-        "brew",
-        "install"
-      ],
-      "query_command": [
-        "brew",
-        "list",
-        "--formula"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "brew",
+            "install",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "brew",
+            "list",
+            "--formula",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

@@ -564,18 +564,26 @@
   "package_managers": [
     {
       "name": "conda",
-      "install_command": [
-        "conda",
-        "install",
-        "--yes",
-        "--channel=conda-forge",
-        "--strict-channel-priority"
-      ],
-      "query_command": [
-        "conda",
-        "list",
-        "-f"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "conda",
+            "install",
+            "--yes",
+            "--channel=conda-forge",
+            "--strict-channel-priority",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "conda",
+            "list",
+            "-f",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {
         "and": ",",
         "arbitrary": "==",
@@ -591,18 +599,26 @@
     },
     {
       "name": "mamba",
-      "install_command": [
-        "mamba",
-        "install",
-        "--yes",
-        "--channel=conda-forge",
-        "--channel-priority=strict"
-      ],
-      "query_command": [
-        "mamba",
-        "list",
-        "-f"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "mamba",
+            "install",
+            "--yes",
+            "--channel=conda-forge",
+            "--channel-priority=strict",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "mamba",
+            "list",
+            "-f",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {
         "and": ",",
         "arbitrary": "==",
@@ -618,18 +634,26 @@
     },
     {
       "name": "micromamba",
-      "install_command": [
-        "micromamba",
-        "install",
-        "--yes",
-        "--channel=conda-forge",
-        "--channel-priority=strict"
-      ],
-      "query_command": [
-        "micromamba",
-        "list",
-        "-f"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "micromamba",
+            "install",
+            "--yes",
+            "--channel=conda-forge",
+            "--channel-priority=strict",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "micromamba",
+            "list",
+            "-f",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {
         "and": ",",
         "arbitrary": "==",
@@ -645,15 +669,22 @@
     },
     {
       "name": "pixi",
-      "install_command": [
-        "pixi",
-        "add"
-      ],
-      "query_command": [
-        "pixi",
-        "list",
-        "^{}$"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "pixi",
+            "add",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "pixi",
+            "list",
+            "^{}$"
+          ]
+        }
+      },
       "version_operators": {
         "and": ",",
         "arbitrary": "==",

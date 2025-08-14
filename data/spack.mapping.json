@@ -475,14 +475,22 @@
   "package_managers": [
     {
       "name": "spack",
-      "install_command": [
-        "spack",
-        "install"
-      ],
-      "query_command": [
-        "spack",
-        "find"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "spack",
+            "install",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "spack",
+            "find",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]
