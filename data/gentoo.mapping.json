@@ -388,7 +388,8 @@
       "commands": {
         "install": {
           "command": [
-            "pmerge"
+            "pmerge",
+            "{}"
           ],
           "requires_elevation": true
         },
@@ -396,7 +397,8 @@
           "command": [
             "pkgcore",
             "search",
-            "-I"
+            "-I",
+            "{}"
           ]
         }
       },
