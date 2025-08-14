@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/query-cmd-2/schemas/external-mapping.schema.json",
   "schema_version": 1,
   "name": "Fedora",
   "description": "Mapping for the Fedora distro",
@@ -662,16 +662,24 @@
   "package_managers": [
     {
       "name": "dnf",
-      "install_command": [
-        "dnf",
-        "install",
-        "-y"
-      ],
-      "query_command": [
-        "rpm",
-        "-q"
-      ],
-      "requires_elevation": "install",
+      "commands": {
+        "install": {
+          "command": [
+            "dnf",
+            "install",
+            "-y",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "rpm",
+            "-q",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

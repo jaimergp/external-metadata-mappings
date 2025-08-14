@@ -39,5 +39,16 @@ for path in sys.argv[1:]:
             for item in sorted(missing_from):
                 print("-", item)
             exit_code = 1
+        for package_manager in data.get("package_managers", ()):
+            for command_name, command_details in package_manager.get(
+                "commands", {}
+            ).items():
+                if command_args := command_details.get("command"):
+                    if not any("{}" in arg for arg in command_args):
+                        print(
+                            f"{path}: {package_manager['name']} command {command_name}",
+                            "is missing the placeholder '{}' in the 'command' key",
+                        )
+                        exit_code = 1
 
 sys.exit(exit_code)

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/query-cmd-2/schemas/external-mapping.schema.json",
   "schema_version": 1,
   "name": "Homebrew",
   "description": "Mapping for the Homebrew ecosystem",
@@ -364,15 +364,23 @@
   "package_managers": [
     {
       "name": "brew",
-      "install_command": [
-        "brew",
-        "install"
-      ],
-      "query_command": [
-        "brew",
-        "list",
-        "--formula"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "brew",
+            "install",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "brew",
+            "list",
+            "--formula",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]
