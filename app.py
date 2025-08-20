@@ -132,12 +132,12 @@ if dep_url and ecosystem:
         render_urls(m)
         if m["specs"]["run"]:
             managers = full_mapping.get("package_managers", ())
-            for verb, method in (
-                ("Install", "build_install_command"),
-                ("Query", "build_query_commands"),
+            for text, method in (
+                ("📦 Install", "build_install_command"),
+                ("🔎 Query", "build_query_commands"),
             ):
                 if len(managers) > 1:
-                    st.write(f"**📦 {verb} with:**")
+                    st.write(f"**{text} with:**")
                     for manager, tab in zip(
                         managers, st.tabs([m["name"] for m in managers])
                     ):
@@ -149,7 +149,7 @@ if dep_url and ecosystem:
                         text = "\n".join([shlex.join(command) for command in commands])
                         tab.write(f"```\n{text}\n```")
                 else:
-                    st.write(f"**{verb} with `{managers[0]['name']}`:**")
+                    st.write(f"**{text} with `{managers[0]['name']}`:**")
                     commands = getattr(full_mapping, method)(
                         managers[0], m["specs"]["run"]
                     )
