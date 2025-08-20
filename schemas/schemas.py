@@ -5,7 +5,7 @@ Generate a JSON schema for PEP-XXX mappings
 
 import json
 from pathlib import Path
-from typing import Annotated, Literal
+from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
@@ -95,6 +95,45 @@ class VersionOperators(BaseModel):
     separator: str = ""
 
 
+class PackageManagerCommand(BaseModel):
+    "Command template plus its elevation requirements."
+
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    command: list[NonEmptyString] = []
+    "Command template, as expected by `subprocess.run`. Use `{}` as a placeholder for package(s)."
+    requires_elevation: bool = False
+    "Whether the command requires elevated permissions to run."
+
+
+class PackageManagerCommands(BaseModel):
+    "Command templates needed to execute certain operations with this package manager"
+
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    install: PackageManagerCommand = ...
+    """
+    Command that must be used to install the given package(s). The tool must accept several
+    packages in the same command. Each argument must be provided as a separate string, as
+    in `subprocess.run`. Use `{}` as a placeholder where the package spec(s) must be injected.
+    The placeholder can only appear once in the whole list and will be replaced once per package.
+    For example, given the names `foo` and `bar`, `["pkg", "install", "{}"]` would become
+    `pkg install foo bar`, and `["pkg", "install", "--spec={}"]` would become
+    `pkg install --spec=foo --spec=bar`.
+    """
+    query: PackageManagerCommand | None = None
+    """
+    Command to check whether a package is installed. The tool must only accept one package at a
+    time. Each argument must be provided as a separate string, as in `subprocess.run`. The `{}`
+    placeholder will be replaced by the single package. An empty list means no query command is
+    available for this package manager.
+    """
+
+
 class PackageManager(BaseModel):
     """
     Details of a particular package manager for this ecosystem.
@@ -107,25 +146,8 @@ class PackageManager(BaseModel):
 
     name: NonEmptyString = ...
     "Name of the package manager"
-    install_command: list[NonEmptyString] = ...
-    """
-    Command that must be used to install the given package(s). Each argument must be provided as a
-    separate string, as in `subprocess.run`. Use `{}` as a placeholder where the package specs
-    must be injected, if needed. If `{}` is not present, they will be added at the end.
-    """
-    query_command: list[NonEmptyString] = ...
-    """
-    Command to check whether a package is installed. Each argument must be provided as a
-    separate string, as in `subprocess.run`. The `{}` placeholder will be replaced by
-    a single package spec, if needed. Otherwise, the package specifier will be added at the end.
-    An empty list means no query command is available for this package manager.
-    """
-    requires_elevation: bool | Literal["install", "query"] = False
-    """
-    Whether the install and query commands require elevated permissions to run. Use `True`
-    to require on all commands, `False` for none. `install` and `query` can be used individually
-    to only require elevation on one of them.
-    """
+    commands: PackageManagerCommands = ...
+    "Command templates needed to execute certain operations with this package manager"
     version_operators: VersionOperators = VersionOperators()
     """
     Mapping of PEP440 version comparison operators to the syntax used in this package manager.

@@ -566,29 +566,45 @@
   "package_managers": [
     {
       "name": "apt",
-      "install_command": [
-        "apt",
-        "install",
-        "--yes"
-      ],
-      "query_command": [
-        "dpkg-query",
-        "-W"
-      ],
-      "requires_elevation": "install"
+      "commands": {
+        "install": {
+          "command": [
+            "apt",
+            "install",
+            "--yes",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "{}"
+          ]
+        }
+      }
     },
     {
       "name": "apt-get",
-      "install_command": [
-        "apt-get",
-        "install",
-        "--yes"
-      ],
-      "query_command": [
-        "dpkg-query",
-        "-W"
-      ],
-      "requires_elevation": "install",
+      "commands": {
+        "install": {
+          "command": [
+            "apt-get",
+            "install",
+            "--yes",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

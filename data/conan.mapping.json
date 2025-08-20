@@ -358,16 +358,24 @@
   "package_managers": [
     {
       "name": "conan",
-      "install_command": [
-        "conan",
-        "install",
-        "--requires"
-      ],
-      "query_command": [
-        "conan",
-        "get",
-        "--check"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "conan",
+            "install",
+            "--requires",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "conan",
+            "get",
+            "--check",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

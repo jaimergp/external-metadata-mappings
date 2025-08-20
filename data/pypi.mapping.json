@@ -296,30 +296,46 @@
   "package_managers": [
     {
       "name": "pip",
-      "install_command": [
-        "pip",
-        "install",
-        "--yes"
-      ],
-      "query_command": [
-        "pip",
-        "show"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "pip",
+            "install",
+            "--yes",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "pip",
+            "show",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     },
     {
       "name": "uv",
-      "install_command": [
-        "uv",
-        "pip",
-        "install",
-        "--yes"
-      ],
-      "query_command": [
-        "uv",
-        "pip",
-        "show"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "uv",
+            "pip",
+            "install",
+            "--yes",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "uv",
+            "pip",
+            "show",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

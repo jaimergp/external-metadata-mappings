@@ -386,14 +386,22 @@
   "package_managers": [
     {
       "name": "scoop",
-      "install_command": [
-        "scoop",
-        "install"
-      ],
-      "query_command": [
-        "scoop",
-        "list"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "scoop",
+            "install",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "scoop",
+            "list",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

@@ -373,14 +373,22 @@
   "package_managers": [
     {
       "name": "vcpkg",
-      "install_command": [
-        "vcpkg",
-        "install"
-      ],
-      "query_command": [
-        "vcpkg",
-        "list"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "vcpkg",
+            "install",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "vcpkg",
+            "list",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

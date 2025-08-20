@@ -416,23 +416,38 @@
   "package_managers": [
     {
       "name": "nix-env",
-      "install_command": [
-        "nix-env",
-        "-iA"
-      ],
-      "query_command": [
-        "nix-env",
-        "-q"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "nix-env",
+            "-iA",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "nix-env",
+            "-q",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     },
     {
       "name": "nix-shell",
-      "install_command": [
-        "nix-shell",
-        "-p"
-      ],
-      "query_command": [],
+      "commands": {
+        "install": {
+          "command": [
+            "nix-shell",
+            "-p",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": []
+        }
+      },
       "version_operators": {}
     }
   ]
