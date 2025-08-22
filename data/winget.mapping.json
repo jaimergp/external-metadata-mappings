@@ -305,16 +305,24 @@
   "package_managers": [
     {
       "name": "winget",
-      "install_command": [
-        "winget",
-        "install",
-        "--exact",
-        "--id"
-      ],
-      "query_command": [
-        "winget",
-        "list"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "winget",
+            "install",
+            "--exact",
+            "--id",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "winget",
+            "list",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

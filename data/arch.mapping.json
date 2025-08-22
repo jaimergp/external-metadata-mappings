@@ -388,16 +388,24 @@
   "package_managers": [
     {
       "name": "pacman",
-      "install_command": [
-        "pacman",
-        "-Syu",
-        "--noconfirm"
-      ],
-      "query_command": [
-        "pacman",
-        "-Q"
-      ],
-      "requires_elevation": "install",
+      "commands": {
+        "install": {
+          "command": [
+            "pacman",
+            "-Syu",
+            "--noconfirm",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "pacman",
+            "-Q",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

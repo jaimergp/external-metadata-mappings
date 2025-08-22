@@ -290,15 +290,23 @@
   "package_managers": [
     {
       "name": "choco",
-      "install_command": [
-        "choco",
-        "install"
-      ],
-      "query_command": [
-        "choco",
-        "list",
-        "--local-only"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "choco",
+            "install",
+            "{}"
+          ]
+        },
+        "query": {
+          "command": [
+            "choco",
+            "list",
+            "--local-only",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

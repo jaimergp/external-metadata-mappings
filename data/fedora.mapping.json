@@ -662,16 +662,24 @@
   "package_managers": [
     {
       "name": "dnf",
-      "install_command": [
-        "dnf",
-        "install",
-        "-y"
-      ],
-      "query_command": [
-        "rpm",
-        "-q"
-      ],
-      "requires_elevation": "install",
+      "commands": {
+        "install": {
+          "command": [
+            "dnf",
+            "install",
+            "-y",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "rpm",
+            "-q",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]

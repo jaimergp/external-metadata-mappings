@@ -203,40 +203,8 @@
           "title": "Name",
           "type": "string"
         },
-        "install_command": {
-          "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `{}` as a placeholder where the package specs\nmust be injected, if needed. If `{}` is not present, they will be added at the end.",
-          "items": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "title": "Install Command",
-          "type": "array"
-        },
-        "query_command": {
-          "description": "Command to check whether a package is installed. Each argument must be provided as a\nseparate string, as in `subprocess.run`. The `{}` placeholder will be replaced by\na single package spec, if needed. Otherwise, the package specifier will be added at the end.\nAn empty list means no query command is available for this package manager.",
-          "items": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "title": "Query Command",
-          "type": "array"
-        },
-        "requires_elevation": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "enum": [
-                "install",
-                "query"
-              ],
-              "type": "string"
-            }
-          ],
-          "default": false,
-          "description": "Whether the install and query commands require elevated permissions to run. Use `True`\nto require on all commands, `False` for none. `install` and `query` can be used individually\nto only require elevation on one of them.",
-          "title": "Requires Elevation"
+        "commands": {
+          "$ref": "#/$defs/PackageManagerCommands"
         },
         "version_operators": {
           "$ref": "#/$defs/VersionOperators",
@@ -257,10 +225,60 @@
       },
       "required": [
         "name",
-        "install_command",
-        "query_command"
+        "commands"
       ],
       "title": "PackageManager",
+      "type": "object"
+    },
+    "PackageManagerCommand": {
+      "additionalProperties": false,
+      "description": "Command template plus its elevation requirements.",
+      "properties": {
+        "command": {
+          "default": [],
+          "description": "Command template, as expected by `subprocess.run`. Use `{}` as a placeholder for package(s).",
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Command",
+          "type": "array"
+        },
+        "requires_elevation": {
+          "default": false,
+          "description": "Whether the command requires elevated permissions to run.",
+          "title": "Requires Elevation",
+          "type": "boolean"
+        }
+      },
+      "title": "PackageManagerCommand",
+      "type": "object"
+    },
+    "PackageManagerCommands": {
+      "additionalProperties": false,
+      "description": "Command templates needed to execute certain operations with this package manager",
+      "properties": {
+        "install": {
+          "$ref": "#/$defs/PackageManagerCommand",
+          "description": "Command that must be used to install the given package(s). The tool must accept several\npackages in the same command. Each argument must be provided as a separate string, as\nin `subprocess.run`. Use `{}` as a placeholder where the package spec(s) must be injected.\nThe placeholder can only appear once in the whole list and will be replaced once per package.\nFor example, given the names `foo` and `bar`, `[\"pkg\", \"install\", \"{}\"]` would become\n`pkg install foo bar`, and `[\"pkg\", \"install\", \"--spec={}\"]` would become\n`pkg install --spec=foo --spec=bar`."
+        },
+        "query": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PackageManagerCommand"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Command to check whether a package is installed. The tool must only accept one package at a\ntime. Each argument must be provided as a separate string, as in `subprocess.run`. The `{}`\nplaceholder will be replaced by the single package. An empty list means no query command is\navailable for this package manager."
+        }
+      },
+      "required": [
+        "install"
+      ],
+      "title": "PackageManagerCommands",
       "type": "object"
     },
     "SpecsDict": {

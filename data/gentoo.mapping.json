@@ -385,25 +385,44 @@
   "package_managers": [
     {
       "name": "pkgcore",
-      "install_command": [
-        "pmerge"
-      ],
-      "query_command": [
-        "pkgcore",
-        "search",
-        "-I"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "pmerge",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "pkgcore",
+            "search",
+            "-I",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     },
     {
       "name": "portage",
-      "install_command": [
-        "emerge"
-      ],
-      "query_command": [
-        "qlist",
-        "-I"
-      ],
+      "commands": {
+        "install": {
+          "command": [
+            "emerge",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "portageq",
+            "has_version",
+            "/",
+            "{}"
+          ]
+        }
+      },
       "version_operators": {}
     }
   ]
