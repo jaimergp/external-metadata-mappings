@@ -5,7 +5,7 @@ Generate a JSON schema for PEP-XXX mappings
 
 import json
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
@@ -73,26 +73,101 @@ class DefinitionListModel(BaseModel):
     "List of PURL definitions currently recognized."
 
 
-class VersionOperators(BaseModel):
+class VersionRanges(BaseModel):
     """
-    Mapping of a PEP440 operator to a package manager specific operator.
-    Use an empty string if there's no equivalent.
+    Instructions to map PEP 440 specifiers to a package manager specific constraints.
+    Use an empty string if there's no equivalent. Use `{name}` and `{version}` as
+    placeholders. The `and` field is not templated; it should just be the `and` operator.
+    If not available, the constraints will be exploded into several specifiers (e.g.
+    `name>=2,<3` would become `name>=2 name<3`).
     """
 
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    and_: str = Field(",", alias="and")
-    arbitrary: str = "==="
-    compatible: str = "~="
-    equal: str = "=="
-    greater_than_equal: str = ">="
-    greater_than: str = ">"
-    less_than_equal: str = "<="
-    less_than: str = "<"
-    not_equal: str = "!="
-    separator: str = ""
+    syntax: list[NonEmptyString] = ["{name}{range}"]
+    """
+    The syntax used to specify a constrained package selection (e.g. `package>=3,<4`). The
+    following placeholders are supported: `{name}` (the name of the package), `ranges` (the merged
+    version constraints). This value is a list of strings because some package managers may need
+    several arguments to express a single package version constraint. It MUST include at least
+    `{ranges}`. Some examples: `["{name}{ranges}"]`, `["{ranges}"]`, `["--spec", "{name}",
+    "--version", "{ranges}"]`.
+    """
+    and_: str | None = Field(",", alias="and")
+    """
+    How to merge several constraints. If the value is a string, this will be used to join all
+    the version constraints in a single string. If set to `None`, the constraints will not be
+    joined, but appended as different arguments to the command.
+    """
+    equal: str = "=={version}"
+    """
+    A range for fuzzy equality. If defined as a string, it MUST include at least the `{version}`
+    placeholder. If `None`, this operator is not supported and no version constraints will be
+    applied.
+    """
+    greater_than_equal: str | None = ">={version}"
+    """
+    A range for inclusive lower bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    greater_than: str | None = ">{version}"
+    """
+    A range for exclusive lower bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    less_than_equal: str | None = "<={version}"
+    """
+    A range for inclusive upper bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    less_than: str | None = "<{version}"
+    """
+    A range for exclusive upper bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    not_equal: str | None = "!={version}"
+    """
+    A range for inequality. If defined as a string, it MUST include at least the `{version}`
+    placeholder. If `None`, this operator is not supported and no version constraints will be
+    applied.
+    """
+
+
+class SpecifierSyntax(BaseModel):
+    """
+    Instructions to process the packager specifiers once mapped.
+    """
+
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    name_only: list[NonEmptyString] = ["{name}"]
+    """
+    Template used to request a package by name only, with no version constraints.
+    Use the `{name}` placeholder to write the mapped name of the package. A list of
+    strings is required because some package managers require several arguments to
+    request a single package; e.g. `["--package", "{name}"]`.
+    """
+    exact_version: list[NonEmptyString] | None = None
+    """
+    Template used to request a package with a specific version (a literal, not a range).
+    Since some package managers require separate arguments, this is a list of strings. The
+    following placeholders are defined: `{name}` (name of the package), `{version}` (the
+    exact version being requested). Some examples: `["{name}=={version}"]`,
+    `["{name}", "--version={version}"]`. A value of `None` means that the package manager
+    does not support version selection, only names.
+    """
+    version_ranges: VersionRanges | None = None
+    """
+    How to map version constraints from PEP440 style to the target package manager.
+    """
 
 
 class PackageManagerCommand(BaseModel):
@@ -106,6 +181,13 @@ class PackageManagerCommand(BaseModel):
     "Command template, as expected by `subprocess.run`. Use `{}` as a placeholder for package(s)."
     requires_elevation: bool = False
     "Whether the command requires elevated permissions to run."
+    multiple_specifiers: Literal["always", "name-only", "never"] = "always"
+    """
+    Whether the command accepts multiple specifiers at once or not. Defaults to `always`.
+    Use `name-only` if the command only accepts multiple specifiers when they don't have
+    version information. With `never`, only one specifier is accepted at a time, which
+    will result in several single-spec commands being generated.
+    """
 
 
 class PackageManagerCommands(BaseModel):
@@ -117,13 +199,9 @@ class PackageManagerCommands(BaseModel):
     )
     install: PackageManagerCommand = ...
     """
-    Command that must be used to install the given package(s). The tool must accept several
-    packages in the same command. Each argument must be provided as a separate string, as
-    in `subprocess.run`. Use `{}` as a placeholder where the package spec(s) must be injected.
-    The placeholder can only appear once in the whole list and will be replaced once per package.
-    For example, given the names `foo` and `bar`, `["pkg", "install", "{}"]` would become
-    `pkg install foo bar`, and `["pkg", "install", "--spec={}"]` would become
-    `pkg install --spec=foo --spec=bar`.
+    Command that must be used to install the given package(s). Each argument must be provided as a
+    separate string, as in `subprocess.run`. Use `"{}"` as a placeholder where the package spec(s)
+    must be injected. The placeholder can only appear once in the whole list.
     """
     query: PackageManagerCommand | None = None
     """
@@ -148,12 +226,8 @@ class PackageManager(BaseModel):
     "Name of the package manager"
     commands: PackageManagerCommands = ...
     "Command templates needed to execute certain operations with this package manager"
-    version_operators: VersionOperators = VersionOperators()
-    """
-    Mapping of PEP440 version comparison operators to the syntax used in this package manager.
-    If set to an empty dictionary, it means that the package manager (or ecosystem)
-    doesn't support the notion of requesting particular package versions.
-    """
+    specifier_syntax: SpecifierSyntax = SpecifierSyntax()
+    "Instructions to transform package names and version constrains for this package manager"
 
 
 # endregion

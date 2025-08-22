@@ -172,21 +172,16 @@
         "commands": {
           "$ref": "#/$defs/PackageManagerCommands"
         },
-        "version_operators": {
-          "$ref": "#/$defs/VersionOperators",
+        "specifier_syntax": {
+          "$ref": "#/$defs/SpecifierSyntax",
           "default": {
-            "and": ",",
-            "arbitrary": "===",
-            "compatible": "~=",
-            "equal": "==",
-            "greater_than": ">",
-            "greater_than_equal": ">=",
-            "less_than": "<",
-            "less_than_equal": "<=",
-            "not_equal": "!=",
-            "separator": ""
+            "exact_version": null,
+            "name_only": [
+              "{name}"
+            ],
+            "version_ranges": null
           },
-          "description": "Mapping of PEP440 version comparison operators to the syntax used in this package manager.\nIf set to an empty dictionary, it means that the package manager (or ecosystem)\ndoesn't support the notion of requesting particular package versions."
+          "description": "Instructions to transform package names and version constrains for this package manager"
         }
       },
       "required": [
@@ -210,6 +205,17 @@
           "title": "Command",
           "type": "array"
         },
+        "multiple_specifiers": {
+          "default": "always",
+          "description": "Whether the command accepts multiple specifiers at once or not. Defaults to `always`.\nUse `name-only` if the command only accepts multiple specifiers when they don't have\nversion information. With `never`, only one specifier is accepted at a time, which\nwill result in several single-spec commands being generated.",
+          "enum": [
+            "always",
+            "name-only",
+            "never"
+          ],
+          "title": "Multiple Specifiers",
+          "type": "string"
+        },
         "requires_elevation": {
           "default": false,
           "description": "Whether the command requires elevated permissions to run.",
@@ -226,7 +232,7 @@
       "properties": {
         "install": {
           "$ref": "#/$defs/PackageManagerCommand",
-          "description": "Command that must be used to install the given package(s). The tool must accept several\npackages in the same command. Each argument must be provided as a separate string, as\nin `subprocess.run`. Use `{}` as a placeholder where the package spec(s) must be injected.\nThe placeholder can only appear once in the whole list and will be replaced once per package.\nFor example, given the names `foo` and `bar`, `[\"pkg\", \"install\", \"{}\"]` would become\n`pkg install foo bar`, and `[\"pkg\", \"install\", \"--spec={}\"]` would become\n`pkg install --spec=foo --spec=bar`."
+          "description": "Command that must be used to install the given package(s). Each argument must be provided as a\nseparate string, as in `subprocess.run`. Use `\"{}\"` as a placeholder where the package spec(s)\nmust be injected. The placeholder can only appear once in the whole list."
         },
         "query": {
           "anyOf": [
@@ -245,6 +251,55 @@
         "install"
       ],
       "title": "PackageManagerCommands",
+      "type": "object"
+    },
+    "SpecifierSyntax": {
+      "additionalProperties": false,
+      "description": "Instructions to process the packager specifiers once mapped.",
+      "properties": {
+        "exact_version": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Template used to request a package with a specific version (a literal, not a range).\nSince some package managers require separate arguments, this is a list of strings. The\nfollowing placeholders are defined: `{name}` (name of the package), `{version}` (the\nexact version being requested). Some examples: `[\"{name}=={version}\"]`,\n`[\"{name}\", \"--version={version}\"]`. A value of `None` means that the package manager\ndoes not support version selection, only names.",
+          "title": "Exact Version"
+        },
+        "name_only": {
+          "default": [
+            "{name}"
+          ],
+          "description": "Template used to request a package by name only, with no version constraints.\nUse the `{name}` placeholder to write the mapped name of the package. A list of\nstrings is required because some package managers require several arguments to\nrequest a single package; e.g. `[\"--package\", \"{name}\"]`.",
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Name Only",
+          "type": "array"
+        },
+        "version_ranges": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/VersionRanges"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How to map version constraints from PEP440 style to the target package manager."
+        }
+      },
+      "title": "SpecifierSyntax",
       "type": "object"
     },
     "SpecsDict": {
@@ -317,62 +372,108 @@
       "title": "SpecsDict",
       "type": "object"
     },
-    "VersionOperators": {
+    "VersionRanges": {
       "additionalProperties": false,
-      "description": "Mapping of a PEP440 operator to a package manager specific operator.\nUse an empty string if there's no equivalent.",
+      "description": "Instructions to map PEP 440 specifiers to a package manager specific constraints.\nUse an empty string if there's no equivalent. Use `{name}` and `{version}` as\nplaceholders. The `and` field is not templated; it should just be the `and` operator.\nIf not available, the constraints will be exploded into several specifiers (e.g.\n`name>=2,<3` would become `name>=2 name<3`).",
       "properties": {
         "and": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
           "default": ",",
-          "title": "And",
-          "type": "string"
-        },
-        "arbitrary": {
-          "default": "===",
-          "title": "Arbitrary",
-          "type": "string"
-        },
-        "compatible": {
-          "default": "~=",
-          "title": "Compatible",
-          "type": "string"
+          "description": "How to merge several constraints. If the value is a string, this will be used to join all\nthe version constraints in a single string. If set to `None`, the constraints will not be\njoined, but appended as different arguments to the command.",
+          "title": "And"
         },
         "equal": {
-          "default": "==",
+          "default": "=={version}",
+          "description": "A range for fuzzy equality. If defined as a string, it MUST include at least the `{version}`\nplaceholder. If `None`, this operator is not supported and no version constraints will be\napplied.",
           "title": "Equal",
           "type": "string"
         },
         "greater_than": {
-          "default": ">",
-          "title": "Greater Than",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": ">{version}",
+          "description": "A range for exclusive lower bound. If defined as a string, it MUST include at least the\n`{version}` placeholder. If `None`, this operator is not supported and no version constraints\nwill be applied.",
+          "title": "Greater Than"
         },
         "greater_than_equal": {
-          "default": ">=",
-          "title": "Greater Than Equal",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": ">={version}",
+          "description": "A range for inclusive lower bound. If defined as a string, it MUST include at least the\n`{version}` placeholder. If `None`, this operator is not supported and no version constraints\nwill be applied.",
+          "title": "Greater Than Equal"
         },
         "less_than": {
-          "default": "<",
-          "title": "Less Than",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "<{version}",
+          "description": "A range for exclusive upper bound. If defined as a string, it MUST include at least the\n`{version}` placeholder. If `None`, this operator is not supported and no version constraints\nwill be applied.",
+          "title": "Less Than"
         },
         "less_than_equal": {
-          "default": "<=",
-          "title": "Less Than Equal",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "<={version}",
+          "description": "A range for inclusive upper bound. If defined as a string, it MUST include at least the\n`{version}` placeholder. If `None`, this operator is not supported and no version constraints\nwill be applied.",
+          "title": "Less Than Equal"
         },
         "not_equal": {
-          "default": "!=",
-          "title": "Not Equal",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "!={version}",
+          "description": "A range for inequality. If defined as a string, it MUST include at least the `{version}`\nplaceholder. If `None`, this operator is not supported and no version constraints will be\napplied.",
+          "title": "Not Equal"
         },
-        "separator": {
-          "default": "",
-          "title": "Separator",
-          "type": "string"
+        "syntax": {
+          "default": [
+            "{name}{range}"
+          ],
+          "description": "The syntax used to specify a constrained package selection (e.g. `package>=3,<4`). The\nfollowing placeholders are supported: `{name}` (the name of the package), `ranges` (the merged\nversion constraints). This value is a list of strings because some package managers may need\nseveral arguments to express a single package version constraint. It MUST include at least\n`{ranges}`. Some examples: `[\"{name}{ranges}\"]`, `[\"{ranges}\"]`, `[\"--spec\", \"{name}\",\n\"--version\", \"{ranges}\"]`.",
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Syntax",
+          "type": "array"
         }
       },
-      "title": "VersionOperators",
+      "title": "VersionRanges",
       "type": "object"
     }
   },
