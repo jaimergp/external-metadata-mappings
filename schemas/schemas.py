@@ -242,7 +242,7 @@ class _BaseMapping(BaseModel):
     """
     Hyperlinks to web locations that provide more information about the mapping.
     """
-    extra: dict[NonEmptyString, Any] | None = None
+    extra_metadata: dict[NonEmptyString, Any] | None = None
     """
     Free-form key-value store for arbitrary metadata.
     """
