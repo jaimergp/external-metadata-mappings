@@ -86,7 +86,7 @@ class VersionRanges(BaseModel):
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    syntax: list[NonEmptyString] = ["{name}{range}"]
+    syntax: list[NonEmptyString] = ["{name}{ranges}"]
     """
     The syntax used to specify a constrained package selection (e.g. `package>=3,<4`). The
     following placeholders are supported: `{name}` (the name of the package), `ranges` (the merged

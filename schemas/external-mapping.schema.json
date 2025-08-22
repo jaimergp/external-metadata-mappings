@@ -462,7 +462,7 @@
         },
         "syntax": {
           "default": [
-            "{name}{range}"
+            "{name}{ranges}"
           ],
           "description": "The syntax used to specify a constrained package selection (e.g. `package>=3,<4`). The\nfollowing placeholders are supported: `{name}` (the name of the package), `ranges` (the merged\nversion constraints). This value is a list of strings because some package managers may need\nseveral arguments to express a single package version constraint. It MUST include at least\n`{ranges}`. Some examples: `[\"{name}{ranges}\"]`, `[\"{ranges}\"]`, `[\"--spec\", \"{name}\",\n\"--version\", \"{ranges}\"]`.",
           "items": {
