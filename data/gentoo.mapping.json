@@ -437,8 +437,9 @@
         },
         "query": {
           "command": [
-            "qlist",
-            "-I",
+            "portageq",
+            "has_version",
+            "/",
             "{}"
           ]
         }

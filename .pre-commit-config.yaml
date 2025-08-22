@@ -4,7 +4,7 @@ ci:
 repos:
   # generic verification and formatting
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       # standard end of line/end of file cleanup
       - id: mixed-line-ending
@@ -26,7 +26,7 @@ repos:
         name: Codespell
         args: [--write-changes]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.2
+    rev: 0.33.3
     hooks:
       - id: check-jsonschema
         name: Check JSON Schema (Registry)
@@ -38,7 +38,7 @@ repos:
         files: ^data/.*\.mapping\.json$
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.12.7
+    rev: v0.12.9
     hooks:
       # Run the linter.
       - id: ruff
