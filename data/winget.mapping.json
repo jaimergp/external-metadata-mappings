@@ -313,7 +313,8 @@
             "--exact",
             "--id",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "name-only"
         },
         "query": {
           "command": [
@@ -323,7 +324,17 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}",
+          "--version",
+          "{version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
     }
   ]
 }

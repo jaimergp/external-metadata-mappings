@@ -396,6 +396,7 @@
             "--noconfirm",
             "{}"
           ],
+          "multiple_specifiers": "name-only",
           "requires_elevation": true
         },
         "query": {
@@ -406,7 +407,13 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": null,
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
     }
   ]
 }

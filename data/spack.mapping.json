@@ -491,7 +491,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}@={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": null,
+          "equal": "{name}@{version}",
+          "greater_than": null,
+          "greater_than_equal": "{name}@{version}:",
+          "less_than": null,
+          "less_than_equal": "{name}@:{version}",
+          "not_equal": null,
+          "syntax": [
+            "{range}"
+          ]
+        }
+      }
     }
   ]
 }

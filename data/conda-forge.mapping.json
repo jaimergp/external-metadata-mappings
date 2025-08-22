@@ -573,7 +573,8 @@
             "--channel=conda-forge",
             "--strict-channel-priority",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "always"
         },
         "query": {
           "command": [
@@ -584,17 +585,25 @@
           ]
         }
       },
-      "version_operators": {
-        "and": ",",
-        "arbitrary": "==",
-        "compatible": "~=",
-        "equal": "=",
-        "greater_than": ">",
-        "greater_than_equal": ">=",
-        "less_than": "<",
-        "less_than_equal": "<=",
-        "not_equal": "!=",
-        "separator": ""
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}=={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{range}"
+          ]
+        }
       }
     },
     {
@@ -608,7 +617,8 @@
             "--channel=conda-forge",
             "--channel-priority=strict",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "always"
         },
         "query": {
           "command": [
@@ -619,17 +629,25 @@
           ]
         }
       },
-      "version_operators": {
-        "and": ",",
-        "arbitrary": "==",
-        "compatible": "~=",
-        "equal": "=",
-        "greater_than": ">",
-        "greater_than_equal": ">=",
-        "less_than": "<",
-        "less_than_equal": "<=",
-        "not_equal": "!=",
-        "separator": ""
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}=={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{range}"
+          ]
+        }
       }
     },
     {
@@ -643,7 +661,8 @@
             "--channel=conda-forge",
             "--channel-priority=strict",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "always"
         },
         "query": {
           "command": [
@@ -654,17 +673,25 @@
           ]
         }
       },
-      "version_operators": {
-        "and": ",",
-        "arbitrary": "==",
-        "compatible": "~=",
-        "equal": "=",
-        "greater_than": ">",
-        "greater_than_equal": ">=",
-        "less_than": "<",
-        "less_than_equal": "<=",
-        "not_equal": "!=",
-        "separator": ""
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}=={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{range}"
+          ]
+        }
       }
     },
     {
@@ -675,7 +702,8 @@
             "pixi",
             "add",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "always"
         },
         "query": {
           "command": [
@@ -685,17 +713,25 @@
           ]
         }
       },
-      "version_operators": {
-        "and": ",",
-        "arbitrary": "==",
-        "compatible": "~=",
-        "equal": "=",
-        "greater_than": ">",
-        "greater_than_equal": ">=",
-        "less_than": "<",
-        "less_than_equal": "<=",
-        "not_equal": "!=",
-        "separator": ""
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}=={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{range}"
+          ]
+        }
       }
     }
   ]

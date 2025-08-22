@@ -313,7 +313,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}==={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "=={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{range}"
+          ]
+        }
+      }
     },
     {
       "name": "uv",
@@ -336,7 +355,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}==={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "=={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{range}"
+          ]
+        }
+      }
     }
   ]
 }

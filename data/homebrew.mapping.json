@@ -370,7 +370,8 @@
             "brew",
             "install",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "always"
         },
         "query": {
           "command": [
@@ -381,7 +382,15 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}@{version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
     }
   ]
 }
