@@ -25,6 +25,23 @@
           "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
         },
+        "extra_metadata": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "propertyNames": {
+                "minLength": 1
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form key-value store for arbitrary metadata.",
+          "title": "Extra Metadata"
+        },
         "specs": {
           "anyOf": [
             {
@@ -109,6 +126,23 @@
           "default": null,
           "description": "Free-form field for details about the mapping. Allows Markdown.",
           "title": "Description"
+        },
+        "extra_metadata": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "propertyNames": {
+                "minLength": 1
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form key-value store for arbitrary metadata.",
+          "title": "Extra Metadata"
         },
         "specs_from": {
           "description": "Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.\nCannot be used together with `specs`.",

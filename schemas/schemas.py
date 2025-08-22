@@ -5,7 +5,7 @@ Generate a JSON schema for PEP-XXX mappings
 
 import json
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Any
 
 from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
@@ -241,6 +241,10 @@ class _BaseMapping(BaseModel):
     urls: AnyUrl | list[AnyUrl] | dict[NonEmptyString, AnyUrl] | None = None
     """
     Hyperlinks to web locations that provide more information about the mapping.
+    """
+    extra_metadata: dict[NonEmptyString, Any] | None = None
+    """
+    Free-form key-value store for arbitrary metadata.
     """
 
 
