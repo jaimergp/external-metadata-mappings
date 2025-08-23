@@ -15,7 +15,7 @@ CANONICAL_IDs = {
 
 exit_code = 0
 
-for path in sys.argv[1:]:
+for path in sorted(sys.argv[1:]):
     with open(path) as f:
         data = json.load(f)
         mapping_ids = {item["id"] for item in data["mappings"]}
@@ -46,9 +46,56 @@ for path in sys.argv[1:]:
                 if command_args := command_details.get("command"):
                     if not any("{}" in arg for arg in command_args):
                         print(
-                            f"{path}: {package_manager['name']} command {command_name}",
-                            "is missing the placeholder '{}' in the 'command' key",
+                            f"{path}: package_managers.{package_manager['name']}.commands.{command_name}.command",
+                            "is missing the placeholder '{}'",
                         )
                         exit_code = 1
+            if specifier_syntax := package_manager.get("specifier_syntax", {}):
+                if "{name}" not in specifier_syntax["name_only"]:
+                    print(
+                        f"{path}: package_managers.{package_manager['name']}.specifier_syntax.name_only",
+                        "does not include the '{name}' placeholder.",
+                    )
+                    exit_code = 1
+                exact_version = specifier_syntax["exact_version"]
+                if exact_version and not any("{name}" in arg for arg in exact_version):
+                    print(
+                        f"{path}: package_managers.{package_manager['name']}.specifier_syntax.exact_version",
+                        "does not have any fields with the '{name}' placeholder.",
+                    )
+                    exit_code = 1
+                if exact_version and not any(
+                    "{version}" in arg for arg in exact_version or ()
+                ):
+                    print(
+                        f"{path}: package_managers.{package_manager['name']}.specifier_syntax.exact_version",
+                        "does not have any fields with the '{version}' placeholder.",
+                    )
+                    exit_code = 1
+                if version_ranges := specifier_syntax.get("version_ranges"):
+                    if not any("{ranges}" in arg for arg in version_ranges["syntax"]):
+                        print(
+                            f"{path}: package_managers.{package_manager['name']}.specifier_syntax.version_ranges.syntax",
+                            "does not have any fields with the '{ranges}' placeholder.",
+                        )
+                        exit_code = 1
+                    for opkey in (
+                        "equal",
+                        "greater_than",
+                        "greater_than_equal",
+                        "less_than",
+                        "less_than_equal",
+                        "not_equal",
+                    ):
+                        op = version_ranges[opkey]
+                        if op is None:
+                            continue
+                        if "{version}" not in op:
+                            print(
+                                f"{path}: package_managers.{package_manager['name']}.specifier_syntax.version_ranges.{opkey}",
+                                "does not have a '{version}' placeholder.",
+                            )
+                            exit_code = 1
+
 
 sys.exit(exit_code)
