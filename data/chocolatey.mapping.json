@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemasexternal-mapping.schema.json",
   "schema_version": 1,
   "name": "Chocolatey",
   "description": "Mapping for the Chocolatey ecosystem",
@@ -296,7 +296,8 @@
             "choco",
             "install",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "name-only"
         },
         "query": {
           "command": [
@@ -307,7 +308,16 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}",
+          "--version={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
     }
   ]
 }

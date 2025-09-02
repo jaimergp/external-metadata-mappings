@@ -5,7 +5,7 @@ Generate a JSON schema for PEP-XXX mappings
 
 import json
 from pathlib import Path
-from typing import Annotated, Any
+from typing import Annotated, Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, AnyUrl
 
@@ -28,7 +28,7 @@ class Definition(BaseModel):
         use_attribute_docstrings=True,
     )
 
-    id: DepURLField = ...
+    id: DepURLField
     "PURL-like identifier."
     description: str | None = None
     "Free-form field to add some details about the package. Allows Markdown."
@@ -73,26 +73,101 @@ class DefinitionListModel(BaseModel):
     "List of PURL definitions currently recognized."
 
 
-class VersionOperators(BaseModel):
+class VersionRanges(BaseModel):
     """
-    Mapping of a PEP440 operator to a package manager specific operator.
-    Use an empty string if there's no equivalent.
+    Instructions to map PEP 440 specifiers to a package manager specific constraints.
+    Use an empty string if there's no equivalent. Use `{name}` and `{version}` as
+    placeholders. The `and` field is not templated; it should just be the `and` operator.
+    If not available, the constraints will be exploded into several specifiers (e.g.
+    `name>=2,<3` would become `name>=2 name<3`).
     """
 
     model_config: ConfigDict = ConfigDict(
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    and_: str = Field(",", alias="and")
-    arbitrary: str = "==="
-    compatible: str = "~="
-    equal: str = "=="
-    greater_than_equal: str = ">="
-    greater_than: str = ">"
-    less_than_equal: str = "<="
-    less_than: str = "<"
-    not_equal: str = "!="
-    separator: str = ""
+    syntax: list[NonEmptyString]
+    """
+    The syntax used to specify a constrained package selection (e.g. `package>=3,<4`). The
+    following placeholders are supported: `{name}` (the name of the package), `ranges` (the merged
+    version constraints). This value is a list of strings because some package managers may need
+    several arguments to express a single package version constraint. It MUST include at least
+    `{ranges}`. Some examples: `["{name}{ranges}"]`, `["{ranges}"]`, `["--spec", "{name}",
+    "--version", "{ranges}"]`.
+    """
+    and_: str | None = Field(..., alias="and")
+    """
+    How to merge several constraints. If the value is a string, this will be used to join all
+    the version constraints in a single string. If set to `None`, the constraints will not be
+    joined, but appended as different arguments to the command.
+    """
+    equal: str
+    """
+    A range for fuzzy equality. If defined as a string, it MUST include at least the `{version}`
+    placeholder. If `None`, this operator is not supported and no version constraints will be
+    applied.
+    """
+    greater_than_equal: str | None
+    """
+    A range for inclusive lower bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    greater_than: str | None
+    """
+    A range for exclusive lower bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    less_than_equal: str | None
+    """
+    A range for inclusive upper bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    less_than: str | None
+    """
+    A range for exclusive upper bound. If defined as a string, it MUST include at least the
+    `{version}` placeholder. If `None`, this operator is not supported and no version constraints
+    will be applied.
+    """
+    not_equal: str | None
+    """
+    A range for inequality. If defined as a string, it MUST include at least the `{version}`
+    placeholder. If `None`, this operator is not supported and no version constraints will be
+    applied.
+    """
+
+
+class SpecifierSyntax(BaseModel):
+    """
+    Instructions to process the packager specifiers once mapped.
+    """
+
+    model_config: ConfigDict = ConfigDict(
+        extra="forbid",
+        use_attribute_docstrings=True,
+    )
+    name_only: list[NonEmptyString]
+    """
+    Template used to request a package by name only, with no version constraints.
+    Use the `{name}` placeholder to write the mapped name of the package. A list of
+    strings is required because some package managers require several arguments to
+    request a single package; e.g. `["--package", "{name}"]`.
+    """
+    exact_version: list[NonEmptyString] | None
+    """
+    Template used to request a package with a specific version (a literal, not a range).
+    Since some package managers require separate arguments, this is a list of strings. The
+    following placeholders are defined: `{name}` (name of the package), `{version}` (the
+    exact version being requested). Some examples: `["{name}=={version}"]`,
+    `["{name}", "--version={version}"]`. A value of `None` means that the package manager
+    does not support version selection, only names.
+    """
+    version_ranges: VersionRanges | None
+    """
+    How to map version constraints from PEP440 style to the target package manager.
+    """
 
 
 class PackageManagerCommand(BaseModel):
@@ -102,10 +177,17 @@ class PackageManagerCommand(BaseModel):
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    command: list[NonEmptyString] = []
+    command: list[NonEmptyString]
     "Command template, as expected by `subprocess.run`. Use `{}` as a placeholder for package(s)."
     requires_elevation: bool = False
     "Whether the command requires elevated permissions to run."
+    multiple_specifiers: Literal["always", "name-only", "never"] = "always"
+    """
+    Whether the command accepts multiple specifiers at once or not. Defaults to `always`.
+    Use `name-only` if the command only accepts multiple specifiers when they don't have
+    version information. With `never`, only one specifier is accepted at a time, which
+    will result in several single-spec commands being generated.
+    """
 
 
 class PackageManagerCommands(BaseModel):
@@ -115,17 +197,13 @@ class PackageManagerCommands(BaseModel):
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    install: PackageManagerCommand = ...
+    install: PackageManagerCommand
     """
-    Command that must be used to install the given package(s). The tool must accept several
-    packages in the same command. Each argument must be provided as a separate string, as
-    in `subprocess.run`. Use `{}` as a placeholder where the package spec(s) must be injected.
-    The placeholder can only appear once in the whole list and will be replaced once per package.
-    For example, given the names `foo` and `bar`, `["pkg", "install", "{}"]` would become
-    `pkg install foo bar`, and `["pkg", "install", "--spec={}"]` would become
-    `pkg install --spec=foo --spec=bar`.
+    Command that must be used to install the given package(s). Each argument must be provided as a
+    separate string, as in `subprocess.run`. Use `"{}"` as a placeholder where the package spec(s)
+    must be injected. The placeholder can only appear once in the whole list.
     """
-    query: PackageManagerCommand | None = None
+    query: PackageManagerCommand | None
     """
     Command to check whether a package is installed. The tool must only accept one package at a
     time. Each argument must be provided as a separate string, as in `subprocess.run`. The `{}`
@@ -144,16 +222,12 @@ class PackageManager(BaseModel):
         use_attribute_docstrings=True,
     )
 
-    name: NonEmptyString = ...
+    name: NonEmptyString
     "Name of the package manager"
-    commands: PackageManagerCommands = ...
+    commands: PackageManagerCommands
     "Command templates needed to execute certain operations with this package manager"
-    version_operators: VersionOperators = VersionOperators()
-    """
-    Mapping of PEP440 version comparison operators to the syntax used in this package manager.
-    If set to an empty dictionary, it means that the package manager (or ecosystem)
-    doesn't support the notion of requesting particular package versions.
-    """
+    specifier_syntax: SpecifierSyntax
+    "Instructions to transform package names and version constrains for this package manager"
 
 
 # endregion
@@ -166,7 +240,7 @@ class EcosystemDetails(BaseModel):
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    mapping: AnyUrl = ...
+    mapping: AnyUrl
     "URL to the mapping for this ecosystem / package manager"
 
 
@@ -190,7 +264,7 @@ class Ecosystems(BaseModel):
     "URL of the definition list schema in use for the document."
 
     schema_version: int = Field(1, ge=1, lt=2)
-    ecosystems: dict[NonEmptyString, EcosystemDetails] = {}
+    ecosystems: dict[NonEmptyString, EcosystemDetails]
     """
     Ecosystems names and their corresponding details
     """
@@ -231,7 +305,7 @@ class _BaseMapping(BaseModel):
         use_attribute_docstrings=True,
     )
 
-    id: DepURLField = ...
+    id: DepURLField
     """
     PURL-like identifier, as provided in the central registry,
     being mapped to ecosystem specific packages.
@@ -251,14 +325,14 @@ class _BaseMapping(BaseModel):
 class MappingWithSpecs(_BaseMapping):
     """ """
 
-    specs: NonEmptyString | list[NonEmptyString] | SpecsDict = ...
+    specs: NonEmptyString | list[NonEmptyString] | SpecsDict
     "Package specifiers that provide the identifier at `id`."
 
 
 class MappingWithSpecsFrom(_BaseMapping):
     """ """
 
-    specs_from: DepURLField = ...
+    specs_from: DepURLField
     """
     Identifier of another mapping entry with identical dependencies. Useful to avoid duplication.
     Cannot be used together with `specs`.
@@ -283,7 +357,7 @@ class MappingsModel(BaseModel):
     schema_: str = Field(default="", alias="$schema")
     "URL of the mappings schema in use for the document."
     schema_version: int = Field(1, ge=1, lt=2)
-    name: NonEmptyString = ...
+    name: NonEmptyString
     "Name of the schema"
     description: str | None = None
     "Free-form field to add information this mapping. Allows Markdown."
@@ -298,26 +372,17 @@ class MappingsModel(BaseModel):
 
 def main():
     with CENTRAL_REGISTRY_FILE.open(mode="w+") as f:
-        model = DefinitionListModel(
-            definitions=[],
-        )
-        obj = model.model_json_schema()
+        obj = DefinitionListModel.model_json_schema()
         f.write(json.dumps(obj, indent=2))
         f.write("\n")
 
     with ECOSYSTEMS_FILE.open(mode="w+") as f:
-        model = Ecosystems()
-        obj = model.model_json_schema()
+        obj = Ecosystems.model_json_schema()
         f.write(json.dumps(obj, indent=2))
         f.write("\n")
 
     with MAPPING_SCHEMA_FILE.open(mode="w+") as f:
-        model = MappingsModel(
-            name="doesnotmatter",
-            package_managers=[],
-            mappings=[],
-        )
-        obj = model.model_json_schema()
+        obj = MappingsModel.model_json_schema()
         f.write(json.dumps(obj, indent=2))
         f.write("\n")
 

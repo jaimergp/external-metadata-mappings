@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemasexternal-mapping.schema.json",
   "schema_version": 1,
   "name": "Arch Linux",
   "description": "Mapping for the Arch Linux distro",
@@ -396,6 +396,7 @@
             "--noconfirm",
             "{}"
           ],
+          "multiple_specifiers": "name-only",
           "requires_elevation": true
         },
         "query": {
@@ -406,7 +407,13 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": null,
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
     }
   ]
 }

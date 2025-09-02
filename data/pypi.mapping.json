@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemasexternal-mapping.schema.json",
   "schema_version": 1,
   "name": "PyPI",
   "description": "Mapping for the external dependencies found in PyPI",
@@ -313,7 +313,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}==={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "=={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{ranges}"
+          ]
+        }
+      }
     },
     {
       "name": "uv",
@@ -336,7 +355,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}==={version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": ",",
+          "equal": "=={version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<={version}",
+          "not_equal": "!={version}",
+          "syntax": [
+            "{name}{ranges}"
+          ]
+        }
+      }
     }
   ]
 }

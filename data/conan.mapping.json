@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemasexternal-mapping.schema.json",
   "schema_version": 1,
   "name": "Conan",
   "description": "Mapping for the Conan ecosystem",
@@ -365,7 +365,8 @@
             "install",
             "--requires",
             "{}"
-          ]
+          ],
+          "multiple_specifiers": "always"
         },
         "query": {
           "command": [
@@ -376,7 +377,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "{name}/{version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": " ",
+          "equal": "~{version}",
+          "greater_than": ">{version}",
+          "greater_than_equal": ">={version}",
+          "less_than": "<{version}",
+          "less_than_equal": "<{version}=",
+          "not_equal": null,
+          "syntax": [
+            "{name}/[{ranges}]"
+          ]
+        }
+      }
     }
   ]
 }

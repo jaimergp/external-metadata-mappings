@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemasexternal-mapping.schema.json",
   "schema_version": 1,
   "name": "Gentoo Linux",
   "description": "Mapping for Gentoo Linux",
@@ -391,6 +391,7 @@
             "pmerge",
             "{}"
           ],
+          "multiple_specifiers": "always",
           "requires_elevation": true
         },
         "query": {
@@ -402,7 +403,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "={name}-{version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": null,
+          "equal": "={name}-{version}*",
+          "greater_than": ">{name}-{version}",
+          "greater_than_equal": ">={name}-{version}",
+          "less_than": "<{name}-{version}",
+          "less_than_equal": "<={name}-{version}",
+          "not_equal": null,
+          "syntax": [
+            "{ranges}"
+          ]
+        }
+      }
     },
     {
       "name": "portage",
@@ -412,6 +432,7 @@
             "emerge",
             "{}"
           ],
+          "multiple_specifiers": "always",
           "requires_elevation": true
         },
         "query": {
@@ -423,7 +444,26 @@
           ]
         }
       },
-      "version_operators": {}
+      "specifier_syntax": {
+        "exact_version": [
+          "={name}-{version}"
+        ],
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": {
+          "and": null,
+          "equal": "={name}-{version}*",
+          "greater_than": ">{name}-{version}",
+          "greater_than_equal": ">={name}-{version}",
+          "less_than": "<{name}-{version}",
+          "less_than_equal": "<={name}-{version}",
+          "not_equal": null,
+          "syntax": [
+            "{ranges}"
+          ]
+        }
+      }
     }
   ]
 }

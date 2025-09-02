@@ -40,7 +40,6 @@
       "additionalProperties": {
         "$ref": "#/$defs/EcosystemDetails"
       },
-      "default": {},
       "description": "Ecosystems names and their corresponding details",
       "propertyNames": {
         "minLength": 1
@@ -49,6 +48,9 @@
       "type": "object"
     }
   },
+  "required": [
+    "ecosystems"
+  ],
   "title": "Ecosystems",
   "type": "object"
 }
