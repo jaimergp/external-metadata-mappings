@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/specifier-syntax/schemas/external-mapping.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemasexternal-mapping.schema.json",
   "schema_version": 1,
   "name": "Ubuntu 24.04",
   "description": "Mapping for the Ubuntu 24.04 LTS (Noble) distro",
