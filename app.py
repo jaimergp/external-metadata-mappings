@@ -9,6 +9,7 @@ from pathlib import Path
 import streamlit as st
 
 from pyproject_external import Registry, Mapping
+from pyproject_external._registry import PackageManager, MappedSpec
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
@@ -131,30 +132,25 @@ if dep_url and ecosystem:
         render_description(m)
         render_urls(m)
         if m["specs"]["run"]:
+            specs = [MappedSpec(spec, "") for spec in m["specs"]["run"]]
             managers = full_mapping.get("package_managers", ())
-            for text, method in (
-                ("📦 Install", "build_install_command"),
-                ("🔎 Query", "build_query_commands"),
+            for text, command_type in (
+                ("📦 Install", "install"),
+                ("🔎 Query", "query"),
             ):
                 if len(managers) > 1:
                     st.write(f"**{text} with:**")
                     for manager, tab in zip(
                         managers, st.tabs([m["name"] for m in managers])
-                    ):
-                        commands = getattr(full_mapping, method)(
-                            manager, m["specs"]["run"]
-                        )
-                        if isinstance(commands[0], str):
-                            commands = [commands]
+                    ): 
+                        mgr = PackageManager.from_mapping_entry(manager)
+                        commands = list(mgr.render_commands(command_type, specs))
                         text = "\n".join([shlex.join(command) for command in commands])
                         tab.write(f"```\n{text}\n```")
                 else:
                     st.write(f"**{text} with `{managers[0]['name']}`:**")
-                    commands = getattr(full_mapping, method)(
-                        managers[0], m["specs"]["run"]
-                    )
-                    if isinstance(commands[0], str):
-                        commands = [commands]
+                    mgr = PackageManager.from_mapping_entry(managers[0])
+                    commands = list(mgr.render_commands(command_type, specs))
                     text = "\n".join([shlex.join(command) for command in commands])
                     st.write(f"```\n{text}\n```")
             with st.expander("Raw data"):
