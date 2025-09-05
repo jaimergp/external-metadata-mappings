@@ -207,11 +207,7 @@
     {
       "id": "dep:generic/python",
       "description": "The Python programming language",
-      "specs": {
-        "build": [],
-        "host": [],
-        "run": "python"
-      },
+      "specs": "python",
       "urls": {
         "archlinux.org": "https://archlinux.org/packages/core/x86_64/python/"
       }

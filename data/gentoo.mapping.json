@@ -196,11 +196,7 @@
     {
       "id": "dep:generic/python",
       "description": "An interpreted, interactive, object-oriented programming language",
-      "specs": {
-        "build": [],
-        "host": [],
-        "run": "dev-lang/python"
-      },
+      "specs": "dev-lang/python",
       "urls": {
         "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-lang/python"
       }
