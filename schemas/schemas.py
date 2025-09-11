@@ -282,16 +282,16 @@ class SpecsDict(BaseModel):
         extra="forbid",
         use_attribute_docstrings=True,
     )
-    build: NonEmptyString | list[NonEmptyString] | None = None
+    build: NonEmptyString | list[NonEmptyString]
     """
     Dependencies that must be present at build time and can be executed in the build machine.
     """
-    host: NonEmptyString | list[NonEmptyString] | None = None
+    host: NonEmptyString | list[NonEmptyString]
     """
     Dependencies that must be present at build time but only for linking purposes.
     Their architecture does not need to match the build machine.
     """
-    run: NonEmptyString | list[NonEmptyString] | None = None
+    run: NonEmptyString | list[NonEmptyString]
     """
     Dependencies needed at runtime in the end-user machines.
     """
