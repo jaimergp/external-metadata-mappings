@@ -272,7 +272,7 @@
     {
       "id": "dep:generic/openblas",
       "description": "The OpenBLAS implementation for BLAS",
-      "specs": "blas * openblas"
+      "specs": "libblas * *_openblas"
     },
     {
       "id": "dep:generic/openjpeg",
@@ -513,7 +513,11 @@
     {
       "id": "dep:virtual/interface/blas",
       "description": "A metapackage for any BLAS implementation",
-      "specs": "blas",
+      "specs": {
+        "build": "libblas * *_netlib",
+        "host": "libblas * *_netlib",
+        "run": "libblas"
+      },
       "urls": {
         "feedstock": "https://github.com/conda-forge/blas-feedstock"
       }
@@ -521,7 +525,7 @@
     {
       "id": "dep:virtual/interface/blas",
       "description": "The OpenBLAS implementation for BLAS",
-      "specs": "blas * openblas",
+      "specs": "libblas * *_openblas",
       "urls": {
         "feedstock": "https://github.com/conda-forge/openblas-feedstock"
       }
@@ -529,7 +533,7 @@
     {
       "id": "dep:virtual/interface/blas",
       "description": "The MKL implementation for BLAS",
-      "specs": "blas * mkl",
+      "specs": "libblas * *_mkl",
       "urls": {
         "feedstock": "https://github.com/conda-forge/intel_repack-feedstock"
       }
@@ -537,7 +541,7 @@
     {
       "id": "dep:virtual/interface/blas",
       "description": "The BLIS implementation for BLAS",
-      "specs": "blas * blis",
+      "specs": "libblas * *_blis",
       "urls": {
         "feedstock": "https://github.com/conda-forge/blis-feedstock"
       }
@@ -545,7 +549,7 @@
     {
       "id": "dep:virtual/interface/lapack",
       "description": "The default implementation for LAPACK",
-      "specs": "lapack",
+      "specs": ["liblapack", "liblapacke"],
       "urls": {
         "feedstock": "https://github.com/conda-forge/lapack-feedstock"
       }
