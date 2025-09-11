@@ -347,12 +347,8 @@
                 "type": "string"
               },
               "type": "array"
-            },
-            {
-              "type": "null"
             }
           ],
-          "default": null,
           "description": "Dependencies that must be present at build time and can be executed in the build machine.",
           "title": "Build"
         },
@@ -368,12 +364,8 @@
                 "type": "string"
               },
               "type": "array"
-            },
-            {
-              "type": "null"
             }
           ],
-          "default": null,
           "description": "Dependencies that must be present at build time but only for linking purposes.\nTheir architecture does not need to match the build machine.",
           "title": "Host"
         },
@@ -389,16 +381,17 @@
                 "type": "string"
               },
               "type": "array"
-            },
-            {
-              "type": "null"
             }
           ],
-          "default": null,
           "description": "Dependencies needed at runtime in the end-user machines.",
           "title": "Run"
         }
       },
+      "required": [
+        "build",
+        "host",
+        "run"
+      ],
       "title": "SpecsDict",
       "type": "object"
     },

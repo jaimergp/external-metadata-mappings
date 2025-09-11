@@ -8,6 +8,7 @@
       "id": "dep:generic/arrow",
       "description": "A toolbox for accelerated data interchange and in-memory processing",
       "specs": {
+        "build": [],
         "host": [
           "libarrow",
           "libarrow-devel",
@@ -58,6 +59,7 @@
       "id": "dep:generic/freetype",
       "description": "A free and portable font rendering engine",
       "specs": {
+        "build": [],
         "host": [
           "freetype",
           "freetype-devel"
@@ -75,6 +77,7 @@
       "id": "dep:generic/gmp",
       "description": "GNU arbitrary precision library",
       "specs": {
+        "build": [],
         "host": [
           "gmp",
           "gmp-devel"
@@ -92,6 +95,7 @@
       "id": "dep:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
       "specs": {
+        "build": [],
         "host": [
           "lcms2",
           "lcms2-devel"
@@ -109,6 +113,7 @@
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": {
+        "build": [],
         "host": [
           "libffi",
           "libffi-devel"
@@ -142,6 +147,7 @@
       "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": {
+        "build": [],
         "host": [
           "libimagequant",
           "libimagequant-devel"
@@ -159,6 +165,7 @@
       "id": "dep:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
       "specs": {
+        "build": [],
         "host": [
           "libjpeg-turbo",
           "libjpeg-turbo-devel"
@@ -176,6 +183,7 @@
       "id": "dep:generic/libpq",
       "description": "Postgres C API library",
       "specs": {
+        "build": [],
         "host": [
           "libpq",
           "libpq-devel"
@@ -193,6 +201,7 @@
       "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": {
+        "build": [],
         "host": [
           "libraqm",
           "libraqm-devel"
@@ -210,6 +219,7 @@
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {
+        "build": [],
         "host": [
           "libtiff",
           "libtiff-devel"
@@ -227,6 +237,7 @@
       "id": "dep:generic/libwebp",
       "description": "WebP image library.",
       "specs": {
+        "build": [],
         "host": [
           "libwebp",
           "libwebp-devel"
@@ -244,6 +255,7 @@
       "id": "dep:generic/libxcb",
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
       "specs": {
+        "build": [],
         "host": [
           "libxcb",
           "libxcb-devel"
@@ -261,6 +273,7 @@
       "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
       "specs": {
+        "build": [],
         "host": [
           "libxml2",
           "libxml2-devel"
@@ -294,6 +307,7 @@
       "id": "dep:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
       "specs": {
+        "build": [],
         "host": [
           "libxslt",
           "libxslt-devel"
@@ -309,6 +323,7 @@
       "id": "dep:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
       "specs": {
+        "build": [],
         "host": [
           "libyaml",
           "libyaml-devel"
@@ -326,6 +341,7 @@
       "id": "dep:generic/llvm",
       "description": "LLVM is a compiler infrastructure designed for compile-time, link-time, runtime, and idle-time optimization of programs from arbitrary programming languages",
       "specs": {
+        "build": [],
         "host": [
           "llvm",
           "llvm-devel"
@@ -359,6 +375,7 @@
       "id": "dep:generic/openblas",
       "description": "An optimized BLAS library based on GotoBLAS2",
       "specs": {
+        "build": [],
         "host": [
           "openblas",
           "openblas-devel"
@@ -376,6 +393,7 @@
       "id": "dep:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": {
+        "build": [],
         "host": [
           "openjpeg",
           "openjpeg-devel"
@@ -393,6 +411,7 @@
       "id": "dep:generic/openssl",
       "description": "Utilities from the general purpose cryptography library with TLS implementation",
       "specs": {
+        "build": [],
         "host": [
           "openssl",
           "openssl-devel"
@@ -433,6 +452,7 @@
       "id": "dep:generic/tk",
       "description": "The graphical toolkit for the Tcl scripting language",
       "specs": {
+        "build": [],
         "host": [
           "tk",
           "tk-devel"
@@ -450,6 +470,7 @@
       "id": "dep:generic/zlib",
       "description": "The zlib-ng-compat package contains the library that is API and binary compatible with zlib.",
       "specs": {
+        "build": [],
         "host": [
           "zlib-ng-compat",
           "zlib-ng-compat-devel"
@@ -575,6 +596,7 @@
       "id": "dep:virtual/interface/blas",
       "description": "The Basic Linear Algebra Subprograms library",
       "specs": {
+        "build": [],
         "host": [
           "blas",
           "blas-devel"
@@ -590,6 +612,7 @@
       "id": "dep:virtual/interface/blas",
       "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
       "specs": {
+        "build": [],
         "host": [
           "openblas",
           "openblas-devel"
@@ -605,6 +628,7 @@
       "id": "dep:virtual/interface/blas",
       "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
       "specs": {
+        "build": [],
         "host": [
           "flexiblas",
           "flexiblas-devel"
@@ -620,6 +644,7 @@
       "id": "dep:virtual/interface/lapack",
       "description": "Numerical linear algebra package libraries",
       "specs": {
+        "build": [],
         "host": [
           "lapack",
           "lapack-devel"
@@ -635,6 +660,7 @@
       "id": "dep:virtual/interface/lapack",
       "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
       "specs": {
+        "build": [],
         "host": [
           "flexiblas",
           "flexiblas-devel"
