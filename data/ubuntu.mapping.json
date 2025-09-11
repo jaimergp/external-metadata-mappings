@@ -29,6 +29,7 @@
       "id": "dep:generic/freetype",
       "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
       "specs": {
+        "build": [],
         "host": [
           "libfreetype6",
           "libfreetype-dev"
@@ -46,6 +47,7 @@
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": {
+        "build": [],
         "host": [
           "libgmp10",
           "libgmp-dev"
@@ -63,6 +65,7 @@
       "id": "dep:generic/lcms2",
       "description": "Color management engine supporting ICC profiles",
       "specs": {
+        "build": [],
         "host": [
           "liblcms2-2",
           "liblcms2-dev"
@@ -80,6 +83,7 @@
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": {
+        "build": [],
         "host": [
           "libffi8",
           "libffi-dev"
@@ -97,6 +101,7 @@
       "id": "dep:generic/libimagequant",
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": {
+        "build": [],
         "host": [
           "libimagequant0",
           "libimagequant-dev"
@@ -114,6 +119,7 @@
       "id": "dep:generic/libjpeg",
       "description": "Independent JPEG Group's JPEG runtime library (Version 9)",
       "specs": {
+        "build": [],
         "host": [
           "libjpeg9",
           "libjpeg9-dev"
@@ -131,6 +137,7 @@
       "id": "dep:generic/libjpeg",
       "description": "Independent JPEG Group's JPEG runtime library (Version 6.2)",
       "specs": {
+        "build": [],
         "host": [
           "libjpeg62",
           "libjpeg62-dev"
@@ -148,6 +155,7 @@
       "id": "dep:generic/libjpeg",
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
       "specs": {
+        "build": [],
         "host": [
           "libjpeg-turbo8",
           "libjpeg-turbo8-dev"
@@ -165,6 +173,7 @@
       "id": "dep:generic/libpq",
       "description": "Postgres C API library",
       "specs": {
+        "build": [],
         "host": [
           "libpq5",
           "libpq-dev"
@@ -182,6 +191,7 @@
       "id": "dep:generic/libraqm",
       "description": "A library for complex text layout.",
       "specs": {
+        "build": [],
         "host": [
           "libraqm0",
           "libraqm-dev"
@@ -199,6 +209,7 @@
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {
+        "build": [],
         "host": [
           "libtiff",
           "libtiff-dev"
@@ -216,6 +227,7 @@
       "id": "dep:generic/libwebp",
       "description": "WebP image library.",
       "specs": {
+        "build": [],
         "host": [
           "libwebp7",
           "libwebp-dev"
@@ -233,6 +245,7 @@
       "id": "dep:generic/libxcb",
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
       "specs": {
+        "build": [],
         "host": [
           "libxcb1",
           "libxcb1-dev"
@@ -250,6 +263,7 @@
       "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
       "specs": {
+        "build": [],
         "host": [
           "libxml2",
           "libxml2-dev"
@@ -265,6 +279,7 @@
       "id": "dep:generic/libxslt",
       "description": "The XSLT C library developed for the GNOME project",
       "specs": {
+        "build": [],
         "host": [
           "libxslt",
           "libxslt-devel"
@@ -280,6 +295,7 @@
       "id": "dep:generic/libyaml",
       "description": "A C library for parsing and emitting YAML",
       "specs": {
+        "build": [],
         "host": [
           "libyaml-0-2",
           "libyaml-dev"
@@ -321,6 +337,7 @@
       "id": "dep:generic/openblas",
       "description": "Optimized BLAS (linear algebra) library (meta)",
       "specs": {
+        "build": [],
         "host": [
           "libopenblas0",
           "libopenblas-dev"
@@ -338,6 +355,7 @@
       "id": "dep:generic/openjpeg",
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": {
+        "build": [],
         "host": [
           "libopenjp2-7",
           "libopenjp2-7-dev"
@@ -379,6 +397,7 @@
       "id": "dep:generic/tk",
       "description": "Toolkit for Tcl and X11 (default version) - windowing shell",
       "specs": {
+        "build": [],
         "host": [
           "tk",
           "tk-dev"
@@ -396,6 +415,7 @@
       "id": "dep:generic/zlib",
       "description": "Compression library",
       "specs": {
+        "build": [],
         "host": [
           "zlib1g",
           "zlib1g-dev"
@@ -413,6 +433,7 @@
       "id": "dep:github/Reference-LAPACK/lapack",
       "description": "Library of linear algebra routines 3 - shared version",
       "specs": {
+        "build": [],
         "host": [
           "liblapack3",
           "liblapack3-dev"
@@ -522,6 +543,7 @@
       "id": "dep:virtual/interface/blas",
       "description": "Basic Linear Algebra Reference implementations",
       "specs": {
+        "build": [],
         "host": [
           "libblas3",
           "libblas-dev"
@@ -537,6 +559,7 @@
       "id": "dep:virtual/interface/lapack",
       "description": "The netlib implementation for lapack",
       "specs": {
+        "build": [],
         "host": [
           "liblapack3",
           "liblapack3-dev"

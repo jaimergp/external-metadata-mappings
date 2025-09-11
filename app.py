@@ -142,7 +142,7 @@ if dep_url and ecosystem:
                     st.write(f"**{text} with:**")
                     for manager, tab in zip(
                         managers, st.tabs([m["name"] for m in managers])
-                    ): 
+                    ):
                         mgr = PackageManager.from_mapping_entry(manager)
                         commands = list(mgr.render_commands(command_type, specs))
                         text = "\n".join([shlex.join(command) for command in commands])

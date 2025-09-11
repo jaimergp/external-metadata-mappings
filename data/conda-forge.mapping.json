@@ -185,6 +185,7 @@
       "id": "dep:generic/libxml2",
       "description": "CDT for libxml2, repackaged from CentOS 7. There are more like this, but didn't include them for brevity.",
       "specs": {
+        "build": [],
         "host": [
           "libxml2-cos7-x86_64",
           "libxml2-devel-cos7-x86_64"
@@ -231,6 +232,7 @@
       "id": "dep:generic/llvm",
       "description": "Development headers and libraries for LLVM",
       "specs": {
+        "build": [],
         "host": [
           "llvm",
           "llvmdev"
