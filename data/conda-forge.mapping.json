@@ -238,7 +238,7 @@
           "llvmdev"
         ],
         "run": [
-          "llvm-tools"
+          "llvmdev"
         ]
       },
       "urls": {
