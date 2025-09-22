@@ -546,7 +546,10 @@
     {
       "id": "dep:virtual/interface/lapack",
       "description": "The default implementation for LAPACK",
-      "specs": ["liblapack", "liblapacke"],
+      "specs": [
+        "liblapack",
+        "liblapacke"
+      ],
       "urls": {
         "feedstock": "https://github.com/conda-forge/lapack-feedstock"
       }
