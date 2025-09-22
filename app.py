@@ -17,12 +17,12 @@ SCHEMAS = HERE / "schemas"
 REGISTRY = Registry.from_path(DATA / "registry.json")
 
 st.set_page_config(
-    page_title="PEP-725 registry and mappings browser",
+    page_title="PEP 725/804 registry and mappings browser",
     page_icon="📦",
     initial_sidebar_state="expanded",
     menu_items={
         "about": """
-        **📦 PEP725-metadata-browser **
+        **📦 PEP 725/804 metadata-browser **
 
         Explore the central registry of package identifiers and their mapped names
         in several ecosystems.
@@ -114,6 +114,11 @@ with st.sidebar:
         placeholder=f"{len(eco_options)} mappings available"
         if dep_url
         else "Or browse a mapping",
+    )
+    st.info(
+        "Did you notice any issues? Please let us know at [external-metadata-mappings]"
+        "(https://github.com/jaimergp/external-metadata-mappings/issues).",
+        icon="ℹ️",
     )
 
 # Mappings detail page
