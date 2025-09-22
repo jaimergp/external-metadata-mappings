@@ -24,10 +24,7 @@
           "clangdev"
         ],
         "run": [
-          "clang",
-          "clangxx",
-          "clang-format",
-          "clang-tools"
+          "clangdev"
         ]
       },
       "urls": {
