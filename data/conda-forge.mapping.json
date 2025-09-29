@@ -176,7 +176,16 @@
     {
       "id": "dep:generic/libxml2",
       "description": "The XML C parser and toolkit of Gnome",
-      "specs": "libxml2",
+      "specs": {
+        "build": [],
+        "host": [
+          "libxml2",
+          "libxml2-devel"
+        ],
+        "run": [
+          "libxml2"
+        ]
+      },
       "urls": {
         "feedstock": "https://github.com/conda-forge/libxml2-feedstock"
       }
