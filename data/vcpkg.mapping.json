@@ -20,7 +20,7 @@
     {
       "id": "dep:generic/cmake",
       "description": "Not available",
-      "specs": ""
+      "specs": []
     },
     {
       "id": "dep:generic/freetype",
