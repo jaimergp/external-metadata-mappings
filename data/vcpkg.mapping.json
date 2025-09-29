@@ -20,10 +20,7 @@
     {
       "id": "dep:generic/cmake",
       "description": "Not available",
-      "specs": "vcpkg-cmake",
-      "urls": {
-        "vcpkg.io": "https://vcpkg.io/en/package/vcpkg-cmake"
-      }
+      "specs": ""
     },
     {
       "id": "dep:generic/freetype",
