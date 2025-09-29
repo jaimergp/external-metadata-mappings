@@ -219,8 +219,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/noble/libtiff6",
-        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev"
+        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev",
+        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/noble/libtiff6"
       }
     },
     {
@@ -372,9 +372,22 @@
     {
       "id": "dep:generic/openssl",
       "description": "Secure Sockets Layer toolkit - cryptographic utility",
-      "specs": "openssl",
+      "specs": {
+        "build": [
+          "libssl-dev",
+          "openssl"
+        ],
+        "host": [
+          "libssl-dev",
+          "openssl"
+        ],
+        "run": [
+          "openssl"
+        ]
+      },
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/openssl"
+        "packages.ubuntu.com (libssl-dev)": "https://packages.ubuntu.com/noble/libssl-dev",
+        "packages.ubuntu.com (openssl)": "https://packages.ubuntu.com/noble/openssl"
       }
     },
     {
@@ -569,8 +582,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
       }
     },
     {
