@@ -117,6 +117,24 @@
     },
     {
       "id": "dep:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": {
+        "build": [],
+        "host": [
+          "libjpeg-turbo8",
+          "libjpeg-turbo8-dev"
+        ],
+        "run": [
+          "libjpeg-turbo8"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
+        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
       "description": "Independent JPEG Group's JPEG runtime library (Version 9)",
       "specs": {
         "build": [],
@@ -149,24 +167,6 @@
       "urls": {
         "packages.ubuntu.com (libjpeg62)": "https://packages.ubuntu.com/noble/libjpeg62",
         "packages.ubuntu.com (libjpeg62-dev)": "https://packages.ubuntu.com/noble/libjpeg62-dev"
-      }
-    },
-    {
-      "id": "dep:generic/libjpeg",
-      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
-      "specs": {
-        "build": [],
-        "host": [
-          "libjpeg-turbo8",
-          "libjpeg-turbo8-dev"
-        ],
-        "run": [
-          "libjpeg-turbo8"
-        ]
-      },
-      "urls": {
-        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
-        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
       }
     },
     {
@@ -544,7 +544,10 @@
     {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
-      "specs": ["cargo", "rustc"],
+      "specs": [
+        "cargo",
+        "rustc"
+      ],
       "urls": {
         "packages.ubuntu.com (cargo)": "https://packages.ubuntu.com/noble/cargo",
         "packages.ubuntu.com (rustc)": "https://packages.ubuntu.com/noble/rustc"
