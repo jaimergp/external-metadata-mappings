@@ -544,9 +544,10 @@
     {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
-      "specs": "rustc",
+      "specs": ["cargo", "rustc"],
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
+        "packages.ubuntu.com (cargo)": "https://packages.ubuntu.com/noble/cargo",
+        "packages.ubuntu.com (rustc)": "https://packages.ubuntu.com/noble/rustc"
       }
     },
     {
