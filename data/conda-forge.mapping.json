@@ -24,10 +24,7 @@
           "clangdev"
         ],
         "run": [
-          "clang",
-          "clangxx",
-          "clang-format",
-          "clang-tools"
+          "clangdev"
         ]
       },
       "urls": {
@@ -247,7 +244,7 @@
           "llvmdev"
         ],
         "run": [
-          "llvm-tools"
+          "llvmdev"
         ]
       },
       "urls": {
