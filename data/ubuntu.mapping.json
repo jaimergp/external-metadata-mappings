@@ -211,15 +211,15 @@
       "specs": {
         "build": [],
         "host": [
-          "libtiff",
+          "libtiff6",
           "libtiff-dev"
         ],
         "run": [
-          "libtiff"
+          "libtiff6"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libtiff)": "https://packages.ubuntu.com/noble/libtiff",
+        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/noble/libtiff6",
         "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev"
       }
     },
@@ -281,14 +281,14 @@
       "specs": {
         "build": [],
         "host": [
-          "libxslt",
-          "libxslt-devel"
+          "libxslt1.1",
+          "libxslt1-dev"
         ],
-        "run": "libxslt"
+        "run": "libxslt1.1"
       },
       "urls": {
-        "packages.ubuntu.com (libxslt)": "https://packages.ubuntu.com/noble/libxslt",
-        "packages.ubuntu.com (libxslt-dev)": "https://packages.ubuntu.com/noble/libxslt-dev"
+        "packages.ubuntu.com (libxslt1-dev)": "https://packages.ubuntu.com/noble/libxslt1-dev",
+        "packages.ubuntu.com (libxslt1.1)": "https://packages.ubuntu.com/noble/libxslt1.1"
       }
     },
     {
@@ -436,15 +436,15 @@
         "build": [],
         "host": [
           "liblapack3",
-          "liblapack3-dev"
+          "liblapack-dev"
         ],
         "run": [
           "liblapack3"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
       }
     },
     {
@@ -562,7 +562,7 @@
         "build": [],
         "host": [
           "liblapack3",
-          "liblapack3-dev"
+          "liblapack-dev"
         ],
         "run": [
           "liblapack3"
@@ -570,7 +570,7 @@
       },
       "urls": {
         "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev"
       }
     },
     {
