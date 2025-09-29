@@ -401,9 +401,24 @@
     {
       "id": "dep:generic/python",
       "description": "The Python interpreter",
-      "specs": "python3",
+      "specs": {
+        "build": [
+          "python3.12-dev",
+          "python-is-python3"
+        ],
+        "host": [
+          "libpython3.12-dev"
+        ],
+        "run": [
+          "python3.12",
+          "python-is-python3"
+        ]
+      },
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/python3"
+        "packages.ubuntu.com (libpython3.12-dev)": "https://packages.ubuntu.com/noble/libpython3.12-dev",
+        "packages.ubuntu.com (python-is-python3)": "https://packages.ubuntu.com/noble/python-is-python3",
+        "packages.ubuntu.com (python3.12)": "https://packages.ubuntu.com/noble/python3.12",
+        "packages.ubuntu.com (python3.12-dev)": "https://packages.ubuntu.com/noble/python3.12-dev"
       }
     },
     {
