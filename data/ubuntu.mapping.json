@@ -117,6 +117,24 @@
     },
     {
       "id": "dep:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": {
+        "build": [],
+        "host": [
+          "libjpeg-turbo8",
+          "libjpeg-turbo8-dev"
+        ],
+        "run": [
+          "libjpeg-turbo8"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
+        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
       "description": "Independent JPEG Group's JPEG runtime library (Version 9)",
       "specs": {
         "build": [],
@@ -149,24 +167,6 @@
       "urls": {
         "packages.ubuntu.com (libjpeg62)": "https://packages.ubuntu.com/noble/libjpeg62",
         "packages.ubuntu.com (libjpeg62-dev)": "https://packages.ubuntu.com/noble/libjpeg62-dev"
-      }
-    },
-    {
-      "id": "dep:generic/libjpeg",
-      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
-      "specs": {
-        "build": [],
-        "host": [
-          "libjpeg-turbo8",
-          "libjpeg-turbo8-dev"
-        ],
-        "run": [
-          "libjpeg-turbo8"
-        ]
-      },
-      "urls": {
-        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
-        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
       }
     },
     {
@@ -211,16 +211,16 @@
       "specs": {
         "build": [],
         "host": [
-          "libtiff",
+          "libtiff6",
           "libtiff-dev"
         ],
         "run": [
-          "libtiff"
+          "libtiff6"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libtiff)": "https://packages.ubuntu.com/noble/libtiff",
-        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev"
+        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev",
+        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/noble/libtiff6"
       }
     },
     {
@@ -281,14 +281,14 @@
       "specs": {
         "build": [],
         "host": [
-          "libxslt",
-          "libxslt-devel"
+          "libxslt1.1",
+          "libxslt1-dev"
         ],
-        "run": "libxslt"
+        "run": "libxslt1.1"
       },
       "urls": {
-        "packages.ubuntu.com (libxslt)": "https://packages.ubuntu.com/noble/libxslt",
-        "packages.ubuntu.com (libxslt-dev)": "https://packages.ubuntu.com/noble/libxslt-dev"
+        "packages.ubuntu.com (libxslt1-dev)": "https://packages.ubuntu.com/noble/libxslt1-dev",
+        "packages.ubuntu.com (libxslt1.1)": "https://packages.ubuntu.com/noble/libxslt1.1"
       }
     },
     {
@@ -372,9 +372,22 @@
     {
       "id": "dep:generic/openssl",
       "description": "Secure Sockets Layer toolkit - cryptographic utility",
-      "specs": "openssl",
+      "specs": {
+        "build": [
+          "libssl-dev",
+          "openssl"
+        ],
+        "host": [
+          "libssl-dev",
+          "openssl"
+        ],
+        "run": [
+          "openssl"
+        ]
+      },
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/openssl"
+        "packages.ubuntu.com (libssl-dev)": "https://packages.ubuntu.com/noble/libssl-dev",
+        "packages.ubuntu.com (openssl)": "https://packages.ubuntu.com/noble/openssl"
       }
     },
     {
@@ -388,9 +401,24 @@
     {
       "id": "dep:generic/python",
       "description": "The Python interpreter",
-      "specs": "python3",
+      "specs": {
+        "build": [
+          "python3.12-dev",
+          "python-is-python3"
+        ],
+        "host": [
+          "libpython3.12-dev"
+        ],
+        "run": [
+          "python3.12",
+          "python-is-python3"
+        ]
+      },
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/python3"
+        "packages.ubuntu.com (libpython3.12-dev)": "https://packages.ubuntu.com/noble/libpython3.12-dev",
+        "packages.ubuntu.com (python-is-python3)": "https://packages.ubuntu.com/noble/python-is-python3",
+        "packages.ubuntu.com (python3.12)": "https://packages.ubuntu.com/noble/python3.12",
+        "packages.ubuntu.com (python3.12-dev)": "https://packages.ubuntu.com/noble/python3.12-dev"
       }
     },
     {
@@ -436,15 +464,15 @@
         "build": [],
         "host": [
           "liblapack3",
-          "liblapack3-dev"
+          "liblapack-dev"
         ],
         "run": [
           "liblapack3"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
       }
     },
     {
@@ -516,9 +544,25 @@
     {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
-      "specs": "rustc",
+      "specs": [
+        "cargo-1.82",
+        "rustc-1.82"
+      ],
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/rustc"
+        "packages.ubuntu.com (cargo-1.82)": "https://packages.ubuntu.com/noble/cargo-1.82",
+        "packages.ubuntu.com (rustc-1.82)": "https://packages.ubuntu.com/noble/rustc-1.82"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": [
+        "cargo",
+        "rustc"
+      ],
+      "urls": {
+        "packages.ubuntu.com (cargo)": "https://packages.ubuntu.com/noble/cargo",
+        "packages.ubuntu.com (rustc)": "https://packages.ubuntu.com/noble/rustc"
       }
     },
     {
@@ -562,15 +606,15 @@
         "build": [],
         "host": [
           "liblapack3",
-          "liblapack3-dev"
+          "liblapack-dev"
         ],
         "run": [
           "liblapack3"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3",
-        "packages.ubuntu.com (liblapack3-dev)": "https://packages.ubuntu.com/noble/liblapack3-dev"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
       }
     },
     {
