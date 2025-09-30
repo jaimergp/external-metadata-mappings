@@ -545,18 +545,6 @@
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust compiler",
       "specs": [
-        "cargo-1.82",
-        "rustc-1.82"
-      ],
-      "urls": {
-        "packages.ubuntu.com (cargo-1.82)": "https://packages.ubuntu.com/noble/cargo-1.82",
-        "packages.ubuntu.com (rustc-1.82)": "https://packages.ubuntu.com/noble/rustc-1.82"
-      }
-    },
-    {
-      "id": "dep:virtual/compiler/rust",
-      "description": "The Rust compiler",
-      "specs": [
         "cargo",
         "rustc"
       ],
