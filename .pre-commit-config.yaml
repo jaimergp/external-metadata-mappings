@@ -26,7 +26,7 @@ repos:
         name: Codespell
         args: [--write-changes]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 0.34.1
     hooks:
       - id: check-jsonschema
         name: Check JSON Schema (Registry)
@@ -38,7 +38,7 @@ repos:
         files: ^data/.*\.mapping\.json$
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.13.1
+    rev: v0.14.2
     hooks:
       # Run the linter.
       - id: ruff
