@@ -286,7 +286,7 @@ class SpecsDict(BaseModel):
     """
     Dependencies that must be present at build time and can be executed in the build machine.
     """
-    host: NonEmptyString | list[NonEmptyString]
+    build_host: NonEmptyString | list[NonEmptyString]
     """
     Dependencies that must be present at build time but only for linking purposes.
     Their architecture does not need to match the build machine.
