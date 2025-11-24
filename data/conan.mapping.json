@@ -391,7 +391,6 @@
           "greater_than_equal": ">={version}",
           "less_than": "<{version}",
           "less_than_equal": "<{version}=",
-          "not_equal": null,
           "syntax": [
             "{name}/[{ranges}]"
           ]

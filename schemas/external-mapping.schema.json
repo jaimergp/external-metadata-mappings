@@ -464,18 +464,6 @@
           "description": "A range for inclusive upper bound. If defined as a string, it MUST include at least the\n`{version}` placeholder. If `None`, this operator is not supported and no version constraints\nwill be applied.",
           "title": "Less Than Equal"
         },
-        "not_equal": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "description": "A range for inequality. If defined as a string, it MUST include at least the `{version}`\nplaceholder. If `None`, this operator is not supported and no version constraints will be\napplied.",
-          "title": "Not Equal"
-        },
         "syntax": {
           "description": "The syntax used to specify a constrained package selection (e.g. `package>=3,<4`). The\nfollowing placeholders are supported: `{name}` (the name of the package), `ranges` (the merged\nversion constraints). This value is a list of strings because some package managers may need\nseveral arguments to express a single package version constraint. It MUST include at least\n`{ranges}`. Some examples: `[\"{name}{ranges}\"]`, `[\"{ranges}\"]`, `[\"--spec\", \"{name}\",\n\"--version\", \"{ranges}\"]`.",
           "items": {
@@ -493,8 +481,7 @@
         "greater_than_equal",
         "greater_than",
         "less_than_equal",
-        "less_than",
-        "not_equal"
+        "less_than"
       ],
       "title": "VersionRanges",
       "type": "object"

@@ -413,7 +413,6 @@
           "greater_than_equal": ">={name}-{version}",
           "less_than": "<{name}-{version}",
           "less_than_equal": "<={name}-{version}",
-          "not_equal": null,
           "syntax": [
             "{ranges}"
           ]
@@ -454,7 +453,6 @@
           "greater_than_equal": ">={name}-{version}",
           "less_than": "<{name}-{version}",
           "less_than_equal": "<={name}-{version}",
-          "not_equal": null,
           "syntax": [
             "{ranges}"
           ]
