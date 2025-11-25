@@ -505,7 +505,6 @@
           "greater_than_equal": "{name}@{version}:",
           "less_than": null,
           "less_than_equal": "{name}@:{version}",
-          "not_equal": null,
           "syntax": [
             "{ranges}"
           ]

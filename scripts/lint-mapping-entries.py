@@ -85,7 +85,6 @@ for path in sorted(sys.argv[1:]):
                         "greater_than_equal",
                         "less_than",
                         "less_than_equal",
-                        "not_equal",
                     ):
                         op = version_ranges[opkey]
                         if op is None:

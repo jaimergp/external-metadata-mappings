@@ -131,12 +131,6 @@ class VersionRanges(BaseModel):
     `{version}` placeholder. If `None`, this operator is not supported and no version constraints
     will be applied.
     """
-    not_equal: str | None
-    """
-    A range for inequality. If defined as a string, it MUST include at least the `{version}`
-    placeholder. If `None`, this operator is not supported and no version constraints will be
-    applied.
-    """
 
 
 class SpecifierSyntax(BaseModel):
