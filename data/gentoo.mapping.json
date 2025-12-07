@@ -90,6 +90,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "Portable fork of NaCl, a higher-level cryptographic library",
+      "specs": "dev-libs/libsodium",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/libsodium"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Tag Image File Format (TIFF) library",
       "specs": "media-libs/tiff",

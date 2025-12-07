@@ -98,6 +98,14 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "NaCl networking and cryptography library",
+      "specs": "libsodium",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libsodium"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": "libtiff",

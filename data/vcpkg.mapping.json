@@ -92,6 +92,14 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "A modern and easy-to-use crypto library",
+      "specs": "libsodium",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libsodium"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "A library that supports the manipulation of TIFF image files",
       "specs": "tiff",

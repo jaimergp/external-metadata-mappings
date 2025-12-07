@@ -74,6 +74,11 @@
       "specs": []
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "A modern and easy-to-use crypto library",
+      "specs": []
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": []

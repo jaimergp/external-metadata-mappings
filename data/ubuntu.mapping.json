@@ -206,6 +206,24 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "Network communication, cryptography and signaturing library",
+      "specs": {
+        "build": [],
+        "build_host": [
+          "libsodium-dev",
+          "libsodium23"
+        ],
+        "run": [
+          "libsodium23"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libsodium-dev)": "https://packages.ubuntu.com/noble/libsodium-dev",
+        "packages.ubuntu.com (libsodium23)": "https://packages.ubuntu.com/noble/libsodium23"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {

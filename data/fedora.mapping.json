@@ -216,6 +216,14 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "The Sodium crypto library",
+      "specs": "libsodium",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/libsodium/libsodium/"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {

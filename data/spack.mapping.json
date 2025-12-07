@@ -104,6 +104,14 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "Sodium is a modern, easy-to-use software library for encryption, decryption, signatures, password hashing and more.",
+      "specs": "libsodium",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=libsodium"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "LibTIFF - Tag Image File Format (TIFF) Library and Utilities.",
       "specs": "libtiff",

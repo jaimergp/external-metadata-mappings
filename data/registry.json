@@ -52,6 +52,10 @@
       "description": "Raqm is a small library that encapsulates the logic for complex text layout"
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "A modern, portable, easy to use crypto library"
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "The LibTIFF software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data."
     },

@@ -101,6 +101,14 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "Modern and easy-to-use crypto library",
+      "specs": "libsodium",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libsodium"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Library and utilities for working with the TIFF image file format",
       "specs": "libtiff",
@@ -202,14 +210,6 @@
       "specs": "pkgconf",
       "urls": {
         "nixos.org": "https://search.nixos.org/packages?show=pkgconf"
-      }
-    },
-    {
-      "id": "dep:generic/pkg-config",
-      "description": "Tool that allows packages to find out information about other packages (wrapper script)",
-      "specs": "pkg-config",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=pkg-config"
       }
     },
     {

@@ -93,6 +93,14 @@
       }
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "A modern, portable, easy to use crypto library",
+      "specs": "libsodium",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libsodium/"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": "libtiff",

@@ -92,6 +92,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/libsodium",
+      "description": "A modern and easy-to-use crypto library",
+      "specs": "libsodium/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libsodium"
+      }
+    },
+    {
       "id": "dep:generic/libtiff",
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": "libtiff/[*]",
