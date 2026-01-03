@@ -20,7 +20,7 @@
           "clang",
           "clangxx"
         ],
-        "build_host": [
+        "host": [
           "clangdev"
         ],
         "run": [
@@ -163,7 +163,7 @@
       "description": "WebP image library. libwebp-base ships libraries; libwebp ships the binaries.",
       "specs": {
         "build": "libwebp",
-        "build_host": "libwebp-base",
+        "host": "libwebp-base",
         "run": "libwebp"
       },
       "urls": {
@@ -183,7 +183,7 @@
       "description": "The XML C parser and toolkit of Gnome",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libxml2",
           "libxml2-devel"
         ],
@@ -200,7 +200,7 @@
       "description": "CDT for libxml2, repackaged from CentOS 7. There are more like this, but didn't include them for brevity.",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libxml2-cos7-x86_64",
           "libxml2-devel-cos7-x86_64"
         ],
@@ -247,7 +247,7 @@
       "description": "Development headers and libraries for LLVM",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "llvm",
           "llvmdev"
         ],
@@ -402,7 +402,7 @@
           "{{ compiler('c') }}",
           "{{ stdlib('c') }}"
         ],
-        "build_host": [],
+        "host": [],
         "run": [
           "c-compiler"
         ]
@@ -446,7 +446,7 @@
         "build": [
           "{{ compiler('fortran') }}"
         ],
-        "build_host": [],
+        "host": [],
         "run": [
           "fortran-compiler"
         ]
@@ -497,7 +497,7 @@
         "build": [
           "{{ compiler('rust') }}"
         ],
-        "build_host": [],
+        "host": [],
         "run": [
           "rust"
         ]
@@ -529,7 +529,7 @@
       "description": "A metapackage for any BLAS implementation",
       "specs": {
         "build": "libblas * *_netlib",
-        "build_host": "libblas * *_netlib",
+        "host": "libblas * *_netlib",
         "run": "libblas"
       },
       "urls": {

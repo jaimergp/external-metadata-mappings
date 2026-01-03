@@ -9,7 +9,7 @@
       "description": "A toolbox for accelerated data interchange and in-memory processing",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libarrow",
           "libarrow-devel",
           "libarrow-dataset-libs",
@@ -32,7 +32,7 @@
         "build": [
           "clang"
         ],
-        "build_host": [
+        "host": [
           "clang-devel",
           "clang-libs"
         ],
@@ -60,7 +60,7 @@
       "description": "A free and portable font rendering engine",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "freetype",
           "freetype-devel"
         ],
@@ -78,7 +78,7 @@
       "description": "GNU arbitrary precision library",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "gmp",
           "gmp-devel"
         ],
@@ -96,7 +96,7 @@
       "description": "Color management engine supporting ICC profiles",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "lcms2",
           "lcms2-devel"
         ],
@@ -114,7 +114,7 @@
       "description": "A Portable Foreign Function Interface Library",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libffi",
           "libffi-devel"
         ],
@@ -148,7 +148,7 @@
       "description": "Palette quantization library that powers pngquant and other PNG optimizers",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libimagequant",
           "libimagequant-devel"
         ],
@@ -166,7 +166,7 @@
       "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libjpeg-turbo",
           "libjpeg-turbo-devel"
         ],
@@ -184,7 +184,7 @@
       "description": "Postgres C API library",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libpq",
           "libpq-devel"
         ],
@@ -202,7 +202,7 @@
       "description": "A library for complex text layout.",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libraqm",
           "libraqm-devel"
         ],
@@ -228,7 +228,7 @@
       "description": "Support for the Tag Image File Format (TIFF)",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libtiff",
           "libtiff-devel"
         ],
@@ -246,7 +246,7 @@
       "description": "WebP image library.",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libwebp",
           "libwebp-devel"
         ],
@@ -264,7 +264,7 @@
       "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libxcb",
           "libxcb-devel"
         ],
@@ -282,7 +282,7 @@
       "description": "The XML C parser and toolkit of Gnome",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libxml2",
           "libxml2-devel"
         ],
@@ -316,7 +316,7 @@
       "description": "The XSLT C library developed for the GNOME project",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libxslt",
           "libxslt-devel"
         ],
@@ -332,7 +332,7 @@
       "description": "A C library for parsing and emitting YAML",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "libyaml",
           "libyaml-devel"
         ],
@@ -350,7 +350,7 @@
       "description": "LLVM is a compiler infrastructure designed for compile-time, link-time, runtime, and idle-time optimization of programs from arbitrary programming languages",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "llvm",
           "llvm-devel"
         ],
@@ -384,7 +384,7 @@
       "description": "An optimized BLAS library based on GotoBLAS2",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "openblas",
           "openblas-devel"
         ],
@@ -402,7 +402,7 @@
       "description": "An open-source JPEG 2000 codec written in C",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "openjpeg",
           "openjpeg-devel"
         ],
@@ -420,7 +420,7 @@
       "description": "Utilities from the general purpose cryptography library with TLS implementation",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "openssl",
           "openssl-devel"
         ],
@@ -444,7 +444,7 @@
       "description": "The Python interpreter",
       "specs": {
         "build": "python3-devel",
-        "build_host": "python3-devel",
+        "host": "python3-devel",
         "run": [
           "python3",
           "python-unversioned-command"
@@ -461,7 +461,7 @@
       "description": "The graphical toolkit for the Tcl scripting language",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "tk",
           "tk-devel"
         ],
@@ -479,7 +479,7 @@
       "description": "The zlib-ng-compat package contains the library that is API and binary compatible with zlib.",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "zlib-ng-compat",
           "zlib-ng-compat-devel"
         ],
@@ -605,7 +605,7 @@
       "description": "The Basic Linear Algebra Subprograms library",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "blas",
           "blas-devel"
         ],
@@ -621,7 +621,7 @@
       "description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "openblas",
           "openblas-devel"
         ],
@@ -637,7 +637,7 @@
       "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "flexiblas",
           "flexiblas-devel"
         ],
@@ -653,7 +653,7 @@
       "description": "Numerical linear algebra package libraries",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "lapack",
           "lapack-devel"
         ],
@@ -669,7 +669,7 @@
       "description": "A BLAS/LAPACK wrapper library with runtime exchangeable backends",
       "specs": {
         "build": [],
-        "build_host": [
+        "host": [
           "flexiblas",
           "flexiblas-devel"
         ],
