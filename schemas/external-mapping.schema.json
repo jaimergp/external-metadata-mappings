@@ -352,7 +352,7 @@
           "description": "Dependencies that must be present at build time and can be executed in the build machine.",
           "title": "Build"
         },
-        "build_host": {
+        "host": {
           "anyOf": [
             {
               "minLength": 1,
@@ -367,7 +367,7 @@
             }
           ],
           "description": "Dependencies that must be present at build time but only for linking purposes.\nTheir architecture does not need to match the build machine.",
-          "title": "Build Host"
+          "title": "Host"
         },
         "run": {
           "anyOf": [
@@ -389,7 +389,7 @@
       },
       "required": [
         "build",
-        "build_host",
+        "host",
         "run"
       ],
       "title": "SpecsDict",
