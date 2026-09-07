@@ -20,13 +20,13 @@ repos:
       - id: check-hooks-apply
       - id: check-useless-excludes
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.1
+    rev: v2.4.3
     hooks:
       - id: codespell
         name: Codespell
         args: [--write-changes]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.35.0
+    rev: 0.38.0
     hooks:
       - id: check-jsonschema
         name: Check JSON Schema (Registry)
@@ -38,7 +38,7 @@ repos:
         files: ^data/.*\.mapping\.json$
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.14.6
+    rev: v0.16.6
     hooks:
       # Run the linter.
       - id: ruff
