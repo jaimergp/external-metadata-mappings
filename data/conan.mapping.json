@@ -34,6 +34,12 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.",
       "specs": "gmp/[*]",
@@ -191,6 +197,12 @@
       "urls": {
         "conan.io": "https://conan.io/center/recipes/openssl"
       }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "",
+      "specs": [],
+      "urls": {}
     },
     {
       "id": "dep:generic/pkg-config",

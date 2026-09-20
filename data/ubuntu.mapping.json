@@ -44,6 +44,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "fast, scalable, distributed revision control system",
+      "specs": "git",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": {
@@ -406,6 +414,14 @@
       "urls": {
         "packages.ubuntu.com (libssl-dev)": "https://packages.ubuntu.com/noble/libssl-dev",
         "packages.ubuntu.com (openssl)": "https://packages.ubuntu.com/noble/openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Apply a diff file to an original",
+      "specs": "patch",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/patch"
       }
     },
     {

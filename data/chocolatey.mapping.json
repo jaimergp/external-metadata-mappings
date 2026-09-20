@@ -28,6 +28,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/git",
+      "description": "Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike",
+      "specs": "git",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": []
@@ -142,6 +150,14 @@
       "specs": "openssl",
       "urls": {
         "chocolatey.org": "https://community.chocolatey.org/packages/openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "'patch' takes a patch file containing a difference listing produced by diff and applies those differences to one or more original files, producing patched versions",
+      "specs": "patch",
+      "urls": {
+        "chocolatey.org": "https://community.chocolatey.org/packages/patch"
       }
     },
     {

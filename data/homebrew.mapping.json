@@ -19,7 +19,7 @@
     },
     {
       "id": "dep:generic/cmake",
-      "description": "",
+      "description": "Cross-platform make",
       "specs": "cmake",
       "urls": {
         "brew.sh": "https://formulae.brew.sh/formula/cmake"
@@ -31,6 +31,14 @@
       "specs": "freetype",
       "urls": {
         "brew.sh": "https://formulae.brew.sh/formula/freetype"
+      }
+    },
+    {
+      "id": "dep:generic/git",
+      "description": "Distributed revision control system",
+      "specs": "git",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/git"
       }
     },
     {
@@ -193,6 +201,14 @@
       "specs": "openssl",
       "urls": {
         "brew.sh": "https://formulae.brew.sh/formula/openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "GNU Patch applies a diff file to an original",
+      "specs": "gpatch",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/gpatch"
       }
     },
     {

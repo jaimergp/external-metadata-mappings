@@ -37,6 +37,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "the fast distributed version control system",
+      "specs": "git",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/git/"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": "gmp",
@@ -202,6 +210,14 @@
       "specs": "openssl",
       "urls": {
         "archlinux.org": "https://archlinux.org/packages/core/x86_64/openssl/"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "A utility to apply patch files to original sources",
+      "specs": "patch",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/core/x86_64/patch/"
       }
     },
     {

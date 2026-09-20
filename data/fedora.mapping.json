@@ -74,6 +74,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "Fast Version Control System",
+      "specs": "git",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/git/git/"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "GNU arbitrary precision library",
       "specs": {
@@ -429,6 +437,14 @@
       "urls": {
         "packages.fedoraproject.org (openssl)": "https://packages.fedoraproject.org/pkgs/openssl/openssl/",
         "packages.fedoraproject.org (openssl-devel)": "https://packages.fedoraproject.org/pkgs/openssl/openssl-devel/"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Utility for modifying/upgrading files",
+      "specs": "patch",
+      "urls": {
+        "packages.fedoraproject.org": "https://packages.fedoraproject.org/pkgs/patch/patch/"
       }
     },
     {

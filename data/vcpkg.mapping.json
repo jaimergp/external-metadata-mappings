@@ -31,6 +31,12 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "GNU multiple precision arithmetic library",
       "specs": "gmp",
@@ -188,6 +194,12 @@
       "urls": {
         "vcpkg.io": "https://vcpkg.io/en/package/openssl"
       }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "",
+      "specs": [],
+      "urls": {}
     },
     {
       "id": "dep:generic/pkg-config",

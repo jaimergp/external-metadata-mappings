@@ -28,6 +28,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/git",
+      "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+      "specs": "Git.Git",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/Git.Git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": []
@@ -148,6 +156,14 @@
       "specs": "ShiningLight.OpenSSL",
       "urls": {
         "winstall.app": "https://winstall.app/apps/ShiningLight.OpenSSL"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "'patch' takes a patch file containing a difference listing produced by diff and applies those differences to one or more original files, producing patched versions.",
+      "specs": "GnuWin32.Patch",
+      "urls": {
+        "winstall.app": "https://winstall.app/apps/GnuWin32.Patch"
       }
     },
     {
