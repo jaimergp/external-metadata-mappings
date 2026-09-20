@@ -37,9 +37,9 @@
         "packages.ubuntu.com (libarrow-dev)": "https://packages.ubuntu.com/resolute/libarrow-dev",
         "packages.ubuntu.com (libarrow-flight-dev)": "https://packages.ubuntu.com/resolute/libarrow-flight-dev",
         "packages.ubuntu.com (libarrow-flight2300)": "https://packages.ubuntu.com/resolute/libarrow-flight2300",
+        "packages.ubuntu.com (libarrow2300)": "https://packages.ubuntu.com/resolute/libarrow2300",
         "packages.ubuntu.com (libgandiva-dev)": "https://packages.ubuntu.com/resolute/libgandiva-dev",
-        "packages.ubuntu.com (libgandiva2300)": "https://packages.ubuntu.com/resolute/libgandiva2300",
-        "packages.ubuntu.com (libarrow2300)": "https://packages.ubuntu.com/resolute/libarrow2300"
+        "packages.ubuntu.com (libgandiva2300)": "https://packages.ubuntu.com/resolute/libgandiva2300"
       }
     },
     {
