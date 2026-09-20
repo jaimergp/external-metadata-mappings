@@ -331,7 +331,7 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libxslt-dev)": "https://packages.ubuntu.com/noble/libxslt-dev",
+        "packages.ubuntu.com (libyaml-dev)": "https://packages.ubuntu.com/noble/libyaml-dev",
         "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/noble/libyaml-0-2"
       }
     },
