@@ -3,49 +3,49 @@
   "schema_version": 1,
   "ecosystems": {
     "arch": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/arch.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/arch.mapping.json"
     },
     "chocolatey": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/chocolatey.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/chocolatey.mapping.json"
     },
     "conan": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/conan.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/conan.mapping.json"
     },
     "conda-forge": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/conda-forge.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/conda-forge.mapping.json"
     },
     "fedora": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/fedora.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/fedora.mapping.json"
     },
     "gentoo": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/gentoo.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/gentoo.mapping.json"
     },
     "homebrew": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/homebrew.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/homebrew.mapping.json"
     },
     "nix": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/nix.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/nix.mapping.json"
     },
     "scoop": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/scoop.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/scoop.mapping.json"
     },
     "spack": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/spack.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/spack.mapping.json"
     },
     "ubuntu": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/ubuntu+26.04.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu+26.04.mapping.json"
     },
     "ubuntu+24.04": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/ubuntu+24.04.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu+24.04.mapping.json"
     },
     "ubuntu+26.04": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/ubuntu+26.04.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu+26.04.mapping.json"
     },
     "vcpkg": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/vcpkg.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/vcpkg.mapping.json"
     },
     "winget": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/ubuntu-26/data/winget.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/winget.mapping.json"
     }
   }
 }
