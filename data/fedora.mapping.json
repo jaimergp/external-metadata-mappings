@@ -12,16 +12,23 @@
         "host": [
           "libarrow",
           "libarrow-devel",
+          "libarrow-compute-libs",
+          "libarrow-compute-devel",
           "libarrow-dataset-libs",
           "libarrow-dataset-devel"
         ],
         "run": [
           "libarrow",
+          "libarrow-compute-libs",
           "libarrow-dataset-libs"
         ]
       },
       "urls": {
         "packages.fedoraproject.org (libarrow)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow/",
+        "packages.fedoraproject.org (libarrow-compute-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-compute-devel/",
+        "packages.fedoraproject.org (libarrow-compute-libs)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-compute-libs/",
+        "packages.fedoraproject.org (libarrow-dataset-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-dataset-devel/",
+        "packages.fedoraproject.org (libarrow-dataset-libs)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-dataset-libs/",
         "packages.fedoraproject.org (libarrow-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-devel/"
       }
     },
