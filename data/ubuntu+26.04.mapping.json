@@ -12,18 +12,28 @@
         "host": [
           "libarrow2300",
           "libarrow-dev",
+          "libarrow-acero2300",
+          "libarrow-acero-dev",
           "libarrow-dataset2300",
-          "libarrow-dataset-dev"
+          "libarrow-dataset-dev",
+          "libarrow-flight2300",
+          "libarrow-flight-dev"
         ],
         "run": [
           "libarrow",
-          "libarrow-dataset2300"
+          "libarrow-acero2300",
+          "libarrow-dataset2300",
+          "libarrow-flight2300"
         ]
       },
       "urls": {
+        "packages.ubuntu.com (libarrow-acero-dev)": "https://packages.ubuntu.com/resolute/libarrow-acero-dev",
+        "packages.ubuntu.com (libarrow-acero2300)": "https://packages.ubuntu.com/resolute/libarrow-acero2300",
         "packages.ubuntu.com (libarrow-dataset-dev)": "https://packages.ubuntu.com/resolute/libarrow-dataset-dev",
         "packages.ubuntu.com (libarrow-dataset2300)": "https://packages.ubuntu.com/resolute/libarrow-dataset2300",
         "packages.ubuntu.com (libarrow-dev)": "https://packages.ubuntu.com/resolute/libarrow-dev",
+        "packages.ubuntu.com (libarrow-flight-dev)": "https://packages.ubuntu.com/resolute/libarrow-flight-dev",
+        "packages.ubuntu.com (libarrow-flight2300)": "https://packages.ubuntu.com/resolute/libarrow-flight2300",
         "packages.ubuntu.com (libarrow2300)": "https://packages.ubuntu.com/resolute/libarrow2300"
       }
     },
