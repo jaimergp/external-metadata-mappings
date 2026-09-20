@@ -21,10 +21,10 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libarrow2300)": "https://packages.ubuntu.com/resolute/libarrow2300",
-        "packages.ubuntu.com (libarrow-dev)": "https://packages.ubuntu.com/resolute/libarrow-dev",
+        "packages.ubuntu.com (libarrow-dataset-dev)": "https://packages.ubuntu.com/resolute/libarrow-dataset-dev",
         "packages.ubuntu.com (libarrow-dataset2300)": "https://packages.ubuntu.com/resolute/libarrow-dataset2300",
-        "packages.ubuntu.com (libarrow-dataset-dev)": "https://packages.ubuntu.com/resolute/libarrow-dataset-dev"
+        "packages.ubuntu.com (libarrow-dev)": "https://packages.ubuntu.com/resolute/libarrow-dev",
+        "packages.ubuntu.com (libarrow2300)": "https://packages.ubuntu.com/resolute/libarrow2300"
       }
     },
     {
@@ -57,8 +57,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libfreetype6)": "https://packages.ubuntu.com/resolute/libfreetype6",
-        "packages.ubuntu.com (libfreetype-dev)": "https://packages.ubuntu.com/resolute/libfreetype-dev"
+        "packages.ubuntu.com (libfreetype-dev)": "https://packages.ubuntu.com/resolute/libfreetype-dev",
+        "packages.ubuntu.com (libfreetype6)": "https://packages.ubuntu.com/resolute/libfreetype6"
       }
     },
     {
@@ -83,8 +83,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libgmp10)": "https://packages.ubuntu.com/resolute/libgmp10",
-        "packages.ubuntu.com (libgmp-dev)": "https://packages.ubuntu.com/resolute/libgmp-dev"
+        "packages.ubuntu.com (libgmp-dev)": "https://packages.ubuntu.com/resolute/libgmp-dev",
+        "packages.ubuntu.com (libgmp10)": "https://packages.ubuntu.com/resolute/libgmp10"
       }
     },
     {
@@ -349,8 +349,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libyaml-dev)": "https://packages.ubuntu.com/resolute/libyaml-dev",
-        "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/resolute/libyaml-0-2"
+        "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/resolute/libyaml-0-2",
+        "packages.ubuntu.com (libyaml-dev)": "https://packages.ubuntu.com/resolute/libyaml-dev"
       }
     },
     {
