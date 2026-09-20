@@ -1,5 +1,5 @@
-import sys
 import json
+import sys
 from pathlib import Path
 
 REGISTRY_PATH = Path(__file__).parent.parent / "data" / "registry.json"
@@ -43,13 +43,14 @@ for path in sorted(sys.argv[1:]):
             for command_name, command_details in package_manager.get(
                 "commands", {}
             ).items():
-                if command_args := command_details.get("command"):
-                    if not any("{}" in arg for arg in command_args):
-                        print(
-                            f"{path}: package_managers.{package_manager['name']}.commands.{command_name}.command",
-                            "is missing the placeholder '{}'",
-                        )
-                        exit_code = 1
+                if (command_args := command_details.get("command")) and not any(
+                    "{}" in arg for arg in command_args
+                ):
+                    print(
+                        f"{path}: package_managers.{package_manager['name']}.commands.{command_name}.command",
+                        "is missing the placeholder '{}'",
+                    )
+                    exit_code = 1
             if specifier_syntax := package_manager.get("specifier_syntax", {}):
                 if "{name}" not in specifier_syntax["name_only"]:
                     print(

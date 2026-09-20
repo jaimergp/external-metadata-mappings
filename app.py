@@ -7,9 +7,8 @@ import shlex
 from pathlib import Path
 
 import streamlit as st
-
-from pyproject_external import Registry, Mapping
-from pyproject_external._registry import PackageManager, MappedSpec
+from pyproject_external import Mapping, Registry
+from pyproject_external._registry import MappedSpec, PackageManager
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"

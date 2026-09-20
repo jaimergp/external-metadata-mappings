@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Annotated, Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, AnyUrl
+from pydantic import AnyUrl, BaseModel, ConfigDict, Field
 
 HERE = Path(__file__).parent
 CENTRAL_REGISTRY_FILE = HERE / "central-registry.schema.json"

@@ -1,0 +1,4 @@
+[lint]
+ignore = [
+    "D419", # Docstring is empty
+]
