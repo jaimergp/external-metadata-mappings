@@ -455,22 +455,22 @@
       "description": "The Python interpreter",
       "specs": {
         "build": [
-          "python3.13-dev",
+          "python3-dev",
           "python-is-python3"
         ],
         "host": [
-          "libpython3.13-dev"
+          "libpython3-dev"
         ],
         "run": [
-          "python3.13",
+          "python3",
           "python-is-python3"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libpython3.13-dev)": "https://packages.ubuntu.com/resolute/libpython3.13-dev",
+        "packages.ubuntu.com (libpython3-dev)": "https://packages.ubuntu.com/resolute/libpython3-dev",
         "packages.ubuntu.com (python-is-python3)": "https://packages.ubuntu.com/resolute/python-is-python3",
-        "packages.ubuntu.com (python3.13)": "https://packages.ubuntu.com/resolute/python3.13",
-        "packages.ubuntu.com (python3.13-dev)": "https://packages.ubuntu.com/resolute/python3.13-dev"
+        "packages.ubuntu.com (python3)": "https://packages.ubuntu.com/resolute/python3",
+        "packages.ubuntu.com (python3-dev)": "https://packages.ubuntu.com/resolute/python3-dev"
       }
     },
     {
