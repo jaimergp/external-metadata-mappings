@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
   "schema_version": 1,
-  "name": "Fedora",
-  "description": "Mapping for the Fedora distro",
+  "name": "Fedora 44",
+  "description": "Mapping for the Fedora 44 distro",
   "mappings": [
     {
       "id": "dep:generic/arrow",
@@ -15,12 +15,15 @@
           "libarrow-compute-libs",
           "libarrow-compute-devel",
           "libarrow-dataset-libs",
-          "libarrow-dataset-devel"
+          "libarrow-dataset-devel",
+          "libarrow-flight-libs",
+          "libarrow-flight-devel"
         ],
         "run": [
           "libarrow",
           "libarrow-compute-libs",
-          "libarrow-dataset-libs"
+          "libarrow-dataset-libs",
+          "libarrow-flight-libs"
         ]
       },
       "urls": {
@@ -29,7 +32,9 @@
         "packages.fedoraproject.org (libarrow-compute-libs)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-compute-libs/",
         "packages.fedoraproject.org (libarrow-dataset-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-dataset-devel/",
         "packages.fedoraproject.org (libarrow-dataset-libs)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-dataset-libs/",
-        "packages.fedoraproject.org (libarrow-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-devel/"
+        "packages.fedoraproject.org (libarrow-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-devel/",
+        "packages.fedoraproject.org (libarrow-flight-devel)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-flight-devel/",
+        "packages.fedoraproject.org (libarrow-flight-libs)": "https://packages.fedoraproject.org/pkgs/libarrow/libarrow-flight-libs/"
       }
     },
     {
