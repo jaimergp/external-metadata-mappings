@@ -31,6 +31,12 @@
       "urls": {}
     },
     {
+      "id": "dep:generic/git",
+      "description": "",
+      "specs": [],
+      "urls": {}
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": [],
@@ -156,6 +162,12 @@
     {
       "id": "dep:generic/openssl",
       "description": "OpenSSL as built from sources at openssl.org",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "",
       "specs": [],
       "urls": {}
     },

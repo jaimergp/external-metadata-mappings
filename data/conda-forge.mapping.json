@@ -58,6 +58,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "distributed version control system",
+      "specs": "git",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/git-feedstock"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": "gmp",
@@ -316,6 +324,22 @@
       "id": "dep:generic/openssl",
       "description": "openssl repackaged from mingw-w64",
       "specs": "m2w64-openssl"
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Utility to apply diffs to files",
+      "specs": "patch",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/patch-feedstock"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "A utility to apply patch files to original sources, from MSYS2",
+      "specs": "m2-patch",
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/m2-binary-packages-feedstock"
+      }
     },
     {
       "id": "dep:generic/pkg-config",

@@ -37,6 +37,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "Stupid content tracker: distributed VCS designed for speed and efficiency",
+      "specs": "dev-vcs/git",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-vcs/git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "Library for arbitrary-precision arithmetic on different type of numbers",
       "specs": "dev-libs/gmp",
@@ -191,6 +199,14 @@
       "specs": "dev-libs/openssl",
       "urls": {
         "packages.gentoo.org": "https://packages.gentoo.org/packages/dev-libs/openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Utility to apply diffs to files",
+      "specs": "sys-devel/patch",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/sys-devel/patch"
       }
     },
     {

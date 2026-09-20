@@ -24,6 +24,10 @@
       "description": "FreeType is a freely available software library to render fonts."
     },
     {
+      "id": "dep:generic/git",
+      "description": "Git is a free and open source distributed version control system."
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU Multiple Precision Arithmetic Library"
     },
@@ -105,6 +109,10 @@
     {
       "id": "dep:generic/openssl",
       "description": "OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols"
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Apply a diff file to an original"
     },
     {
       "id": "dep:generic/pkg-config",

@@ -40,6 +40,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+      "specs": "git",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.",
       "specs": "gmp",
@@ -205,6 +213,14 @@
       "specs": "openssl",
       "urls": {
         "packages.spack.io": "https://packages.spack.io/package.html?name=openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Patch takes a patch file containing a difference listing produced by the diff program and applies those differences to one or more original files, producing patched versions.",
+      "specs": "patch",
+      "urls": {
+        "packages.spack.io": "https://packages.spack.io/package.html?name=patch"
       }
     },
     {

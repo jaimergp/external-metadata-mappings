@@ -37,6 +37,14 @@
       }
     },
     {
+      "id": "dep:generic/git",
+      "description": "Distributed version control system",
+      "specs": "git",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "GNU multiple precision arithmetic library",
       "specs": "gmp",
@@ -202,6 +210,14 @@
       "specs": "openssl",
       "urls": {
         "nixos.org": "https://search.nixos.org/packages?show=openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "GNU Patch, a program to apply differences to files",
+      "specs": "patch",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=patch"
       }
     },
     {

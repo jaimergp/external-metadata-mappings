@@ -28,6 +28,14 @@
       "specs": []
     },
     {
+      "id": "dep:generic/git",
+      "description": "A free and open source distributed version control system",
+      "specs": "main/git",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=git"
+      }
+    },
+    {
       "id": "dep:generic/gmp",
       "description": "The GNU multiprecision library",
       "specs": []
@@ -170,6 +178,14 @@
       "specs": "main/openssl-light",
       "urls": {
         "scoop.sh": "https://scoop.sh/#/apps?q=openssl-light"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Apply diff to original",
+      "specs": "main/patch",
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=patch"
       }
     },
     {
