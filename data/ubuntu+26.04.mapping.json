@@ -1,20 +1,53 @@
 {
   "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
   "schema_version": 1,
-  "name": "Ubuntu 24.04",
-  "description": "Mapping for the Ubuntu 24.04 LTS (Noble) distro",
+  "name": "Ubuntu 26.04",
+  "description": "Mapping for the Ubuntu 26.04 LTS (Resolute) distro",
   "mappings": [
     {
       "id": "dep:generic/arrow",
       "description": "C++ libraries for Apache Arrow core",
-      "specs": []
+      "specs": {
+        "build": [],
+        "host": [
+          "libarrow2300",
+          "libarrow-dev",
+          "libarrow-acero2300",
+          "libarrow-acero-dev",
+          "libarrow-dataset2300",
+          "libarrow-dataset-dev",
+          "libarrow-flight2300",
+          "libarrow-flight-dev",
+          "libgandiva2300",
+          "libgandiva-dev"
+        ],
+        "run": [
+          "libarrow",
+          "libarrow-acero2300",
+          "libarrow-dataset2300",
+          "libarrow-flight2300",
+          "libgandiva2300"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libarrow-acero-dev)": "https://packages.ubuntu.com/resolute/libarrow-acero-dev",
+        "packages.ubuntu.com (libarrow-acero2300)": "https://packages.ubuntu.com/resolute/libarrow-acero2300",
+        "packages.ubuntu.com (libarrow-dataset-dev)": "https://packages.ubuntu.com/resolute/libarrow-dataset-dev",
+        "packages.ubuntu.com (libarrow-dataset2300)": "https://packages.ubuntu.com/resolute/libarrow-dataset2300",
+        "packages.ubuntu.com (libarrow-dev)": "https://packages.ubuntu.com/resolute/libarrow-dev",
+        "packages.ubuntu.com (libarrow-flight-dev)": "https://packages.ubuntu.com/resolute/libarrow-flight-dev",
+        "packages.ubuntu.com (libarrow-flight2300)": "https://packages.ubuntu.com/resolute/libarrow-flight2300",
+        "packages.ubuntu.com (libarrow2300)": "https://packages.ubuntu.com/resolute/libarrow2300",
+        "packages.ubuntu.com (libgandiva-dev)": "https://packages.ubuntu.com/resolute/libgandiva-dev",
+        "packages.ubuntu.com (libgandiva2300)": "https://packages.ubuntu.com/resolute/libgandiva2300"
+      }
     },
     {
       "id": "dep:generic/clang",
       "description": "C, C++ and Objective-C compiler (LLVM based), clang binary",
       "specs": "clang",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/clang"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/clang"
       }
     },
     {
@@ -22,7 +55,7 @@
       "description": "cross-platform, open-source make system",
       "specs": "cmake",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/cmake"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/cmake"
       }
     },
     {
@@ -39,8 +72,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libfreetype6)": "https://packages.ubuntu.com/noble/libfreetype6",
-        "packages.ubuntu.com (libfreetype6-dev)": "https://packages.ubuntu.com/noble/libfreetype6-dev"
+        "packages.ubuntu.com (libfreetype-dev)": "https://packages.ubuntu.com/resolute/libfreetype-dev",
+        "packages.ubuntu.com (libfreetype6)": "https://packages.ubuntu.com/resolute/libfreetype6"
       }
     },
     {
@@ -48,7 +81,7 @@
       "description": "fast, scalable, distributed revision control system",
       "specs": "git",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/git"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/git"
       }
     },
     {
@@ -65,8 +98,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libgmp10)": "https://packages.ubuntu.com/noble/libgmp10",
-        "packages.ubuntu.com (libgmp10-dev)": "https://packages.ubuntu.com/noble/libgmp10-dev"
+        "packages.ubuntu.com (libgmp-dev)": "https://packages.ubuntu.com/resolute/libgmp-dev",
+        "packages.ubuntu.com (libgmp10)": "https://packages.ubuntu.com/resolute/libgmp10"
       }
     },
     {
@@ -83,8 +116,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblcms2-2)": "https://packages.ubuntu.com/noble/liblcms2-2",
-        "packages.ubuntu.com (liblcms2-dev)": "https://packages.ubuntu.com/noble/liblcms2-dev"
+        "packages.ubuntu.com (liblcms2-2)": "https://packages.ubuntu.com/resolute/liblcms2-2",
+        "packages.ubuntu.com (liblcms2-dev)": "https://packages.ubuntu.com/resolute/liblcms2-dev"
       }
     },
     {
@@ -101,8 +134,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libffi-dev)": "https://packages.ubuntu.com/noble/libffi-dev",
-        "packages.ubuntu.com (libffi8)": "https://packages.ubuntu.com/noble/libffi8"
+        "packages.ubuntu.com (libffi-dev)": "https://packages.ubuntu.com/resolute/libffi-dev",
+        "packages.ubuntu.com (libffi8)": "https://packages.ubuntu.com/resolute/libffi8"
       }
     },
     {
@@ -119,8 +152,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libimagequant-dev)": "https://packages.ubuntu.com/noble/libimagequant-dev",
-        "packages.ubuntu.com (libimagequant0)": "https://packages.ubuntu.com/noble/libimagequant0"
+        "packages.ubuntu.com (libimagequant-dev)": "https://packages.ubuntu.com/resolute/libimagequant-dev",
+        "packages.ubuntu.com (libimagequant0)": "https://packages.ubuntu.com/resolute/libimagequant0"
       }
     },
     {
@@ -137,8 +170,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
-        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
+        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/resolute/libjpeg-turbo8",
+        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/resolute/libjpeg-turbo8-dev"
       }
     },
     {
@@ -155,8 +188,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libjpeg9)": "https://packages.ubuntu.com/noble/libjpeg9",
-        "packages.ubuntu.com (libjpeg9-dev)": "https://packages.ubuntu.com/noble/libjpeg9-dev"
+        "packages.ubuntu.com (libjpeg9)": "https://packages.ubuntu.com/resolute/libjpeg9",
+        "packages.ubuntu.com (libjpeg9-dev)": "https://packages.ubuntu.com/resolute/libjpeg9-dev"
       }
     },
     {
@@ -173,8 +206,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libjpeg62)": "https://packages.ubuntu.com/noble/libjpeg62",
-        "packages.ubuntu.com (libjpeg62-dev)": "https://packages.ubuntu.com/noble/libjpeg62-dev"
+        "packages.ubuntu.com (libjpeg62)": "https://packages.ubuntu.com/resolute/libjpeg62",
+        "packages.ubuntu.com (libjpeg62-dev)": "https://packages.ubuntu.com/resolute/libjpeg62-dev"
       }
     },
     {
@@ -191,8 +224,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libpq-dev)": "https://packages.ubuntu.com/noble/libpq-dev",
-        "packages.ubuntu.com (libpq5)": "https://packages.ubuntu.com/noble/libpq5"
+        "packages.ubuntu.com (libpq-dev)": "https://packages.ubuntu.com/resolute/libpq-dev",
+        "packages.ubuntu.com (libpq5)": "https://packages.ubuntu.com/resolute/libpq5"
       }
     },
     {
@@ -209,8 +242,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libraqm-dev)": "https://packages.ubuntu.com/noble/libraqm-dev",
-        "packages.ubuntu.com (libraqm0)": "https://packages.ubuntu.com/noble/libraqm0"
+        "packages.ubuntu.com (libraqm-dev)": "https://packages.ubuntu.com/resolute/libraqm-dev",
+        "packages.ubuntu.com (libraqm0)": "https://packages.ubuntu.com/resolute/libraqm0"
       }
     },
     {
@@ -227,8 +260,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libsodium-dev)": "https://packages.ubuntu.com/noble/libsodium-dev",
-        "packages.ubuntu.com (libsodium23)": "https://packages.ubuntu.com/noble/libsodium23"
+        "packages.ubuntu.com (libsodium-dev)": "https://packages.ubuntu.com/resolute/libsodium-dev",
+        "packages.ubuntu.com (libsodium23)": "https://packages.ubuntu.com/resolute/libsodium23"
       }
     },
     {
@@ -245,8 +278,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev",
-        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/noble/libtiff6"
+        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/resolute/libtiff-dev",
+        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/resolute/libtiff6"
       }
     },
     {
@@ -263,8 +296,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libwebp-dev)": "https://packages.ubuntu.com/noble/libwebp-dev",
-        "packages.ubuntu.com (libwebp7)": "https://packages.ubuntu.com/noble/libwebp7"
+        "packages.ubuntu.com (libwebp-dev)": "https://packages.ubuntu.com/resolute/libwebp-dev",
+        "packages.ubuntu.com (libwebp7)": "https://packages.ubuntu.com/resolute/libwebp7"
       }
     },
     {
@@ -281,8 +314,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libxcb1)": "https://packages.ubuntu.com/noble/libxcb1",
-        "packages.ubuntu.com (libxcb1-dev)": "https://packages.ubuntu.com/noble/libxcb1-dev"
+        "packages.ubuntu.com (libxcb1)": "https://packages.ubuntu.com/resolute/libxcb1",
+        "packages.ubuntu.com (libxcb1-dev)": "https://packages.ubuntu.com/resolute/libxcb1-dev"
       }
     },
     {
@@ -291,14 +324,14 @@
       "specs": {
         "build": [],
         "host": [
-          "libxml2",
+          "libxml2-16",
           "libxml2-dev"
         ],
-        "run": "libxml2"
+        "run": "libxml2-16"
       },
       "urls": {
-        "packages.ubuntu.com (libxml2)": "https://packages.ubuntu.com/noble/libxml2",
-        "packages.ubuntu.com (libxml2-dev)": "https://packages.ubuntu.com/noble/libxml2-dev"
+        "packages.ubuntu.com (libxml2-16)": "https://packages.ubuntu.com/resolute/libxml2-16",
+        "packages.ubuntu.com (libxml2-dev)": "https://packages.ubuntu.com/resolute/libxml2-dev"
       }
     },
     {
@@ -313,8 +346,8 @@
         "run": "libxslt1.1"
       },
       "urls": {
-        "packages.ubuntu.com (libxslt1-dev)": "https://packages.ubuntu.com/noble/libxslt1-dev",
-        "packages.ubuntu.com (libxslt1.1)": "https://packages.ubuntu.com/noble/libxslt1.1"
+        "packages.ubuntu.com (libxslt1-dev)": "https://packages.ubuntu.com/resolute/libxslt1-dev",
+        "packages.ubuntu.com (libxslt1.1)": "https://packages.ubuntu.com/resolute/libxslt1.1"
       }
     },
     {
@@ -331,8 +364,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libxslt-dev)": "https://packages.ubuntu.com/noble/libxslt-dev",
-        "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/noble/libyaml-0-2"
+        "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/resolute/libyaml-0-2",
+        "packages.ubuntu.com (libyaml-dev)": "https://packages.ubuntu.com/resolute/libyaml-dev"
       }
     },
     {
@@ -340,7 +373,7 @@
       "description": "Low-Level Virtual Machine (LLVM)",
       "specs": "llvm",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/llvm"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/llvm"
       }
     },
     {
@@ -348,7 +381,7 @@
       "description": "GNU Make",
       "specs": "make",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/make"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/make"
       }
     },
     {
@@ -356,7 +389,7 @@
       "description": "A small build system with a focus on speed",
       "specs": "ninja-build",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/ninja-build"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/ninja-build"
       }
     },
     {
@@ -373,8 +406,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libopenblas-dev)": "https://packages.ubuntu.com/noble/libopenblas-dev",
-        "packages.ubuntu.com (libopenblas0)": "https://packages.ubuntu.com/noble/libopenblas0"
+        "packages.ubuntu.com (libopenblas-dev)": "https://packages.ubuntu.com/resolute/libopenblas-dev",
+        "packages.ubuntu.com (libopenblas0)": "https://packages.ubuntu.com/resolute/libopenblas0"
       }
     },
     {
@@ -391,8 +424,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libopenjp2-7)": "https://packages.ubuntu.com/noble/libopenjp2-7",
-        "packages.ubuntu.com (libopenjp2-7-dev)": "https://packages.ubuntu.com/noble/libopenjp2-7-dev"
+        "packages.ubuntu.com (libopenjp2-7)": "https://packages.ubuntu.com/resolute/libopenjp2-7",
+        "packages.ubuntu.com (libopenjp2-7-dev)": "https://packages.ubuntu.com/resolute/libopenjp2-7-dev"
       }
     },
     {
@@ -412,8 +445,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libssl-dev)": "https://packages.ubuntu.com/noble/libssl-dev",
-        "packages.ubuntu.com (openssl)": "https://packages.ubuntu.com/noble/openssl"
+        "packages.ubuntu.com (libssl-dev)": "https://packages.ubuntu.com/resolute/libssl-dev",
+        "packages.ubuntu.com (openssl)": "https://packages.ubuntu.com/resolute/openssl"
       }
     },
     {
@@ -421,7 +454,7 @@
       "description": "Apply a diff file to an original",
       "specs": "patch",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/patch"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/patch"
       }
     },
     {
@@ -429,7 +462,7 @@
       "description": "Package compiler and linker metadata toolkit.",
       "specs": "pkgconf",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/pkgconf"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/pkgconf"
       }
     },
     {
@@ -437,22 +470,22 @@
       "description": "The Python interpreter",
       "specs": {
         "build": [
-          "python3.12-dev",
+          "python3-dev",
           "python-is-python3"
         ],
         "host": [
-          "libpython3.12-dev"
+          "libpython3-dev"
         ],
         "run": [
-          "python3.12",
+          "python3",
           "python-is-python3"
         ]
       },
       "urls": {
-        "packages.ubuntu.com (libpython3.12-dev)": "https://packages.ubuntu.com/noble/libpython3.12-dev",
-        "packages.ubuntu.com (python-is-python3)": "https://packages.ubuntu.com/noble/python-is-python3",
-        "packages.ubuntu.com (python3.12)": "https://packages.ubuntu.com/noble/python3.12",
-        "packages.ubuntu.com (python3.12-dev)": "https://packages.ubuntu.com/noble/python3.12-dev"
+        "packages.ubuntu.com (libpython3-dev)": "https://packages.ubuntu.com/resolute/libpython3-dev",
+        "packages.ubuntu.com (python-is-python3)": "https://packages.ubuntu.com/resolute/python-is-python3",
+        "packages.ubuntu.com (python3)": "https://packages.ubuntu.com/resolute/python3",
+        "packages.ubuntu.com (python3-dev)": "https://packages.ubuntu.com/resolute/python3-dev"
       }
     },
     {
@@ -469,8 +502,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (tk)": "https://packages.ubuntu.com/noble/tk",
-        "packages.ubuntu.com (tk-dev)": "https://packages.ubuntu.com/noble/tk-dev"
+        "packages.ubuntu.com (tk)": "https://packages.ubuntu.com/resolute/tk",
+        "packages.ubuntu.com (tk-dev)": "https://packages.ubuntu.com/resolute/tk-dev"
       }
     },
     {
@@ -487,8 +520,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (zlib1g)": "https://packages.ubuntu.com/noble/zlib1g",
-        "packages.ubuntu.com (zlib1g-dev)": "https://packages.ubuntu.com/noble/zlib1g-dev"
+        "packages.ubuntu.com (zlib1g)": "https://packages.ubuntu.com/resolute/zlib1g",
+        "packages.ubuntu.com (zlib1g-dev)": "https://packages.ubuntu.com/resolute/zlib1g-dev"
       }
     },
     {
@@ -505,8 +538,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/resolute/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/resolute/liblapack3"
       }
     },
     {
@@ -514,7 +547,7 @@
       "description": "GNU C Compiler",
       "specs": "gcc",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/gcc"
       }
     },
     {
@@ -534,7 +567,7 @@
       "description": "GNU C++ Compiler",
       "specs": "g++",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/g++"
       }
     },
     {
@@ -542,7 +575,7 @@
       "description": "GNU Fortran Compiler",
       "specs": "gfortran",
       "urls": {
-        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
+        "packages.ubuntu.com": "https://packages.ubuntu.com/resolute/gfortran"
       }
     },
     {
@@ -583,8 +616,8 @@
         "rustc"
       ],
       "urls": {
-        "packages.ubuntu.com (cargo)": "https://packages.ubuntu.com/noble/cargo",
-        "packages.ubuntu.com (rustc)": "https://packages.ubuntu.com/noble/rustc"
+        "packages.ubuntu.com (cargo)": "https://packages.ubuntu.com/resolute/cargo",
+        "packages.ubuntu.com (rustc)": "https://packages.ubuntu.com/resolute/rustc"
       }
     },
     {
@@ -617,8 +650,8 @@
         "run": "libblas3"
       },
       "urls": {
-        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
-        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
+        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/resolute/libblas-dev",
+        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/resolute/libblas3"
       }
     },
     {
@@ -635,8 +668,8 @@
         ]
       },
       "urls": {
-        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
-        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/resolute/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/resolute/liblapack3"
       }
     },
     {

@@ -33,7 +33,13 @@
       "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/spack.mapping.json"
     },
     "ubuntu": {
-      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu.mapping.json"
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu+26.04.mapping.json"
+    },
+    "ubuntu+24.04": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu+24.04.mapping.json"
+    },
+    "ubuntu+26.04": {
+      "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/ubuntu+26.04.mapping.json"
     },
     "vcpkg": {
       "mapping": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/refs/heads/main/data/vcpkg.mapping.json"

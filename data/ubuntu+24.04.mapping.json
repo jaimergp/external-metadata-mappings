@@ -1,0 +1,713 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+  "schema_version": 1,
+  "name": "Ubuntu 24.04",
+  "description": "Mapping for the Ubuntu 24.04 LTS (Noble) distro",
+  "mappings": [
+    {
+      "id": "dep:generic/arrow",
+      "description": "C++ libraries for Apache Arrow core",
+      "specs": []
+    },
+    {
+      "id": "dep:generic/clang",
+      "description": "C, C++ and Objective-C compiler (LLVM based), clang binary",
+      "specs": "clang",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/clang"
+      }
+    },
+    {
+      "id": "dep:generic/cmake",
+      "description": "cross-platform, open-source make system",
+      "specs": "cmake",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/cmake"
+      }
+    },
+    {
+      "id": "dep:generic/freetype",
+      "description": "A Free, High-Quality, and Portable Font Engine. From freetype.org.",
+      "specs": {
+        "build": [],
+        "host": [
+          "libfreetype6",
+          "libfreetype-dev"
+        ],
+        "run": [
+          "libfreetype6"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libfreetype6)": "https://packages.ubuntu.com/noble/libfreetype6",
+        "packages.ubuntu.com (libfreetype6-dev)": "https://packages.ubuntu.com/noble/libfreetype6-dev"
+      }
+    },
+    {
+      "id": "dep:generic/git",
+      "description": "fast, scalable, distributed revision control system",
+      "specs": "git",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/git"
+      }
+    },
+    {
+      "id": "dep:generic/gmp",
+      "description": "The GNU multiprecision library",
+      "specs": {
+        "build": [],
+        "host": [
+          "libgmp10",
+          "libgmp-dev"
+        ],
+        "run": [
+          "libgmp10"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libgmp10)": "https://packages.ubuntu.com/noble/libgmp10",
+        "packages.ubuntu.com (libgmp10-dev)": "https://packages.ubuntu.com/noble/libgmp10-dev"
+      }
+    },
+    {
+      "id": "dep:generic/lcms2",
+      "description": "Color management engine supporting ICC profiles",
+      "specs": {
+        "build": [],
+        "host": [
+          "liblcms2-2",
+          "liblcms2-dev"
+        ],
+        "run": [
+          "liblcms2-2"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblcms2-2)": "https://packages.ubuntu.com/noble/liblcms2-2",
+        "packages.ubuntu.com (liblcms2-dev)": "https://packages.ubuntu.com/noble/liblcms2-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libffi",
+      "description": "A Portable Foreign Function Interface Library",
+      "specs": {
+        "build": [],
+        "host": [
+          "libffi8",
+          "libffi-dev"
+        ],
+        "run": [
+          "libffi8"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libffi-dev)": "https://packages.ubuntu.com/noble/libffi-dev",
+        "packages.ubuntu.com (libffi8)": "https://packages.ubuntu.com/noble/libffi8"
+      }
+    },
+    {
+      "id": "dep:generic/libimagequant",
+      "description": "Palette quantization library that powers pngquant and other PNG optimizers",
+      "specs": {
+        "build": [],
+        "host": [
+          "libimagequant0",
+          "libimagequant-dev"
+        ],
+        "run": [
+          "libimagequant0"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libimagequant-dev)": "https://packages.ubuntu.com/noble/libimagequant-dev",
+        "packages.ubuntu.com (libimagequant0)": "https://packages.ubuntu.com/noble/libimagequant0"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "IJG JPEG compliant runtime library with SIMD and other optimizations",
+      "specs": {
+        "build": [],
+        "host": [
+          "libjpeg-turbo8",
+          "libjpeg-turbo8-dev"
+        ],
+        "run": [
+          "libjpeg-turbo8"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg-turbo8)": "https://packages.ubuntu.com/noble/libjpeg-turbo8",
+        "packages.ubuntu.com (libjpeg-turbo8-dev)": "https://packages.ubuntu.com/noble/libjpeg-turbo8-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "Independent JPEG Group's JPEG runtime library (Version 9)",
+      "specs": {
+        "build": [],
+        "host": [
+          "libjpeg9",
+          "libjpeg9-dev"
+        ],
+        "run": [
+          "libjpeg9"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg9)": "https://packages.ubuntu.com/noble/libjpeg9",
+        "packages.ubuntu.com (libjpeg9-dev)": "https://packages.ubuntu.com/noble/libjpeg9-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libjpeg",
+      "description": "Independent JPEG Group's JPEG runtime library (Version 6.2)",
+      "specs": {
+        "build": [],
+        "host": [
+          "libjpeg62",
+          "libjpeg62-dev"
+        ],
+        "run": [
+          "libjpeg62"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libjpeg62)": "https://packages.ubuntu.com/noble/libjpeg62",
+        "packages.ubuntu.com (libjpeg62-dev)": "https://packages.ubuntu.com/noble/libjpeg62-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "Postgres C API library",
+      "specs": {
+        "build": [],
+        "host": [
+          "libpq5",
+          "libpq-dev"
+        ],
+        "run": [
+          "libpq5"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libpq-dev)": "https://packages.ubuntu.com/noble/libpq-dev",
+        "packages.ubuntu.com (libpq5)": "https://packages.ubuntu.com/noble/libpq5"
+      }
+    },
+    {
+      "id": "dep:generic/libraqm",
+      "description": "A library for complex text layout.",
+      "specs": {
+        "build": [],
+        "host": [
+          "libraqm0",
+          "libraqm-dev"
+        ],
+        "run": [
+          "libraqm0"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libraqm-dev)": "https://packages.ubuntu.com/noble/libraqm-dev",
+        "packages.ubuntu.com (libraqm0)": "https://packages.ubuntu.com/noble/libraqm0"
+      }
+    },
+    {
+      "id": "dep:generic/libsodium",
+      "description": "Network communication, cryptography and signaturing library",
+      "specs": {
+        "build": [],
+        "host": [
+          "libsodium-dev",
+          "libsodium23"
+        ],
+        "run": [
+          "libsodium23"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libsodium-dev)": "https://packages.ubuntu.com/noble/libsodium-dev",
+        "packages.ubuntu.com (libsodium23)": "https://packages.ubuntu.com/noble/libsodium23"
+      }
+    },
+    {
+      "id": "dep:generic/libtiff",
+      "description": "Support for the Tag Image File Format (TIFF)",
+      "specs": {
+        "build": [],
+        "host": [
+          "libtiff6",
+          "libtiff-dev"
+        ],
+        "run": [
+          "libtiff6"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libtiff-dev)": "https://packages.ubuntu.com/noble/libtiff-dev",
+        "packages.ubuntu.com (libtiff6)": "https://packages.ubuntu.com/noble/libtiff6"
+      }
+    },
+    {
+      "id": "dep:generic/libwebp",
+      "description": "WebP image library.",
+      "specs": {
+        "build": [],
+        "host": [
+          "libwebp7",
+          "libwebp-dev"
+        ],
+        "run": [
+          "libwebp7"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libwebp-dev)": "https://packages.ubuntu.com/noble/libwebp-dev",
+        "packages.ubuntu.com (libwebp7)": "https://packages.ubuntu.com/noble/libwebp7"
+      }
+    },
+    {
+      "id": "dep:generic/libxcb",
+      "description": "This is the C-language Binding (XCB) package to the X Window System protocol",
+      "specs": {
+        "build": [],
+        "host": [
+          "libxcb1",
+          "libxcb1-dev"
+        ],
+        "run": [
+          "libxcb1"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libxcb1)": "https://packages.ubuntu.com/noble/libxcb1",
+        "packages.ubuntu.com (libxcb1-dev)": "https://packages.ubuntu.com/noble/libxcb1-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libxml2",
+      "description": "The XML C parser and toolkit of Gnome",
+      "specs": {
+        "build": [],
+        "host": [
+          "libxml2",
+          "libxml2-dev"
+        ],
+        "run": "libxml2"
+      },
+      "urls": {
+        "packages.ubuntu.com (libxml2)": "https://packages.ubuntu.com/noble/libxml2",
+        "packages.ubuntu.com (libxml2-dev)": "https://packages.ubuntu.com/noble/libxml2-dev"
+      }
+    },
+    {
+      "id": "dep:generic/libxslt",
+      "description": "The XSLT C library developed for the GNOME project",
+      "specs": {
+        "build": [],
+        "host": [
+          "libxslt1.1",
+          "libxslt1-dev"
+        ],
+        "run": "libxslt1.1"
+      },
+      "urls": {
+        "packages.ubuntu.com (libxslt1-dev)": "https://packages.ubuntu.com/noble/libxslt1-dev",
+        "packages.ubuntu.com (libxslt1.1)": "https://packages.ubuntu.com/noble/libxslt1.1"
+      }
+    },
+    {
+      "id": "dep:generic/libyaml",
+      "description": "A C library for parsing and emitting YAML",
+      "specs": {
+        "build": [],
+        "host": [
+          "libyaml-0-2",
+          "libyaml-dev"
+        ],
+        "run": [
+          "libyaml-0-2"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libyaml-0-2)": "https://packages.ubuntu.com/noble/libyaml-0-2",
+        "packages.ubuntu.com (libyaml-dev)": "https://packages.ubuntu.com/noble/libyaml-dev"
+      }
+    },
+    {
+      "id": "dep:generic/llvm",
+      "description": "Low-Level Virtual Machine (LLVM)",
+      "specs": "llvm",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/llvm"
+      }
+    },
+    {
+      "id": "dep:generic/make",
+      "description": "GNU Make",
+      "specs": "make",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/make"
+      }
+    },
+    {
+      "id": "dep:generic/ninja",
+      "description": "A small build system with a focus on speed",
+      "specs": "ninja-build",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/ninja-build"
+      }
+    },
+    {
+      "id": "dep:generic/openblas",
+      "description": "Optimized BLAS (linear algebra) library (meta)",
+      "specs": {
+        "build": [],
+        "host": [
+          "libopenblas0",
+          "libopenblas-dev"
+        ],
+        "run": [
+          "libopenblas0"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libopenblas-dev)": "https://packages.ubuntu.com/noble/libopenblas-dev",
+        "packages.ubuntu.com (libopenblas0)": "https://packages.ubuntu.com/noble/libopenblas0"
+      }
+    },
+    {
+      "id": "dep:generic/openjpeg",
+      "description": "An open-source JPEG 2000 codec written in C",
+      "specs": {
+        "build": [],
+        "host": [
+          "libopenjp2-7",
+          "libopenjp2-7-dev"
+        ],
+        "run": [
+          "libopenjp2-7"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libopenjp2-7)": "https://packages.ubuntu.com/noble/libopenjp2-7",
+        "packages.ubuntu.com (libopenjp2-7-dev)": "https://packages.ubuntu.com/noble/libopenjp2-7-dev"
+      }
+    },
+    {
+      "id": "dep:generic/openssl",
+      "description": "Secure Sockets Layer toolkit - cryptographic utility",
+      "specs": {
+        "build": [
+          "libssl-dev",
+          "openssl"
+        ],
+        "host": [
+          "libssl-dev",
+          "openssl"
+        ],
+        "run": [
+          "openssl"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libssl-dev)": "https://packages.ubuntu.com/noble/libssl-dev",
+        "packages.ubuntu.com (openssl)": "https://packages.ubuntu.com/noble/openssl"
+      }
+    },
+    {
+      "id": "dep:generic/patch",
+      "description": "Apply a diff file to an original",
+      "specs": "patch",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/patch"
+      }
+    },
+    {
+      "id": "dep:generic/pkg-config",
+      "description": "Package compiler and linker metadata toolkit.",
+      "specs": "pkgconf",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/pkgconf"
+      }
+    },
+    {
+      "id": "dep:generic/python",
+      "description": "The Python interpreter",
+      "specs": {
+        "build": [
+          "python3.12-dev",
+          "python-is-python3"
+        ],
+        "host": [
+          "libpython3.12-dev"
+        ],
+        "run": [
+          "python3.12",
+          "python-is-python3"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libpython3.12-dev)": "https://packages.ubuntu.com/noble/libpython3.12-dev",
+        "packages.ubuntu.com (python-is-python3)": "https://packages.ubuntu.com/noble/python-is-python3",
+        "packages.ubuntu.com (python3.12)": "https://packages.ubuntu.com/noble/python3.12",
+        "packages.ubuntu.com (python3.12-dev)": "https://packages.ubuntu.com/noble/python3.12-dev"
+      }
+    },
+    {
+      "id": "dep:generic/tk",
+      "description": "Toolkit for Tcl and X11 (default version) - windowing shell",
+      "specs": {
+        "build": [],
+        "host": [
+          "tk",
+          "tk-dev"
+        ],
+        "run": [
+          "tk"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (tk)": "https://packages.ubuntu.com/noble/tk",
+        "packages.ubuntu.com (tk-dev)": "https://packages.ubuntu.com/noble/tk-dev"
+      }
+    },
+    {
+      "id": "dep:generic/zlib",
+      "description": "Compression library",
+      "specs": {
+        "build": [],
+        "host": [
+          "zlib1g",
+          "zlib1g-dev"
+        ],
+        "run": [
+          "zlib1g"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (zlib1g)": "https://packages.ubuntu.com/noble/zlib1g",
+        "packages.ubuntu.com (zlib1g-dev)": "https://packages.ubuntu.com/noble/zlib1g-dev"
+      }
+    },
+    {
+      "id": "dep:github/Reference-LAPACK/lapack",
+      "description": "Library of linear algebra routines 3 - shared version",
+      "specs": {
+        "build": [],
+        "host": [
+          "liblapack3",
+          "liblapack-dev"
+        ],
+        "run": [
+          "liblapack3"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c",
+      "description": "GNU C Compiler",
+      "specs": "gcc",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gcc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/c-sharp",
+      "description": "Compiler for the C# language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cuda",
+      "description": "Compiler for the CUDA language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/cxx",
+      "description": "GNU C++ Compiler",
+      "specs": "g++",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/g++"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/fortran",
+      "description": "GNU Fortran Compiler",
+      "specs": "gfortran",
+      "urls": {
+        "packages.ubuntu.com": "https://packages.ubuntu.com/noble/gfortran"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/go",
+      "description": "Compiler for the Go language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/javascript",
+      "description": "Compiler for the JavaScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-c",
+      "description": "Compiler for the Objective C language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/obj-cxx",
+      "description": "Compiler for the Objective C++ language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/ocaml",
+      "description": "Compiler for the OCaml language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/rust",
+      "description": "The Rust compiler",
+      "specs": [
+        "cargo",
+        "rustc"
+      ],
+      "urls": {
+        "packages.ubuntu.com (cargo)": "https://packages.ubuntu.com/noble/cargo",
+        "packages.ubuntu.com (rustc)": "https://packages.ubuntu.com/noble/rustc"
+      }
+    },
+    {
+      "id": "dep:virtual/compiler/swift",
+      "description": "Compiler for the Swift language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/typescript",
+      "description": "Compiler for the TypeScript language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/compiler/zig",
+      "description": "Compiler for the Zig language",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/blas",
+      "description": "Basic Linear Algebra Reference implementations",
+      "specs": {
+        "build": [],
+        "host": [
+          "libblas3",
+          "libblas-dev"
+        ],
+        "run": "libblas3"
+      },
+      "urls": {
+        "packages.ubuntu.com (libblas-dev)": "https://packages.ubuntu.com/noble/libblas-dev",
+        "packages.ubuntu.com (libblas3)": "https://packages.ubuntu.com/noble/libblas3"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "The netlib implementation for lapack",
+      "specs": {
+        "build": [],
+        "host": [
+          "liblapack3",
+          "liblapack-dev"
+        ],
+        "run": [
+          "liblapack3"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (liblapack-dev)": "https://packages.ubuntu.com/noble/liblapack-dev",
+        "packages.ubuntu.com (liblapack3)": "https://packages.ubuntu.com/noble/liblapack3"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/mpi",
+      "description": "Message Passing Interface",
+      "specs": [],
+      "urls": {}
+    },
+    {
+      "id": "dep:virtual/interface/openmp",
+      "description": "OpenMP MultiProcessing",
+      "specs": [],
+      "urls": {}
+    }
+  ],
+  "package_managers": [
+    {
+      "name": "apt",
+      "commands": {
+        "install": {
+          "command": [
+            "apt",
+            "install",
+            "--yes",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "{}"
+          ]
+        }
+      },
+      "specifier_syntax": {
+        "exact_version": null,
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
+    },
+    {
+      "name": "apt-get",
+      "commands": {
+        "install": {
+          "command": [
+            "apt-get",
+            "install",
+            "--yes",
+            "{}"
+          ],
+          "requires_elevation": true
+        },
+        "query": {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "{}"
+          ]
+        }
+      },
+      "specifier_syntax": {
+        "exact_version": null,
+        "name_only": [
+          "{name}"
+        ],
+        "version_ranges": null
+      }
+    }
+  ]
+}
