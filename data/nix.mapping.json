@@ -78,14 +78,6 @@
     },
     {
       "id": "dep:generic/libjpeg",
-      "description": "Library that implements the JPEG image file format",
-      "specs": "libjpeg_original",
-      "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libjpeg_original"
-      }
-    },
-    {
-      "id": "dep:generic/libjpeg",
       "description": "Faster (using SIMD) libjpeg implementation",
       "specs": "libjpeg",
       "urls": {
@@ -93,11 +85,19 @@
       }
     },
     {
-      "id": "dep:generic/libpq",
-      "description": "C++ library to access PostgreSQL databases",
-      "specs": "libpqxx",
+      "id": "dep:generic/libjpeg",
+      "description": "Library that implements the JPEG image file format",
+      "specs": "libjpeg_original",
       "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=libpqxx"
+        "nixos.org": "https://search.nixos.org/packages?show=libjpeg_original"
+      }
+    },
+    {
+      "id": "dep:generic/libpq",
+      "description": "PostgreSQL client C library (libpq)",
+      "specs": "libpq",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libpq"
       }
     },
     {
@@ -135,9 +135,9 @@
     {
       "id": "dep:generic/libxcb",
       "description": "The X protocol C-language Binding (XCB) is a replacement for Xlib",
-      "specs": "xorg.libxcb",
+      "specs": "libxcb",
       "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=xorg.libxcb"
+        "nixos.org": "https://search.nixos.org/packages?show=libxcb"
       }
     },
     {
@@ -373,7 +373,7 @@
       "description": "Software library containing BLAS functions written in OpenCL",
       "specs": "clblas",
       "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=clblast"
+        "nixos.org": "https://search.nixos.org/packages?show=clblas"
       }
     },
     {
@@ -398,6 +398,14 @@
       "specs": "amd-blis",
       "urls": {
         "nixos.org": "https://search.nixos.org/packages?show=amd-blis"
+      }
+    },
+    {
+      "id": "dep:virtual/interface/lapack",
+      "description": "Nixpkgs' configurable LAPACK wrapper",
+      "specs": "lapack",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=lapack"
       }
     },
     {
