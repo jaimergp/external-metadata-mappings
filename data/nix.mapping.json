@@ -329,9 +329,13 @@
     {
       "id": "dep:virtual/compiler/rust",
       "description": "The Rust programming language toolchain.",
-      "specs": "rustc",
+      "specs": [
+        "rustc",
+        "cargo"
+      ],
       "urls": {
-        "nixos.org": "https://search.nixos.org/packages?show=rustc"
+        "nixos.org (cargo)": "https://search.nixos.org/packages?show=cargo",
+        "nixos.org (rustc)": "https://search.nixos.org/packages?show=rustc"
       }
     },
     {
