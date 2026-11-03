@@ -130,6 +130,24 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files",
+      "specs": {
+        "build": [],
+        "host": [
+          "libavif",
+          "libavif-devel"
+        ],
+        "run": [
+          "libavif"
+        ]
+      },
+      "urls": {
+        "packages.fedoraproject.org (libavif)": "https://packages.fedoraproject.org/pkgs/libavif/libavif/",
+        "packages.fedoraproject.org (libavif-devel)": "https://packages.fedoraproject.org/pkgs/libavif/libavif-devel/"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": {

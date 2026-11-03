@@ -46,6 +46,11 @@
       "specs": []
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files.",
+      "specs": []
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": []

@@ -88,6 +88,24 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files",
+      "specs": {
+        "build": [],
+        "host": [
+          "libavif16",
+          "libavif-dev"
+        ],
+        "run": [
+          "libavif16"
+        ]
+      },
+      "urls": {
+        "packages.ubuntu.com (libavif-dev)": "https://packages.ubuntu.com/noble/libavif-dev",
+        "packages.ubuntu.com (libavif16)": "https://packages.ubuntu.com/noble/libavif16"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": {

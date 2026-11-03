@@ -58,6 +58,14 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files",
+      "specs": "libavif",
+      "urls": {
+        "brew.sh": "https://formulae.brew.sh/formula/libavif"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": "libffi",

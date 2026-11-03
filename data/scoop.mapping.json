@@ -46,6 +46,16 @@
       "specs": []
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Tools and library for encoding and decoding AV1 video streams (.avif)",
+      "specs": [
+        "main/libavif"
+      ],
+      "urls": {
+        "scoop.sh": "https://scoop.sh/#/apps?q=libavif"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": []

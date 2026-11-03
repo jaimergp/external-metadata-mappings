@@ -61,6 +61,14 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files",
+      "specs": "libavif",
+      "urls": {
+        "archlinux.org": "https://archlinux.org/packages/extra/x86_64/libavif/"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": "libffi",
