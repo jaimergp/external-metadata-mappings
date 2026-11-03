@@ -36,6 +36,10 @@
       "description": "Little Color Management System"
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files"
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A portable foreign-function interface library"
     },

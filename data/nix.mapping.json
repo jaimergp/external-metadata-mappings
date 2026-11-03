@@ -61,6 +61,14 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "C implementation of the AV1 Image File Format",
+      "specs": "libavif",
+      "urls": {
+        "nixos.org": "https://search.nixos.org/packages?show=libavif"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "Foreign function call interface library",
       "specs": "libffi",

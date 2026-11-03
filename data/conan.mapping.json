@@ -56,6 +56,14 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files",
+      "specs": "libavif/[*]",
+      "urls": {
+        "conan.io": "https://conan.io/center/recipes/libavif"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A portable, high level programming interface to various calling conventions",
       "specs": "libffi/[*]",

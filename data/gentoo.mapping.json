@@ -61,6 +61,14 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding .avif files",
+      "specs": "media-libs/libavif",
+      "urls": {
+        "packages.gentoo.org": "https://packages.gentoo.org/packages/media-libs/libavif"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "a portable, high level programming interface to various calling conventions",
       "specs": "dev-libs/libffi",

@@ -82,6 +82,22 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "A friendly, portable C implementation of the AV1 Image File Format.",
+      "specs": {
+        "build": [],
+        "host": [
+          "libavif"
+        ],
+        "run": [
+          "libavif"
+        ]
+      },
+      "urls": {
+        "feedstock": "https://github.com/conda-forge/libavif-feedstock"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "A Portable Foreign Function Interface Library",
       "specs": "libffi",

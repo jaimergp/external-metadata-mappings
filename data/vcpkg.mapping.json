@@ -53,6 +53,14 @@
       }
     },
     {
+      "id": "dep:generic/libavif",
+      "description": "Library for encoding and decoding AVIF files",
+      "specs": "libavif",
+      "urls": {
+        "vcpkg.io": "https://vcpkg.io/en/package/libavif"
+      }
+    },
+    {
       "id": "dep:generic/libffi",
       "description": "Portable, high level programming interface to various calling conventions",
       "specs": "libffi",
